@@ -1,11 +1,11 @@
-/* site.js - Pop Glass behaviour (FOUNDATION). No libraries. Content works without it.
+/* site.js - Iron Star behaviour (FOUNDATION). No libraries. Content works without it.
    - store memory: localStorage "sbshop-store" (a store slug); rewrites a[data-menu-cat] (live menu) and a[data-store-link]
      (store page), fills [data-store-label] ("MS: Pearl") and [data-store-field], unhides [data-store-current],
      marks [data-store-pick] / .chip of the current store with .is-current, fires document event "sb:store" {detail: store}.
    - [data-store-pick="<slug>"] click = choose that store (stays on the page); a live-menu link clicked before any store
      is chosen opens the Locations chooser and continues to the menu after the pick.
    - header switcher ([data-switch-toggle] / [data-switcher]), mobile drawer ([data-drawer-toggle] / [data-drawer]),
-     age gate (localStorage "sbshop-age-ok" = "1"), reveals ([data-reveal], [data-stagger]), parallax ([data-depth]),
+     age gate (localStorage "sbshop-age-ok" = "1"), reveals ([data-reveal], [data-stagger], .sheen, .stitch--draw, .seam: one-shot .is-in), parallax ([data-depth]),
      tilt ([data-tilt]), tabs ([data-tabs]), background videos (.bg-video). */
 (function () {
   'use strict';
@@ -123,7 +123,7 @@
       closeSwitcher(); closeDrawer();
       var s = bySlug[slug];
       if (SB.pendingCat !== null && s) { var url = menuUrl(s, SB.pendingCat); SB.pendingCat = null; window.open(url, '_blank', 'noopener'); return; }
-      if (s && !pick.hasAttribute('data-no-toast')) toast('<span>You’re shopping at <strong>Star Buds in ' + escH(s.city) + '</strong></span><a href="/stores/' + escH(s.slug) + '/">View store</a>');
+      if (s && !pick.hasAttribute('data-no-toast')) toast('<span>You’re shopping at <strong>Star Buds in ' + escH(s.city) + '</strong></span>' + (storeHref[s.slug] ? '<a href="' + escH(storeHref[s.slug]) + '">View store</a>' : ''));
       return;
     }
     var menu = t.closest('a[data-menu-cat]');
@@ -184,7 +184,7 @@
   });
 
   /* ---------- reveals ---------- */
-  var revealEls = $$('[data-reveal], [data-stagger]');
+  var revealEls = $$('[data-reveal], [data-stagger], .sheen, .stitch--draw, .seam');
   $$('[data-stagger]').forEach(function (p) { Array.prototype.forEach.call(p.children, function (c, i) { c.style.setProperty('--i', i); }); });
   if (!('IntersectionObserver' in window) || reduce) revealEls.forEach(function (el) { el.classList.add('is-in'); });
   else {

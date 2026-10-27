@@ -6,11 +6,13 @@
   <title>Higher Rewards | Star Buds</title>
   <meta name="description" content="Join our Higher Rewards Loyalty Program and get rewarded when you visit the store!">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#11432B">
+  <meta name="theme-color" content="#0B0B0A">
+  <meta name="color-scheme" content="dark">
   <meta property="og:title" content="Higher Rewards | Star Buds">
   <meta property="og:description" content="Join our Higher Rewards Loyalty Program and get rewarded when you visit the store!">
   <link rel="icon" type="image/png" href="/starbuds-shop-redesign/assets/brand/favicon.png">
   <link rel="apple-touch-icon" href="/starbuds-shop-redesign/assets/brand/apple-touch-icon.png">
+  <link rel="preload" href="/starbuds-shop-redesign/assets/fonts/GrenzeGotisch-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/starbuds-shop-redesign/assets/fonts/Oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/starbuds-shop-redesign/assets/fonts/Manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/tokens.css">
@@ -18,34 +20,37 @@
   <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/components.css">
   <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/motion.css">
   <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/home.css">
+  <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/finder.css">
+  <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/faq.css">
   <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/stores.css">
   <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/content.css">
   <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('sbshop-age-ok')!=='1')h.classList.add('age-pending')}catch(e){h.classList.add('age-pending')}setTimeout(function(){if(!window.SB_READY)h.classList.add('reveal-all')},2500)})(document);</script>
   <script src="/starbuds-shop-redesign/assets/js/site.js" defer></script>
+  
   
 </head>
 <body class="pg page-rewards">
   
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="promo">
-    <a class="promo__link" href="/starbuds-shop-redesign/deals/"><svg class="icon promo__star" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span>Shop Our Special Offers</span><svg class="icon promo__arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+    <a class="promo__link" href="/starbuds-shop-redesign/deals/"><span class="promo__rule" aria-hidden="true"></span><svg class="icon promo__star" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span>Shop Our Special Offers</span><svg class="icon promo__star" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span class="promo__rule" aria-hidden="true"></span></a>
   </div>
   <header class="site-header" data-header>
     <div class="site-header__inner">
       <a class="brand" href="/starbuds-shop-redesign/" aria-label="Star Buds home">
-        <img class="brand__logo" src="/starbuds-shop-redesign/assets/brand/logo.png" width="1417" height="430" alt="Star Buds">
+        <img class="brand__logo" src="/starbuds-shop-redesign/assets/brand/logo-on-dark.png" width="1417" height="430" alt="Star Buds">
       </a>
       <nav class="nav" aria-label="Main">
-        <ul class="nav__list" role="list"><li class="nav__item"><a class="nav__link" href="/starbuds-shop-redesign/#shop">Shop All</a></li><li class="nav__item"><a class="nav__link" href="/starbuds-shop-redesign/deals/">Deals</a></li><li class="nav__item nav__item--switch"><a class="nav__link" href="/starbuds-shop-redesign/stores/" data-switch-toggle aria-controls="store-switcher" aria-expanded="false" aria-haspopup="true">Locations<svg class="icon nav__chev" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></a></li><li class="nav__item"><a class="nav__link" href="/starbuds-shop-redesign/rewards/" aria-current="page">Higher Rewards</a></li></ul>
+        <ul class="nav__list" role="list"><li class="nav__item"><a class="nav__link" href="/starbuds-shop-redesign/#shop">Shop All</a></li><li class="nav__item"><a class="nav__link" href="/starbuds-shop-redesign/deals/">Deals</a></li><li class="nav__item nav__item--switch"><a class="nav__link" href="/starbuds-shop-redesign/stores/" data-switch-toggle aria-controls="store-switcher" aria-expanded="false" aria-haspopup="true">Locations<svg class="icon nav__chev" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></a></li><li class="nav__item"><a class="nav__link" href="/starbuds-shop-redesign/rewards/" aria-current="page">Higher Rewards</a></li></ul>
       </nav>
       <div class="header-actions">
-        <button type="button" class="store-chip" data-switch-toggle aria-controls="store-switcher" aria-expanded="false"><svg class="icon store-chip__pin" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span class="store-chip__text" data-store-label>Choose your location</span><svg class="icon store-chip__chev" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
-        <a class="btn btn--primary btn--sm header-actions__shop" href="/starbuds-shop-redesign/stores/" data-menu-cat=""><span class="btn__label">Shop now</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
+        <button type="button" class="store-chip" data-switch-toggle aria-controls="store-switcher" aria-expanded="false"><svg class="icon store-chip__pin" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span class="store-chip__text" data-store-label>Choose your location</span><svg class="icon store-chip__chev" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+        <a class="btn btn--gold btn--sm header-actions__shop" href="/starbuds-shop-redesign/stores/" data-menu-cat=""><span class="btn__label">Shop now</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
         <button type="button" class="burger" data-drawer-toggle aria-controls="drawer" aria-expanded="false"><span class="sr-only">Menu</span><span class="burger__bars" aria-hidden="true"></span></button>
       </div>
     </div>
     <div class="switcher" id="store-switcher" data-switcher hidden>
-      <div class="switcher__panel glass glass--pop">
+      <div class="switcher__panel glass glass--stitch stitch is-in">
         <div class="switcher__head">
           <p class="switcher__title">Choose your location</p>
           <p class="switcher__current" data-store-current hidden>Shopping at <strong data-store-label></strong></p>
@@ -85,11 +90,12 @@
         </ul>
       </div>
         </div>
-        <div class="switcher__foot"><a class="switcher__all" href="/starbuds-shop-redesign/stores/">All locations<svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+        <div class="switcher__foot"><a class="switcher__all" href="/starbuds-shop-redesign/stores/">All locations<svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
       </div>
     </div>
   </header>
   <div class="drawer" id="drawer" data-drawer hidden>
+    <span class="leaves leaves--gold drawer__leaves" aria-hidden="true"></span>
     <div class="drawer__panel">
       <ul class="drawer__nav" role="list"><li><a class="drawer__link" href="/starbuds-shop-redesign/#shop">Shop All</a></li><li><a class="drawer__link" href="/starbuds-shop-redesign/deals/">Deals</a></li><li><a class="drawer__link" href="/starbuds-shop-redesign/rewards/">Higher Rewards</a></li><li><a class="drawer__link" href="/starbuds-shop-redesign/stores/">Locations</a></li></ul>
       <div class="drawer__stores">
@@ -128,242 +134,258 @@
         </ul>
       </div>
       </div>
-      <a class="btn btn--pop drawer__shop" href="/starbuds-shop-redesign/stores/" data-menu-cat=""><span class="btn__label">Shop now</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
+      <a class="btn btn--gold drawer__shop" href="/starbuds-shop-redesign/stores/" data-menu-cat=""><span class="btn__label">Shop now</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
     </div>
   </div>
   <main id="main" tabindex="-1">
 
 <section class="section rw-hero on-dark" aria-labelledby="rw-title">
   <div class="plane-back">
-    <img class="cover rw-hero__poster" src="/starbuds-shop-redesign/assets/media/glass-dark-poster.webp" width="1600" height="890" alt="" decoding="async" fetchpriority="high" data-ai="generated">
-    <video class="cover bg-video rw-hero__video" autoplay muted loop playsinline preload="metadata" poster="/starbuds-shop-redesign/assets/media/glass-dark-poster.webp" aria-hidden="true" tabindex="-1" data-ai="generated" title="Dark glass bubbles and leaves drifting (AI-generated loop)">
-      <source src="/starbuds-shop-redesign/assets/media/glass-dark.webm" type="video/webm">
-      <source src="/starbuds-shop-redesign/assets/media/glass-dark.mp4" type="video/mp4">
+    <img class="cover rw-hero__still" src="/starbuds-shop-redesign/assets/img/g-smoke-960.webp" srcset="/starbuds-shop-redesign/assets/img/g-smoke-640.webp 640w, /starbuds-shop-redesign/assets/img/g-smoke-960.webp 960w, /starbuds-shop-redesign/assets/img/g-smoke-1440.webp 1440w, /starbuds-shop-redesign/assets/img/g-smoke-1920.webp 1920w, /starbuds-shop-redesign/assets/img/g-smoke-2560.webp 2560w" sizes="100vw" width="2752" height="1536" alt="" decoding="async" loading="eager" fetchpriority="high" data-ai="generated">
+    <video class="cover bg-video rw-hero__video" autoplay muted loop playsinline preload="metadata" poster="/starbuds-shop-redesign/assets/media/smoke-ember-poster.webp" aria-hidden="true" tabindex="-1" data-ai="generated" title="Smoke and golden embers drifting in darkness (AI-generated loop)">
+      <source src="/starbuds-shop-redesign/assets/media/smoke-ember.webm" type="video/webm"><source src="/starbuds-shop-redesign/assets/media/smoke-ember.mp4" type="video/mp4">
     </video>
     <div class="rw-hero__shade"></div>
-    <span class="leaves leaves--lime rw-hero__leaves" aria-hidden="true"></span>
-    <span class="halftone halftone--pink halftone--bl rw-hero__dots" aria-hidden="true"></span>
+    <span class="leaves leaves--gold rw-hero__leaves" aria-hidden="true"></span>
+    <span class="halftone halftone--gold halftone--bl rw-hero__dots" aria-hidden="true"></span>
+    <span class="grain" aria-hidden="true"></span>
+    <div class="vignette"></div>
   </div>
   <div class="wrap rw-hero__grid">
-    <div class="glass glass--dark glass--pop rw-hero__panel" data-reveal="up">
-      <span class="sticker sticker--lime" style="--tilt:-4deg">Higher Rewards Loyalty Program</span>
-      <h1 id="rw-title" class="h-display rw-hero__title">Higher Rewards</h1>
+    <div class="glass glass--stitch stitch stitch--draw rw-hero__panel" data-reveal="up">
+      <p class="rw-hero__eyebrow"><span class="patch patch--green patch--sm"><svg class="icon patch__icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span class="patch__text">Higher Rewards Loyalty Program</span></span></p>
+      <h1 id="rw-title" class="rw-hero__title">Higher <span class="rw-hero__accent">Rewards</span></h1>
+      <svg class="pinstripe pinstripe--gold rw-hero__rule" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg>
       <p class="rw-hero__lead">Simply present your custom rewards wallet on each visit and automatically earn points towards discounts and specials on your favorite products. Best of all, it’s absolutely FREE!</p>
       <div class="btn-row">
-        <a class="btn btn--pop btn--lg" href="https://lab.alpineiq.com/joinMembers/1130" target="_blank" rel="noopener"><span class="btn__label">Join Higher Rewards</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
-        <a class="btn btn--ghost" href="https://lab.alpineiq.com/wallet/1130" target="_blank" rel="noopener"><span class="btn__label">Log in</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        <a class="btn btn--gold btn--lg" href="https://lab.alpineiq.com/joinMembers/1130" target="_blank" rel="noopener"><span class="btn__label">Join Higher Rewards</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        <a class="btn btn--ghost" href="https://lab.alpineiq.com/wallet/1130" target="_blank" rel="noopener"><span class="btn__label">Log in</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
       </div></div>
-    <span class="starburst starburst--lime starburst--spin rw-hero__burst"><svg class="starburst__svg" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon class="starburst__shadow" points="100.0,2.0 111.9,24.9 128.4,12.5 135.9,29.6 157.6,20.7 153.7,46.3 174.4,45.9 167.7,65.5 193.2,69.7 178.0,87.6 192.0,100.0 175.1,111.9 193.2,130.3 167.7,134.5 174.4,154.1 155.9,155.9 157.6,179.3 134.5,167.7 128.4,187.5 111.9,175.1 100.0,198.0 87.6,178.0 71.6,187.5 65.5,167.7 42.4,179.3 46.3,153.7 25.6,154.1 29.6,135.9 6.8,130.3 24.9,111.9 8.0,100.0 24.9,88.1 6.8,69.7 29.6,64.1 25.6,45.9 46.3,46.3 42.4,20.7 65.5,32.3 71.6,12.5 87.6,22.0" transform="translate(7 7)"/><polygon class="starburst__shape" points="100.0,2.0 111.9,24.9 128.4,12.5 135.9,29.6 157.6,20.7 153.7,46.3 174.4,45.9 167.7,65.5 193.2,69.7 178.0,87.6 192.0,100.0 175.1,111.9 193.2,130.3 167.7,134.5 174.4,154.1 155.9,155.9 157.6,179.3 134.5,167.7 128.4,187.5 111.9,175.1 100.0,198.0 87.6,178.0 71.6,187.5 65.5,167.7 42.4,179.3 46.3,153.7 25.6,154.1 29.6,135.9 6.8,130.3 24.9,111.9 8.0,100.0 24.9,88.1 6.8,69.7 29.6,64.1 25.6,45.9 46.3,46.3 42.4,20.7 65.5,32.3 71.6,12.5 87.6,22.0"/></svg><span class="starburst__label">Free<small>to sign up</small></span></span>
+    <div class="rw-hero__art" aria-hidden="true">
+      <span class="cutout cutout--patch rw-hero__wings" data-depth="0.08" style="--rot:-3deg;" aria-hidden="true"><img class="cutout__img" src="/starbuds-shop-redesign/assets/img/patch-wings-960.webp" srcset="/starbuds-shop-redesign/assets/img/patch-wings-240.webp 240w, /starbuds-shop-redesign/assets/img/patch-wings-400.webp 400w, /starbuds-shop-redesign/assets/img/patch-wings-640.webp 640w, /starbuds-shop-redesign/assets/img/patch-wings-960.webp 960w, /starbuds-shop-redesign/assets/img/patch-wings-1400.webp 1400w" sizes="(max-width: 900px) 70vw, 460px" width="2752" height="1536" alt="" decoding="async" loading="eager" fetchpriority="high" data-ai="generated"></span>
+      <span class="seal seal--green rw-hero__seal"><span class="seal__label">Free<small>to sign up</small></span></span>
+    </div>
   </div>
-  <div class="rw-hero__front" aria-hidden="true">
-    <span class="cutout rw-hero__jar" data-depth="0.14" style="--rot:-6deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/cut-jar-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-jar-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-jar-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-jar-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-jar-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-jar-1400.webp 1400w" sizes="(max-width: 700px) 36vw, 300px" width="1792" height="2368" alt="" decoding="async" loading="eager" fetchpriority="high" data-ai="generated"></span>
-    <span class="cutout rw-hero__star" data-depth="-0.08" style="--rot:14deg;" aria-hidden="true"><img class="cutout__img float float--fast" src="/starbuds-shop-redesign/assets/img/pop-star-960.webp" srcset="/starbuds-shop-redesign/assets/img/pop-star-240.webp 240w, /starbuds-shop-redesign/assets/img/pop-star-400.webp 400w, /starbuds-shop-redesign/assets/img/pop-star-640.webp 640w, /starbuds-shop-redesign/assets/img/pop-star-960.webp 960w, /starbuds-shop-redesign/assets/img/pop-star-1400.webp 1400w" sizes="(max-width: 700px) 26vw, 200px" width="2048" height="2048" alt="" decoding="async" loading="eager" fetchpriority="high" data-ai="generated"></span>
-  </div>
-  <svg class="seam seam--wave seam--bottom" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true" focusable="false" style="color:var(--paper)"><path d="M0 40 C 240 0 480 0 720 26 S 1200 60 1440 18 V64 H0z" fill="currentColor"/></svg>
+  <span class="cutout rw-hero__star" data-depth="-0.1" style="--rot:12deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/chrome-star-960.webp" srcset="/starbuds-shop-redesign/assets/img/chrome-star-240.webp 240w, /starbuds-shop-redesign/assets/img/chrome-star-400.webp 400w, /starbuds-shop-redesign/assets/img/chrome-star-640.webp 640w, /starbuds-shop-redesign/assets/img/chrome-star-960.webp 960w, /starbuds-shop-redesign/assets/img/chrome-star-1400.webp 1400w" sizes="(max-width: 700px) 26vw, 150px" width="2048" height="2048" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
 </section>
 
-<section class="section rw-steps" aria-labelledby="rw-steps-title">
-  <div class="plane-back"><span class="leaves leaves--light" aria-hidden="true"></span><span class="halftone halftone--yellow halftone--tr" aria-hidden="true"></span><span class="blob blob--lime rw-steps__blob"></span></div>
+<section class="section section--bone rw-steps" aria-labelledby="rw-steps-title">
+  <div class="plane-back"><span class="leaves leaves--light" aria-hidden="true"></span><span class="halftone halftone--ink halftone--tr" aria-hidden="true"></span><span class="grain dl-grain-bone" aria-hidden="true"></span></div>
+  <div class="seam seam--double seam--gold" aria-hidden="true"><svg class="seam__svg" viewBox="0 0 1440 24" preserveAspectRatio="none" focusable="false"><line class="seam__welt" x1="0" y1="1" x2="1440" y2="1"/><line class="seam__thread" x1="0" y1="7" x2="1440" y2="7"/><line class="seam__thread" x1="0" y1="17" x2="1440" y2="17"/></svg></div>
   <div class="wrap">
     <div class="rw-head">
-      <p class="eyebrow" data-reveal="up"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg> Higher Rewards Loyalty Program</p>
-      <h2 id="rw-steps-title" class="h-display" data-reveal="up" style="--i:1">How it <span class="swipe">works</span></h2>
+      <p class="rw-head__eyebrow" data-reveal="fade"><span class="patch patch--leather"><svg class="icon patch__icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span class="patch__text">Higher Rewards Loyalty Program</span></span></p>
+      <h2 id="rw-steps-title" class="h-display rw-head__title sheen" data-reveal="up" style="--i:1">How it works</h2>
+      <svg class="pinstripe pinstripe--ink rw-head__rule" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg>
     </div>
     <ol class="rw-steps__list" role="list" data-stagger>
-      <li class="rw-step glass glass--pop lift rw-step--0" data-tilt="4">
-        <span class="cutout rw-step__cut" aria-hidden="true"><img class="cutout__img" src="/starbuds-shop-redesign/assets/img/cut-preroll-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-preroll-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-preroll-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-preroll-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-preroll-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-preroll-1400.webp 1400w" sizes="(max-width: 700px) 30vw, 170px" width="2048" height="2048" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
-        <span class="rw-step__n" aria-hidden="true">01</span>
-        <h3 class="h-display rw-step__label">Join</h3>
+      <li class="rw-step rw-step--0">
+        <span class="rw-step__stitch stitch" aria-hidden="true"></span>
+        <span class="cutout cutout--patch rw-step__cut rw-step__cut--patch rw-step__cut--patch-leaf" style="--rot:4deg;" aria-hidden="true"><img class="cutout__img" src="/starbuds-shop-redesign/assets/img/patch-leaf-960.webp" srcset="/starbuds-shop-redesign/assets/img/patch-leaf-240.webp 240w, /starbuds-shop-redesign/assets/img/patch-leaf-400.webp 400w, /starbuds-shop-redesign/assets/img/patch-leaf-640.webp 640w, /starbuds-shop-redesign/assets/img/patch-leaf-960.webp 960w, /starbuds-shop-redesign/assets/img/patch-leaf-1400.webp 1400w" sizes="(max-width: 700px) 30vw, 140px" width="1792" height="2368" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
+        <span class="rw-step__n numeral" aria-hidden="true">01</span>
+        <h3 class="rw-step__label">Join</h3>
         <p class="rw-step__text">Join our Higher Rewards Loyalty Program and get rewarded when you visit the store!</p>
-        <a class="btn btn--primary btn--sm" href="https://lab.alpineiq.com/joinMembers/1130" target="_blank" rel="noopener"><span class="btn__label">Join</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        <a class="btn btn--gold btn--sm" href="https://lab.alpineiq.com/joinMembers/1130" target="_blank" rel="noopener"><span class="btn__label">Join</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
       </li>
-      <li class="rw-step glass glass--pop lift rw-step--1" data-tilt="4">
+      <li class="rw-step rw-step--1">
+        <span class="rw-step__stitch stitch" aria-hidden="true"></span>
         <span class="cutout rw-step__cut" aria-hidden="true"><img class="cutout__img" src="/starbuds-shop-redesign/assets/img/cut-bud-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-bud-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-bud-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-bud-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-bud-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-bud-1400.webp 1400w" sizes="(max-width: 700px) 30vw, 170px" width="2048" height="2048" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
-        <span class="rw-step__n" aria-hidden="true">02</span>
-        <h3 class="h-display rw-step__label">Earn</h3>
+        <span class="rw-step__n numeral" aria-hidden="true">02</span>
+        <h3 class="rw-step__label">Earn</h3>
         <p class="rw-step__text">Customers will accrue one (1) loyalty point (each, a “Point”) for every $1 spent on the total qualifying purchase of both cannabis and non-cannabis products (not including discounts, returns, credits, delivery fees, and taxes).</p>
         
       </li>
-      <li class="rw-step glass glass--pop lift rw-step--2" data-tilt="4">
-        <span class="cutout rw-step__cut" aria-hidden="true"><img class="cutout__img" src="/starbuds-shop-redesign/assets/img/cut-gummies-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-gummies-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-gummies-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-gummies-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-gummies-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-gummies-1400.webp 1400w" sizes="(max-width: 700px) 30vw, 170px" width="2368" height="1792" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
-        <span class="rw-step__n" aria-hidden="true">03</span>
-        <h3 class="h-display rw-step__label">Redeem</h3>
+      <li class="rw-step rw-step--2">
+        <span class="rw-step__stitch stitch" aria-hidden="true"></span>
+        <span class="cutout cutout--patch rw-step__cut rw-step__cut--patch rw-step__cut--patch-star" style="--rot:4deg;" aria-hidden="true"><img class="cutout__img" src="/starbuds-shop-redesign/assets/img/patch-star-960.webp" srcset="/starbuds-shop-redesign/assets/img/patch-star-240.webp 240w, /starbuds-shop-redesign/assets/img/patch-star-400.webp 400w, /starbuds-shop-redesign/assets/img/patch-star-640.webp 640w, /starbuds-shop-redesign/assets/img/patch-star-960.webp 960w, /starbuds-shop-redesign/assets/img/patch-star-1400.webp 1400w" sizes="(max-width: 700px) 30vw, 140px" width="2048" height="2048" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
+        <span class="rw-step__n numeral" aria-hidden="true">03</span>
+        <h3 class="rw-step__label">Redeem</h3>
         <p class="rw-step__text">To redeem an offer or reward, Customers must let the budtender know that they are a Program member and that they wish to redeem their points or award at the time of the qualifying transaction.</p>
         
       </li>
     </ol>
   </div>
-  <svg class="seam seam--scallop seam--bottom" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true" focusable="false" style="color:var(--green-deep)"><path d="M0 64 V36 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 V64z" fill="currentColor"/></svg>
 </section>
 
 <section class="section rw-tiers on-dark" aria-labelledby="rw-tiers-title">
   <div class="plane-back">
-    <img class="cover rw-tiers__bg" src="/starbuds-shop-redesign/assets/img/g-glass-dark-960.webp" srcset="/starbuds-shop-redesign/assets/img/g-glass-dark-640.webp 640w, /starbuds-shop-redesign/assets/img/g-glass-dark-960.webp 960w, /starbuds-shop-redesign/assets/img/g-glass-dark-1440.webp 1440w, /starbuds-shop-redesign/assets/img/g-glass-dark-1920.webp 1920w, /starbuds-shop-redesign/assets/img/g-glass-dark-2560.webp 2560w" sizes="100vw" width="2752" height="1536" alt="" decoding="async" loading="lazy" data-ai="generated">
+    <div class="leather-bg"></div>
+    <img class="cover rw-tiers__smoke" src="/starbuds-shop-redesign/assets/img/g-smoke-960.webp" srcset="/starbuds-shop-redesign/assets/img/g-smoke-640.webp 640w, /starbuds-shop-redesign/assets/img/g-smoke-960.webp 960w, /starbuds-shop-redesign/assets/img/g-smoke-1440.webp 1440w, /starbuds-shop-redesign/assets/img/g-smoke-1920.webp 1920w, /starbuds-shop-redesign/assets/img/g-smoke-2560.webp 2560w" sizes="100vw" width="2752" height="1536" alt="" decoding="async" loading="lazy" data-ai="generated">
     <div class="rw-tiers__shade"></div>
-    <span class="leaves leaves--dark rw-tiers__leaves" aria-hidden="true"></span>
-    <span class="halftone halftone--lime halftone--br" aria-hidden="true"></span>
+    <span class="leaves leaves--gold rw-tiers__leaves" aria-hidden="true"></span>
+    <span class="halftone halftone--green halftone--br" aria-hidden="true"></span>
+    <span class="grain" aria-hidden="true"></span>
   </div>
+  <div class="seam seam--stitch seam--gold" aria-hidden="true"><svg class="seam__svg" viewBox="0 0 1440 24" preserveAspectRatio="none" focusable="false"><line class="seam__welt" x1="0" y1="1" x2="1440" y2="1"/><line class="seam__thread" x1="0" y1="12" x2="1440" y2="12"/></svg></div>
   <div class="wrap">
     <div class="rw-head rw-head--split">
       <div>
-        <p class="eyebrow" data-reveal="up"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> By state</p>
-        <h2 id="rw-tiers-title" class="h-display" data-reveal="up" style="--i:1">Points <span class="rw-pop">&amp;</span> rewards</h2>
+        <p class="rw-head__eyebrow" data-reveal="fade"><span class="patch patch--gold"><svg class="icon patch__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span class="patch__text">By state</span></span></p>
+        <h2 id="rw-tiers-title" class="h-display rw-head__title" data-reveal="up" style="--i:1">Points <span class="rw-amp">&amp;</span> rewards</h2>
       </div>
       <div class="tabs rw-tabs" role="tablist" aria-label="Rewards by state" data-tabs data-reveal="up" style="--i:2">
-        <button type="button" class="tab" role="tab" id="rw-tab-MS" aria-controls="rw-panel-MS" aria-selected="true" data-tab-state="MS">MS<span class="sr-only"> Mississippi</span></button><button type="button" class="tab" role="tab" id="rw-tab-OK" aria-controls="rw-panel-OK" aria-selected="false" data-tab-state="OK" tabindex="-1">OK<span class="sr-only"> Oklahoma</span></button><button type="button" class="tab" role="tab" id="rw-tab-MD" aria-controls="rw-panel-MD" aria-selected="false" data-tab-state="MD" tabindex="-1">MD<span class="sr-only"> Maryland</span></button><button type="button" class="tab" role="tab" id="rw-tab-NY" aria-controls="rw-panel-NY" aria-selected="false" data-tab-state="NY" tabindex="-1">NY<span class="sr-only"> New York</span></button>
+        <button type="button" class="tab rw-tab" role="tab" id="rw-tab-MS" aria-controls="rw-panel-MS" aria-selected="true" data-tab-state="MS"><span class="rw-tab__code">MS</span><span class="rw-tab__name">Mississippi</span></button><button type="button" class="tab rw-tab" role="tab" id="rw-tab-OK" aria-controls="rw-panel-OK" aria-selected="false" data-tab-state="OK" tabindex="-1"><span class="rw-tab__code">OK</span><span class="rw-tab__name">Oklahoma</span></button><button type="button" class="tab rw-tab" role="tab" id="rw-tab-MD" aria-controls="rw-panel-MD" aria-selected="false" data-tab-state="MD" tabindex="-1"><span class="rw-tab__code">MD</span><span class="rw-tab__name">Maryland</span></button><button type="button" class="tab rw-tab" role="tab" id="rw-tab-NY" aria-controls="rw-panel-NY" aria-selected="false" data-tab-state="NY" tabindex="-1"><span class="rw-tab__code">NY</span><span class="rw-tab__name">New York</span></button>
       </div>
     </div>
     
     <div class="rw-panel" role="tabpanel" id="rw-panel-MS" aria-labelledby="rw-tab-MS">
-      <div class="glass glass--dark glass--pop rw-panel__glass">
+      <div class="glass glass--stitch stitch stitch--draw rw-panel__glass">
         <div class="rw-panel__copy">
-          <p class="rw-panel__state">Mississippi</p>
-          <h3 class="h-display rw-panel__title">MISSISSIPPI HIGHER REWARDS</h3>
+          <p class="rw-panel__state" aria-hidden="true">Mississippi</p>
+          <h3 class="rw-panel__title">MISSISSIPPI HIGHER REWARDS</h3>
           <p class="rw-panel__intro">Members receive up to <mark class="dl-hl">10%</mark> back in rewards, free stuff and exclusive deals. Sign up now and start earning points on your next purchase.</p>
           <p class="rw-panel__outro">Simply present your custom reward wallet with each visit and automatically earn points towards discounts and specials on your favorite Star Buds products. Best of all, it&#39;s absolutely free to sign up!</p>
-          <div class="btn-row"><a class="btn btn--pop" href="https://lab.alpineiq.com/join/c/1130/3215" target="_blank" rel="noopener"><span class="btn__label">Join in Mississippi</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></div>
+          <div class="btn-row"><a class="btn btn--gold" href="https://lab.alpineiq.com/join/c/1130/3215" target="_blank" rel="noopener"><span class="btn__label">Join in Mississippi</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></div>
         </div>
         <ol class="rw-ladder" role="list" style="--n:4">
           <li class="rw-tier" style="--k:0">
-            <span class="rw-tier__pts">100 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$5</mark> OFF</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">100</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$5</mark> OFF</span></span>
           </li>
           <li class="rw-tier" style="--k:1">
-            <span class="rw-tier__pts">250 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$20</mark> OFF</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">250</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$20</mark> OFF</span></span>
           </li>
           <li class="rw-tier" style="--k:2">
-            <span class="rw-tier__pts">500 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$50</mark> OFF + <mark class="dl-hl">$20</mark> ACCESSORY</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">500</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$50</mark> OFF + <mark class="dl-hl">$20</mark> ACCESSORY</span></span>
           </li>
           <li class="rw-tier" style="--k:3">
-            <span class="rw-tier__pts">1000 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$100</mark> OFF + <mark class="dl-hl">$5</mark> EIGHTH</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">1000</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$100</mark> OFF + <mark class="dl-hl">$5</mark> EIGHTH</span></span>
           </li>
         </ol></div>
     </div>
     <div class="rw-panel" role="tabpanel" id="rw-panel-OK" aria-labelledby="rw-tab-OK" hidden>
-      <div class="glass glass--dark glass--pop rw-panel__glass">
+      <div class="glass glass--stitch stitch stitch--draw rw-panel__glass">
         <div class="rw-panel__copy">
-          <p class="rw-panel__state">Oklahoma</p>
-          <h3 class="h-display rw-panel__title">OKLAHOMA HIGHER REWARDS</h3>
+          <p class="rw-panel__state" aria-hidden="true">Oklahoma</p>
+          <h3 class="rw-panel__title">OKLAHOMA HIGHER REWARDS</h3>
           <p class="rw-panel__intro">Members receive over <mark class="dl-hl">10%</mark> back in rewards, free stuff and exclusive deals. Sign up now and start earning points on your next purchase.</p>
           <p class="rw-panel__outro">Simply present your rewards wallet with each visit and automatically earn points towards discounts and specials on your favorite Star Buds products. Best of all, it&#39;s absolutely free to sign up!</p>
-          <div class="btn-row"><a class="btn btn--pop" href="https://lab.alpineiq.com/joinMembers/1130" target="_blank" rel="noopener"><span class="btn__label">Join in Oklahoma</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></div>
+          <div class="btn-row"><a class="btn btn--gold" href="https://lab.alpineiq.com/joinMembers/1130" target="_blank" rel="noopener"><span class="btn__label">Join in Oklahoma</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></div>
         </div>
-        <ol class="rw-ladder rw-ladder--many" role="list" style="--n:6">
+        <ol class="rw-ladder" role="list" style="--n:6">
           <li class="rw-tier" style="--k:0">
-            <span class="rw-tier__pts">100 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$5</mark> OFF</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">100</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$5</mark> OFF</span></span>
           </li>
           <li class="rw-tier" style="--k:1">
-            <span class="rw-tier__pts">250 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$10</mark> OFF + FREE JOINT</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">250</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$10</mark> OFF + FREE JOINT</span></span>
           </li>
           <li class="rw-tier" style="--k:2">
-            <span class="rw-tier__pts">500 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$30</mark> OFF + <mark class="dl-hl">$10</mark> FEATURED ITEM</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">500</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$30</mark> OFF + <mark class="dl-hl">$10</mark> FEATURED ITEM</span></span>
           </li>
           <li class="rw-tier" style="--k:3">
-            <span class="rw-tier__pts">750 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$50</mark> OFF + FREE ACCESSORY</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">750</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$50</mark> OFF + FREE ACCESSORY</span></span>
           </li>
           <li class="rw-tier" style="--k:4">
-            <span class="rw-tier__pts">1,000 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$70</mark> OFF + <mark class="dl-hl">$10</mark> PREMIUM ITEM</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">1,000</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$70</mark> OFF + <mark class="dl-hl">$10</mark> PREMIUM ITEM</span></span>
           </li>
           <li class="rw-tier" style="--k:5">
-            <span class="rw-tier__pts">2,000 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$150</mark> OFF + <mark class="dl-hl">$20</mark> QUARTER</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">2,000</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$150</mark> OFF + <mark class="dl-hl">$20</mark> QUARTER</span></span>
           </li>
         </ol></div>
     </div>
     <div class="rw-panel" role="tabpanel" id="rw-panel-MD" aria-labelledby="rw-tab-MD" hidden>
-      <div class="glass glass--dark glass--pop rw-panel__glass">
+      <div class="glass glass--stitch stitch stitch--draw rw-panel__glass">
         <div class="rw-panel__copy">
-          <p class="rw-panel__state">Maryland</p>
-          <h3 class="h-display rw-panel__title">MARYLAND HIGHER REWARDS</h3>
+          <p class="rw-panel__state" aria-hidden="true">Maryland</p>
+          <h3 class="rw-panel__title">MARYLAND HIGHER REWARDS</h3>
           <p class="rw-panel__intro">Members receive over <mark class="dl-hl">10%</mark> back in rewards, free stuff and exclusive deals. Sign up now and start earning points on your next purchase.</p>
           <p class="rw-panel__outro">Simply present your custom reward wallet with each visit and automatically earn points towards discounts and specials on your favorite Star Buds products. Best of all, it&#39;s absolutely free to sign up!</p>
-          <div class="btn-row"><a class="btn btn--pop" href="https://lab.alpineiq.com/joinMembers/1130" target="_blank" rel="noopener"><span class="btn__label">Join in Maryland</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></div>
+          <div class="btn-row"><a class="btn btn--gold" href="https://lab.alpineiq.com/joinMembers/1130" target="_blank" rel="noopener"><span class="btn__label">Join in Maryland</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></div>
         </div>
-        <ol class="rw-ladder rw-ladder--many" role="list" style="--n:5">
+        <ol class="rw-ladder" role="list" style="--n:5">
           <li class="rw-tier" style="--k:0">
-            <span class="rw-tier__pts">100 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$5</mark> OFF</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">100</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$5</mark> OFF</span></span>
           </li>
           <li class="rw-tier" style="--k:1">
-            <span class="rw-tier__pts">200 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$10</mark> OFF</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">200</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$10</mark> OFF</span></span>
           </li>
           <li class="rw-tier" style="--k:2">
-            <span class="rw-tier__pts">500 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$50</mark> OFF</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">500</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$50</mark> OFF</span></span>
           </li>
           <li class="rw-tier" style="--k:3">
-            <span class="rw-tier__pts">1,000 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$100</mark> OFF</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">1,000</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$100</mark> OFF</span></span>
           </li>
           <li class="rw-tier" style="--k:4">
-            <span class="rw-tier__pts">2,000 POINTS</span>
-            <span class="rw-tier__reward"><mark class="dl-hl">$250</mark> OFF</span>
+            <span class="rw-tier__badge"><span class="rw-tier__num numeral">2,000</span> <span class="rw-tier__unit">POINTS</span></span>
+            <span class="rw-tier__reward"><span><mark class="dl-hl">$250</mark> OFF</span></span>
           </li>
         </ol></div>
     </div>
     <div class="rw-panel" role="tabpanel" id="rw-panel-NY" aria-labelledby="rw-tab-NY" hidden>
-      <div class="glass glass--dark glass--pop rw-panel__glass rw-panel__glass--solo">
+      <div class="glass glass--stitch stitch stitch--draw rw-panel__glass rw-panel__glass--solo">
         <div class="rw-panel__copy">
+          <h3 class="rw-panel__state">New York</h3>
           
-          <h3 class="h-display rw-panel__title">NEW YORK</h3>
           
-          
-          <div class="btn-row"><a class="btn btn--pop" href="https://lab.alpineiq.com/join/c/1130/101717?storeID=41" target="_blank" rel="noopener"><span class="btn__label">Join in New York</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></div>
+          <div class="btn-row"><a class="btn btn--gold" href="https://lab.alpineiq.com/join/c/1130/101717?storeID=41" target="_blank" rel="noopener"><span class="btn__label">Join in New York</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></div>
         </div>
         </div>
     </div>
     <noscript><style>.rw-panel[hidden]{display:block!important;margin-top:28px}</style></noscript>
   </div>
-  <span class="cutout rw-tiers__tincture" data-depth="0.14" style="--rot:10deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/cut-tincture-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-tincture-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-tincture-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-tincture-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-tincture-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-tincture-1400.webp 1400w" sizes="(max-width: 700px) 26vw, 200px" width="1792" height="2368" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
-  <svg class="seam seam--zig seam--bottom" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true" focusable="false" style="color:var(--paper)"><path d="M0 64 V40 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 V64z" fill="currentColor"/></svg>
+  <span class="cutout rw-tiers__tincture" data-depth="0.14" style="--rot:10deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/cut-tincture-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-tincture-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-tincture-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-tincture-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-tincture-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-tincture-1400.webp 1400w" sizes="(max-width: 700px) 26vw, 190px" width="1792" height="2368" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
 </section>
 
-<section class="section rw-apps" aria-labelledby="rw-apps-title">
-  <div class="plane-back"><span class="leaves leaves--light" aria-hidden="true"></span><span class="halftone halftone--pink halftone--tl" aria-hidden="true"></span><span class="blob blob--yellow rw-apps__blob"></span></div>
+<section class="section section--parchment rw-apps" aria-labelledby="rw-apps-title">
+  <div class="plane-back"><span class="leaves leaves--light" aria-hidden="true"></span><span class="halftone halftone--ink halftone--tl" aria-hidden="true"></span><span class="grain dl-grain-bone" aria-hidden="true"></span></div>
+  <div class="seam seam--double seam--gold" aria-hidden="true"><svg class="seam__svg" viewBox="0 0 1440 24" preserveAspectRatio="none" focusable="false"><line class="seam__welt" x1="0" y1="1" x2="1440" y2="1"/><line class="seam__thread" x1="0" y1="7" x2="1440" y2="7"/><line class="seam__thread" x1="0" y1="17" x2="1440" y2="17"/></svg></div>
   <div class="wrap rw-apps__grid">
-    <div class="rw-apps__panel halftone-host" data-reveal="up">
-      <span class="halftone halftone--pink halftone--full rw-apps__dots" aria-hidden="true"></span>
-      <p class="eyebrow"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg> Get the app</p>
+    <div class="rw-plaque" aria-hidden="true" data-reveal="left">
+      <div class="rw-plaque__plate">
+        <span class="rw-plaque__stitch stitch stitch--draw"></span>
+        <span class="rw-plaque__rivet rw-plaque__rivet--tl"></span><span class="rw-plaque__rivet rw-plaque__rivet--tr"></span><span class="rw-plaque__rivet rw-plaque__rivet--bl"></span><span class="rw-plaque__rivet rw-plaque__rivet--br"></span>
+        <img class="rw-plaque__star" src="/starbuds-shop-redesign/assets/brand/star-on-dark.png" width="256" height="256" alt="" loading="lazy" decoding="async">
+        <span class="rw-plaque__name">Higher Rewards</span>
+        <svg class="pinstripe pinstripe--gold rw-plaque__rule" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg>
+        <span class="rw-plaque__sub">Higher Rewards Loyalty Program</span>
+      </div>
+      <span class="cutout rw-plaque__vape" data-depth="0.1" style="--rot:18deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/cut-vape-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-vape-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-vape-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-vape-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-vape-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-vape-1400.webp 1400w" sizes="(max-width: 700px) 22vw, 150px" width="1792" height="2368" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
+    </div>
+    <div class="rw-apps__copy" data-reveal="right">
+      <p class="rw-head__eyebrow"><span class="patch patch--leather"><svg class="icon patch__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg><span class="patch__text">Get the app</span></span></p>
       <h2 id="rw-apps-title" class="h-display rw-apps__title">App Store &amp; Google Play</h2>
       <div class="btn-row">
-        <a class="btn btn--dark" href="https://apps.apple.com/us/app/star-buds-dispensary/id1589380634" target="_blank" rel="noopener"><span class="btn__label">App Store</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
-        <a class="btn btn--dark" href="https://play.google.com/store/apps/details?id=com.starbudsdispensary.wallet" target="_blank" rel="noopener"><span class="btn__label">Google Play</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        <a class="btn btn--dark" href="https://apps.apple.com/us/app/star-buds-dispensary/id1589380634" target="_blank" rel="noopener"><span class="btn__label">App Store</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        <a class="btn btn--dark" href="https://play.google.com/store/apps/details?id=com.starbudsdispensary.wallet" target="_blank" rel="noopener"><span class="btn__label">Google Play</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
       </div>
-      <span class="cutout rw-apps__vape" data-depth="0.1" style="--rot:18deg;" aria-hidden="true"><img class="cutout__img float float--fast" src="/starbuds-shop-redesign/assets/img/cut-vape-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-vape-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-vape-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-vape-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-vape-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-vape-1400.webp 1400w" sizes="(max-width: 700px) 22vw, 160px" width="1792" height="2368" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
-    </div>
-    <div class="glass glass--pop rw-apps__terms" data-reveal="up" style="--i:1">
-      <p class="eyebrow"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg> Terms</p>
-      <p class="h-display h-sub rw-apps__terms-title">Higher Rewards Loyalty Program</p>
+      <hr class="rule-stitch">
+      <p class="rw-apps__terms-title"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg> Terms</p>
       <div class="rw-apps__links">
-        <a class="link-arrow" href="https://www.starbuds.us/hr-tc" target="_blank" rel="noopener">Terms and conditions<svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
-        <a class="link-arrow" href="https://lab.alpineiq.com/wallet/1130" target="_blank" rel="noopener">Log in<svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
-        <a class="link-arrow" href="/starbuds-shop-redesign/deals/">Deals<svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
-      </div></div>
+        <a class="link-arrow" href="https://www.starbuds.us/hr-tc" target="_blank" rel="noopener">Terms and conditions<svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        <a class="link-arrow" href="https://lab.alpineiq.com/wallet/1130" target="_blank" rel="noopener">Log in<svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        <a class="link-arrow" href="/starbuds-shop-redesign/deals/">Deals<svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
   </div>
 </section>
   </main>
   
   <footer class="site-footer">
-    <span class="leaves leaves--dark site-footer__leaves" aria-hidden="true"></span>
-    <span class="halftone halftone--lime halftone--tr" aria-hidden="true"></span>
+    <span class="leaves leaves--gold site-footer__leaves" aria-hidden="true"></span>
+    <span class="grain" aria-hidden="true"></span>
+    <div class="seam seam--double seam--gold site-footer__seam" aria-hidden="true"><svg class="seam__svg" viewBox="0 0 1440 24" preserveAspectRatio="none" focusable="false"><line class="seam__welt" x1="0" y1="1" x2="1440" y2="1"/><line class="seam__thread" x1="0" y1="7" x2="1440" y2="7"/><line class="seam__thread" x1="0" y1="17" x2="1440" y2="17"/></svg></div>
     <div class="site-footer__inner">
       <div class="footer-brand">
         <a href="/starbuds-shop-redesign/" class="footer-brand__logo"><img src="/starbuds-shop-redesign/assets/brand/logo-on-dark.png" width="1417" height="430" alt="Star Buds" loading="lazy" decoding="async"></a>
-        <span class="sticker sticker--yellow footer-brand__est" style="--tilt:-5deg">EST. 2013</span>
-        <p class="footer-brand__store" data-store-current hidden><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Shopping at <strong data-store-label></strong> <a href="/starbuds-shop-redesign/stores/" data-store-link>View store</a></p>
+        <p class="footer-brand__tag">Shining High Above the Rest</p>
+        <p class="footer-brand__store" data-store-current hidden><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Shopping at <strong data-store-label></strong> <a href="/starbuds-shop-redesign/stores/" data-store-link>View store</a></p>
         <div class="footer-apps">
           <p class="footer__heading">Get the app</p>
-          <a class="btn btn--light btn--sm" href="https://apps.apple.com/us/app/star-buds-dispensary/id1589380634" rel="noopener" target="_blank"><span class="btn__label">App Store</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></a>
-          <a class="btn btn--light btn--sm" href="https://play.google.com/store/apps/details?id=com.starbudsdispensary.wallet" rel="noopener" target="_blank"><span class="btn__label">Google Play</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></a>
+          <a class="btn btn--ghost btn--sm" href="https://apps.apple.com/us/app/star-buds-dispensary/id1589380634" rel="noopener" target="_blank"><span class="btn__label">App Store</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></a>
+          <a class="btn btn--ghost btn--sm" href="https://play.google.com/store/apps/details?id=com.starbudsdispensary.wallet" rel="noopener" target="_blank"><span class="btn__label">Google Play</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></a>
         </div>
       </div>
       <nav class="footer-col" aria-label="Quick links">
@@ -379,6 +401,7 @@
         <div class="footer-state"><p class="footer-state__name">Mississippi</p><ul role="list"><li><a href="/starbuds-shop-redesign/stores/greenwood-dispensary/">Greenwood</a></li><li><a href="/starbuds-shop-redesign/stores/natchez-dispensary/">Natchez</a></li><li><a href="/starbuds-shop-redesign/stores/ocean-springs-dispensary/">Ocean Springs</a></li><li><a href="/starbuds-shop-redesign/stores/pearl/">Pearl</a></li><li><a href="/starbuds-shop-redesign/stores/oxford-dispensary/">Oxford</a></li><li><a href="/starbuds-shop-redesign/stores/tupelo-saltillo-dispensary/">Tupelo</a></li></ul></div><div class="footer-state"><p class="footer-state__name">Oklahoma</p><ul role="list"><li><a href="/starbuds-shop-redesign/stores/lawton-dispensary/">Lawton</a></li><li><a href="/starbuds-shop-redesign/stores/altus-dispensary/">Altus</a></li><li><a href="/starbuds-shop-redesign/stores/ardmore-dispensary/">Ardmore</a></li><li><a href="/starbuds-shop-redesign/stores/chickasha-dispensary/">Chickasha</a></li></ul></div><div class="footer-state"><p class="footer-state__name">Maryland</p><ul role="list"><li><a href="/starbuds-shop-redesign/stores/baltimore-dispensary/">Baltimore</a></li></ul></div><div class="footer-state"><p class="footer-state__name">New York</p><ul role="list"><li><a href="/starbuds-shop-redesign/stores/buffalo-dispensary/">Buffalo</a></li></ul></div>
       </div>
     </div>
+    <div class="site-footer__mark" aria-hidden="true"><svg class="pinstripe pinstripe--gold site-footer__flourish" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg><span class="site-footer__est">Est. 2013</span><svg class="pinstripe pinstripe--gold site-footer__flourish" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg></div>
     <div class="site-footer__legal">
       <p class="site-footer__fine">Star Buds · EST. 2013 · Redesign concept: menus and checkout open the live Star Buds shop. Product and backdrop imagery on this site is AI-generated and illustrative.</p>
       <ul class="site-footer__legal-links" role="list"><li><a href="https://shop.starbuds.us/eula/" rel="noopener">EULA</a></li><li><a href="https://shop.starbuds.us/privacy-policy/" rel="noopener">Privacy Policy</a></li><li><a href="https://shop.starbuds.us/terms-of-use/" rel="noopener">Terms Of Use</a></li></ul>
@@ -386,14 +409,14 @@
   </footer>
   
   <div class="agegate" data-agegate role="dialog" aria-modal="true" aria-labelledby="agegate-title" aria-describedby="agegate-body">
-    <div class="agegate__veil"><span class="halftone halftone--yellow halftone--tl" aria-hidden="true"></span><span class="halftone halftone--pink halftone--br" aria-hidden="true"></span></div>
-    <div class="agegate__panel glass glass--pop">
-      <span class="starburst starburst--yellow starburst--spin agegate__burst"><svg class="starburst__svg" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon class="starburst__shadow" points="100.0,2.0 111.9,24.9 128.4,12.5 135.9,29.6 157.6,20.7 153.7,46.3 174.4,45.9 167.7,65.5 193.2,69.7 178.0,87.6 192.0,100.0 175.1,111.9 193.2,130.3 167.7,134.5 174.4,154.1 155.9,155.9 157.6,179.3 134.5,167.7 128.4,187.5 111.9,175.1 100.0,198.0 87.6,178.0 71.6,187.5 65.5,167.7 42.4,179.3 46.3,153.7 25.6,154.1 29.6,135.9 6.8,130.3 24.9,111.9 8.0,100.0 24.9,88.1 6.8,69.7 29.6,64.1 25.6,45.9 46.3,46.3 42.4,20.7 65.5,32.3 71.6,12.5 87.6,22.0" transform="translate(7 7)"/><polygon class="starburst__shape" points="100.0,2.0 111.9,24.9 128.4,12.5 135.9,29.6 157.6,20.7 153.7,46.3 174.4,45.9 167.7,65.5 193.2,69.7 178.0,87.6 192.0,100.0 175.1,111.9 193.2,130.3 167.7,134.5 174.4,154.1 155.9,155.9 157.6,179.3 134.5,167.7 128.4,187.5 111.9,175.1 100.0,198.0 87.6,178.0 71.6,187.5 65.5,167.7 42.4,179.3 46.3,153.7 25.6,154.1 29.6,135.9 6.8,130.3 24.9,111.9 8.0,100.0 24.9,88.1 6.8,69.7 29.6,64.1 25.6,45.9 46.3,46.3 42.4,20.7 65.5,32.3 71.6,12.5 87.6,22.0"/></svg><span class="starburst__label">21+</span></span>
-      <img class="agegate__logo" src="/starbuds-shop-redesign/assets/brand/logo.png" width="1417" height="430" alt="Star Buds">
+    <div class="agegate__veil"><span class="leaves leaves--gold agegate__leaves" aria-hidden="true"></span><span class="halftone halftone--gold halftone--full" aria-hidden="true"></span><span class="grain" aria-hidden="true"></span></div>
+    <div class="agegate__panel glass glass--stitch stitch is-in">
+      <svg class="emblem sb-rocker--gold agegate__emblem" viewBox="-200 -200 400 400" role="img" aria-label="Star Buds - Est. 2013" focusable="false"><defs><pattern id="tw4y" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect class="tw1" width="5" height="5"/><rect class="tw2" width="2.2" height="5"/></pattern><pattern id="tw50" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect class="tw1" width="5" height="5"/><rect class="tw2" width="2.2" height="5"/></pattern><pattern id="tw51" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect class="tw1" width="5" height="5"/><rect class="tw2" width="2.2" height="5"/></pattern></defs><g class="emblem__top"><path class="sb-rocker__band" d="M-167.8 -89.2A190 190 0 0 1 167.8 -89.2L116.5 -62A132 132 0 0 0 -116.5 -62Z" fill="url(#tw4y)"/><path class="sb-rocker__stitch" d="M-158.6 -93.4A184 184 0 0 1 158.6 -93.4L118.9 -70A138 138 0 0 0 -118.9 -70Z"/><path id="rk4x" d="M-143.7 -42.7A149.9 149.9 0 0 1 143.7 -42.7" fill="none" stroke="none"/><text class="sb-rocker__text" font-size="37.1"><textPath href="#rk4x" startOffset="50%" text-anchor="middle">Star Buds</textPath></text></g><g class="emblem__centre"><circle class="emblem__disc" r="112" fill="url(#tw51)"/><circle class="emblem__ring" r="103"/><circle class="emblem__inner" r="92"/><image href="/starbuds-shop-redesign/assets/brand/star-on-dark.png" x="-74" y="-78" width="148" height="148" preserveAspectRatio="xMidYMid meet"/></g><g class="emblem__bottom"><path class="sb-rocker__band" d="M-167.8 89.2A190 190 0 0 0 167.8 89.2L116.5 62A132 132 0 0 1 -116.5 62Z" fill="url(#tw50)"/><path class="sb-rocker__stitch" d="M-158.6 93.4A184 184 0 0 0 158.6 93.4L118.9 70A138 138 0 0 1 -118.9 70Z"/><path id="rk4z" d="M-165 49A172.1 172.1 0 0 0 165 49" fill="none" stroke="none"/><text class="sb-rocker__text" font-size="37.1"><textPath href="#rk4z" startOffset="50%" text-anchor="middle">Est. 2013</textPath></text></g></svg>
       <p class="agegate__title" id="agegate-title">Are you 21 years of age or older?</p>
+      <svg class="pinstripe pinstripe--gold agegate__rule" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg>
       <p class="agegate__body" id="agegate-body">You must be 21 years of age or older or 18+ with a valid medical card to enter this site.</p>
       <div class="agegate__actions">
-        <button type="button" class="btn btn--primary" data-age-yes=""><span class="btn__label">Yes</span></button>
+        <button type="button" class="btn btn--gold" data-age-yes=""><span class="btn__label">Yes</span></button>
         <button type="button" class="btn btn--ghost" data-age-no=""><span class="btn__label">No</span></button>
       </div>
       <p class="agegate__no" data-age-msg hidden role="status">Sorry, you can't enter this site.</p>

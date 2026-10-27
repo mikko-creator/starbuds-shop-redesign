@@ -1,33 +1,46 @@
-/* motion.css - reveals, float, spin, marquee, reduced motion (FOUNDATION).
-   Reveals apply ONLY under html.js; they animate the individual opacity/translate/scale/clip-path properties, never
-   `transform`, so hover and tilt transforms keep working. Failsafe: html.reveal-all (set by the head script 2.5 s after
-   load when site.js has not booted) shows everything; site.js reveals anything already above or in the viewport. */
+/* motion.css - Iron Star motion (FOUNDATION): weighty reveals, stitch draw-in, one-time chrome sheen, heavy float,
+   strap marquee, reduced motion.
+   Reveals apply ONLY under html.js; they animate the individual opacity/translate/scale/clip-path/filter properties,
+   never `transform`, so hover and tilt transforms keep working. The blur clears to `filter: none` (a lingering filter
+   would disable backdrop-filter inside the panel). Failsafe: html.reveal-all (set by the head script 2.5 s after load
+   when site.js has not booted) shows everything; site.js reveals anything already above or in the viewport. */
 html.js [data-reveal] {
-  transition: opacity .8s var(--ease-out), translate .8s var(--ease-out), scale .8s var(--ease-out), clip-path 1s var(--ease-out);
-  transition-delay: calc(var(--i, 0) * 90ms);
+  transition: opacity 1.1s var(--ease-heavy), translate 1.2s var(--ease-heavy), scale 1.2s var(--ease-heavy), clip-path 1.3s var(--ease-heavy), filter 1s var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 110ms);
 }
-html.js [data-reveal="up"]:not(.is-in) { opacity: 0; translate: 0 34px; }
-html.js [data-reveal="left"]:not(.is-in) { opacity: 0; translate: -44px 0; }
-html.js [data-reveal="right"]:not(.is-in) { opacity: 0; translate: 44px 0; }
-html.js [data-reveal="scale"]:not(.is-in) { opacity: 0; scale: .86; }
+html.js [data-reveal="up"]:not(.is-in) { opacity: 0; translate: 0 42px; filter: blur(6px); }
+html.js [data-reveal="fade"]:not(.is-in) { opacity: 0; filter: blur(4px); }
+html.js [data-reveal="left"]:not(.is-in) { opacity: 0; translate: -48px 0; filter: blur(6px); }
+html.js [data-reveal="right"]:not(.is-in) { opacity: 0; translate: 48px 0; filter: blur(6px); }
+html.js [data-reveal="scale"]:not(.is-in) { opacity: 0; scale: .94; filter: blur(6px); }
 html.js [data-reveal="wipe"]:not(.is-in) { clip-path: inset(0 100% 0 0); }
 html.js [data-reveal="wipe"] { clip-path: inset(0 0 0 0); }
-html.js [data-reveal="pop"]:not(.is-in) { opacity: 0; scale: .4; }
-html.js [data-reveal="pop"] { transition-timing-function: var(--ease-pop); }
 /* staggered children: put data-stagger on the parent; site.js sets --i on each child */
-html.js [data-stagger] > * { transition: opacity .7s var(--ease-out), translate .7s var(--ease-out); transition-delay: calc(var(--i, 0) * 80ms); }
-html.js [data-stagger]:not(.is-in) > * { opacity: 0; translate: 0 26px; }
-html.reveal-all [data-reveal], html.reveal-all [data-stagger] > * { opacity: 1 !important; translate: none !important; scale: none !important; clip-path: none !important; }
+html.js [data-stagger] > * { transition: opacity 1s var(--ease-heavy), translate 1.1s var(--ease-heavy), filter .9s var(--ease-out); transition-delay: calc(var(--i, 0) * 90ms); }
+html.js [data-stagger]:not(.is-in) > * { opacity: 0; translate: 0 34px; filter: blur(5px); }
+html.reveal-all [data-reveal], html.reveal-all [data-stagger] > * { opacity: 1 !important; translate: none !important; scale: none !important; clip-path: none !important; filter: none !important; }
 
-@keyframes sb-float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(1.6deg); } }
-@keyframes sb-spin { to { rotate: 360deg; } }
+/* one-time metal sheen across a heading when it scrolls in: add class "sheen" (site.js adds .is-in once).
+   The heading keeps its own colour (--sheen-base, default currentColor) and a highlight band sweeps through it. */
+.sheen {
+  --sheen-base: currentColor; --sheen-hi: #FFFFFF;
+  background-image: linear-gradient(100deg, var(--sheen-base) 0 40%, var(--sheen-hi) 50%, var(--sheen-base) 60% 100%);
+  background-size: 260% 100%; background-position: 100% 0; background-repeat: no-repeat;
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+html.js .sheen.is-in { animation: sb-sheen 1.9s var(--ease-out) .35s both; }
+@keyframes sb-sheen { from { background-position: 100% 0; } to { background-position: 0% 0; } }
+
+@keyframes sb-float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-9px) rotate(.7deg); } }
 @keyframes sb-marquee { to { transform: translateX(-50%); } }
-@keyframes sb-wiggle { 0%, 100% { rotate: var(--tilt, -4deg); } 50% { rotate: calc(var(--tilt, -4deg) + 4deg); } }
-.wiggle { animation: sb-wiggle 3.2s ease-in-out infinite; }
+@keyframes sb-spin { to { rotate: 360deg; } }
 
 @media (prefers-reduced-motion: reduce) {
-  html.js [data-reveal], html.js [data-stagger] > * { opacity: 1 !important; translate: none !important; scale: none !important; clip-path: none !important; transition: none !important; }
-  .float--slow, .float--fast, .starburst--spin .starburst__svg, .marquee__track, .wiggle { animation: none !important; }
+  html.js [data-reveal], html.js [data-stagger] > * { opacity: 1 !important; translate: none !important; scale: none !important; clip-path: none !important; filter: none !important; transition: none !important; }
+  html.js .sheen.is-in { animation: none; }
+  html.js .stitch--draw::after { --sweep: 360deg !important; }
+  html.js .seam .seam__svg { clip-path: none !important; }
+  .float--slow, .float--fast, .marquee__track { animation: none !important; }
   .cutout { transform: rotate(var(--rot, 0deg)) !important; }
   [data-tilt] { --rx: 0deg !important; --ry: 0deg !important; }
   .bg-video { display: none; }

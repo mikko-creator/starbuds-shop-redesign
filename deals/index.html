@@ -6,11 +6,13 @@
   <title>Deals | Star Buds</title>
   <meta name="description" content="Get one at Star Buds today and every day. Daily deals by state: Mississippi, Oklahoma, Maryland.">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#11432B">
+  <meta name="theme-color" content="#0B0B0A">
+  <meta name="color-scheme" content="dark">
   <meta property="og:title" content="Deals | Star Buds">
   <meta property="og:description" content="Get one at Star Buds today and every day. Daily deals by state: Mississippi, Oklahoma, Maryland.">
   <link rel="icon" type="image/png" href="/starbuds-shop-redesign/assets/brand/favicon.png">
   <link rel="apple-touch-icon" href="/starbuds-shop-redesign/assets/brand/apple-touch-icon.png">
+  <link rel="preload" href="/starbuds-shop-redesign/assets/fonts/GrenzeGotisch-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/starbuds-shop-redesign/assets/fonts/Oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/starbuds-shop-redesign/assets/fonts/Manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/tokens.css">
@@ -18,34 +20,37 @@
   <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/components.css">
   <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/motion.css">
   <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/home.css">
+  <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/finder.css">
+  <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/faq.css">
   <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/stores.css">
   <link rel="stylesheet" href="/starbuds-shop-redesign/assets/css/content.css">
   <script>(function(d){var h=d.documentElement;h.classList.add('js');try{if(localStorage.getItem('sbshop-age-ok')!=='1')h.classList.add('age-pending')}catch(e){h.classList.add('age-pending')}setTimeout(function(){if(!window.SB_READY)h.classList.add('reveal-all')},2500)})(document);</script>
   <script src="/starbuds-shop-redesign/assets/js/site.js" defer></script>
+  
   
 </head>
 <body class="pg page-deals">
   
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="promo">
-    <a class="promo__link" href="/starbuds-shop-redesign/deals/"><svg class="icon promo__star" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span>Shop Our Special Offers</span><svg class="icon promo__arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+    <a class="promo__link" href="/starbuds-shop-redesign/deals/"><span class="promo__rule" aria-hidden="true"></span><svg class="icon promo__star" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span>Shop Our Special Offers</span><svg class="icon promo__star" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span class="promo__rule" aria-hidden="true"></span></a>
   </div>
   <header class="site-header" data-header>
     <div class="site-header__inner">
       <a class="brand" href="/starbuds-shop-redesign/" aria-label="Star Buds home">
-        <img class="brand__logo" src="/starbuds-shop-redesign/assets/brand/logo.png" width="1417" height="430" alt="Star Buds">
+        <img class="brand__logo" src="/starbuds-shop-redesign/assets/brand/logo-on-dark.png" width="1417" height="430" alt="Star Buds">
       </a>
       <nav class="nav" aria-label="Main">
-        <ul class="nav__list" role="list"><li class="nav__item"><a class="nav__link" href="/starbuds-shop-redesign/#shop">Shop All</a></li><li class="nav__item"><a class="nav__link" href="/starbuds-shop-redesign/deals/" aria-current="page">Deals</a></li><li class="nav__item nav__item--switch"><a class="nav__link" href="/starbuds-shop-redesign/stores/" data-switch-toggle aria-controls="store-switcher" aria-expanded="false" aria-haspopup="true">Locations<svg class="icon nav__chev" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></a></li><li class="nav__item"><a class="nav__link" href="/starbuds-shop-redesign/rewards/">Higher Rewards</a></li></ul>
+        <ul class="nav__list" role="list"><li class="nav__item"><a class="nav__link" href="/starbuds-shop-redesign/#shop">Shop All</a></li><li class="nav__item"><a class="nav__link" href="/starbuds-shop-redesign/deals/" aria-current="page">Deals</a></li><li class="nav__item nav__item--switch"><a class="nav__link" href="/starbuds-shop-redesign/stores/" data-switch-toggle aria-controls="store-switcher" aria-expanded="false" aria-haspopup="true">Locations<svg class="icon nav__chev" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></a></li><li class="nav__item"><a class="nav__link" href="/starbuds-shop-redesign/rewards/">Higher Rewards</a></li></ul>
       </nav>
       <div class="header-actions">
-        <button type="button" class="store-chip" data-switch-toggle aria-controls="store-switcher" aria-expanded="false"><svg class="icon store-chip__pin" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span class="store-chip__text" data-store-label>Choose your location</span><svg class="icon store-chip__chev" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
-        <a class="btn btn--primary btn--sm header-actions__shop" href="/starbuds-shop-redesign/stores/" data-menu-cat=""><span class="btn__label">Shop now</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
+        <button type="button" class="store-chip" data-switch-toggle aria-controls="store-switcher" aria-expanded="false"><svg class="icon store-chip__pin" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span class="store-chip__text" data-store-label>Choose your location</span><svg class="icon store-chip__chev" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+        <a class="btn btn--gold btn--sm header-actions__shop" href="/starbuds-shop-redesign/stores/" data-menu-cat=""><span class="btn__label">Shop now</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
         <button type="button" class="burger" data-drawer-toggle aria-controls="drawer" aria-expanded="false"><span class="sr-only">Menu</span><span class="burger__bars" aria-hidden="true"></span></button>
       </div>
     </div>
     <div class="switcher" id="store-switcher" data-switcher hidden>
-      <div class="switcher__panel glass glass--pop">
+      <div class="switcher__panel glass glass--stitch stitch is-in">
         <div class="switcher__head">
           <p class="switcher__title">Choose your location</p>
           <p class="switcher__current" data-store-current hidden>Shopping at <strong data-store-label></strong></p>
@@ -85,11 +90,12 @@
         </ul>
       </div>
         </div>
-        <div class="switcher__foot"><a class="switcher__all" href="/starbuds-shop-redesign/stores/">All locations<svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+        <div class="switcher__foot"><a class="switcher__all" href="/starbuds-shop-redesign/stores/">All locations<svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
       </div>
     </div>
   </header>
   <div class="drawer" id="drawer" data-drawer hidden>
+    <span class="leaves leaves--gold drawer__leaves" aria-hidden="true"></span>
     <div class="drawer__panel">
       <ul class="drawer__nav" role="list"><li><a class="drawer__link" href="/starbuds-shop-redesign/#shop">Shop All</a></li><li><a class="drawer__link" href="/starbuds-shop-redesign/deals/">Deals</a></li><li><a class="drawer__link" href="/starbuds-shop-redesign/rewards/">Higher Rewards</a></li><li><a class="drawer__link" href="/starbuds-shop-redesign/stores/">Locations</a></li></ul>
       <div class="drawer__stores">
@@ -128,342 +134,370 @@
         </ul>
       </div>
       </div>
-      <a class="btn btn--pop drawer__shop" href="/starbuds-shop-redesign/stores/" data-menu-cat=""><span class="btn__label">Shop now</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
+      <a class="btn btn--gold drawer__shop" href="/starbuds-shop-redesign/stores/" data-menu-cat=""><span class="btn__label">Shop now</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
     </div>
   </div>
   <main id="main" tabindex="-1">
 
-<section class="section dl-hero" aria-labelledby="dl-title">
+<section class="section dl-hero on-dark" aria-labelledby="dl-title">
   <div class="plane-back">
-    <img class="cover dl-hero__bg" src="/starbuds-shop-redesign/assets/img/g-hero-960.webp" srcset="/starbuds-shop-redesign/assets/img/g-hero-640.webp 640w, /starbuds-shop-redesign/assets/img/g-hero-960.webp 960w, /starbuds-shop-redesign/assets/img/g-hero-1440.webp 1440w, /starbuds-shop-redesign/assets/img/g-hero-1920.webp 1920w, /starbuds-shop-redesign/assets/img/g-hero-2560.webp 2560w" sizes="100vw" width="2752" height="1536" alt="" decoding="async" loading="eager" fetchpriority="high" data-ai="generated">
-    <div class="dl-hero__wash"></div>
-    <span class="halftone halftone--yellow halftone--tr dl-hero__dots" aria-hidden="true"></span>
-    <span class="leaves leaves--lime dl-hero__leaves" aria-hidden="true"></span>
+    <div class="leather-bg"></div>
+    <div class="dl-hero__leaves"><span class="leaves leaves--gold" aria-hidden="true"></span></div>
+    <span class="halftone halftone--gold halftone--br dl-hero__dots" aria-hidden="true"></span>
+    <span class="grain" aria-hidden="true"></span>
+    <div class="vignette"></div>
   </div>
   <div class="wrap dl-hero__grid">
-    <div class="glass glass--pop glass--shadow-yellow dl-hero__panel" data-reveal="up">
-      <p class="eyebrow"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg> Shop Our Special Offers</p>
-      <h1 id="dl-title" class="h-display dl-hero__title">We know you love a <span class="dl-hero__pop">great deal.</span></h1>
-      <p class="dl-hero__sub">Get one at Star Buds today and every day.</p>
-      <p class="dl-hero__p">Everyone wants to buy their favorite products for less. That&#39;s why our customers shop at Star Buds - we have a great deal for everyone at all times. Check out what&#39;s available now:</p>
-      <nav class="dl-jump" aria-label="Deals by state">
-        <a class="dl-jump__link" href="#dl-ms" style="--tilt:-3deg"><strong>MS</strong> Mississippi</a><a class="dl-jump__link" href="#dl-ok" style="--tilt:2deg"><strong>OK</strong> Oklahoma</a><a class="dl-jump__link" href="#dl-md" style="--tilt:-2deg"><strong>MD</strong> Maryland</a><a class="dl-jump__link" href="#dl-ny" style="--tilt:3deg"><strong>NY</strong> New York</a>
-      </nav></div>
-    <span class="starburst starburst--coral starburst--spin dl-hero__burst"><svg class="starburst__svg" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon class="starburst__shadow" points="100.0,2.0 111.9,24.9 128.4,12.5 135.9,29.6 157.6,20.7 153.7,46.3 174.4,45.9 167.7,65.5 193.2,69.7 178.0,87.6 192.0,100.0 175.1,111.9 193.2,130.3 167.7,134.5 174.4,154.1 155.9,155.9 157.6,179.3 134.5,167.7 128.4,187.5 111.9,175.1 100.0,198.0 87.6,178.0 71.6,187.5 65.5,167.7 42.4,179.3 46.3,153.7 25.6,154.1 29.6,135.9 6.8,130.3 24.9,111.9 8.0,100.0 24.9,88.1 6.8,69.7 29.6,64.1 25.6,45.9 46.3,46.3 42.4,20.7 65.5,32.3 71.6,12.5 87.6,22.0" transform="translate(7 7)"/><polygon class="starburst__shape" points="100.0,2.0 111.9,24.9 128.4,12.5 135.9,29.6 157.6,20.7 153.7,46.3 174.4,45.9 167.7,65.5 193.2,69.7 178.0,87.6 192.0,100.0 175.1,111.9 193.2,130.3 167.7,134.5 174.4,154.1 155.9,155.9 157.6,179.3 134.5,167.7 128.4,187.5 111.9,175.1 100.0,198.0 87.6,178.0 71.6,187.5 65.5,167.7 42.4,179.3 46.3,153.7 25.6,154.1 29.6,135.9 6.8,130.3 24.9,111.9 8.0,100.0 24.9,88.1 6.8,69.7 29.6,64.1 25.6,45.9 46.3,46.3 42.4,20.7 65.5,32.3 71.6,12.5 87.6,22.0"/></svg><span class="starburst__label">Deals<small>Every day</small></span></span>
+    <div class="dl-hero__copy">
+      <p class="dl-hero__eyebrow" data-reveal="fade"><span class="patch patch--gold"><svg class="icon patch__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg><span class="patch__text">Shop Our Special Offers</span></span></p>
+      <h1 id="dl-title" class="dl-hero__title" data-reveal="up" style="--i:1">We know you love a <span class="dl-hero__accent">great deal.</span></h1>
+      <div class="dl-hero__rule" data-reveal="fade" style="--i:2"><svg class="pinstripe pinstripe--gold" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg></div>
+      <p class="dl-hero__sub" data-reveal="up" style="--i:2">Get one at Star Buds today and every day.</p>
+      <p class="dl-hero__p" data-reveal="up" style="--i:3">Everyone wants to buy their favorite products for less. That&#39;s why our customers shop at Star Buds - we have a great deal for everyone at all times. Check out what&#39;s available now:</p>
+      <nav class="dl-jump" aria-label="Deals by state" data-reveal="up" style="--i:4">
+        <a class="dl-jump__link" href="#dl-ms"><svg class="sb-rocker sb-rocker--gold sb-rocker--top dl-jump__rocker" viewBox="-111.8 -266 223.5 76.5" aria-hidden="true" focusable="false"><defs><pattern id="tw4l" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect class="tw1" width="5" height="5"/><rect class="tw2" width="2.2" height="5"/></pattern></defs><path class="sb-rocker__band" d="M-105.8 -237.5A260 260 0 0 1 105.8 -237.5L87 -195.5A214 214 0 0 0 -87 -195.5Z" fill="url(#tw4l)"/><path class="sb-rocker__stitch" d="M-96.4 -235A254 254 0 0 1 96.4 -235L83.5 -203.5A220 220 0 0 0 -83.5 -203.5Z"/><path id="rk4k" d="M-132.4 -185.9A228.2 228.2 0 0 1 132.4 -185.9" fill="none" stroke="none"/><text class="sb-rocker__text" font-size="29.4"><textPath href="#rk4k" startOffset="50%" text-anchor="middle">Mississippi</textPath></text></svg><span class="sr-only">Mississippi</span></a><a class="dl-jump__link" href="#dl-ok"><svg class="sb-rocker sb-rocker--gold sb-rocker--top dl-jump__rocker" viewBox="-111.8 -266 223.5 76.5" aria-hidden="true" focusable="false"><defs><pattern id="tw4n" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect class="tw1" width="5" height="5"/><rect class="tw2" width="2.2" height="5"/></pattern></defs><path class="sb-rocker__band" d="M-105.8 -237.5A260 260 0 0 1 105.8 -237.5L87 -195.5A214 214 0 0 0 -87 -195.5Z" fill="url(#tw4n)"/><path class="sb-rocker__stitch" d="M-96.4 -235A254 254 0 0 1 96.4 -235L83.5 -203.5A220 220 0 0 0 -83.5 -203.5Z"/><path id="rk4m" d="M-132.4 -185.9A228.2 228.2 0 0 1 132.4 -185.9" fill="none" stroke="none"/><text class="sb-rocker__text" font-size="29.4"><textPath href="#rk4m" startOffset="50%" text-anchor="middle">Oklahoma</textPath></text></svg><span class="sr-only">Oklahoma</span></a><a class="dl-jump__link" href="#dl-md"><svg class="sb-rocker sb-rocker--gold sb-rocker--top dl-jump__rocker" viewBox="-111.8 -266 223.5 76.5" aria-hidden="true" focusable="false"><defs><pattern id="tw4p" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect class="tw1" width="5" height="5"/><rect class="tw2" width="2.2" height="5"/></pattern></defs><path class="sb-rocker__band" d="M-105.8 -237.5A260 260 0 0 1 105.8 -237.5L87 -195.5A214 214 0 0 0 -87 -195.5Z" fill="url(#tw4p)"/><path class="sb-rocker__stitch" d="M-96.4 -235A254 254 0 0 1 96.4 -235L83.5 -203.5A220 220 0 0 0 -83.5 -203.5Z"/><path id="rk4o" d="M-132.4 -185.9A228.2 228.2 0 0 1 132.4 -185.9" fill="none" stroke="none"/><text class="sb-rocker__text" font-size="29.4"><textPath href="#rk4o" startOffset="50%" text-anchor="middle">Maryland</textPath></text></svg><span class="sr-only">Maryland</span></a><a class="dl-jump__link" href="#dl-ny"><svg class="sb-rocker sb-rocker--gold sb-rocker--top dl-jump__rocker" viewBox="-111.8 -266 223.5 76.5" aria-hidden="true" focusable="false"><defs><pattern id="tw4r" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect class="tw1" width="5" height="5"/><rect class="tw2" width="2.2" height="5"/></pattern></defs><path class="sb-rocker__band" d="M-105.8 -237.5A260 260 0 0 1 105.8 -237.5L87 -195.5A214 214 0 0 0 -87 -195.5Z" fill="url(#tw4r)"/><path class="sb-rocker__stitch" d="M-96.4 -235A254 254 0 0 1 96.4 -235L83.5 -203.5A220 220 0 0 0 -83.5 -203.5Z"/><path id="rk4q" d="M-132.4 -185.9A228.2 228.2 0 0 1 132.4 -185.9" fill="none" stroke="none"/><text class="sb-rocker__text" font-size="29.4"><textPath href="#rk4q" startOffset="50%" text-anchor="middle">New York</textPath></text></svg><span class="sr-only">New York</span></a>
+      </nav>
+    </div>
+    <div class="dl-hero__art" aria-hidden="true">
+      <div class="dl-sheet" data-depth="0.05">
+        <span class="halftone halftone--red halftone--full dl-sheet__dots" aria-hidden="true"></span>
+        <span class="dl-sheet__corner dl-sheet__corner--tl"></span><span class="dl-sheet__corner dl-sheet__corner--br"></span>
+        <span class="cutout cutout--patch dl-sheet__flash" style="--rot:0deg;" aria-hidden="true"><img class="cutout__img" src="/starbuds-shop-redesign/assets/img/flash-bud-960.webp" srcset="/starbuds-shop-redesign/assets/img/flash-bud-240.webp 240w, /starbuds-shop-redesign/assets/img/flash-bud-400.webp 400w, /starbuds-shop-redesign/assets/img/flash-bud-640.webp 640w, /starbuds-shop-redesign/assets/img/flash-bud-960.webp 960w, /starbuds-shop-redesign/assets/img/flash-bud-1400.webp 1400w" sizes="(max-width: 900px) 56vw, 380px" width="2048" height="2048" alt="" decoding="async" loading="eager" fetchpriority="high" data-ai="generated"></span>
+      </div>
+      <span class="seal seal--gold dl-hero__seal"><span class="seal__label">Deals<small>Every day</small></span></span>
+    </div>
   </div>
-  <div class="dl-hero__front" aria-hidden="true">
-    <span class="cutout dl-hero__star" data-depth="0.1" style="--rot:12deg;" aria-hidden="true"><img class="cutout__img float float--fast" src="/starbuds-shop-redesign/assets/img/pop-star-960.webp" srcset="/starbuds-shop-redesign/assets/img/pop-star-240.webp 240w, /starbuds-shop-redesign/assets/img/pop-star-400.webp 400w, /starbuds-shop-redesign/assets/img/pop-star-640.webp 640w, /starbuds-shop-redesign/assets/img/pop-star-960.webp 960w, /starbuds-shop-redesign/assets/img/pop-star-1400.webp 1400w" sizes="(max-width: 700px) 28vw, 220px" width="2048" height="2048" alt="" decoding="async" loading="eager" fetchpriority="high" data-ai="generated"></span>
-    <span class="cutout dl-hero__gummies" data-depth="0.18" style="--rot:-8deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/cut-gummies-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-gummies-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-gummies-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-gummies-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-gummies-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-gummies-1400.webp 1400w" sizes="(max-width: 700px) 40vw, 320px" width="2368" height="1792" alt="" decoding="async" loading="eager" fetchpriority="high" data-ai="generated"></span>
-  </div>
-  <svg class="seam seam--zig seam--bottom" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true" focusable="false" style="color:var(--paper)"><path d="M0 64 V40 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 V64z" fill="currentColor"/></svg>
+  <span class="cutout dl-hero__jar" data-depth="0.14" style="--rot:-8deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/cut-jar-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-jar-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-jar-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-jar-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-jar-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-jar-1400.webp 1400w" sizes="(max-width: 700px) 40vw, 280px" width="1792" height="2368" alt="" decoding="async" loading="eager" fetchpriority="high" data-ai="generated"></span>
 </section>
 
-<section class="section dl-ms" id="dl-ms" aria-labelledby="dl-ms-title">
-  <div class="plane-back"><span class="leaves leaves--light" aria-hidden="true"></span><span class="halftone halftone--pink halftone--bl" aria-hidden="true"></span><span class="blob blob--yellow dl-ms__blob"></span></div>
-  <div class="wrap">
-    <div class="dl-state-head" data-reveal="up">
-      <span class="sticker sticker--yellow dl-state-head__code" style="--tilt:-5deg">MS</span>
-      <div><p class="eyebrow"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg> Deals</p><h2 class="h-display dl-state-head__title" id="dl-ms-title">Mississippi</h2><p class="dl-scope"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> As listed on the Star Buds Oxford store page</p></div>
+<section class="section section--bone dl-ms" id="dl-ms" aria-labelledby="dl-ms-title">
+  <div class="plane-back"><span class="leaves leaves--light" aria-hidden="true"></span><span class="halftone halftone--red halftone--bl dl-dots-soft" aria-hidden="true"></span><span class="grain dl-grain-bone" aria-hidden="true"></span></div>
+  <div class="seam seam--double seam--gold" aria-hidden="true"><svg class="seam__svg" viewBox="0 0 1440 24" preserveAspectRatio="none" focusable="false"><line class="seam__welt" x1="0" y1="1" x2="1440" y2="1"/><line class="seam__thread" x1="0" y1="7" x2="1440" y2="7"/><line class="seam__thread" x1="0" y1="17" x2="1440" y2="17"/></svg></div>
+  <div class="wrap dl-ms__grid">
+    <div class="dl-ms__main">
+      <div class="dl-state-head" data-reveal="up">
+      <p class="dl-state-head__eyebrow"><span class="patch patch--leather"><svg class="icon patch__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg><span class="patch__text">Deals · MS</span></span></p>
+      <h2 class="h-display dl-state-head__title sheen" id="dl-ms-title">Mississippi</h2>
+      <svg class="pinstripe pinstripe--ink dl-state-head__rule" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg>
+      <p class="dl-scope"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> As listed on the Star Buds Oxford store page</p>
     </div>
-    
-    <div class="dl-comic dl-comic--yellow" data-reveal="up" style="--i:1">
-      <div class="dl-comic__panel halftone-host">
-        <span class="halftone halftone--pink halftone--tr dl-comic__dots" aria-hidden="true"></span>
-        <div class="dl-comic__head">
-          <h3 class="h-display dl-comic__title">Daily deals</h3>
-          <p class="dl-comic__intro">No need to wait for a sale. You save seven days a week with our daily deals!</p>
-        </div>
-        <ul class="dl-board" role="list" data-stagger>
-      <li class="dl-row" data-weekday="1">
-        <span class="dl-row__abbr" aria-hidden="true">Mon</span>
-        <div class="dl-row__body"><p class="dl-row__name">MUNCHIE MONDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal">Buy one edible get one <mark class="dl-hl">25% off</mark> <span class="dl-fine">(equal or lesser value)</span></p></div>
-      </li>
-      <li class="dl-row" data-weekday="2">
-        <span class="dl-row__abbr" aria-hidden="true">Tue</span>
-        <div class="dl-row__body"><p class="dl-row__name">PHAT TUESDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal">Buy one eighth get one <mark class="dl-hl">25% off</mark> <span class="dl-fine">(equal or lesser value)</span></p></div>
-      </li>
-      <li class="dl-row" data-weekday="3">
-        <span class="dl-row__abbr" aria-hidden="true">Wed</span>
-        <div class="dl-row__body"><p class="dl-row__name">WAX WEDNESDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">15% off</mark> all concentrates including vapes</p></div>
-      </li>
-      <li class="dl-row" data-weekday="4">
-        <span class="dl-row__abbr" aria-hidden="true">Thu</span>
-        <div class="dl-row__body"><p class="dl-row__name">THERAPEUTIC THURSDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">20% off</mark> all wellness products</p></div>
-      </li>
-      <li class="dl-row" data-weekday="5">
-        <span class="dl-row__abbr" aria-hidden="true">Fri</span>
-        <div class="dl-row__body"><p class="dl-row__name">TRIFECTA FRIDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal">Buy any three pre-rolls, get <mark class="dl-hl">15% off</mark></p></div>
-      </li>
-      <li class="dl-row" data-weekday="6">
-        <span class="dl-row__abbr" aria-hidden="true">Sat</span>
-        <div class="dl-row__body"><p class="dl-row__name">STOCK UP SATURDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal">Fulfill Your weekly MMCEU allotment, receive <mark class="dl-hl">15% off</mark></p></div>
-      </li>
-    </ul>
+      
+    <article class="dl-board " data-reveal="up">
+      <div class="dl-board__inner">
+        <header class="dl-board__head">
+          
+          <h3 class="dl-board__title">Daily deals</h3>
+          <p class="dl-board__intro">No need to wait for a sale. You save seven days a week with our daily deals!</p>
+          <svg class="pinstripe pinstripe--ink dl-board__rule" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg>
+        </header>
+        <ul class="dl-board__rows" role="list" data-stagger>
+        <li class="dl-row" data-weekday="1">
+          <span class="dl-row__abbr" aria-hidden="true">Mon</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>MUNCHIE MONDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal">Buy one edible get one <mark class="dl-hl">25% off</mark> <span class="dl-fine">(equal or lesser value)</span></p></div>
+        </li>
+        <li class="dl-row" data-weekday="2">
+          <span class="dl-row__abbr" aria-hidden="true">Tue</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>PHAT TUESDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal">Buy one eighth get one <mark class="dl-hl">25% off</mark> <span class="dl-fine">(equal or lesser value)</span></p></div>
+        </li>
+        <li class="dl-row" data-weekday="3">
+          <span class="dl-row__abbr" aria-hidden="true">Wed</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>WAX WEDNESDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">15% off</mark> all concentrates including vapes</p></div>
+        </li>
+        <li class="dl-row" data-weekday="4">
+          <span class="dl-row__abbr" aria-hidden="true">Thu</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>THERAPEUTIC THURSDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">20% off</mark> all wellness products</p></div>
+        </li>
+        <li class="dl-row" data-weekday="5">
+          <span class="dl-row__abbr" aria-hidden="true">Fri</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>TRIFECTA FRIDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal">Buy any three pre-rolls, get <mark class="dl-hl">15% off</mark></p></div>
+        </li>
+        <li class="dl-row" data-weekday="6">
+          <span class="dl-row__abbr" aria-hidden="true">Sat</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>STOCK UP SATURDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal">Fulfill Your weekly MMCEU allotment, receive <mark class="dl-hl">15% off</mark></p></div>
+        </li>
+      </ul>
         
       </div>
-      <span class="starburst starburst--yellow starburst--spin dl-comic__burst"><svg class="starburst__svg" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon class="starburst__shadow" points="100.0,2.0 111.9,24.9 128.4,12.5 135.9,29.6 157.6,20.7 153.7,46.3 174.4,45.9 167.7,65.5 193.2,69.7 178.0,87.6 192.0,100.0 175.1,111.9 193.2,130.3 167.7,134.5 174.4,154.1 155.9,155.9 157.6,179.3 134.5,167.7 128.4,187.5 111.9,175.1 100.0,198.0 87.6,178.0 71.6,187.5 65.5,167.7 42.4,179.3 46.3,153.7 25.6,154.1 29.6,135.9 6.8,130.3 24.9,111.9 8.0,100.0 24.9,88.1 6.8,69.7 29.6,64.1 25.6,45.9 46.3,46.3 42.4,20.7 65.5,32.3 71.6,12.5 87.6,22.0" transform="translate(7 7)"/><polygon class="starburst__shape" points="100.0,2.0 111.9,24.9 128.4,12.5 135.9,29.6 157.6,20.7 153.7,46.3 174.4,45.9 167.7,65.5 193.2,69.7 178.0,87.6 192.0,100.0 175.1,111.9 193.2,130.3 167.7,134.5 174.4,154.1 155.9,155.9 157.6,179.3 134.5,167.7 128.4,187.5 111.9,175.1 100.0,198.0 87.6,178.0 71.6,187.5 65.5,167.7 42.4,179.3 46.3,153.7 25.6,154.1 29.6,135.9 6.8,130.3 24.9,111.9 8.0,100.0 24.9,88.1 6.8,69.7 29.6,64.1 25.6,45.9 46.3,46.3 42.4,20.7 65.5,32.3 71.6,12.5 87.6,22.0"/></svg><span class="starburst__label">7 days<small>a week</small></span></span>
-    </div>
-    
-    
+    </article>
+      
+      
     <div class="dl-shop">
-      <a class="btn btn--primary" href="#dl-stores-ms" data-deals-shop="MS"><span class="btn__label">Shop the deals</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
+      <a class="btn btn--dark" href="#dl-stores-ms" data-deals-shop="MS"><span class="btn__label">Shop the deals</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
       <div class="dl-shop__stores" id="dl-stores-ms">
         <p class="dl-shop__label">Live menus in Mississippi</p>
         <ul class="dl-shop__chips" role="list">
-          <li><a class="chip" href="https://shop.starbuds.us/stores/greenwood-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Greenwood<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
-          <li><a class="chip" href="https://shop.starbuds.us/stores/natchez-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Natchez<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
-          <li><a class="chip" href="https://shop.starbuds.us/stores/ocean-springs-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Ocean Springs<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
-          <li><a class="chip" href="https://shop.starbuds.us/stores/pearl/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Pearl<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
-          <li><a class="chip" href="https://shop.starbuds.us/stores/oxford-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Oxford<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
-          <li><a class="chip" href="https://shop.starbuds.us/stores/tupelo-saltillo-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Tupelo<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
+          <li><a class="chip" href="https://shop.starbuds.us/stores/greenwood-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Greenwood<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
+          <li><a class="chip" href="https://shop.starbuds.us/stores/natchez-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Natchez<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
+          <li><a class="chip" href="https://shop.starbuds.us/stores/ocean-springs-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Ocean Springs<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
+          <li><a class="chip" href="https://shop.starbuds.us/stores/pearl/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Pearl<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
+          <li><a class="chip" href="https://shop.starbuds.us/stores/oxford-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Oxford<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
+          <li><a class="chip" href="https://shop.starbuds.us/stores/tupelo-saltillo-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Tupelo<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
         </ul>
       </div>
     </div>
+    </div>
+    <div class="dl-ms__art" aria-hidden="true">
+      <span class="cutout cutout--patch dl-ms__flash" data-depth="0.08" style="--rot:4deg;" aria-hidden="true"><img class="cutout__img" src="/starbuds-shop-redesign/assets/img/flash-leaf-960.webp" srcset="/starbuds-shop-redesign/assets/img/flash-leaf-240.webp 240w, /starbuds-shop-redesign/assets/img/flash-leaf-400.webp 400w, /starbuds-shop-redesign/assets/img/flash-leaf-640.webp 640w, /starbuds-shop-redesign/assets/img/flash-leaf-960.webp 960w, /starbuds-shop-redesign/assets/img/flash-leaf-1400.webp 1400w" sizes="(max-width: 900px) 60vw, 440px" width="2048" height="2048" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
+    </div>
   </div>
-  <span class="cutout dl-ms__bud" data-depth="0.14" style="--rot:10deg;" aria-hidden="true"><img class="cutout__img float float--fast" src="/starbuds-shop-redesign/assets/img/pop-bud-960.webp" srcset="/starbuds-shop-redesign/assets/img/pop-bud-240.webp 240w, /starbuds-shop-redesign/assets/img/pop-bud-400.webp 400w, /starbuds-shop-redesign/assets/img/pop-bud-640.webp 640w, /starbuds-shop-redesign/assets/img/pop-bud-960.webp 960w, /starbuds-shop-redesign/assets/img/pop-bud-1400.webp 1400w" sizes="(max-width: 700px) 34vw, 270px" width="2048" height="2048" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
-  <svg class="seam seam--wave seam--bottom" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true" focusable="false" style="color:var(--green-ink)"><path d="M0 40 C 240 0 480 0 720 26 S 1200 60 1440 18 V64 H0z" fill="currentColor"/></svg>
+  <span class="cutout dl-ms__bud" data-depth="-0.1" style="--rot:10deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/cut-bud-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-bud-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-bud-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-bud-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-bud-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-bud-1400.webp 1400w" sizes="(max-width: 700px) 34vw, 240px" width="2048" height="2048" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
 </section>
 
 <section class="section dl-ok on-dark" id="dl-ok" aria-labelledby="dl-ok-title">
   <div class="plane-back">
-    <img class="cover dl-ok__bg" src="/starbuds-shop-redesign/assets/img/g-glass-dark-960.webp" srcset="/starbuds-shop-redesign/assets/img/g-glass-dark-640.webp 640w, /starbuds-shop-redesign/assets/img/g-glass-dark-960.webp 960w, /starbuds-shop-redesign/assets/img/g-glass-dark-1440.webp 1440w, /starbuds-shop-redesign/assets/img/g-glass-dark-1920.webp 1920w, /starbuds-shop-redesign/assets/img/g-glass-dark-2560.webp 2560w" sizes="100vw" width="2752" height="1536" alt="" decoding="async" loading="lazy" data-ai="generated">
-    <div class="dl-ok__shade"></div>
-    <span class="leaves leaves--lime dl-ok__leaves" aria-hidden="true"></span>
-    <span class="halftone halftone--lime halftone--tr" aria-hidden="true"></span>
+    <div class="leather-bg"></div>
+    <span class="leaves leaves--gold dl-ok__leaves" aria-hidden="true"></span>
+    <span class="halftone halftone--gold halftone--tr" aria-hidden="true"></span>
+    <span class="grain" aria-hidden="true"></span>
   </div>
+  <div class="seam seam--stitch seam--gold" aria-hidden="true"><svg class="seam__svg" viewBox="0 0 1440 24" preserveAspectRatio="none" focusable="false"><line class="seam__welt" x1="0" y1="1" x2="1440" y2="1"/><line class="seam__thread" x1="0" y1="12" x2="1440" y2="12"/></svg></div>
   <div class="wrap">
-    <div class="dl-state-head" data-reveal="up">
-      <span class="sticker sticker--lime dl-state-head__code" style="--tilt:-5deg">OK</span>
-      <div><p class="eyebrow"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg> Deals</p><h2 class="h-display dl-state-head__title" id="dl-ok-title">Oklahoma</h2></div>
+    <div class="dl-ok__head">
+      <div class="dl-state-head" data-reveal="up">
+      <p class="dl-state-head__eyebrow"><span class="patch patch--gold"><svg class="icon patch__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg><span class="patch__text">Deals · OK</span></span></p>
+      <h2 class="h-display dl-state-head__title sheen" id="dl-ok-title">Oklahoma</h2>
+      <svg class="pinstripe pinstripe--gold dl-state-head__rule" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg>
+      
+    </div>
+      <span class="cutout dl-ok__conc" data-depth="0.12" style="--rot:-10deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/cut-concentrate-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-concentrate-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-concentrate-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-concentrate-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-concentrate-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-concentrate-1400.webp 1400w" sizes="(max-width: 700px) 30vw, 200px" width="2048" height="2048" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
     </div>
     <div class="dl-ok__top">
-      <div class="glass glass--dark glass--pop dl-ok__community" data-reveal="left">
-        <span class="starburst starburst--lime starburst--spin dl-ok__pct"><svg class="starburst__svg" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon class="starburst__shadow" points="100.0,2.0 111.9,24.9 128.4,12.5 135.9,29.6 157.6,20.7 153.7,46.3 174.4,45.9 167.7,65.5 193.2,69.7 178.0,87.6 192.0,100.0 175.1,111.9 193.2,130.3 167.7,134.5 174.4,154.1 155.9,155.9 157.6,179.3 134.5,167.7 128.4,187.5 111.9,175.1 100.0,198.0 87.6,178.0 71.6,187.5 65.5,167.7 42.4,179.3 46.3,153.7 25.6,154.1 29.6,135.9 6.8,130.3 24.9,111.9 8.0,100.0 24.9,88.1 6.8,69.7 29.6,64.1 25.6,45.9 46.3,46.3 42.4,20.7 65.5,32.3 71.6,12.5 87.6,22.0" transform="translate(7 7)"/><polygon class="starburst__shape" points="100.0,2.0 111.9,24.9 128.4,12.5 135.9,29.6 157.6,20.7 153.7,46.3 174.4,45.9 167.7,65.5 193.2,69.7 178.0,87.6 192.0,100.0 175.1,111.9 193.2,130.3 167.7,134.5 174.4,154.1 155.9,155.9 157.6,179.3 134.5,167.7 128.4,187.5 111.9,175.1 100.0,198.0 87.6,178.0 71.6,187.5 65.5,167.7 42.4,179.3 46.3,153.7 25.6,154.1 29.6,135.9 6.8,130.3 24.9,111.9 8.0,100.0 24.9,88.1 6.8,69.7 29.6,64.1 25.6,45.9 46.3,46.3 42.4,20.7 65.5,32.3 71.6,12.5 87.6,22.0"/></svg><span class="starburst__label">10%<small>every day</small></span></span>
-        <h3 class="h-display h-sub dl-card__title">Community discounts</h3>
+      <div class="glass glass--stitch stitch stitch--draw dl-ok__community" data-reveal="left">
+        <span class="seal seal--gold dl-ok__pct"><span class="seal__label">10%<small>every day</small></span></span>
+        <h3 class="dl-card__title">Community discounts</h3>
         <p class="dl-card__intro">Star Buds Oklahoma offers a <mark class="dl-hl">10%</mark> discount every day for:</p>
-        <ul class="dl-ticks" role="list"><li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span>Veterans and Active Military</span></li><li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span>Tribal Members</span></li><li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span>Cannabis Industry Employee</span></li></ul>
+        <ul class="dl-ticks" role="list"><li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span>Veterans and Active Military</span></li><li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span>Tribal Members</span></li><li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span>Cannabis Industry Employee</span></li></ul>
         </div>
-      <div class="glass glass--dark dl-ok__early" data-reveal="right">
-        <span class="sticker sticker--yellow dl-early__tag" style="--tilt:4deg">Morning</span>
-        <h3 class="h-display h-sub dl-card__title">Early Bird Gets the herb</h3>
+      <div class="glass glass--chrome dl-ok__early" data-reveal="right">
+        <p class="dl-early__tag"><span class="patch patch--bone patch--sm"><span class="patch__text">Morning</span></span></p>
+        <h3 class="dl-card__title">Early Bird Gets the herb</h3>
         <p class="dl-card__intro">Take advantage of our morning happy hour every day of the week</p>
         
-        </div>
-      <span class="cutout dl-ok__conc" data-depth="0.12" style="--rot:-10deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/cut-concentrate-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-concentrate-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-concentrate-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-concentrate-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-concentrate-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-concentrate-1400.webp 1400w" sizes="(max-width: 700px) 30vw, 220px" width="2048" height="2048" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
+        
+        <span class="cutout cutout--patch dl-early__patch" style="--rot:8deg;" aria-hidden="true"><img class="cutout__img" src="/starbuds-shop-redesign/assets/img/patch-star-960.webp" srcset="/starbuds-shop-redesign/assets/img/patch-star-240.webp 240w, /starbuds-shop-redesign/assets/img/patch-star-400.webp 400w, /starbuds-shop-redesign/assets/img/patch-star-640.webp 640w, /starbuds-shop-redesign/assets/img/patch-star-960.webp 960w, /starbuds-shop-redesign/assets/img/patch-star-1400.webp 1400w" sizes="120px" width="2048" height="2048" alt="" decoding="async" loading="lazy" data-ai="generated"></span></div>
     </div>
     
     <div class="dl-ok__daily">
       <div class="dl-ok__daily-head" data-reveal="up">
-        <h3 class="h-display dl-ok__daily-title">Daily deals at Star Buds Oklahoma</h3>
+        <h3 class="dl-ok__daily-title">Daily deals at Star Buds Oklahoma</h3>
         <p class="dl-card__intro">No need to wait for a sale. You save seven days a week with our daily deals!</p>
       </div>
-      <ul class="dl-week" role="list" data-count="7" data-stagger>
-      <li class="dl-day glass glass--dark glass--pop lift" data-weekday="1" data-tilt="4">
-        <span class="dl-day__abbr" aria-hidden="true">Mon</span><span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span>
-        <p class="dl-day__name">MUNCHEEZMONDAY</p>
-        <p class="dl-day__deal">BUY ONE, GET ONE <mark class="dl-hl">25% OFF</mark> <span class="dl-fine">(Equal or lesser value)</span></p>
+      <ul class="dl-flash" role="list" data-stagger>
+      <li class="dl-flash__card" data-weekday="1">
+        <span class="dl-flash__stitch stitch" aria-hidden="true"></span>
+        <span class="dl-flash__top"><span class="dl-flash__abbr numeral" aria-hidden="true">Mon</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></span>
+        <p class="dl-flash__name">MUNCHEEZMONDAY</p>
+        <p class="dl-flash__deal">BUY ONE, GET ONE <mark class="dl-hl">25% OFF</mark> <span class="dl-fine">(Equal or lesser value)</span></p>
       </li>
-      <li class="dl-day glass glass--dark glass--pop lift" data-weekday="2" data-tilt="4">
-        <span class="dl-day__abbr" aria-hidden="true">Tue</span><span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span>
-        <p class="dl-day__name">TOP SHELF TUESDAY</p>
-        <p class="dl-day__deal"><mark class="dl-hl">$25</mark> TOP SHELF EIGHTHS <span class="dl-fine">(Valid on Top Shelf Only)</span></p>
+      <li class="dl-flash__card" data-weekday="2">
+        <span class="dl-flash__stitch stitch" aria-hidden="true"></span>
+        <span class="dl-flash__top"><span class="dl-flash__abbr numeral" aria-hidden="true">Tue</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></span>
+        <p class="dl-flash__name">TOP SHELF TUESDAY</p>
+        <p class="dl-flash__deal"><mark class="dl-hl">$25</mark> TOP SHELF EIGHTHS <span class="dl-fine">(Valid on Top Shelf Only)</span></p>
       </li>
-      <li class="dl-day glass glass--dark glass--pop lift" data-weekday="3" data-tilt="4">
-        <span class="dl-day__abbr" aria-hidden="true">Wed</span><span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span>
-        <p class="dl-day__name">WAX WEDNESDAY</p>
-        <p class="dl-day__deal">FEATURED 1G CONCENTRATES 10 FOR <mark class="dl-hl">$75</mark></p>
+      <li class="dl-flash__card" data-weekday="3">
+        <span class="dl-flash__stitch stitch" aria-hidden="true"></span>
+        <span class="dl-flash__top"><span class="dl-flash__abbr numeral" aria-hidden="true">Wed</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></span>
+        <p class="dl-flash__name">WAX WEDNESDAY</p>
+        <p class="dl-flash__deal">FEATURED 1G CONCENTRATES 10 FOR <mark class="dl-hl">$75</mark></p>
       </li>
-      <li class="dl-day glass glass--dark glass--pop lift" data-weekday="4" data-tilt="4">
-        <span class="dl-day__abbr" aria-hidden="true">Thu</span><span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span>
-        <p class="dl-day__name">TOP SHELF THURSDAY</p>
-        <p class="dl-day__deal"><mark class="dl-hl">$25</mark> TOP SHELF EIGHTHS <span class="dl-fine">(Valid on Top Shelf Only)</span></p>
+      <li class="dl-flash__card" data-weekday="4">
+        <span class="dl-flash__stitch stitch" aria-hidden="true"></span>
+        <span class="dl-flash__top"><span class="dl-flash__abbr numeral" aria-hidden="true">Thu</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></span>
+        <p class="dl-flash__name">TOP SHELF THURSDAY</p>
+        <p class="dl-flash__deal"><mark class="dl-hl">$25</mark> TOP SHELF EIGHTHS <span class="dl-fine">(Valid on Top Shelf Only)</span></p>
       </li>
-      <li class="dl-day glass glass--dark glass--pop lift" data-weekday="5" data-tilt="4">
-        <span class="dl-day__abbr" aria-hidden="true">Fri</span><span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span>
-        <p class="dl-day__name">FIRE FRIDAY</p>
-        <p class="dl-day__deal">TWO 1.5G KAVIAR CONES FOR <mark class="dl-hl">$25</mark></p>
+      <li class="dl-flash__card" data-weekday="5">
+        <span class="dl-flash__stitch stitch" aria-hidden="true"></span>
+        <span class="dl-flash__top"><span class="dl-flash__abbr numeral" aria-hidden="true">Fri</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></span>
+        <p class="dl-flash__name">FIRE FRIDAY</p>
+        <p class="dl-flash__deal">TWO 1.5G KAVIAR CONES FOR <mark class="dl-hl">$25</mark></p>
       </li>
-      <li class="dl-day glass glass--dark glass--pop lift" data-weekday="6" data-tilt="4">
-        <span class="dl-day__abbr" aria-hidden="true">Sat</span><span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span>
-        <p class="dl-day__name">SUPER SATURDAY</p>
-        <p class="dl-day__deal">SPEND <mark class="dl-hl">$25</mark> GET A FREE GRAM OF PREMIUM FLOWER</p>
+      <li class="dl-flash__card" data-weekday="6">
+        <span class="dl-flash__stitch stitch" aria-hidden="true"></span>
+        <span class="dl-flash__top"><span class="dl-flash__abbr numeral" aria-hidden="true">Sat</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></span>
+        <p class="dl-flash__name">SUPER SATURDAY</p>
+        <p class="dl-flash__deal">SPEND <mark class="dl-hl">$25</mark> GET A FREE GRAM OF PREMIUM FLOWER</p>
       </li>
-      <li class="dl-day glass glass--dark glass--pop lift" data-weekday="0" data-tilt="4">
-        <span class="dl-day__abbr" aria-hidden="true">Sun</span><span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span>
-        <p class="dl-day__name">SUNDAY FUNDAY</p>
-        <p class="dl-day__deal">YOU PICK ANY DAILY DEAL</p>
+      <li class="dl-flash__card" data-weekday="0">
+        <span class="dl-flash__stitch stitch" aria-hidden="true"></span>
+        <span class="dl-flash__top"><span class="dl-flash__abbr numeral" aria-hidden="true">Sun</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></span>
+        <p class="dl-flash__name">SUNDAY FUNDAY</p>
+        <p class="dl-flash__deal">YOU PICK ANY DAILY DEAL</p>
       </li>
+      <li class="dl-flash__art" aria-hidden="true"><span class="cutout cutout--patch dl-flash__bud" style="--rot:3deg;" aria-hidden="true"><img class="cutout__img" src="/starbuds-shop-redesign/assets/img/flash-bud-960.webp" srcset="/starbuds-shop-redesign/assets/img/flash-bud-240.webp 240w, /starbuds-shop-redesign/assets/img/flash-bud-400.webp 400w, /starbuds-shop-redesign/assets/img/flash-bud-640.webp 640w, /starbuds-shop-redesign/assets/img/flash-bud-960.webp 960w, /starbuds-shop-redesign/assets/img/flash-bud-1400.webp 1400w" sizes="(max-width: 700px) 40vw, 220px" width="2048" height="2048" alt="" decoding="async" loading="lazy" data-ai="generated"></span></li>
     </ul>
       <p class="dl-terms">TERMS AND CONDITIONS: ALL PRICES ARE POST-TAX. ALL DEALS WHILE SUPPLIES LAST. RESTRICTIONS APPLY.</p>
     </div>
     
     
     <div class="dl-shop dl-shop--dark">
-      <a class="btn btn--pop" href="#dl-stores-ok" data-deals-shop="OK"><span class="btn__label">Shop the deals</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
+      <a class="btn btn--gold" href="#dl-stores-ok" data-deals-shop="OK"><span class="btn__label">Shop the deals</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
       <div class="dl-shop__stores" id="dl-stores-ok">
         <p class="dl-shop__label">Live menus in Oklahoma</p>
         <ul class="dl-shop__chips" role="list">
-          <li><a class="chip" href="https://shop.starbuds.us/stores/lawton-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Lawton<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
-          <li><a class="chip" href="https://shop.starbuds.us/stores/altus-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Altus<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
-          <li><a class="chip" href="https://shop.starbuds.us/stores/ardmore-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Ardmore<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
-          <li><a class="chip" href="https://shop.starbuds.us/stores/chickasha-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Chickasha<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
+          <li><a class="chip" href="https://shop.starbuds.us/stores/lawton-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Lawton<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
+          <li><a class="chip" href="https://shop.starbuds.us/stores/altus-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Altus<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
+          <li><a class="chip" href="https://shop.starbuds.us/stores/ardmore-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Ardmore<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
+          <li><a class="chip" href="https://shop.starbuds.us/stores/chickasha-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Chickasha<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
         </ul>
       </div>
     </div>
   </div>
-  <span class="cutout dl-ok__roll" data-depth="-0.12" style="--rot:-20deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/cut-preroll-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-preroll-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-preroll-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-preroll-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-preroll-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-preroll-1400.webp 1400w" sizes="(max-width: 700px) 46vw, 380px" width="2048" height="2048" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
-  <svg class="seam seam--scallop seam--bottom" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true" focusable="false" style="color:var(--paper)"><path d="M0 64 V36 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 q30 -36 60 0 V64z" fill="currentColor"/></svg>
+  <span class="cutout dl-ok__roll" data-depth="-0.12" style="--rot:-20deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/cut-preroll-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-preroll-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-preroll-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-preroll-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-preroll-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-preroll-1400.webp 1400w" sizes="(max-width: 700px) 46vw, 340px" width="2048" height="2048" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
 </section>
 
-<section class="section dl-md" id="dl-md" aria-labelledby="dl-md-title">
-  <div class="plane-back">
-    <img class="cover dl-md__bg" src="/starbuds-shop-redesign/assets/img/g-glass-960.webp" srcset="/starbuds-shop-redesign/assets/img/g-glass-640.webp 640w, /starbuds-shop-redesign/assets/img/g-glass-960.webp 960w, /starbuds-shop-redesign/assets/img/g-glass-1440.webp 1440w, /starbuds-shop-redesign/assets/img/g-glass-1920.webp 1920w, /starbuds-shop-redesign/assets/img/g-glass-2560.webp 2560w" sizes="100vw" width="2752" height="1536" alt="" decoding="async" loading="lazy" data-ai="generated">
-    <div class="dl-md__wash"></div>
-    <span class="leaves leaves--light" aria-hidden="true"></span>
-    <span class="halftone halftone--ink halftone--top" aria-hidden="true"></span>
-  </div>
+<section class="section section--parchment dl-md" id="dl-md" aria-labelledby="dl-md-title">
+  <div class="plane-back"><span class="leaves leaves--light" aria-hidden="true"></span><span class="halftone halftone--ink halftone--top" aria-hidden="true"></span><span class="grain dl-grain-bone" aria-hidden="true"></span></div>
+  <div class="seam seam--double seam--gold" aria-hidden="true"><svg class="seam__svg" viewBox="0 0 1440 24" preserveAspectRatio="none" focusable="false"><line class="seam__welt" x1="0" y1="1" x2="1440" y2="1"/><line class="seam__thread" x1="0" y1="7" x2="1440" y2="7"/><line class="seam__thread" x1="0" y1="17" x2="1440" y2="17"/></svg></div>
   <div class="wrap">
     <div class="dl-state-head" data-reveal="up">
-      <span class="sticker sticker--pink dl-state-head__code" style="--tilt:-5deg">MD</span>
-      <div><p class="eyebrow"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg> Deals</p><h2 class="h-display dl-state-head__title" id="dl-md-title">Maryland</h2><p class="dl-md__note-row"><span class="sticker sticker--pink dl-md__note" style="--tilt:-2deg">NOW SERVING ADULTS 21+ W/ VALID ID FROM ANY STATE</span></p></div>
+      <p class="dl-state-head__eyebrow"><span class="patch patch--leather"><svg class="icon patch__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg><span class="patch__text">Deals · MD</span></span></p>
+      <h2 class="h-display dl-state-head__title sheen" id="dl-md-title">Maryland</h2>
+      <svg class="pinstripe pinstripe--ink dl-state-head__rule" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg>
+      <p class="dl-md__note"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg><span>NOW SERVING ADULTS 21+ W/ VALID ID FROM ANY STATE</span></p>
     </div>
     <div class="dl-md__boards">
       
-      <div class="dl-comic dl-comic--pink" data-reveal="up">
-        <div class="dl-comic__panel halftone-host">
-          <span class="halftone halftone--paper halftone--tr dl-comic__dots" aria-hidden="true"></span>
-          <div class="dl-comic__head">
-            <span class="sticker sticker--paper dl-comic__tag" style="--tilt:-4deg">Adult-use 21+</span>
-            <h3 class="h-display dl-comic__title dl-comic__title--sm">Daily deals at Maryland Star Buds</h3>
-            <p class="dl-comic__intro">No need to wait for a sale. You save seven days a week with our daily deals!</p>
-          </div>
-          <ul class="dl-board" role="list" data-stagger>
-      <li class="dl-row" data-weekday="1">
-        <span class="dl-row__abbr" aria-hidden="true">Mon</span>
-        <div class="dl-row__body"><p class="dl-row__name">MUNCHIE MONDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">10% OFF</mark> Edibles &amp; Topicals</p></div>
-      </li>
-      <li class="dl-row" data-weekday="2">
-        <span class="dl-row__abbr" aria-hidden="true">Tue</span>
-        <div class="dl-row__body"><p class="dl-row__name">SPECIAL SHELF TUESDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">10% OFF</mark> Special Flower</p></div>
-      </li>
-      <li class="dl-row" data-weekday="3">
-        <span class="dl-row__abbr" aria-hidden="true">Wed</span>
-        <div class="dl-row__body"><p class="dl-row__name">WARRIOR WEDNESDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">22% OFF</mark> For Veterans/Military</p></div>
-      </li>
-      <li class="dl-row" data-weekday="4">
-        <span class="dl-row__abbr" aria-hidden="true">Thu</span>
-        <div class="dl-row__body"><p class="dl-row__name">TWO TOKE THURSDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">50% OFF</mark> House Pre-Rolls</p></div>
-      </li>
-      <li class="dl-row" data-weekday="5">
-        <span class="dl-row__abbr" aria-hidden="true">Fri</span>
-        <div class="dl-row__body"><p class="dl-row__name">FLAMELESS FRIDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">10% OFF</mark> Vapes</p></div>
-      </li>
-      <li class="dl-row" data-weekday="6">
-        <span class="dl-row__abbr" aria-hidden="true">Sat</span>
-        <div class="dl-row__body"><p class="dl-row__name">SPECIAL SHELF SATURDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">10% OFF</mark> Special Flower</p></div>
-      </li>
-      <li class="dl-row" data-weekday="0">
-        <span class="dl-row__abbr" aria-hidden="true">Sun</span>
-        <div class="dl-row__body"><p class="dl-row__name">SUNDAY FUNDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">$200</mark> Ounces of Value Flower</p></div>
-      </li>
-    </ul>
-          <p class="dl-terms">TERMS AND CONDITIONS: ALL PRICES ARE PRE-TAX. ALL DEALS WHILE SUPPLIES LAST. RESTRICTIONS APPLY.</p>
-        </div>
+    <article class="dl-board " data-reveal="up">
+      <div class="dl-board__inner">
+        <header class="dl-board__head">
+          <p class="dl-board__tag"><span class="patch patch--leather patch--sm"><span class="patch__text">Adult-use 21+</span></span></p>
+          <h3 class="dl-board__title dl-board__title--sm">Daily deals at Maryland Star Buds</h3>
+          <p class="dl-board__intro">No need to wait for a sale. You save seven days a week with our daily deals!</p>
+          <svg class="pinstripe pinstripe--ink dl-board__rule" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg>
+        </header>
+        <ul class="dl-board__rows" role="list" data-stagger>
+        <li class="dl-row" data-weekday="1">
+          <span class="dl-row__abbr" aria-hidden="true">Mon</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>MUNCHIE MONDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">10% OFF</mark> Edibles &amp; Topicals</p></div>
+        </li>
+        <li class="dl-row" data-weekday="2">
+          <span class="dl-row__abbr" aria-hidden="true">Tue</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>SPECIAL SHELF TUESDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">10% OFF</mark> Special Flower</p></div>
+        </li>
+        <li class="dl-row" data-weekday="3">
+          <span class="dl-row__abbr" aria-hidden="true">Wed</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>WARRIOR WEDNESDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">22% OFF</mark> For Veterans/Military</p></div>
+        </li>
+        <li class="dl-row" data-weekday="4">
+          <span class="dl-row__abbr" aria-hidden="true">Thu</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>TWO TOKE THURSDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">50% OFF</mark> House Pre-Rolls</p></div>
+        </li>
+        <li class="dl-row" data-weekday="5">
+          <span class="dl-row__abbr" aria-hidden="true">Fri</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>FLAMELESS FRIDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">10% OFF</mark> Vapes</p></div>
+        </li>
+        <li class="dl-row" data-weekday="6">
+          <span class="dl-row__abbr" aria-hidden="true">Sat</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>SPECIAL SHELF SATURDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">10% OFF</mark> Special Flower</p></div>
+        </li>
+        <li class="dl-row" data-weekday="0">
+          <span class="dl-row__abbr" aria-hidden="true">Sun</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>SUNDAY FUNDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">$200</mark> Ounces of Value Flower</p></div>
+        </li>
+      </ul>
+        <p class="dl-terms">TERMS AND CONDITIONS: ALL PRICES ARE PRE-TAX. ALL DEALS WHILE SUPPLIES LAST. RESTRICTIONS APPLY.</p>
       </div>
+    </article>
       
-      <div class="dl-comic dl-comic--white" data-reveal="up">
-        <div class="dl-comic__panel halftone-host">
-          <span class="halftone halftone--pink halftone--tr dl-comic__dots" aria-hidden="true"></span>
-          <div class="dl-comic__head">
-            <span class="sticker sticker--pink dl-comic__tag" style="--tilt:-4deg">Medical</span>
-            <h3 class="h-display dl-comic__title dl-comic__title--sm">Medical daily deals at Maryland Star Buds</h3>
-            <p class="dl-comic__intro">available for Maryland medical patients</p>
-          </div>
-          <ul class="dl-board" role="list" data-stagger>
-      <li class="dl-row" data-weekday="1">
-        <span class="dl-row__abbr" aria-hidden="true">Mon</span>
-        <div class="dl-row__body"><p class="dl-row__name">MONDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">20% OFF</mark> Edibles, Topicals, &amp; RSO</p></div>
-      </li>
-      <li class="dl-row" data-weekday="2">
-        <span class="dl-row__abbr" aria-hidden="true">Tue</span>
-        <div class="dl-row__body"><p class="dl-row__name">SPECIAL SHELF TUESDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">20% OFF</mark> Special Flower</p></div>
-      </li>
-      <li class="dl-row" data-weekday="3">
-        <span class="dl-row__abbr" aria-hidden="true">Wed</span>
-        <div class="dl-row__body"><p class="dl-row__name">WAX WEDNESDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">20% OFF</mark> Concentrates + <mark class="dl-hl">22% OFF</mark> For Veterans</p></div>
-      </li>
-      <li class="dl-row" data-weekday="4">
-        <span class="dl-row__abbr" aria-hidden="true">Thu</span>
-        <div class="dl-row__body"><p class="dl-row__name">THURSDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">50% OFF</mark> House Pre-Rolled Joints</p></div>
-      </li>
-      <li class="dl-row" data-weekday="5">
-        <span class="dl-row__abbr" aria-hidden="true">Fri</span>
-        <div class="dl-row__body"><p class="dl-row__name">FLAMELESS FRIDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">20% OFF</mark> Vapes</p></div>
-      </li>
-      <li class="dl-row" data-weekday="6">
-        <span class="dl-row__abbr" aria-hidden="true">Sat</span>
-        <div class="dl-row__body"><p class="dl-row__name">SPECIAL SHELF SATURDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">20% OFF</mark> Special Flower</p></div>
-      </li>
-      <li class="dl-row" data-weekday="0">
-        <span class="dl-row__abbr" aria-hidden="true">Sun</span>
-        <div class="dl-row__body"><p class="dl-row__name">BIG SAVINGS SUNDAY <span class="sticker sticker--coral dl-today" style="--tilt:-6deg" data-today hidden>Today</span></p><p class="dl-row__deal"><mark class="dl-hl">$200</mark> Ounces of Value Flower</p></div>
-      </li>
-    </ul>
-          <p class="dl-terms">TERMS AND CONDITIONS: ALL PRICES ARE PRE-TAX. ALL DEALS WHILE SUPPLIES LAST. RESTRICTIONS APPLY.</p>
-        </div>
+    <article class="dl-board " data-reveal="up">
+      <div class="dl-board__inner">
+        <header class="dl-board__head">
+          <p class="dl-board__tag"><span class="patch patch--green patch--sm"><span class="patch__text">Medical</span></span></p>
+          <h3 class="dl-board__title dl-board__title--sm">Medical daily deals at Maryland Star Buds</h3>
+          <p class="dl-board__intro">available for Maryland medical patients</p>
+          <svg class="pinstripe pinstripe--ink dl-board__rule" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg>
+        </header>
+        <ul class="dl-board__rows" role="list" data-stagger>
+        <li class="dl-row" data-weekday="1">
+          <span class="dl-row__abbr" aria-hidden="true">Mon</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>MONDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">20% OFF</mark> Edibles, Topicals, &amp; RSO</p></div>
+        </li>
+        <li class="dl-row" data-weekday="2">
+          <span class="dl-row__abbr" aria-hidden="true">Tue</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>SPECIAL SHELF TUESDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">20% OFF</mark> Special Flower</p></div>
+        </li>
+        <li class="dl-row" data-weekday="3">
+          <span class="dl-row__abbr" aria-hidden="true">Wed</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>WAX WEDNESDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">20% OFF</mark> Concentrates + <mark class="dl-hl">22% OFF</mark> For Veterans</p></div>
+        </li>
+        <li class="dl-row" data-weekday="4">
+          <span class="dl-row__abbr" aria-hidden="true">Thu</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>THURSDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">50% OFF</mark> House Pre-Rolled Joints</p></div>
+        </li>
+        <li class="dl-row" data-weekday="5">
+          <span class="dl-row__abbr" aria-hidden="true">Fri</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>FLAMELESS FRIDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">20% OFF</mark> Vapes</p></div>
+        </li>
+        <li class="dl-row" data-weekday="6">
+          <span class="dl-row__abbr" aria-hidden="true">Sat</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>SPECIAL SHELF SATURDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">20% OFF</mark> Special Flower</p></div>
+        </li>
+        <li class="dl-row" data-weekday="0">
+          <span class="dl-row__abbr" aria-hidden="true">Sun</span>
+          <div class="dl-row__body"><p class="dl-row__name"><span>BIG SAVINGS SUNDAY</span><span class="patch patch--red patch--sm dl-today" data-today hidden><span class="patch__text">Today</span></span></p><p class="dl-row__deal"><mark class="dl-hl">$200</mark> Ounces of Value Flower</p></div>
+        </li>
+      </ul>
+        <p class="dl-terms">TERMS AND CONDITIONS: ALL PRICES ARE PRE-TAX. ALL DEALS WHILE SUPPLIES LAST. RESTRICTIONS APPLY.</p>
       </div>
+    </article>
     </div>
     
     <div class="dl-new" data-reveal="up">
-      <span class="starburst starburst--coral starburst--spin dl-new__burst"><svg class="starburst__svg" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon class="starburst__shadow" points="100.0,2.0 110.8,24.8 125.9,11.7 132.8,28.1 153.0,17.6 149.8,42.6 169.5,39.8 163.9,58.9 189.1,59.3 175.8,77.7 191.1,86.9 176.0,100.0 197.0,113.9 172.9,121.4 183.7,138.2 166.5,142.7 174.1,164.2 149.8,157.4 149.7,177.4 131.6,169.1 127.6,194.0 111.2,178.2 100.0,192.0 89.2,175.2 72.4,194.0 68.4,169.1 50.3,177.4 48.3,159.7 25.9,164.2 36.1,141.1 16.3,138.2 27.1,121.4 3.0,113.9 21.0,100.0 8.9,86.9 27.1,78.6 10.9,59.3 36.1,58.9 30.5,39.8 48.3,40.3 47.0,17.6 68.4,30.9 74.1,11.7 89.2,24.8" transform="translate(7 7)"/><polygon class="starburst__shape" points="100.0,2.0 110.8,24.8 125.9,11.7 132.8,28.1 153.0,17.6 149.8,42.6 169.5,39.8 163.9,58.9 189.1,59.3 175.8,77.7 191.1,86.9 176.0,100.0 197.0,113.9 172.9,121.4 183.7,138.2 166.5,142.7 174.1,164.2 149.8,157.4 149.7,177.4 131.6,169.1 127.6,194.0 111.2,178.2 100.0,192.0 89.2,175.2 72.4,194.0 68.4,169.1 50.3,177.4 48.3,159.7 25.9,164.2 36.1,141.1 16.3,138.2 27.1,121.4 3.0,113.9 21.0,100.0 8.9,86.9 27.1,78.6 10.9,59.3 36.1,58.9 30.5,39.8 48.3,40.3 47.0,17.6 68.4,30.9 74.1,11.7 89.2,24.8"/></svg><span class="starburst__label">20% OFF<small>1ST PURCHASE</small></span></span>
-      <div class="glass glass--pop dl-new__panel">
-        <p class="eyebrow"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg> Medical</p>
-        <h3 class="h-display dl-new__title">New Medical Deal</h3>
-        <p class="dl-new__intro"><mark class="dl-hl">20% OFF</mark> 1ST PURCHASE</p>
-        <ul class="dl-small" role="list"><li>No stacking discounts/points. All products are subject to availability.</li><li>MEDICAL ONLY DELIVERY: Please note all deliveries will be subject to a delivery fee of $7.99 + a service fee of 8.5% on your subtotal. At this time delivery is only available using Dutchie Pay.</li></ul>
+      <div class="dl-new__panel">
+        <span class="dl-new__stitch stitch stitch--draw" aria-hidden="true"></span>
+        <span class="halftone halftone--red halftone--tr dl-new__dots" aria-hidden="true"></span>
+        <div class="dl-new__copy">
+          <p class="eyebrow"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8l2.7 6 6.5.6-4.9 4.3 1.5 6.4L12 16.8l-5.8 3.3 1.5-6.4-4.9-4.3 6.5-.6z"/></svg> Medical</p>
+          <h3 class="dl-new__title">New Medical Deal</h3>
+          <p class="dl-new__intro"><mark class="dl-hl">20% OFF</mark> 1ST PURCHASE</p>
+          <ul class="dl-small" role="list"><li>No stacking discounts/points. All products are subject to availability.</li><li>MEDICAL ONLY DELIVERY: Please note all deliveries will be subject to a delivery fee of $7.99 + a service fee of 8.5% on your subtotal. At this time delivery is only available using Dutchie Pay.</li></ul>
+          
         </div>
+      </div>
+      <span class="seal seal--red dl-new__seal"><span class="seal__label">20% OFF<small>1ST PURCHASE</small></span></span>
     </div>
     
     
     <div class="dl-shop">
-      <a class="btn btn--primary" href="https://shop.starbuds.us/stores/baltimore-dispensary/" target="_blank" rel="noopener" data-deals-shop="MD" data-ext=""><span class="btn__label">Shop the deals in Baltimore</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
+      <a class="btn btn--dark" href="https://shop.starbuds.us/stores/baltimore-dispensary/" target="_blank" rel="noopener" data-deals-shop="MD" data-ext=""><span class="btn__label">Shop the deals in Baltimore</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
       <div class="dl-shop__stores" id="dl-stores-md">
         <p class="dl-shop__label">Live menu</p>
         <ul class="dl-shop__chips" role="list">
-          <li><a class="chip" href="https://shop.starbuds.us/stores/baltimore-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Baltimore<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
+          <li><a class="chip" href="https://shop.starbuds.us/stores/baltimore-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Baltimore<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
         </ul>
       </div>
     </div>
   </div>
-  <span class="cutout dl-md__vape" data-depth="0.16" style="--rot:16deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/cut-vape-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-vape-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-vape-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-vape-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-vape-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-vape-1400.webp 1400w" sizes="(max-width: 700px) 22vw, 170px" width="1792" height="2368" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
-  <svg class="seam seam--zig seam--bottom" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true" focusable="false" style="color:var(--green-deep)"><path d="M0 64 V40 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 l24 -24 l24 24 V64z" fill="currentColor"/></svg>
+  <span class="cutout dl-md__vape" data-depth="0.14" style="--rot:16deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/cut-vape-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-vape-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-vape-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-vape-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-vape-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-vape-1400.webp 1400w" sizes="(max-width: 700px) 22vw, 160px" width="1792" height="2368" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
 </section>
 
 <section class="section dl-outro on-dark" aria-label="More from Star Buds">
-  <div class="plane-back"><span class="leaves leaves--dark dl-outro__leaves" aria-hidden="true"></span><span class="halftone halftone--yellow halftone--br" aria-hidden="true"></span></div>
+  <div class="plane-back"><img class="cover dl-outro__smoke" src="/starbuds-shop-redesign/assets/img/g-smoke-960.webp" srcset="/starbuds-shop-redesign/assets/img/g-smoke-640.webp 640w, /starbuds-shop-redesign/assets/img/g-smoke-960.webp 960w, /starbuds-shop-redesign/assets/img/g-smoke-1440.webp 1440w, /starbuds-shop-redesign/assets/img/g-smoke-1920.webp 1920w, /starbuds-shop-redesign/assets/img/g-smoke-2560.webp 2560w" sizes="100vw" width="2752" height="1536" alt="" decoding="async" loading="lazy" data-ai="generated"><div class="dl-outro__shade"></div><span class="leaves leaves--gold dl-outro__leaves" aria-hidden="true"></span><span class="halftone halftone--green halftone--br" aria-hidden="true"></span><span class="grain" aria-hidden="true"></span></div>
+  <div class="seam seam--stitch seam--gold" aria-hidden="true"><svg class="seam__svg" viewBox="0 0 1440 24" preserveAspectRatio="none" focusable="false"><line class="seam__welt" x1="0" y1="1" x2="1440" y2="1"/><line class="seam__thread" x1="0" y1="12" x2="1440" y2="12"/></svg></div>
   <div class="wrap dl-outro__grid">
-    <section class="glass glass--dark glass--pop dl-quiet" id="dl-ny" aria-labelledby="dl-ny-title" data-reveal="up">
-      <span class="sticker sticker--lime" style="--tilt:-5deg">NY</span>
-      <h2 class="h-display h-sub dl-quiet__title" id="dl-ny-title">New York</h2>
+    <section class="glass glass--stitch stitch stitch--draw dl-quiet" id="dl-ny" aria-labelledby="dl-ny-title" data-reveal="up">
+      <p class="dl-quiet__tag"><span class="patch patch--gold patch--sm"><svg class="icon patch__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span class="patch__text">NY</span></span></p>
+      <h2 class="dl-quiet__title" id="dl-ny-title">New York</h2>
       <p>Exciting news for cannabis enthusiasts in Western New York: Star Buds Buffalo is officially open!</p>
       
     <div class="dl-shop dl-shop--dark">
-      <a class="btn btn--pop" href="https://shop.starbuds.us/stores/buffalo-dispensary/" target="_blank" rel="noopener" data-deals-shop="NY" data-ext=""><span class="btn__label">Shop the deals in Buffalo</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
+      <a class="btn btn--gold" href="https://shop.starbuds.us/stores/buffalo-dispensary/" target="_blank" rel="noopener" data-deals-shop="NY" data-ext=""><span class="btn__label">Shop the deals in Buffalo</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
       <div class="dl-shop__stores" id="dl-stores-ny">
         <p class="dl-shop__label">Live menu</p>
         <ul class="dl-shop__chips" role="list">
-          <li><a class="chip" href="https://shop.starbuds.us/stores/buffalo-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Buffalo<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
+          <li><a class="chip" href="https://shop.starbuds.us/stores/buffalo-dispensary/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Buffalo<svg class="icon dl-shop__ext" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li>
         </ul>
       </div>
     </div></section>
-    <div class="glass glass--dark glass--pop dl-outro__rewards" data-reveal="up" style="--i:1">
-      <span class="sticker sticker--yellow" style="--tilt:3deg">Higher Rewards Loyalty Program</span>
-      <h2 class="h-display h-sub dl-quiet__title">Higher Rewards</h2>
+    <div class="glass glass--chrome dl-outro__rewards" data-reveal="up" style="--i:1">
+      <p class="dl-quiet__tag"><span class="patch patch--green patch--sm"><span class="patch__text">Higher Rewards Loyalty Program</span></span></p>
+      <h2 class="dl-quiet__title">Higher Rewards</h2>
       <p>Join our Higher Rewards Loyalty Program and get rewarded when you visit the store!</p>
-      <div class="btn-row"><a class="btn btn--pop" href="/starbuds-shop-redesign/rewards/"><span class="btn__label">Higher Rewards</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a><a class="btn btn--ghost" href="/starbuds-shop-redesign/stores/"><span class="btn__label">Find a store</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></a></div></div>
+      <div class="btn-row"><a class="btn btn--gold" href="/starbuds-shop-redesign/rewards/"><span class="btn__label">Higher Rewards</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a><a class="btn btn--ghost" href="/starbuds-shop-redesign/stores/"><span class="btn__label">Find a store</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></a></div></div>
   </div>
-  <span class="cutout dl-outro__jar" data-depth="0.12" style="--rot:8deg;" aria-hidden="true"><img class="cutout__img float float--fast" src="/starbuds-shop-redesign/assets/img/cut-jar-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-jar-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-jar-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-jar-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-jar-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-jar-1400.webp 1400w" sizes="(max-width: 700px) 28vw, 200px" width="1792" height="2368" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
-  <span class="cutout dl-outro__leaf" data-depth="-0.1" style="--rot:-30deg;" aria-hidden="true"><img class="cutout__img float float--slow" src="/starbuds-shop-redesign/assets/img/cut-leaf-960.webp" srcset="/starbuds-shop-redesign/assets/img/cut-leaf-240.webp 240w, /starbuds-shop-redesign/assets/img/cut-leaf-400.webp 400w, /starbuds-shop-redesign/assets/img/cut-leaf-640.webp 640w, /starbuds-shop-redesign/assets/img/cut-leaf-960.webp 960w, /starbuds-shop-redesign/assets/img/cut-leaf-1400.webp 1400w" sizes="(max-width: 700px) 26vw, 180px" width="2048" height="2048" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
+  <span class="cutout cutout--patch dl-outro__wings" data-depth="0.05" style="--rot:-4deg;" aria-hidden="true"><img class="cutout__img" src="/starbuds-shop-redesign/assets/img/patch-wings-960.webp" srcset="/starbuds-shop-redesign/assets/img/patch-wings-240.webp 240w, /starbuds-shop-redesign/assets/img/patch-wings-400.webp 400w, /starbuds-shop-redesign/assets/img/patch-wings-640.webp 640w, /starbuds-shop-redesign/assets/img/patch-wings-960.webp 960w, /starbuds-shop-redesign/assets/img/patch-wings-1400.webp 1400w" sizes="(max-width: 700px) 50vw, 300px" width="2752" height="1536" alt="" decoding="async" loading="lazy" data-ai="generated"></span>
 </section>
 <script>(function(d){var t=new Date().getDay();
 d.querySelectorAll('[data-weekday="'+t+'"]').forEach(function(el){el.classList.add('is-today');var s=el.querySelector('[data-today]');if(s)s.hidden=false;});
@@ -475,17 +509,18 @@ d.addEventListener('sb:store',sync);d.addEventListener('DOMContentLoaded',sync);
   </main>
   
   <footer class="site-footer">
-    <span class="leaves leaves--dark site-footer__leaves" aria-hidden="true"></span>
-    <span class="halftone halftone--lime halftone--tr" aria-hidden="true"></span>
+    <span class="leaves leaves--gold site-footer__leaves" aria-hidden="true"></span>
+    <span class="grain" aria-hidden="true"></span>
+    <div class="seam seam--double seam--gold site-footer__seam" aria-hidden="true"><svg class="seam__svg" viewBox="0 0 1440 24" preserveAspectRatio="none" focusable="false"><line class="seam__welt" x1="0" y1="1" x2="1440" y2="1"/><line class="seam__thread" x1="0" y1="7" x2="1440" y2="7"/><line class="seam__thread" x1="0" y1="17" x2="1440" y2="17"/></svg></div>
     <div class="site-footer__inner">
       <div class="footer-brand">
         <a href="/starbuds-shop-redesign/" class="footer-brand__logo"><img src="/starbuds-shop-redesign/assets/brand/logo-on-dark.png" width="1417" height="430" alt="Star Buds" loading="lazy" decoding="async"></a>
-        <span class="sticker sticker--yellow footer-brand__est" style="--tilt:-5deg">EST. 2013</span>
-        <p class="footer-brand__store" data-store-current hidden><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Shopping at <strong data-store-label></strong> <a href="/starbuds-shop-redesign/stores/" data-store-link>View store</a></p>
+        <p class="footer-brand__tag">Shining High Above the Rest</p>
+        <p class="footer-brand__store" data-store-current hidden><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Shopping at <strong data-store-label></strong> <a href="/starbuds-shop-redesign/stores/" data-store-link>View store</a></p>
         <div class="footer-apps">
           <p class="footer__heading">Get the app</p>
-          <a class="btn btn--light btn--sm" href="https://apps.apple.com/us/app/star-buds-dispensary/id1589380634" rel="noopener" target="_blank"><span class="btn__label">App Store</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></a>
-          <a class="btn btn--light btn--sm" href="https://play.google.com/store/apps/details?id=com.starbudsdispensary.wallet" rel="noopener" target="_blank"><span class="btn__label">Google Play</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></a>
+          <a class="btn btn--ghost btn--sm" href="https://apps.apple.com/us/app/star-buds-dispensary/id1589380634" rel="noopener" target="_blank"><span class="btn__label">App Store</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></a>
+          <a class="btn btn--ghost btn--sm" href="https://play.google.com/store/apps/details?id=com.starbudsdispensary.wallet" rel="noopener" target="_blank"><span class="btn__label">Google Play</span><svg class="icon btn__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></a>
         </div>
       </div>
       <nav class="footer-col" aria-label="Quick links">
@@ -501,6 +536,7 @@ d.addEventListener('sb:store',sync);d.addEventListener('DOMContentLoaded',sync);
         <div class="footer-state"><p class="footer-state__name">Mississippi</p><ul role="list"><li><a href="/starbuds-shop-redesign/stores/greenwood-dispensary/">Greenwood</a></li><li><a href="/starbuds-shop-redesign/stores/natchez-dispensary/">Natchez</a></li><li><a href="/starbuds-shop-redesign/stores/ocean-springs-dispensary/">Ocean Springs</a></li><li><a href="/starbuds-shop-redesign/stores/pearl/">Pearl</a></li><li><a href="/starbuds-shop-redesign/stores/oxford-dispensary/">Oxford</a></li><li><a href="/starbuds-shop-redesign/stores/tupelo-saltillo-dispensary/">Tupelo</a></li></ul></div><div class="footer-state"><p class="footer-state__name">Oklahoma</p><ul role="list"><li><a href="/starbuds-shop-redesign/stores/lawton-dispensary/">Lawton</a></li><li><a href="/starbuds-shop-redesign/stores/altus-dispensary/">Altus</a></li><li><a href="/starbuds-shop-redesign/stores/ardmore-dispensary/">Ardmore</a></li><li><a href="/starbuds-shop-redesign/stores/chickasha-dispensary/">Chickasha</a></li></ul></div><div class="footer-state"><p class="footer-state__name">Maryland</p><ul role="list"><li><a href="/starbuds-shop-redesign/stores/baltimore-dispensary/">Baltimore</a></li></ul></div><div class="footer-state"><p class="footer-state__name">New York</p><ul role="list"><li><a href="/starbuds-shop-redesign/stores/buffalo-dispensary/">Buffalo</a></li></ul></div>
       </div>
     </div>
+    <div class="site-footer__mark" aria-hidden="true"><svg class="pinstripe pinstripe--gold site-footer__flourish" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg><span class="site-footer__est">Est. 2013</span><svg class="pinstripe pinstripe--gold site-footer__flourish" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg></div>
     <div class="site-footer__legal">
       <p class="site-footer__fine">Star Buds · EST. 2013 · Redesign concept: menus and checkout open the live Star Buds shop. Product and backdrop imagery on this site is AI-generated and illustrative.</p>
       <ul class="site-footer__legal-links" role="list"><li><a href="https://shop.starbuds.us/eula/" rel="noopener">EULA</a></li><li><a href="https://shop.starbuds.us/privacy-policy/" rel="noopener">Privacy Policy</a></li><li><a href="https://shop.starbuds.us/terms-of-use/" rel="noopener">Terms Of Use</a></li></ul>
@@ -508,14 +544,14 @@ d.addEventListener('sb:store',sync);d.addEventListener('DOMContentLoaded',sync);
   </footer>
   
   <div class="agegate" data-agegate role="dialog" aria-modal="true" aria-labelledby="agegate-title" aria-describedby="agegate-body">
-    <div class="agegate__veil"><span class="halftone halftone--yellow halftone--tl" aria-hidden="true"></span><span class="halftone halftone--pink halftone--br" aria-hidden="true"></span></div>
-    <div class="agegate__panel glass glass--pop">
-      <span class="starburst starburst--yellow starburst--spin agegate__burst"><svg class="starburst__svg" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><polygon class="starburst__shadow" points="100.0,2.0 111.9,24.9 128.4,12.5 135.9,29.6 157.6,20.7 153.7,46.3 174.4,45.9 167.7,65.5 193.2,69.7 178.0,87.6 192.0,100.0 175.1,111.9 193.2,130.3 167.7,134.5 174.4,154.1 155.9,155.9 157.6,179.3 134.5,167.7 128.4,187.5 111.9,175.1 100.0,198.0 87.6,178.0 71.6,187.5 65.5,167.7 42.4,179.3 46.3,153.7 25.6,154.1 29.6,135.9 6.8,130.3 24.9,111.9 8.0,100.0 24.9,88.1 6.8,69.7 29.6,64.1 25.6,45.9 46.3,46.3 42.4,20.7 65.5,32.3 71.6,12.5 87.6,22.0" transform="translate(7 7)"/><polygon class="starburst__shape" points="100.0,2.0 111.9,24.9 128.4,12.5 135.9,29.6 157.6,20.7 153.7,46.3 174.4,45.9 167.7,65.5 193.2,69.7 178.0,87.6 192.0,100.0 175.1,111.9 193.2,130.3 167.7,134.5 174.4,154.1 155.9,155.9 157.6,179.3 134.5,167.7 128.4,187.5 111.9,175.1 100.0,198.0 87.6,178.0 71.6,187.5 65.5,167.7 42.4,179.3 46.3,153.7 25.6,154.1 29.6,135.9 6.8,130.3 24.9,111.9 8.0,100.0 24.9,88.1 6.8,69.7 29.6,64.1 25.6,45.9 46.3,46.3 42.4,20.7 65.5,32.3 71.6,12.5 87.6,22.0"/></svg><span class="starburst__label">21+</span></span>
-      <img class="agegate__logo" src="/starbuds-shop-redesign/assets/brand/logo.png" width="1417" height="430" alt="Star Buds">
+    <div class="agegate__veil"><span class="leaves leaves--gold agegate__leaves" aria-hidden="true"></span><span class="halftone halftone--gold halftone--full" aria-hidden="true"></span><span class="grain" aria-hidden="true"></span></div>
+    <div class="agegate__panel glass glass--stitch stitch is-in">
+      <svg class="emblem sb-rocker--gold agegate__emblem" viewBox="-200 -200 400 400" role="img" aria-label="Star Buds - Est. 2013" focusable="false"><defs><pattern id="tw4t" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect class="tw1" width="5" height="5"/><rect class="tw2" width="2.2" height="5"/></pattern><pattern id="tw4v" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect class="tw1" width="5" height="5"/><rect class="tw2" width="2.2" height="5"/></pattern><pattern id="tw4w" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect class="tw1" width="5" height="5"/><rect class="tw2" width="2.2" height="5"/></pattern></defs><g class="emblem__top"><path class="sb-rocker__band" d="M-167.8 -89.2A190 190 0 0 1 167.8 -89.2L116.5 -62A132 132 0 0 0 -116.5 -62Z" fill="url(#tw4t)"/><path class="sb-rocker__stitch" d="M-158.6 -93.4A184 184 0 0 1 158.6 -93.4L118.9 -70A138 138 0 0 0 -118.9 -70Z"/><path id="rk4s" d="M-143.7 -42.7A149.9 149.9 0 0 1 143.7 -42.7" fill="none" stroke="none"/><text class="sb-rocker__text" font-size="37.1"><textPath href="#rk4s" startOffset="50%" text-anchor="middle">Star Buds</textPath></text></g><g class="emblem__centre"><circle class="emblem__disc" r="112" fill="url(#tw4w)"/><circle class="emblem__ring" r="103"/><circle class="emblem__inner" r="92"/><image href="/starbuds-shop-redesign/assets/brand/star-on-dark.png" x="-74" y="-78" width="148" height="148" preserveAspectRatio="xMidYMid meet"/></g><g class="emblem__bottom"><path class="sb-rocker__band" d="M-167.8 89.2A190 190 0 0 0 167.8 89.2L116.5 62A132 132 0 0 1 -116.5 62Z" fill="url(#tw4v)"/><path class="sb-rocker__stitch" d="M-158.6 93.4A184 184 0 0 0 158.6 93.4L118.9 70A138 138 0 0 1 -118.9 70Z"/><path id="rk4u" d="M-165 49A172.1 172.1 0 0 0 165 49" fill="none" stroke="none"/><text class="sb-rocker__text" font-size="37.1"><textPath href="#rk4u" startOffset="50%" text-anchor="middle">Est. 2013</textPath></text></g></svg>
       <p class="agegate__title" id="agegate-title">Are you 21 years of age or older?</p>
+      <svg class="pinstripe pinstripe--gold agegate__rule" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6"/><path d="M100 15.5C92 19 86 19.5 83 18"/><path d="M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6" transform="matrix(-1 0 0 1 240 0)"/><path d="M100 15.5C92 19 86 19.5 83 18" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg>
       <p class="agegate__body" id="agegate-body">You must be 21 years of age or older or 18+ with a valid medical card to enter this site.</p>
       <div class="agegate__actions">
-        <button type="button" class="btn btn--primary" data-age-yes=""><span class="btn__label">Yes</span></button>
+        <button type="button" class="btn btn--gold" data-age-yes=""><span class="btn__label">Yes</span></button>
         <button type="button" class="btn btn--ghost" data-age-no=""><span class="btn__label">No</span></button>
       </div>
       <p class="agegate__no" data-age-msg hidden role="status">Sorry, you can't enter this site.</p>
