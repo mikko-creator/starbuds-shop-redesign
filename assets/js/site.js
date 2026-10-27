@@ -4,6 +4,9 @@
      marks [data-store-pick] / .chip of the current store with .is-current, fires document event "sb:store" {detail: store}.
    - [data-store-pick="<slug>"] click = choose that store (stays on the page); a live-menu link clicked before any store
      is chosen opens the Locations chooser and continues to the menu after the pick.
+   - revision 2: mega menus ([data-mega-item] > button[data-mega-toggle][aria-controls] + [data-mega-panel]; click, hover
+     intent on a mouse, Escape returns focus, focus-out / click outside closes) and the drawer accordions
+     (button[data-acc][aria-controls]); window.SB.closeMega().
    - header switcher ([data-switch-toggle] / [data-switcher]), mobile drawer ([data-drawer-toggle] / [data-drawer]),
      age gate (localStorage "sbshop-age-ok" = "1"), reveals ([data-reveal], [data-stagger], .sheen, .stitch--draw, .seam: one-shot .is-in), parallax ([data-depth]),
      tilt ([data-tilt]), tabs ([data-tabs]), background videos (.bg-video). */
@@ -91,8 +94,49 @@
   var drawer = d.querySelector('[data-drawer]');
   var hint = d.querySelector('[data-switcher-hint]');
   function setExpanded(sel, on) { $$(sel).forEach(function (b) { b.setAttribute('aria-expanded', on ? 'true' : 'false'); }); }
+
+  /* ---------- mega menus (desktop >= 1000px): click toggles, hover intent on a mouse, Escape closes and returns focus,
+     focus leaving the item or a click outside closes. One open at a time; the store switcher closes them. ---------- */
+  var openMega = null, megaVia = '', hoverTimer = 0, leaveTimer = 0;
+  function megaPanelOf(b) { return d.getElementById(b.getAttribute('aria-controls')); }
+  function closeMega(focusBack) {
+    clearTimeout(hoverTimer); clearTimeout(leaveTimer);
+    if (!openMega) return;
+    var b = openMega; openMega = null; megaVia = '';
+    b.setAttribute('aria-expanded', 'false');
+    var p = megaPanelOf(b); if (p) p.hidden = true;
+    if (focusBack) b.focus();
+  }
+  function showMega(b, via) {
+    if (openMega === b) { megaVia = via === 'hover' ? megaVia : via; return; }
+    closeMega(false); closeSwitcher();
+    var p = megaPanelOf(b); if (!p) return;
+    p.hidden = false; b.setAttribute('aria-expanded', 'true'); openMega = b; megaVia = via;
+  }
+  SB.closeMega = function () { closeMega(false); };
+  $$('[data-mega-item]').forEach(function (li) {
+    var b = li.querySelector('[data-mega-toggle]');
+    if (!b) return;
+    li.addEventListener('pointerenter', function (e) {
+      if (e.pointerType !== 'mouse' || innerWidth < 1000) return;
+      clearTimeout(leaveTimer); clearTimeout(hoverTimer);
+      if (openMega === b) return;
+      hoverTimer = setTimeout(function () { showMega(b, 'hover'); }, openMega ? 40 : 150);
+    });
+    li.addEventListener('pointerleave', function (e) {
+      if (e.pointerType !== 'mouse') return;
+      clearTimeout(hoverTimer);
+      if (openMega !== b || megaVia !== 'hover') return; // a menu opened by click stays until Escape or a click outside
+      leaveTimer = setTimeout(function () { if (openMega === b && megaVia === 'hover') closeMega(false); }, 280);
+    });
+    li.addEventListener('focusout', function (e) {
+      if (openMega === b && e.relatedTarget && !li.contains(e.relatedTarget)) closeMega(false);
+    });
+  });
+
   function openSwitcher(focus) {
     if (!switcher) return;
+    closeMega(false);
     switcher.hidden = false; setExpanded('[data-switch-toggle]', true);
     if (hint) hint.hidden = SB.pendingCat === null;
     if (focus) { var f = switcher.querySelector('.is-current') || switcher.querySelector('a'); if (f) f.focus({ preventScroll: true }); }
@@ -104,14 +148,33 @@
   function openChooser() { if (innerWidth < 1000) openDrawer(); else openSwitcher(true); }
   SB.openChooser = openChooser;
 
+  var switchOpener = null;
   d.addEventListener('click', function (e) {
     var t = e.target.closest ? e.target : e.target.parentElement;
     if (!t) return;
+    var mega = t.closest('[data-mega-toggle]');
+    if (mega) {
+      e.preventDefault();
+      if (openMega === mega && megaVia !== 'hover') closeMega(false);
+      else showMega(mega, 'click'); // a click on a menu opened by hover pins it open
+      return;
+    }
+    if (openMega && (!t.closest('[data-mega-item]') || (t.closest('[data-mega-panel] a') && SB.current) || (t.closest('[data-mega-panel] a:not([data-menu-cat])')))) closeMega(false);
+    var acc = t.closest('[data-acc]');
+    if (acc) {
+      e.preventDefault();
+      var ap = d.getElementById(acc.getAttribute('aria-controls'));
+      var on = acc.getAttribute('aria-expanded') !== 'true';
+      acc.setAttribute('aria-expanded', on ? 'true' : 'false');
+      if (ap) ap.hidden = !on;
+      return;
+    }
     var tog = t.closest('[data-switch-toggle]');
     if (tog) {
       e.preventDefault();
       if (innerWidth < 1000) { openDrawer(); return; }
-      if (switcher && switcher.hidden) { SB.pendingCat = null; openSwitcher(false); } else closeSwitcher();
+      // opened from outside the header (promo bar, footer): move focus into the panel so keyboard users land in it
+      if (switcher && switcher.hidden) { SB.pendingCat = null; switchOpener = tog; openSwitcher(!tog.closest('[data-header]')); } else closeSwitcher();
       return;
     }
     if (t.closest('[data-drawer-toggle]')) { e.preventDefault(); if (drawer && drawer.hidden) openDrawer(); else closeDrawer(); return; }
@@ -131,12 +194,17 @@
     if (switcher && !switcher.hidden && !t.closest('[data-switcher]')) closeSwitcher();
   });
   d.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      if (switcher && !switcher.hidden) { closeSwitcher(); var b = d.querySelector('.nav [data-switch-toggle]'); if (b) b.focus(); }
-      closeDrawer();
+    if (e.key !== 'Escape') return;
+    if (openMega) { var mi = openMega.closest('[data-mega-item]'); closeMega(megaVia !== 'hover' || (mi && mi.contains(d.activeElement))); return; }
+    if (switcher && !switcher.hidden) {
+      closeSwitcher();
+      var b = switchOpener && switchOpener.offsetParent !== null ? switchOpener : $$('[data-switch-toggle]').filter(function (x) { return x.offsetParent !== null; })[0];
+      if (b) b.focus();
+      return;
     }
+    if (drawer && !drawer.hidden) { closeDrawer(); var bg = d.querySelector('[data-drawer-toggle]'); if (bg) bg.focus(); }
   });
-  addEventListener('resize', function () { if (innerWidth >= 1000) closeDrawer(); else closeSwitcher(); }, { passive: true });
+  addEventListener('resize', function () { if (innerWidth >= 1000) closeDrawer(); else { closeSwitcher(); closeMega(false); } }, { passive: true });
 
   /* ---------- age gate ---------- */
   var gate = d.querySelector('[data-agegate]');

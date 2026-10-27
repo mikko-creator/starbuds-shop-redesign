@@ -1,6 +1,7 @@
 /* home.css - the home page (FOUNDATION, Iron Star). Section stacking: each section sits above the next so its
-   front-plane cut-outs can hang across the seam below it (hero 9 > cats 6 > deals 5 > rewards 4 > story 2; the FINDER
-   and FAQ lanes' sections sit between at their own z-index). One accent per section: hero gold, categories gold,
+   front-plane cut-outs can hang across the seam below it. Revision 2 order: hero 9 > finder 7 (finder.css) > cats 6 >
+   vibes 5 = deals 5 (later in the DOM paints over) > statement 4 > spotlights 3 = rewards 3 > blog 2 < FAQ 3 (faq.css,
+   its patch hangs up into the blog) > story 1. One accent per section: hero gold, categories gold,
    deals oxblood red, rewards gold, story green. */
 
 /* ---------- hero ---------- */
@@ -122,7 +123,7 @@
 }
 
 /* ---------- rewards band ---------- */
-.rewards-band { z-index: 4; padding-block: clamp(140px, 12vw, 200px) clamp(120px, 11vw, 180px); background: var(--ink); }
+.rewards-band { z-index: 3; padding-block: clamp(140px, 12vw, 200px) clamp(120px, 11vw, 180px); background: var(--ink); }
 .rewards-band__still, .rewards-band__video { object-position: 72% 50%; }
 .rewards-band__shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11, 11, 10, .9) 0%, rgba(11, 11, 10, .6) 50%, rgba(11, 11, 10, .3) 100%), linear-gradient(180deg, rgba(11, 11, 10, .85) 0%, transparent 22%, transparent 78%, rgba(11, 11, 10, .85) 100%); }
 .rewards-band__leaves { --leaf-opacity: .12; }
@@ -144,7 +145,7 @@
 }
 
 /* ---------- brand story ---------- */
-.story { z-index: 2; padding-block: clamp(120px, 11vw, 180px); background: radial-gradient(ellipse 80% 90% at 30% 40%, #11452B 0%, #0C3220 55%, #081F14 100%); color: var(--text-light); --seam-bg: #0C3220; }
+.story { z-index: 1; padding-block: clamp(120px, 11vw, 180px); background: radial-gradient(ellipse 80% 90% at 30% 40%, #11452B 0%, #0C3220 55%, #081F14 100%); color: var(--text-light); --seam-bg: #0C3220; }
 .story .leaves { --leaf-opacity: .14; }
 .story__est { position: absolute; right: -.04em; bottom: -.16em; margin: 0; font-family: var(--font-black); font-weight: 700; font-size: clamp(7rem, 19vw, 18rem); line-height: .9; white-space: nowrap; color: transparent; -webkit-text-stroke: 1.5px rgba(232, 203, 122, .16); }
 .story__grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(40px, 6vw, 96px); align-items: center; }
@@ -167,3 +168,108 @@
   .story__media { max-width: 520px; }
   .story__patch { right: -6px; top: -44px; width: 104px; }
 }
+
+/* ========== revision 2 home sections (FOUNDATION-R2, sb-) ========== */
+/* ---------- Find your vibe: embroidered reading tiles ---------- */
+.sb-vibes { z-index: 5; padding-block: clamp(110px, 10vw, 160px) clamp(96px, 9vw, 140px); background: var(--oil); --seam-bg: var(--oil); }
+.sb-vibes__leaves { --leaf-opacity: .16; }
+.sb-vibes__head { display: grid; justify-items: center; max-width: 720px; margin: 0 auto clamp(46px, 5vw, 70px); text-align: center; }
+.sb-vibes__eyebrow { margin: 0 0 18px; }
+.sb-vibes__title { margin-bottom: .18em; color: var(--bone); }
+.sb-vibes__lead { margin-inline: auto; color: var(--text-light-soft); }
+.sb-vibes__grid { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(16px, 2vw, 26px); }
+.sb-vibes__item { display: flex; flex: 1 1 210px; max-width: 300px; min-width: 0; }
+.sb-vibe {
+  position: relative; isolation: isolate; display: flex; flex-direction: column; width: 100%; padding: 26px 22px 20px; text-decoration: none; color: var(--bone);
+  background: repeating-linear-gradient(38deg, #17140F 0 2px, #1F1A14 2px 4px); border: 2px solid var(--gold); border-radius: 6px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, .55), 0 22px 36px -20px rgba(0, 0, 0, .9), inset 0 0 0 1px rgba(0, 0, 0, .5);
+  transition: translate var(--t-med) var(--ease-heavy), box-shadow var(--t-med) var(--ease-heavy), border-color var(--t-med);
+}
+.sb-vibe:hover, .sb-vibe:focus-visible { translate: 0 -5px; border-color: var(--gold-hi); box-shadow: 0 3px 0 rgba(0, 0, 0, .55), var(--shadow-leather-hover), var(--glow-gold); }
+.sb-vibe__stitch { position: absolute; inset: 5px; z-index: -1; border: 1.5px dashed var(--gold); border-radius: 3px; opacity: .6; pointer-events: none; }
+.sb-vibe__badge { display: grid; place-items: center; width: 64px; height: 64px; margin-bottom: 16px; }
+.sb-vibe__badge-img { width: 60px; height: 60px; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .6)); rotate: -4deg; transition: rotate var(--t-med) var(--ease-heavy); }
+.sb-vibe:hover .sb-vibe__badge-img { rotate: 2deg; }
+.sb-vibe__label { font-family: var(--font-black); font-weight: 700; font-size: clamp(1.7rem, 1.4rem + .8vw, 2.2rem); line-height: 1; color: var(--gold-hi); }
+.sb-vibe__title { margin-top: 10px; font-size: .9rem; line-height: 1.45; color: var(--text-light-soft); }
+.sb-vibe__cta { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 16px; font-family: var(--font-display); font-weight: 500; font-size: .74rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-hi); }
+.sb-vibe__cta .icon { width: 1.15em; height: 1.15em; transition: translate var(--t-med) var(--ease-heavy); }
+.sb-vibe:hover .sb-vibe__cta .icon { translate: 4px 0; }
+.sb-vibes__more { margin: 38px 0 0; text-align: center; }
+@media (max-width: 599px) { .sb-vibes__grid { gap: 14px; } .sb-vibes__item { flex-basis: 140px; } .sb-vibe__label { font-size: 1.5rem; } }
+@media (max-width: 479px) { .sb-vibe { padding: 20px 16px 16px; } .sb-vibe__badge { width: 52px; height: 52px; margin-bottom: 10px; } .sb-vibe__badge-img { width: 48px; height: 48px; } .sb-vibe__title { font-size: .84rem; } }
+
+/* ---------- brand statement band: Star Buds' own words ---------- */
+.sb-statement { z-index: 4; padding-block: clamp(120px, 11vw, 180px); background: var(--ink); text-align: center; --seam-bg: var(--ink); }
+.sb-statement__leaves { --leaf-opacity: .22; --leaf-size: 520px; -webkit-mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, transparent 30%, #000 75%); mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, transparent 30%, #000 75%); }
+.sb-statement__dots { opacity: .7; }
+.sb-statement__inner { display: grid; justify-items: center; max-width: calc(1000px + 2 * var(--gutter)); }
+.sb-statement__eyebrow { margin: 0 0 26px; }
+.sb-statement__quote { position: relative; margin: 0; padding: 0 clamp(28px, 5vw, 70px); }
+.sb-statement__quote::before, .sb-statement__quote::after { position: absolute; font-family: var(--font-black); font-weight: 700; font-size: clamp(4rem, 3rem + 4vw, 8rem); line-height: 1; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sb-statement__quote::before { content: "\201C"; left: 0; top: -.18em; }
+.sb-statement__quote::after { content: "\201D"; right: 0; bottom: -.62em; }
+.sb-statement__text { margin: 0; font-size: clamp(2.3rem, 1.3rem + 3.5vw, 4.8rem); line-height: 1.02; color: var(--bone); text-wrap: balance; filter: drop-shadow(0 4px 18px rgba(0, 0, 0, .7)); }
+.sb-statement__rule { width: 230px; margin: 30px auto 22px; }
+.sb-statement__rule .pinstripe { width: 100%; }
+.sb-statement__line { margin: 0; max-width: 46ch; font-family: var(--font-black); font-weight: 600; font-size: clamp(1.4rem, 1.1rem + 1vw, 2rem); line-height: 1.15; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sb-statement__cite { margin: 22px 0 0; font-family: var(--font-display); font-weight: 500; font-size: .78rem; letter-spacing: .24em; text-transform: uppercase; color: var(--text-light-soft); }
+.sb-statement__cite::before { content: "\2014\00a0"; }
+.sb-statement__cite a { color: var(--gold-hi); text-decoration: none; border-bottom: 1px dashed currentColor; }
+.sb-statement__star { width: clamp(96px, 11vw, 170px); left: max(3vw, calc((100vw - 1360px) / 2)); top: 18%; }
+.sb-statement__patch { width: clamp(84px, 8vw, 128px); right: max(4vw, calc((100vw - 1320px) / 2)); bottom: 14%; }
+@media (max-width: 760px) {
+  .sb-statement__star { width: 76px; top: 26px; left: 14px; }
+  .sb-statement__patch { width: 74px; right: 14px; bottom: 26px; }
+  .sb-statement__quote { padding-inline: 18px; }
+}
+
+/* ---------- Flower and Vapes spotlights ---------- */
+.sb-spot { z-index: 3; padding-block: clamp(110px, 10vw, 160px); --seam-bg: var(--leather); }
+.sb-spot__head { display: grid; justify-items: center; max-width: 760px; margin: 0 auto clamp(56px, 6vw, 86px); text-align: center; }
+.sb-spot__eyebrow { margin: 0 0 18px; }
+.sb-spot__title { margin-bottom: .2em; color: var(--bone); }
+.sb-spot__lead { margin-inline: auto; color: var(--text-light-soft); }
+.sb-spot__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(22px, 3vw, 40px); }
+.sb-spot__card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .82fr); align-items: center; gap: 12px; min-height: 360px; padding: clamp(28px, 3.4vw, 46px); overflow: visible; }
+.sb-spot__card--vaporizers { background: linear-gradient(180deg, rgba(30, 32, 34, .74) 0%, rgba(12, 12, 12, .7) 100%); }
+.sb-spot__card.glass--stitch.stitch::after { inset: 9px; }
+.sb-spot__copy { position: relative; z-index: 2; }
+.sb-spot__patch { margin: 0 0 16px; }
+.sb-spot__name { margin: 0 0 .3em; font-family: var(--font-black); font-weight: 700; font-size: clamp(2.6rem, 1.8rem + 2.6vw, 4.2rem); line-height: .95; letter-spacing: 0; text-transform: none; color: var(--bone); }
+.sb-spot__card--vaporizers .sb-spot__name { background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sb-spot__card--flower .sb-spot__name { background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sb-spot__text { max-width: 34ch; color: var(--text-light-soft); }
+.sb-spot__store { margin: 0 0 20px; font-family: var(--font-display); font-weight: 500; font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+.sb-spot__store strong { color: var(--bone); font-weight: 500; }
+.sb-spot__art { position: relative; align-self: stretch; min-height: 260px; }
+.sb-spot__ring { position: absolute; left: 50%; top: 50%; width: min(100%, 270px); aspect-ratio: 1; translate: -50% -50%; border-radius: 50%; border: 1.5px dashed rgba(201, 162, 74, .5); background: radial-gradient(circle, rgba(201, 162, 74, .16) 0%, rgba(201, 162, 74, 0) 65%); }
+.sb-spot__card--vaporizers .sb-spot__ring { border-color: rgba(220, 224, 228, .4); background: radial-gradient(circle, rgba(220, 224, 228, .14) 0%, rgba(220, 224, 228, 0) 65%); }
+.sb-spot__cut { width: min(118%, 330px); left: 50%; top: 50%; margin: -42% 0 0 -59%; }
+.sb-spot__card:hover .sb-spot__cut { translate: 0 -8px; }
+.sb-spot__cut { transition: translate .8s var(--ease-heavy); }
+.sb-spot__note { display: flex; align-items: center; justify-content: center; gap: 14px; margin: clamp(40px, 4vw, 56px) 0 0; font-family: var(--font-display); font-weight: 500; font-size: .8rem; letter-spacing: .24em; text-transform: uppercase; color: var(--text-light-soft); text-align: center; }
+.sb-spot__note .icon { width: 9px; height: 9px; color: var(--gold); }
+@media (max-width: 1099px) { .sb-spot__grid { grid-template-columns: minmax(0, 1fr); max-width: 720px; margin-inline: auto; } }
+@media (max-width: 599px) {
+  .sb-spot__card { grid-template-columns: minmax(0, 1fr); min-height: 0; padding-top: 0; }
+  .sb-spot__art { order: -1; min-height: 210px; margin: -40px 0 0; }
+  .sb-spot__cut { width: 220px; margin: -110px 0 0 -110px; }
+  .sb-spot__ring { width: 190px; }
+  .sb-spot__card .btn { width: 100%; }
+  .sb-spot__note { gap: 10px; letter-spacing: .16em; font-size: .72rem; }
+}
+
+/* ---------- From the blog ---------- */
+.sb-news { z-index: 2; padding-block: clamp(110px, 10vw, 160px); --seam-bg: var(--parchment); }
+.sb-news .leaves { --leaf-opacity: .08; }
+.sb-news__grain { mix-blend-mode: multiply; opacity: .12; }
+.sb-news__head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 18px 30px; margin-bottom: clamp(36px, 4vw, 56px); }
+.sb-news__eyebrow { margin: 0 0 16px; }
+.sb-news__title { margin: 0; color: var(--text-dark); }
+.sb-news__all { margin: 0; }
+.sb-news__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(18px, 2.2vw, 30px); }
+.sb-news__item { display: flex; min-width: 0; }
+.sb-news__item > .sb-article { width: 100%; }
+@media (max-width: 999px) { .sb-news__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sb-news__item:last-child:nth-child(odd) { display: none; } }
+@media (max-width: 599px) { .sb-news__grid { grid-template-columns: minmax(0, 1fr); } .sb-news__item:last-child:nth-child(odd) { display: flex; } }

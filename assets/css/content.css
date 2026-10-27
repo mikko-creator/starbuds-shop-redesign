@@ -427,3 +427,7 @@ html.reveal-all .rw-tier { opacity: 1 !important; animation: none !important; }
   .rw-tier { animation: none !important; opacity: 1 !important; }
   .dl-sheet { transform: rotate(-2deg) !important; }
 }
+
+/* ---------- revision 2 (RESOURCES-R2): state deals links + Higher Rewards terms links ---------- */
+.dl-more { display: flex; flex-wrap: wrap; gap: 12px 26px; margin: 22px 0 0; }
+.dl-outro__terms { margin: 14px 0 0; }
