@@ -19,7 +19,7 @@ remembers a "Yes" in your browser.
 |---|---|
 | `/` | Hero on a looping motion backdrop, location chooser, the nine shop categories, deals, rewards, the brand story |
 | `/stores/` | All 12 shop locations, grouped by state |
-| `/stores/<slug>/` | One page per store, on the shop's own URLs: hours with a live open/closed status, address, directions, call, categories, about |
+| `/stores/<slug>/` | One page per store, on the shop's own URLs: address, directions, call, categories, about, and hours with a live open/closed status where starbuds.us lists hours (6 of the 12) |
 | `/deals/`, `/rewards/` | Deals and the rewards programme, using the copy published on starbuds.us |
 
 The online ordering itself stays on the existing Dutchie storefront. Category tiles and "Shop" buttons deep-link to the
