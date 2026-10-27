@@ -1,0 +1,27 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "G-HERO-JACKET",
+  "file": "assets/generated/g-hero-jacket.jpg",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "cinematic photograph of a vintage black leather jacket hanging on a worn wooden wall hook in a dim brick workshop, seen from behind, a large round embroidered patch on its back showing a gold five-point star with a green cannabis leaf, chrome zipper and studs catching warm tungsten light, thin smoke haze drifting through a shaft of light, deep blacks, the left third of the frame darker and empty for headline space, no lettering anywhere, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "16:9",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 3218176563,
+  "requestId": "01a17cd0-ab8b-70f0-83e0-6f45044d82dd",
+  "cutout": null,
+  "width": 2752,
+  "height": 1536,
+  "sha256": "c18e6eb1c50bb8d66a9739398093d1ebab15d30f439f2220f9029e85abd913bc",
+  "raw": "tmp/img/raw/G-HERO-JACKET.1793095420631.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T10:03:42.681Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

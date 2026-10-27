@@ -4,88 +4,253 @@
   "defaults": {
     "model": "fal-ai/flux-pro/v1.1-ultra",
     "style": "sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
-    "input": { "aspect_ratio": "1:1", "output_format": "jpeg", "safety_tolerance": "5" },
+    "input": {
+      "aspect_ratio": "1:1",
+      "output_format": "jpeg",
+      "safety_tolerance": "5"
+    },
     "cutoutModel": "fal-ai/birefnet/v2",
-    "cutoutInput": { "model": "General Use (Heavy)", "operating_resolution": "2048x2048", "output_format": "png", "refine_foreground": true }
+    "cutoutInput": {
+      "model": "General Use (Heavy)",
+      "operating_resolution": "2048x2048",
+      "output_format": "png",
+      "refine_foreground": true
+    }
   },
   "images": [
     {
-      "id": "CUT-BUD", "file": "assets/generated/cut-bud.png", "cutout": true,
-      "role": "front-plane cut-out: hero and flower category", "alt": "A frosty cannabis flower bud",
+      "id": "CUT-BUD",
+      "file": "assets/generated/cut-bud.png",
+      "cutout": true,
+      "role": "front-plane cut-out: hero and flower category",
+      "alt": "A frosty cannabis flower bud",
       "prompt": "studio macro product photograph of a single large dense cured cannabis flower bud, frosty white trichomes, curled orange pistils, deep green with violet tones, the whole bud centred and fully in frame with generous space around it, isolated on a plain flat light grey seamless background, soft even studio light with crisp specular highlights, no shadow",
-      "input": { "aspect_ratio": "1:1" }
+      "input": {
+        "aspect_ratio": "1:1"
+      }
     },
     {
-      "id": "CUT-PREROLL", "file": "assets/generated/cut-preroll.png", "cutout": true,
-      "role": "front-plane cut-out: pre-roll category", "alt": "A cone-shaped pre-rolled joint",
+      "id": "CUT-PREROLL",
+      "file": "assets/generated/cut-preroll.png",
+      "cutout": true,
+      "role": "front-plane cut-out: pre-roll category",
+      "alt": "A cone-shaped pre-rolled joint",
       "prompt": "studio product photograph of a single cone-shaped pre-rolled joint in plain unbleached white rolling paper with a neatly twisted tip and a short rolled paper filter at the narrow end, green cannabis visible at the open end, lying diagonally across the frame, fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light, no shadow, blank paper with no print",
-      "input": { "aspect_ratio": "1:1" }
+      "input": {
+        "aspect_ratio": "1:1"
+      }
     },
     {
-      "id": "CUT-JAR", "file": "assets/generated/cut-jar.png", "cutout": true,
-      "role": "front-plane cut-out: flower jar", "alt": "A glass jar filled with cannabis buds",
+      "id": "CUT-JAR",
+      "file": "assets/generated/cut-jar.png",
+      "cutout": true,
+      "role": "front-plane cut-out: flower jar",
+      "alt": "A glass jar filled with cannabis buds",
       "prompt": "studio product photograph of a small clear glass apothecary jar with a matte black screw lid, filled with dense green cannabis buds, completely blank glass with no label and no print, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, crisp white rim highlights tracing the glass edges, soft even light",
-      "input": { "aspect_ratio": "3:4" }
+      "input": {
+        "aspect_ratio": "3:4"
+      }
     },
     {
-      "id": "CUT-GUMMIES", "file": "assets/generated/cut-gummies.png", "cutout": true,
-      "role": "front-plane cut-out: edibles category", "alt": "A small heap of star-shaped fruit gummies",
+      "id": "CUT-GUMMIES",
+      "file": "assets/generated/cut-gummies.png",
+      "cutout": true,
+      "role": "front-plane cut-out: edibles category",
+      "alt": "A small heap of star-shaped fruit gummies",
       "prompt": "studio product photograph of a small heap of glossy sugar-dusted star-shaped fruit gummies in hot pink, lime green, sunny yellow and orange, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light, crisp sugar crystals",
-      "input": { "aspect_ratio": "4:3" }
+      "input": {
+        "aspect_ratio": "4:3"
+      }
     },
     {
-      "id": "CUT-VAPE", "file": "assets/generated/cut-vape.png", "cutout": true,
-      "role": "front-plane cut-out: vape category", "alt": "A vape cartridge filled with golden oil",
+      "id": "CUT-VAPE",
+      "file": "assets/generated/cut-vape.png",
+      "cutout": true,
+      "role": "front-plane cut-out: vape category",
+      "alt": "A vape cartridge filled with golden oil",
       "prompt": "studio product photograph of a single sleek unbranded vape cartridge standing upright, clear glass tank filled with golden amber cannabis oil, a matte black ceramic mouthpiece and a brushed gold metal base, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light with glowing amber highlights, completely blank with no print",
-      "input": { "aspect_ratio": "3:4" }
+      "input": {
+        "aspect_ratio": "3:4"
+      }
     },
     {
-      "id": "CUT-TINCTURE", "file": "assets/generated/cut-tincture.png", "cutout": true,
-      "role": "front-plane cut-out: tincture / wellness", "alt": "An amber dropper bottle beside cannabis leaflets",
+      "id": "CUT-TINCTURE",
+      "file": "assets/generated/cut-tincture.png",
+      "cutout": true,
+      "role": "front-plane cut-out: tincture / wellness",
+      "alt": "An amber dropper bottle beside cannabis leaflets",
       "prompt": "studio product photograph of an amber glass dropper bottle with a black rubber dropper cap standing upright, two small fresh cannabis leaflets resting against its base, completely blank bottle with no label and no print, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light, warm glow through the amber glass",
-      "input": { "aspect_ratio": "3:4" }
+      "input": {
+        "aspect_ratio": "3:4"
+      }
     },
     {
-      "id": "CUT-LEAF", "file": "assets/generated/cut-leaf.png", "cutout": true,
-      "role": "front-plane cut-out: floating leaves at section seams", "alt": "A single cannabis fan leaf",
+      "id": "CUT-LEAF",
+      "file": "assets/generated/cut-leaf.png",
+      "cutout": true,
+      "role": "front-plane cut-out: floating leaves at section seams",
+      "alt": "A single cannabis fan leaf",
       "prompt": "studio product photograph of a single fresh vivid green cannabis fan leaf with seven serrated leaflets and a short stem, flat and fully in frame with space around it, centred, isolated on a plain flat light grey seamless background, soft backlight showing the leaf veins, crisp edges, no shadow",
-      "input": { "aspect_ratio": "1:1" }
+      "input": {
+        "aspect_ratio": "1:1"
+      }
     },
     {
-      "id": "CUT-CONCENTRATE", "file": "assets/generated/cut-concentrate.png", "cutout": true,
-      "role": "front-plane cut-out: concentrates category", "alt": "A translucent amber shard of cannabis concentrate",
+      "id": "CUT-CONCENTRATE",
+      "file": "assets/generated/cut-concentrate.png",
+      "cutout": true,
+      "role": "front-plane cut-out: concentrates category",
+      "alt": "A translucent amber shard of cannabis concentrate",
       "prompt": "studio macro product photograph of a single translucent golden amber shard of cannabis shatter concentrate with glassy facets catching the light, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light, bright golden glints",
-      "input": { "aspect_ratio": "1:1" }
+      "input": {
+        "aspect_ratio": "1:1"
+      }
     },
     {
-      "id": "POP-STAR", "file": "assets/generated/pop-star.png", "cutout": true,
-      "role": "pop-art sticker: cannabis leaf bursting from a starburst", "alt": "Pop-art illustration of a cannabis leaf bursting out of a yellow starburst",
+      "id": "POP-STAR",
+      "file": "assets/generated/pop-star.png",
+      "cutout": true,
+      "role": "pop-art sticker: cannabis leaf bursting from a starburst",
+      "alt": "Pop-art illustration of a cannabis leaf bursting out of a yellow starburst",
       "prompt": "1960s comic-book pop art illustration of a green cannabis fan leaf bursting out of a bold sunshine-yellow starburst shape, thick black ink outlines, flat saturated green, yellow and hot pink fills, Ben-Day halftone dot shading, crisp screen-print look, centred with space around it on a plain white background",
-      "input": { "aspect_ratio": "1:1" }
+      "input": {
+        "aspect_ratio": "1:1"
+      }
     },
     {
-      "id": "POP-BUD", "file": "assets/generated/pop-bud.png", "cutout": true,
-      "role": "pop-art sticker: cannabis bud with sparkles", "alt": "Pop-art illustration of a cannabis bud with comic sparkles",
+      "id": "POP-BUD",
+      "file": "assets/generated/pop-bud.png",
+      "cutout": true,
+      "role": "pop-art sticker: cannabis bud with sparkles",
+      "alt": "Pop-art illustration of a cannabis bud with comic sparkles",
       "prompt": "1960s comic-book pop art illustration of a single plump cannabis flower bud, thick black ink outlines, flat green and violet fills with Ben-Day halftone dot shading, small yellow comic sparkle bursts around it, crisp screen-print look, centred with space around it on a plain white background",
-      "input": { "aspect_ratio": "1:1" }
+      "input": {
+        "aspect_ratio": "1:1"
+      }
     },
     {
-      "id": "G-HERO", "file": "assets/generated/g-hero.jpg",
-      "role": "home hero backdrop; V-HERO loop source", "alt": "Glossy cannabis leaves and frosted glass discs floating against a deep green backdrop",
+      "id": "G-HERO",
+      "file": "assets/generated/g-hero.jpg",
+      "role": "home hero backdrop; V-HERO loop source",
+      "alt": "Glossy cannabis leaves and frosted glass discs floating against a deep green backdrop",
       "prompt": "pop art studio set photograph, oversized glossy green cannabis fan leaves and translucent frosted glass discs and glass spheres floating in mid-air against a saturated deep emerald green backdrop printed with a faint pattern of large halftone dots, bold sunshine-yellow rim light from the right and a soft hot pink glow from the left, playful clean composition, the left third of the frame calmer with only soft out-of-focus shapes for headline space, shallow depth of field",
-      "input": { "aspect_ratio": "16:9" }
+      "input": {
+        "aspect_ratio": "16:9"
+      }
     },
     {
-      "id": "G-GLASS", "file": "assets/generated/g-glass.jpg",
-      "role": "section backdrop behind glass panels (light)", "alt": "Layered frosted glass panels and glass leaf shapes refracting green and yellow light",
+      "id": "G-GLASS",
+      "file": "assets/generated/g-glass.jpg",
+      "role": "section backdrop behind glass panels (light)",
+      "alt": "Layered frosted glass panels and glass leaf shapes refracting green and yellow light",
       "prompt": "abstract 3D render of layered frosted glass panels and translucent glass cannabis leaf shapes refracting light, saturated emerald green and sunshine yellow gradients with a hint of hot pink, soft caustics on a pale cream ground, clean minimal composition, studio lighting",
-      "input": { "aspect_ratio": "16:9" }
+      "input": {
+        "aspect_ratio": "16:9"
+      }
     },
     {
-      "id": "G-GLASS-DARK", "file": "assets/generated/g-glass-dark.jpg",
-      "role": "section backdrop behind glass panels (dark); V-GLASS loop source", "alt": "Dark green glass shapes and cannabis leaf silhouettes glowing with lime and pink light",
+      "id": "G-GLASS-DARK",
+      "file": "assets/generated/g-glass-dark.jpg",
+      "role": "section backdrop behind glass panels (dark); V-GLASS loop source",
+      "alt": "Dark green glass shapes and cannabis leaf silhouettes glowing with lime and pink light",
       "prompt": "abstract 3D render of translucent dark green glass shapes, glass cannabis leaf silhouettes and glossy glass spheres floating in deep black-green space, glowing lime green and hot pink rim light, soft caustic reflections, clean minimal composition with calm empty space in the centre",
-      "input": { "aspect_ratio": "16:9" }
+      "input": {
+        "aspect_ratio": "16:9"
+      }
+    },
+    {
+      "id": "PATCH-STAR",
+      "file": "assets/generated/patch-star.png",
+      "cutout": true,
+      "role": "Iron Star: embroidered emblem patch (front plane)",
+      "alt": "An embroidered patch of a star with a cannabis leaf",
+      "prompt": "studio product photograph of a round embroidered biker-style emblem patch, a bold five-point star in antique gold thread with a green cannabis leaf embroidered at its centre, black twill backing, thick raised satin-stitch texture, a merrowed gold thread border, absolutely no lettering, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light"
+    },
+    {
+      "id": "PATCH-WINGS",
+      "file": "assets/generated/patch-wings.png",
+      "cutout": true,
+      "role": "Iron Star: winged star patch",
+      "alt": "An embroidered patch of a winged star",
+      "prompt": "studio product photograph of an embroidered patch shaped as a five-point star with spread feathered wings, antique gold and bone-white thread on black twill, raised satin stitching, a merrowed border following the outline, vintage biker jacket patch style, absolutely no lettering, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light",
+      "input": {
+        "aspect_ratio": "16:9"
+      }
+    },
+    {
+      "id": "PATCH-LEAF",
+      "file": "assets/generated/patch-leaf.png",
+      "cutout": true,
+      "role": "Iron Star: shield patch with a leaf",
+      "alt": "An embroidered shield patch with a cannabis leaf and stars",
+      "prompt": "studio product photograph of a shield-shaped embroidered patch, a green cannabis leaf in the middle flanked by two small bone-white stars, black twill backing, raised satin stitching, a thick merrowed bone-white border, vintage biker jacket patch style, absolutely no lettering, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light",
+      "input": {
+        "aspect_ratio": "3:4"
+      }
+    },
+    {
+      "id": "CHROME-STAR",
+      "file": "assets/generated/chrome-star.png",
+      "cutout": true,
+      "role": "Iron Star: chrome star badge",
+      "alt": "A polished chrome star emblem",
+      "prompt": "studio product photograph of a polished chrome five-point star emblem with bevelled edges like a vintage motorcycle tank badge, mirror reflections of a dark studio, crisp specular highlights, absolutely no lettering, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background"
+    },
+    {
+      "id": "FLASH-LEAF",
+      "file": "assets/generated/flash-leaf.png",
+      "cutout": true,
+      "role": "Iron Star: tattoo-flash illustration (pop-art layer)",
+      "alt": "Tattoo-flash illustration of a cannabis leaf with a star and a ribbon",
+      "prompt": "vintage American traditional tattoo flash illustration of a cannabis leaf crossed by a plain blank ribbon banner with a five-point star above it, bold black outlines, limited palette of deep green, bone white, oxblood red and antique gold, halftone dot shading, screen-print texture, the ribbon completely empty with no lettering, centred with space around it on a plain off-white paper background"
+    },
+    {
+      "id": "FLASH-BUD",
+      "file": "assets/generated/flash-bud.png",
+      "cutout": true,
+      "role": "Iron Star: tattoo-flash bud in a horseshoe",
+      "alt": "Tattoo-flash illustration of a cannabis bud inside a horseshoe with stars",
+      "prompt": "vintage American traditional tattoo flash illustration of a plump cannabis flower bud inside a lucky horseshoe framed by small five-point stars, bold black outlines, limited palette of deep green, bone white, oxblood red and antique gold, halftone dot shading, screen-print texture, no lettering, centred with space around it on a plain off-white paper background"
+    },
+    {
+      "id": "G-LEATHER",
+      "file": "assets/generated/g-leather.jpg",
+      "role": "Iron Star: leather backdrop behind smoked glass",
+      "alt": "Black leather with a stitched seam and chrome rivets",
+      "prompt": "macro texture photograph of black motorcycle jacket leather with fine natural grain, one diagonal double-stitched seam and three small chrome rivets, dramatic low side light raking across the grain, deep shadows, rich blacks with warm brown undertones",
+      "input": {
+        "aspect_ratio": "16:9"
+      }
+    },
+    {
+      "id": "G-HERO-JACKET",
+      "file": "assets/generated/g-hero-jacket.jpg",
+      "role": "Iron Star hero candidate A (loop source)",
+      "alt": "A black leather jacket with an embroidered star-and-leaf patch hanging in a dim workshop",
+      "prompt": "cinematic photograph of a vintage black leather jacket hanging on a worn wooden wall hook in a dim brick workshop, seen from behind, a large round embroidered patch on its back showing a gold five-point star with a green cannabis leaf, chrome zipper and studs catching warm tungsten light, thin smoke haze drifting through a shaft of light, deep blacks, the left third of the frame darker and empty for headline space, no lettering anywhere",
+      "input": {
+        "aspect_ratio": "16:9"
+      }
+    },
+    {
+      "id": "G-HERO-BUDS",
+      "file": "assets/generated/g-hero-buds.jpg",
+      "role": "Iron Star hero candidate B (loop source)",
+      "alt": "Cannabis buds resting on black leather with chrome studs in drifting smoke",
+      "prompt": "cinematic still life of three frosty cannabis flower buds resting on a folded black leather jacket sleeve with chrome studs and a silver zipper, curls of soft smoke drifting through warm tungsten rim light, a faint green glow in the background, deep blacks, shallow depth of field, the left third of the frame darker and empty for headline space",
+      "input": {
+        "aspect_ratio": "16:9"
+      }
+    },
+    {
+      "id": "G-SMOKE",
+      "file": "assets/generated/g-smoke.jpg",
+      "role": "Iron Star dark band backdrop; smoke loop source",
+      "alt": "Smoke and golden embers drifting in darkness",
+      "prompt": "slow drifting wisps of pale smoke and a few tiny glowing golden embers floating in deep black space, a faint emerald green rim light from the right, calm and minimal with empty dark space in the centre",
+      "input": {
+        "aspect_ratio": "16:9"
+      }
     }
   ]
 }

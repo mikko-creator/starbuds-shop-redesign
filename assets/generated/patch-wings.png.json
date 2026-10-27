@@ -1,0 +1,30 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "PATCH-WINGS",
+  "file": "assets/generated/patch-wings.png",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "studio product photograph of an embroidered patch shaped as a five-point star with spread feathered wings, antique gold and bone-white thread on black twill, raised satin stitching, a merrowed border following the outline, vintage biker jacket patch style, absolutely no lettering, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "16:9",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 3805101373,
+  "requestId": "01a17cd0-6099-7ff3-a4a1-3ba2fb9823cc",
+  "cutout": {
+    "model": "fal-ai/birefnet/v2",
+    "requestId": "01a17cd0-92d0-7633-b07c-41dc9e44aced"
+  },
+  "width": 2752,
+  "height": 1536,
+  "sha256": "0d0b7f1f0ba30cd2f1cce4cf192d3207fedfb9c87c78a9c66e9dbf1ea2c1cf58",
+  "raw": "tmp/img/raw/PATCH-WINGS.1793095403566.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T10:03:30.177Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "FLASH-BUD",
+  "file": "assets/generated/flash-bud.png",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "vintage American traditional tattoo flash illustration of a plump cannabis flower bud inside a lucky horseshoe framed by small five-point stars, bold black outlines, limited palette of deep green, bone white, oxblood red and antique gold, halftone dot shading, screen-print texture, no lettering, centred with space around it on a plain off-white paper background, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "1:1",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 121642284,
+  "requestId": "01a17cd0-a341-7f12-8b72-a0add1684ab3",
+  "cutout": {
+    "model": "fal-ai/birefnet/v2",
+    "requestId": "01a17cd0-dafa-7dd3-88af-b5be39299060"
+  },
+  "width": 2048,
+  "height": 2048,
+  "sha256": "245c546040f457bee823af212b74e620753838187ea7fe422ab5a8051d8db3c7",
+  "raw": "tmp/img/raw/FLASH-BUD.1793095421924.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T10:03:49.608Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

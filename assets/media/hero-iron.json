@@ -1,0 +1,25 @@
+{
+  "tool": "tools/make-loop.mjs",
+  "input": "tmp/hf/v-hero-iron-pp.mp4",
+  "inputDuration": 20.083333,
+  "fps": 24,
+  "fade": 0.4,
+  "loopDuration": 19.683,
+  "outputs": {
+    "assets/media/hero-iron.mp4": 2171793,
+    "assets/media/hero-iron.webm": 1222434,
+    "assets/media/hero-iron-poster.webp": 62024,
+    "assets/media/hero-iron-phone.mp4": 1270386
+  },
+  "calmness": {
+    "metric": "ffmpeg signalstats YDIF (mean absolute luma change between consecutive frames, 0-255), measured over two plays of the loop",
+    "frames": 945,
+    "max": 3.20214,
+    "p95": 2.83498,
+    "mean": 1.91,
+    "framesOver20": 0,
+    "seamChange": 1.40903
+  },
+  "aiLabel": "AI-generated leather jacket with an embroidered star-and-leaf patch in a smoky workshop, slow push-in, ping-pong (Higgsfield kling-video/v3.0-turbo/image-to-video). IPTC digital source type: http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia. Not footage of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "generatedAt": "2026-10-27T10:17:08.274Z"
+}

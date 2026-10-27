@@ -1,0 +1,86 @@
+{
+  "greenwood-dispensary": {
+    "lat": 33.5162315,
+    "lon": -90.1795281,
+    "precision": "city",
+    "query": "Greenwood, MS 38930",
+    "display_name": "Greenwood, Leflore County, Mississippi, United States"
+  },
+  "natchez-dispensary": {
+    "lat": 31.538377,
+    "lon": -91.3779439,
+    "precision": "address",
+    "query": "135 US-61, Natchez, MS 39120",
+    "display_name": "135, Seargent Prentiss Drive, Saint Catherine, Natchez, Adams County, Mississippi, 39120, United States"
+  },
+  "ocean-springs-dispensary": {
+    "lat": 30.4160994,
+    "lon": -88.8321788,
+    "precision": "address",
+    "query": "718 Bienville Blvd, Ocean Springs, MS 39564",
+    "display_name": "718, Bienville Boulevard, Ocean Springs, Jackson County, Mississippi, 39564, United States"
+  },
+  "pearl": {
+    "lat": 32.2735792,
+    "lon": -90.127881,
+    "precision": "city",
+    "query": "Pearl, MS 39208",
+    "display_name": "Pearl, Rankin County, Mississippi, United States"
+  },
+  "oxford-dispensary": {
+    "lat": 34.3804109,
+    "lon": -89.5105572,
+    "precision": "address",
+    "query": "1319 N Lamar Blvd, Oxford, MS 38655",
+    "display_name": "1319, North Lamar Boulevard, Oxford, Lafayette County, Mississippi, 38655, United States"
+  },
+  "tupelo-saltillo-dispensary": {
+    "lat": 34.3679135,
+    "lon": -88.7016489,
+    "precision": "address",
+    "query": "2546 Hwy 145, Saltillo, MS 38866",
+    "display_name": "2546, Mississippi Highway 145, Saltillo, Lee County, Mississippi, 38866, United States"
+  },
+  "lawton-dispensary": {
+    "lat": 34.623602,
+    "lon": -98.4315906,
+    "precision": "address",
+    "query": "2629 NW Cache Rd, Lawton, OK 73505",
+    "display_name": "2629, Northwest Cache Road, Lawton, Comanche County, Oklahoma, 73505, United States"
+  },
+  "altus-dispensary": {
+    "lat": 34.6519175,
+    "lon": -99.3171327,
+    "precision": "address",
+    "query": "1100 Falcon Rd, Altus, OK 73521",
+    "display_name": "Republic Loans, 1100, Falcon Road, Altus, Jackson County, Oklahoma, 73521, United States"
+  },
+  "ardmore-dispensary": {
+    "lat": 34.179174,
+    "lon": -97.1607,
+    "precision": "address",
+    "query": "2502 Crossroads Dr., Ardmore, OK 73401",
+    "display_name": "2502, Crossroads Drive, Ardmore, Carter County, Oklahoma, 73401, United States"
+  },
+  "chickasha-dispensary": {
+    "lat": 35.0432576,
+    "lon": -97.9373033,
+    "precision": "address",
+    "query": "718 S 4th St, Chickasha, OK 73018",
+    "display_name": "718, South 4th Street, Chickasha, Grady County, Oklahoma, 73018, United States"
+  },
+  "baltimore-dispensary": {
+    "lat": 39.3471216,
+    "lon": -76.5389077,
+    "precision": "address",
+    "query": "5975 Belair Rd, Baltimore, MD 21206",
+    "display_name": "5975, Belair Road, Cedmont, Hamilton, Baltimore, Maryland, 21206, United States"
+  },
+  "buffalo-dispensary": {
+    "lat": 42.9580211,
+    "lon": -78.8334832,
+    "precision": "address",
+    "query": "396 Kenmore Ave, Buffalo, NY 14223",
+    "display_name": "Star Buds, 396, Kenmore Avenue, Kenilworth, Buffalo, Erie County, New York, 14223, United States"
+  }
+}

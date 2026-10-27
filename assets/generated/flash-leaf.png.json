@@ -1,0 +1,30 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "FLASH-LEAF",
+  "file": "assets/generated/flash-leaf.png",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "vintage American traditional tattoo flash illustration of a cannabis leaf crossed by a plain blank ribbon banner with a five-point star above it, bold black outlines, limited palette of deep green, bone white, oxblood red and antique gold, halftone dot shading, screen-print texture, the ribbon completely empty with no lettering, centred with space around it on a plain off-white paper background, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "1:1",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 640308893,
+  "requestId": "01a17cd0-a297-7fa0-b223-09fd976a94fc",
+  "cutout": {
+    "model": "fal-ai/birefnet/v2",
+    "requestId": "01a17cd0-ce6c-7521-9264-40f857a0aab3"
+  },
+  "width": 2048,
+  "height": 2048,
+  "sha256": "cacace95ee9ec7b987c6cbf3151368589a7f43113d7662bcca8948db7a360b90",
+  "raw": "tmp/img/raw/FLASH-LEAF.1793095418743.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T10:03:44.655Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

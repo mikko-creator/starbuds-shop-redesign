@@ -1,0 +1,24 @@
+{
+  "tool": "tools/make-loop.mjs",
+  "input": "tmp/hf/v-smoke-pp.mp4",
+  "inputDuration": 10.083333,
+  "fps": 24,
+  "fade": 0.4,
+  "loopDuration": 9.683,
+  "outputs": {
+    "assets/media/smoke-ember.mp4": 614480,
+    "assets/media/smoke-ember.webm": 246602,
+    "assets/media/smoke-ember-poster.webp": 14696
+  },
+  "calmness": {
+    "metric": "ffmpeg signalstats YDIF (mean absolute luma change between consecutive frames, 0-255), measured over two plays of the loop",
+    "frames": 465,
+    "max": 1.05101,
+    "p95": 0.848161,
+    "mean": 0.596,
+    "framesOver20": 0,
+    "seamChange": 1.05101
+  },
+  "aiLabel": "AI-generated smoke and golden embers in darkness, slow drift, ping-pong (Higgsfield kling-video/v3.0-turbo/image-to-video). IPTC digital source type: http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia. Not footage of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "generatedAt": "2026-10-27T10:17:32.008Z"
+}

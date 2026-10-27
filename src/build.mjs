@@ -1,4 +1,4 @@
-// build.mjs - Star Buds shop redesign pitch ("Pop Glass"): src/content/site.json -> static site (FOUNDATION).
+// build.mjs - Star Buds shop redesign pitch ("Iron Star"): src/content/site.json -> static site (FOUNDATION).
 //   node src/build.mjs [--out dist]        (lanes: --out tmp/build-<lane>)
 // Node builtins + cwebp (and webpmux, optional) on PATH. Reads src/content/site.json, or src/content/site.stub.json
 // when the real data does not exist yet. Exit 1 on a missing image, an unknown template, a duplicate page path or a
@@ -42,17 +42,21 @@ function copyDir(src, dst, filter = () => true) {
 }
 
 // ---------- static assets ----------
+const RETIRED_MEDIA = /^(hero-pop|glass-dark)/;
 const cssFiles = CSS_ORDER.filter((f) => fs.existsSync(path.join(ROOT, 'src/styles', f + '.css')));
 fs.mkdirSync(path.join(OUT, 'assets/css'), { recursive: true });
 for (const f of cssFiles) fs.copyFileSync(path.join(ROOT, 'src/styles', f + '.css'), path.join(OUT, 'assets/css', f + '.css'));
 const extraCss = fs.readdirSync(path.join(ROOT, 'src/styles')).filter((f) => f.endsWith('.css') && !CSS_ORDER.includes(f.replace(/\.css$/, '')));
 if (extraCss.length) console.warn('warning: stylesheets not in the fixed order are not linked: ' + extraCss.join(', '));
 fs.mkdirSync(path.join(OUT, 'assets/js'), { recursive: true });
-fs.copyFileSync(path.join(ROOT, 'src/scripts/site.js'), path.join(OUT, 'assets/js/site.js'));
+const jsFiles = fs.readdirSync(path.join(ROOT, 'src/scripts')).filter((f) => f.endsWith('.js'));
+for (const f of jsFiles) fs.copyFileSync(path.join(ROOT, 'src/scripts', f), path.join(OUT, 'assets/js', f));
 const copied = {
   brand: copyDir('assets/brand', 'assets/brand', (n) => /\.(png|webp|svg|jpg)$/i.test(n)),
   fonts: copyDir('assets/fonts', 'assets/fonts', (n) => /\.(woff2?|txt)$/i.test(n)),
-  media: copyDir('assets/media', 'assets/media', (n) => /\.(mp4|webm|webp|jpg|png)$/i.test(n)),
+  // the pop-era loops (hero-pop.*, glass-dark.*) are retired by REVISION-1 R1.5: shipped below only while a page
+  // still references them (with a warning naming the page), so a lane that has not restyled yet does not 404
+  media: copyDir('assets/media', 'assets/media', (n) => /\.(mp4|webm|webp|jpg|png)$/i.test(n) && !RETIRED_MEDIA.test(n)),
   photos: copyDir('assets/photos', 'assets/photos', (n) => /\.(webp|jpe?g|png|avif)$/i.test(n)),
 };
 fs.copyFileSync(path.join(ROOT, 'assets/brand/favicon.png'), path.join(OUT, 'favicon.png'));
@@ -108,6 +112,14 @@ for (const [p, { html, from }] of pages) {
   if (h1 !== 1) warnings.push(`${p} (${from}): ${h1} <h1>`);
   if (!/<main id="main"/.test(html)) warnings.push(`${p} (${from}): no <main id="main">`);
   if (!/<meta name="description" content="[^"]+"/.test(html)) warnings.push(`${p} (${from}): empty meta description`);
+  for (const m of new Set(html.match(/\/assets\/media\/[\w.-]+/g) || [])) {
+    const name = m.split('/').pop();
+    if (!RETIRED_MEDIA.test(name)) continue;
+    const src = path.join(ROOT, 'assets/media', name);
+    if (!fs.existsSync(src)) continue;
+    fs.copyFileSync(src, path.join(OUT, 'assets/media', name));
+    warnings.push(`${p} (${from}): still uses retired media ${name} (REVISION-1 R1.5)`);
+  }
 }
 if (!pages.has('/404.html')) warnings.push('no /404.html page rendered');
 
@@ -117,4 +129,4 @@ const errs2 = imageErrors();
 if (errs2.length) fail([...new Set(errs2)].join('\n  '));
 
 for (const w of warnings) console.warn('warning: ' + w);
-console.log(`built ${pages.size} pages -> ${path.relative(ROOT, OUT) || '.'} | css ${cssFiles.join(',')} | brand ${copied.brand}, fonts ${copied.fonts}, media ${copied.media}, photos ${copied.photos} | img variants ${iv.copied} (encoded ${iv.encoded}, xmp ai-label ${iv.labelled ? 'yes' : 'no'}) | ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+console.log(`built ${pages.size} pages -> ${path.relative(ROOT, OUT) || '.'} | css ${cssFiles.join(',')} | js ${jsFiles.join(',')} | brand ${copied.brand}, fonts ${copied.fonts}, media ${copied.media}, photos ${copied.photos} | img variants ${iv.copied} (encoded ${iv.encoded}, xmp ai-label ${iv.labelled ? 'yes' : 'no'}) | ${((Date.now() - t0) / 1000).toFixed(1)}s`);

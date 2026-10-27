@@ -1,0 +1,30 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "PATCH-STAR",
+  "file": "assets/generated/patch-star.png",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "studio product photograph of a round embroidered biker-style emblem patch, a bold five-point star in antique gold thread with a green cannabis leaf embroidered at its centre, black twill backing, thick raised satin-stitch texture, a merrowed gold thread border, absolutely no lettering, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "1:1",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 3894679124,
+  "requestId": "01a17cd0-6097-7fa2-a0cb-20eb10539767",
+  "cutout": {
+    "model": "fal-ai/birefnet/v2",
+    "requestId": "01a17cd0-9a7d-7853-ab1f-a9ca66e432a2"
+  },
+  "width": 2048,
+  "height": 2048,
+  "sha256": "ce730ce6001ea5c1b452683e669c9cf3e4b42386971ddf34f2a4c84f6f561f4c",
+  "raw": "tmp/img/raw/PATCH-STAR.1793095404896.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T10:03:31.729Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

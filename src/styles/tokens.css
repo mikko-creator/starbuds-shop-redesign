@@ -1,72 +1,109 @@
-/* tokens.css - Pop Glass design tokens (FOUNDATION). Table + usage: docs/DESIGN.md */
+/* tokens.css - "Iron Star" design tokens (FOUNDATION, revision 1). Table + usage: docs/DESIGN.md
+   Old English biker pop-art: jet, leather and bone grounds; brand green and antique gold accents; chrome as a gradient;
+   oxblood red for deal urgency only. */
 :root {
-  /* brand + pop palette */
-  --green: #006937;        /* brand green (template) */
-  --green-deep: #11432B;   /* pill buttons, dark grounds */
-  --green-ink: #0B2A1C;    /* darkest green ground */
-  --ink: #101512;          /* text, outlines, hard shadows */
-  --charcoal: #231F20;
-  --paper: #FFF8EA;        /* warm light ground */
-  --white: #fff;
-  --mist: #F2F6F8;
-  --coral: #DA5347;        /* deal urgency only */
-  --pop-yellow: #FFD23F;   /* pop accent */
-  --pop-pink: #FF5FA2;     /* pop accent */
-  --pop-lime: #C7F45A;     /* pop accent on dark */
-  --green-bright: #19A35B; /* lighter green for lines on dark (derived from --green) */
-  --ink-soft: rgba(16, 21, 18, .72);
-  --paper-soft: rgba(255, 248, 234, .82);
+  /* grounds */
+  --ink: #0B0B0A;          /* jet: page ground, text on bone */
+  --leather: #15120E;      /* leather black: dark sections */
+  --oil: #1D1A16;          /* raised dark surfaces */
+  --bone: #EFE6D2;         /* light sections, text on dark */
+  --parchment: #E3D4B5;    /* secondary light ground */
+  /* accents */
+  --green: #006937;        /* brand green */
+  --green-deep: #0E3B25;
+  --green-glow: #2E9B5A;   /* sparingly: lines and glows on dark */
+  --gold: #C9A24A;         /* antique gold: rules, stitches, eyebrows */
+  --gold-hi: #E8CB7A;
+  --red: #9E2A22;          /* oxblood: deal urgency only */
+  --chrome: linear-gradient(180deg, #F7F7F5 0%, #B9BEC2 38%, #5D6368 52%, #E9EBEC 70%, #8D9398 100%);
+  --gold-grad: linear-gradient(180deg, #F3DD9A 0%, #D9B45E 34%, #9C7A2E 54%, #E4C273 74%, #B08A3A 100%);
+  --white: #FFFFFF;
+
+  /* text */
+  --text-dark: #1A1712;                    /* body text on bone */
+  --text-dark-soft: rgba(26, 23, 18, .74);
+  --text-light: var(--bone);               /* body text on dark */
+  --text-light-soft: rgba(239, 230, 210, .74);
+  --rule-dark: rgba(239, 230, 210, .16);   /* hairlines on dark */
+  --rule-light: rgba(26, 23, 18, .2);      /* hairlines on bone */
+
+  /* legacy aliases (Pop Glass names, kept so older markup keeps working; new code uses the names above) */
+  --paper: var(--bone);
+  --mist: var(--parchment);
+  --charcoal: var(--oil);
+  --green-ink: var(--leather);
+  --green-bright: var(--green-glow);
+  --coral: var(--red);
+  --pop-yellow: var(--gold);
+  --pop-pink: var(--red);
+  --pop-lime: var(--gold-hi);
+  --ink-soft: var(--text-dark-soft);
+  --paper-soft: var(--text-light-soft);
 
   /* type */
-  --font-display: "Oswald", "Oswald Fallback", "Arial Narrow", Impact, sans-serif;
+  --font-black: "Grenze Gotisch", "Grenze Gotisch Fallback", "Old English Text MT", Georgia, serif; /* display only */
+  --font-display: "Oswald", "Oswald Fallback", "Arial Narrow", Impact, sans-serif;                   /* uppercase UI */
   --font-body: "Manrope", "Manrope Fallback", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  --fs-hero: clamp(3.1rem, 1.4rem + 6.4vw, 7.4rem);
-  --fs-h2: clamp(2.3rem, 1.35rem + 3.6vw, 4.6rem);
-  --fs-h3: clamp(1.35rem, 1.1rem + .9vw, 1.9rem);
-  --fs-lead: clamp(1.06rem, 1rem + .35vw, 1.3rem);
+  --fs-hero: clamp(3.2rem, 1.5rem + 6.2vw, 7.6rem);
+  --fs-h2: clamp(2.5rem, 1.5rem + 3.8vw, 5rem);
+  --fs-h3: clamp(1.45rem, 1.15rem + 1vw, 2.05rem);
+  --fs-lead: clamp(1.06rem, 1rem + .35vw, 1.28rem);
   --fs-body: 1.0625rem;
   --fs-small: .875rem;
   --fs-tiny: .75rem;
-  --lh-tight: .92;
-  --lh-body: 1.6;
-  --track-caps: .04em;
+  --lh-tight: .95;
+  --lh-body: 1.65;
+  --track-caps: .16em;
 
   /* layout */
   --maxw: 1280px;
   --gutter: clamp(16px, 4vw, 56px);
-  --section-y: clamp(80px, 9vw, 150px);
-  --promo-h: 36px;
+  --section-y: clamp(84px, 9vw, 150px);
+  --promo-h: 34px;
   --header-h: 76px;
 
-  /* shape */
-  --r-sm: 10px;
-  --r-md: 18px;
-  --r-lg: 28px;
-  --r-xl: 40px;
+  /* shape: crisp, tailored corners (no bubbles) */
+  --r-sm: 3px;
+  --r-md: 6px;
+  --r-lg: 10px;
+  --r-xl: 14px;
   --r-pill: 999px;
-  --outline: 2px solid var(--ink);
+  --outline: 1px solid var(--gold);
 
-  /* shadows */
-  --shadow-pop: 6px 6px 0 var(--ink);
-  --shadow-pop-hover: 9px 9px 0 var(--ink);
-  --shadow-pop-yellow: 6px 6px 0 var(--pop-yellow);
-  --shadow-pop-pink: 6px 6px 0 var(--pop-pink);
-  --shadow-soft: 0 24px 60px -24px rgba(11, 42, 28, .45);
-  --shadow-cut: drop-shadow(0 18px 22px rgba(11, 42, 28, .35));
+  /* depth */
+  --shadow-leather: 0 34px 70px -30px rgba(0, 0, 0, .9), 0 10px 24px -12px rgba(0, 0, 0, .7);
+  --shadow-leather-hover: 0 46px 90px -30px rgba(0, 0, 0, .95), 0 16px 34px -14px rgba(0, 0, 0, .8);
+  --shadow-soft: 0 24px 60px -26px rgba(0, 0, 0, .55);
+  --shadow-cut: drop-shadow(0 22px 24px rgba(0, 0, 0, .55)) drop-shadow(0 4px 5px rgba(0, 0, 0, .45));
+  --glow-gold: 0 0 0 1px rgba(201, 162, 74, .7), 0 0 28px -4px rgba(201, 162, 74, .45);
+  /* legacy shadow names */
+  --shadow-pop: var(--shadow-leather);
+  --shadow-pop-hover: var(--shadow-leather-hover);
 
-  /* glass */
-  --glass-light: rgba(255, 255, 255, .55);
-  --glass-dark: rgba(255, 255, 255, .14);
-  --glass-blur: blur(18px) saturate(160%);
-  --glass-edge-light: rgba(255, 255, 255, .75);
-  --glass-edge-dark: rgba(255, 255, 255, .28);
+  /* smoked glass */
+  --glass-smoke: rgba(18, 16, 13, .62);
+  --glass-smoke-strong: rgba(14, 12, 10, .78);
+  --glass-bone: rgba(239, 230, 210, .72);
+  --glass-blur: blur(20px) saturate(125%);
+  --glass-edge: rgba(201, 162, 74, .55);
+  --glass-edge-chrome: rgba(220, 224, 228, .35);
+  /* legacy glass names */
+  --glass-light: var(--glass-bone);
+  --glass-dark: var(--glass-smoke);
 
-  /* motion */
-  --ease-out: cubic-bezier(.2, .8, .2, 1);
-  --ease-pop: cubic-bezier(.34, 1.56, .64, 1);
-  --t-fast: .18s;
-  --t-med: .45s;
-  --t-slow: .9s;
+  /* stitching */
+  --stitch: rgba(201, 162, 74, .75);
+  --stitch-bone: rgba(239, 230, 210, .55);
+  --stitch-dash: 7px;
+  --stitch-gap: 5px;
+
+  /* motion: weighty, never bouncy */
+  --ease-out: cubic-bezier(.16, .84, .24, 1);
+  --ease-heavy: cubic-bezier(.22, .9, .18, 1);
+  --ease-pop: var(--ease-heavy); /* legacy name: no overshoot any more */
+  --t-fast: .2s;
+  --t-med: .5s;
+  --t-slow: 1.1s;
 
   /* stacking: back plane < mid plane < front plane < header < drawer < gate */
   --z-back: 0;

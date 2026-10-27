@@ -1,0 +1,27 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "G-SMOKE",
+  "file": "assets/generated/g-smoke.jpg",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "slow drifting wisps of pale smoke and a few tiny glowing golden embers floating in deep black space, a faint emerald green rim light from the right, calm and minimal with empty dark space in the centre, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "16:9",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 1777989332,
+  "requestId": "01a17cd0-d70e-7d22-8f51-9f5966b159e6",
+  "cutout": null,
+  "width": 2752,
+  "height": 1536,
+  "sha256": "fea0ce4f0621f6935d4d3e2ea5140b88aaebfa4a4281f1a411ebf3dce52231ac",
+  "raw": "tmp/img/raw/G-SMOKE.1793095431735.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T10:03:53.197Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

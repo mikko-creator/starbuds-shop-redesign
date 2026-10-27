@@ -1,0 +1,183 @@
+{
+  "schema": "faq/1",
+  "note": "Home-page FAQ (REVISION-1 R1.4, FAQ lane). Star Buds-specific answers quote captured copy only; every captured answer carries refs[] whose 'quote' must appear verbatim both in the answer and in the cited source (checked by the FAQ lane's proof script, and re-checked against site.json by faq.mjs at build time). General answers are neutral, non-medical and carry no dosing numbers. 'ui' answers describe this redesign's own pages. Link targets in 'links' are keys that faq.mjs maps to rendered hrefs (no internal paths in this file).",
+  "eyebrow": "FAQ",
+  "title": "Frequently asked questions",
+  "lede": "Visiting a store, shopping with Star Buds, and the cannabis basics.",
+  "disclaimer": "General information, not medical or legal advice. Rules differ by state and can change; check your store's page before you visit.",
+  "groups": [
+    {
+      "id": "visit",
+      "title": "Before you visit",
+      "items": [
+        {
+          "id": "bring",
+          "q": "What do I need to bring on my first visit?",
+          "answer": [
+            "At the Oklahoma stores: “All visitors must be at least 18 years of age with a valid medical card and must provide a valid photo ID. We take cash and debit cards and there is also an ATM inside our dispensary for your convenience.”",
+            "At Star Buds Baltimore: “All visitors must be at least 21 years of age and must provide a valid photo ID. We take cash and there is also an ATM inside our dispensary for your convenience.”",
+            "Requirements differ by state, so check your store's page before you go."
+          ],
+          "cite": "Quoted from the Star Buds Lawton, Altus, Chickasha and Baltimore store pages on starbuds.us",
+          "links": [{ "label": "Find your store", "to": "stores" }],
+          "source": {
+            "type": "captured",
+            "refs": [
+              { "file": "src/content/site.json", "path": "stores[slug=lawton-dispensary].visit[0].a", "origin": "lawton.json (www.starbuds.us/lawton); the same sentence is on altus.json and chickasha.json", "quote": "All visitors must be at least 18 years of age with a valid medical card and must provide a valid photo ID. We take cash and debit cards and there is also an ATM inside our dispensary for your convenience." },
+              { "file": "src/content/site.json", "path": "stores[slug=baltimore-dispensary].visit[0].a", "origin": "maryland.json (www.starbuds.us/maryland)", "quote": "All visitors must be at least 21 years of age and must provide a valid photo ID. We take cash and there is also an ATM inside our dispensary for your convenience." }
+            ],
+            "uiParts": ["Requirements differ by state, so check your store's page before you go."]
+          }
+        },
+        {
+          "id": "medical-card",
+          "q": "Do I need a medical card?",
+          "answer": [
+            "It depends on the state. Mississippi and Oklahoma run medical cannabis programs, so buying there requires a valid medical card. Maryland and New York allow adult-use purchases for anyone 21 or older with a valid photo ID, and both also run medical programs."
+          ],
+          "disclaimer": true,
+          "links": [{ "label": "Find your store", "to": "stores" }],
+          "source": {
+            "type": "general",
+            "basis": "State-program facts stated generally, as REVISION-1 R1.4 allows (Mississippi and Oklahoma: medical programs; Maryland and New York: adult-use 21+ and medical), with the required general-information note. Consistent with the captured store copy: Oklahoma visit answers require 'a valid medical card'; the Baltimore visit answer requires visitors to be 'at least 21 years of age'."
+          }
+        },
+        {
+          "id": "store-page",
+          "q": "What does a store page list?",
+          "answer": [
+            "Each store page on this site shows the store's address, phone number and directions, its opening hours where they are published, shortcuts into that store's live menu by category, and the other Star Buds stores in the same state."
+          ],
+          "links": [{ "label": "All locations", "to": "stores" }],
+          "source": {
+            "type": "ui",
+            "basis": "Describes the redesign's own store pages (BUILD-CONTRACT section 3: status/hours, categories as live-menu links, info with address, phone, hours and directions, nearby stores in the same state). Hours are captured for 7 of the 12 stores, hence 'where they are published'."
+          }
+        }
+      ]
+    },
+    {
+      "id": "shopping",
+      "title": "Shopping at Star Buds",
+      "items": [
+        {
+          "id": "order-online",
+          "q": "Can I order online?",
+          "answer": [
+            "The Oklahoma store pages say: “Looking for extra speed and convenience? Skip the line and place your order online to pick up in store!”",
+            "Every store's live menu is linked from this site: choose your store, then open its menu on shop.starbuds.us."
+          ],
+          "cite": "Quoted from the Star Buds Lawton, Altus and Chickasha store pages on starbuds.us",
+          "links": [{ "label": "Shop the live menu", "to": "menu" }],
+          "source": {
+            "type": "captured",
+            "refs": [
+              { "file": "src/content/site.json", "path": "stores[slug=lawton-dispensary].about[1]", "origin": "lawton.json; the same sentence is on altus.json and chickasha.json", "quote": "Looking for extra speed and convenience? Skip the line and place your order online to pick up in store!" }
+            ],
+            "uiParts": ["Every store's live menu is linked from this site: choose your store, then open its menu on shop.starbuds.us."]
+          }
+        },
+        {
+          "id": "deals",
+          "q": "Are there daily deals?",
+          "answer": [
+            "“No need to wait for a sale. You save seven days a week with our daily deals!”",
+            "Each state runs its own line-up, and some deals carry their own terms. The Deals page lists them by state."
+          ],
+          "cite": "Quoted from the Star Buds deals pages for Mississippi, Oklahoma and Maryland on starbuds.us",
+          "links": [{ "label": "See the deals", "to": "deals" }],
+          "source": {
+            "type": "captured",
+            "refs": [
+              { "file": "src/content/site.json", "path": "deals[state=OK,group=daily].intro", "origin": "ok-deals.json; the same line is the intro of md-deals.json and of the Oxford (MS) deals block in oxford.json", "quote": "No need to wait for a sale. You save seven days a week with our daily deals!" }
+            ],
+            "uiParts": ["Each state runs its own line-up, and some deals carry their own terms. The Deals page lists them by state."]
+          }
+        },
+        {
+          "id": "discounts",
+          "q": "Are there discounts for veterans or medical card holders?",
+          "answer": [
+            "The store pages say: “We are happy to provide our MED card holders and veterans with a discount upon request.”",
+            "Star Buds Oklahoma offers a 10% discount every day for veterans and active military, tribal members and cannabis industry employees."
+          ],
+          "cite": "From the Star Buds Oklahoma and Baltimore store pages and the Oklahoma deals page on starbuds.us",
+          "links": [{ "label": "See the deals", "to": "deals" }],
+          "source": {
+            "type": "captured",
+            "refs": [
+              { "file": "src/content/site.json", "path": "stores[slug=lawton-dispensary].visit[2].a", "origin": "lawton.json; the same sentence is on altus.json, ardmore.json, chickasha.json and maryland.json (Baltimore)", "quote": "We are happy to provide our MED card holders and veterans with a discount upon request." },
+              { "file": "src/content/site.json", "path": "deals[state=OK,group=community].intro", "origin": "ok-deals.json (intro sentence quoted; the three groups are its list items 'Veterans and Active Military', 'Tribal Members', 'Cannabis Industry Employee', lower-cased and joined)", "quote": "Star Buds Oklahoma offers a 10% discount every day for" }
+            ]
+          }
+        },
+        {
+          "id": "rewards",
+          "q": "What is Higher Rewards?",
+          "answer": [
+            "“Join our Higher Rewards Loyalty Program and get rewarded when you visit the store! Simply present your custom rewards wallet on each visit and automatically earn points towards discounts and specials on your favorite products. Best of all, it’s absolutely FREE!”",
+            "To redeem, let the budtender know you are a member when you check out. Reward tiers differ by state."
+          ],
+          "cite": "Quoted from the Higher Rewards page on starbuds.us; redemption paraphrased from its terms",
+          "links": [{ "label": "Higher Rewards", "to": "rewards" }],
+          "source": {
+            "type": "captured",
+            "refs": [
+              { "file": "src/content/site.json", "path": "rewards.paragraphs[0]", "origin": "rewards.json (www.starbuds.us/rewards)", "quote": "Join our Higher Rewards Loyalty Program and get rewarded when you visit the store! Simply present your custom rewards wallet on each visit and automatically earn points towards discounts and specials on your favorite products. Best of all, it’s absolutely FREE!" }
+            ],
+            "paraphrased": [
+              { "text": "To redeem, let the budtender know you are a member when you check out.", "from": "rewards.points[1] (hr-tc.json): \"To redeem an offer or reward, Customers must let the budtender know that they are a Program member and that they wish to redeem their points or award at the time of the qualifying transaction.\"" },
+              { "text": "Reward tiers differ by state.", "from": "rewards.byState[] (mississippirewards.json, oklahomarewards.json, marylandrewards.json list different tiers)" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "basics",
+      "title": "Cannabis basics",
+      "items": [
+        {
+          "id": "thc-cbd",
+          "q": "What is the difference between THC and CBD?",
+          "answer": [
+            "THC (delta-9-tetrahydrocannabinol) and CBD (cannabidiol) are the best-known cannabinoids in the cannabis plant. THC is the main intoxicating compound, the one that causes a high. CBD is not intoxicating in the way THC is. Product labels list how much of each a product contains."
+          ],
+          "source": { "type": "general", "basis": "Neutral general information; no health claims." }
+        },
+        {
+          "id": "strain-types",
+          "q": "What do indica, sativa and hybrid mean?",
+          "answer": [
+            "They are traditional names for cannabis plant types: indica plants tend to be short and bushy, sativa plants tall with narrow leaves, and hybrids are crosses of the two. Shops still use the labels to group strains, but how a product feels depends more on its cannabinoid and terpene content, and on the person, than on the label."
+          ],
+          "source": { "type": "general", "basis": "Neutral general information; no health claims." }
+        },
+        {
+          "id": "terpenes",
+          "q": "What are terpenes?",
+          "answer": [
+            "Terpenes are aromatic compounds made by many plants, cannabis included. They give each strain its scent, from citrus to pine to pepper. Common ones include myrcene, limonene and pinene, and some lab-tested products list their terpenes on the label."
+          ],
+          "source": { "type": "general", "basis": "Neutral general information; no health claims." }
+        },
+        {
+          "id": "edibles",
+          "q": "How are edibles different from smoking?",
+          "answer": [
+            "Start low and go slow. Eaten cannabis is processed through the digestive system, so its effects come on much more slowly than smoking or vaping and can last longer. Wait until the first serving has taken full effect before having more."
+          ],
+          "source": { "type": "general", "basis": "Neutral general information; 'start low and go slow' is the only dosing guidance, per REVISION-1 R1.4." }
+        },
+        {
+          "id": "storage",
+          "q": "How should I store cannabis at home?",
+          "answer": [
+            "Keep it in its original child-resistant packaging, locked away or out of reach and out of sight of children and pets. Edibles can look like ordinary sweets, so keep them apart from food. A cool, dark, dry place also keeps products fresh. If a child or pet swallows cannabis, call Poison Control at 1-800-222-1222 or your vet."
+          ],
+          "source": { "type": "general", "basis": "Neutral safety information. 1-800-222-1222 is the US national Poison Help line (America's Poison Centers)." }
+        }
+      ]
+    }
+  ]
+}

@@ -36,6 +36,31 @@ Calmness, measured with ffmpeg `signalstats` YDIF (mean absolute luma change bet
 There is no flashing, and each seam is no larger than an ordinary frame-to-frame step. With
 `prefers-reduced-motion: reduce`, the poster frames show instead of the video.
 
+## Revision 1 (2026-10-27): "Iron Star" media
+
+The first design's bright pop-art read as childish. Revision 1 moves to an Old English biker pop-art look, and these
+are its new files:
+
+| File | Use | Model |
+|---|---|---|
+| `patch-wings.png`, `patch-leaf.png`, `patch-star.png` | embroidered biker-style patches with no lettering (a winged star, a shield with a leaf, a round star with a leaf) | flux-pro v1.1 ultra, then birefnet v2 |
+| `chrome-star.png` | a chrome star badge | flux-pro v1.1 ultra, then birefnet v2 |
+| `flash-leaf.png`, `flash-bud.png` | tattoo-flash illustrations (the ribbon is left blank on purpose) | flux-pro v1.1 ultra, then birefnet v2 |
+| `g-leather.jpg`, `g-smoke.jpg` | backdrops behind the smoked glass | flux-pro v1.1 ultra |
+| `g-hero-jacket.jpg` | the hero still: a leather jacket with an embroidered star-and-leaf back patch | flux-pro v1.1 ultra |
+| `assets/media/hero-iron.webm` / `.mp4`, `hero-iron-poster.webp`, `hero-iron-phone.mp4` | the hero loop: a slow push-in on the jacket while smoke drifts through the light (ping-pong, 20 s) | Higgsfield Kling v3.0 turbo image-to-video, 10 s, 1080p |
+| `assets/media/smoke-ember.webm` / `.mp4`, `smoke-ember-poster.webp` | the dark-band loop: smoke and golden embers (ping-pong, 10 s) | Higgsfield Kling v3.0 turbo image-to-video, 5 s, 1080p |
+
+Calmness (YDIF): the hero loop has a mean of 1.91 and a max of 3.20, the smoke loop a mean of 0.60 and a max of 1.05.
+Neither has a frame over 20, and the seams measure 1.41 and 1.05. Every image was looked at before use. The jacket's
+patch stays intact through the whole clip.
+
+The imagery deliberately has no motorcycles: many states' cannabis advertising rules bar imagery tied to driving or
+riding. The biker character comes from the patches, the lettering, the leather and the chrome.
+
+The revision retires the first design's pop-art files: `pop-star.png`, `pop-bud.png`, `g-hero.jpg`, `g-glass.jpg`,
+`g-glass-dark.jpg`, `hero-pop.*` and `glass-dark.*`. They are no longer in the repository; the product cut-outs stay.
+
 ## The leaves pattern
 
 `assets/brand/pattern-buds.webp` is Star Buds' engraved botanical wallpaper (leaves, roses and cannabis leaves), taken

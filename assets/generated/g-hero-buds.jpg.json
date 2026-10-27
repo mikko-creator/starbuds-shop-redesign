@@ -1,0 +1,27 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "G-HERO-BUDS",
+  "file": "assets/generated/g-hero-buds.jpg",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "cinematic still life of three frosty cannabis flower buds resting on a folded black leather jacket sleeve with chrome studs and a silver zipper, curls of soft smoke drifting through warm tungsten rim light, a faint green glow in the background, deep blacks, shallow depth of field, the left third of the frame darker and empty for headline space, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "16:9",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 3984528211,
+  "requestId": "01a17cd0-d658-77a1-acd9-42165d0ad57e",
+  "cutout": null,
+  "width": 2752,
+  "height": 1536,
+  "sha256": "ee0d5683dd264dbc969923e3cf9775560d635e1612ded8703841264e34dc9082",
+  "raw": "tmp/img/raw/G-HERO-BUDS.1793095431550.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T10:03:52.981Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

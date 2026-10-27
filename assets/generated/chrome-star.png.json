@@ -1,0 +1,30 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "CHROME-STAR",
+  "file": "assets/generated/chrome-star.png",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "studio product photograph of a polished chrome five-point star emblem with bevelled edges like a vintage motorcycle tank badge, mirror reflections of a dark studio, crisp specular highlights, absolutely no lettering, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "1:1",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 2968934462,
+  "requestId": "01a17cd0-609f-7233-a61d-45b425e879af",
+  "cutout": {
+    "model": "fal-ai/birefnet/v2",
+    "requestId": "01a17cd0-9353-7581-b26a-a7ddc7552e9b"
+  },
+  "width": 2048,
+  "height": 2048,
+  "sha256": "ab477a376d1ce2d9a82df5c39b8fbad47b7cbf7760700d736c49a7e11bd24117",
+  "raw": "tmp/img/raw/CHROME-STAR.1793095403570.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T10:03:29.434Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

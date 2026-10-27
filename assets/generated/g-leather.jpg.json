@@ -1,0 +1,27 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "G-LEATHER",
+  "file": "assets/generated/g-leather.jpg",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "macro texture photograph of black motorcycle jacket leather with fine natural grain, one diagonal double-stitched seam and three small chrome rivets, dramatic low side light raking across the grain, deep shadows, rich blacks with warm brown undertones, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "16:9",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 3589641478,
+  "requestId": "01a17cd0-a57b-7c33-ac82-bd77de8ed9a5",
+  "cutout": null,
+  "width": 2752,
+  "height": 1536,
+  "sha256": "fb1b29704d9b7f5adce1115699c76e703ba3d6218a4874d8aaccd5fa94874b88",
+  "raw": "tmp/img/raw/G-LEATHER.1793095420766.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T10:03:42.867Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}
