@@ -1,15 +1,18 @@
-// home.mjs - the home page (FOUNDATION, Iron Star; revision 2 = the large operator's home order, docs/REVISION-2.md
-// "Home"). Sections: hero, store finder (finder.mjs), Shop by category (its "Shop Our Brands" slot), Find your vibe
-// (its "Shop by Effect" slot; src/content/blog/vibes.json from BLOG-R2, omitted when absent), deals teaser (its "Locally
-// Grown Goods" slot), brand statement band (Star Buds' own words, verbatim), Flower and Vapes spotlights (its product
-// rails; no live product data, so spotlight cards open the chosen store's menu), rewards band, From the blog (3 newest
-// of src/content/blog/index.json, omitted when absent), FAQ (faq.mjs), brand story.
+// home.mjs - the home page (HOME-R3, "Starlight", docs/REVISION-3.md; section order from docs/REVISION-2.md "Home").
+// Sections: hero, store finder (finder.mjs), Shop by category (its "Shop Our Brands" slot), Find your vibe (its "Shop by
+// Effect" slot; src/content/blog/vibes.json from BLOG-R2, omitted when absent), deals teaser (its "Locally Grown Goods"
+// slot), brand statement band (Star Buds' own words, verbatim), Flower and Vapes spotlights (its product rails; no live
+// product data, so spotlight cards open the chosen store's menu), rewards band, From the blog (3 newest of
+// src/content/blog/index.json, omitted when absent), FAQ (faq.mjs), brand story.
 // Copy: captured site.json text, Star Buds' own words quoted verbatim from the starbuds.us capture (each cited below),
 // and neutral UI labels only (BUILD-CONTRACT 2, REVISION-2 D2/D3). No text from the other operator's site.
+// Revision 3 changes only the look: a night sky (CSS star field + aurora), frosted glass, star sparkles and the cut-*
+// product cut-outs floating with a halo. Every text, link, id and data hook of revision 2 is kept.
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from '../lib/paths.mjs';
-import { page, esc, attrs, icon, btn, img, glass, patch, rocker, emblem, halftone, leaves, grain, cutout, patchCut, seam, pinstripe, marquee, reveal, menuAttrs, articleCard, readContent, latestPosts } from './shell.mjs';
+import * as shell from './shell.mjs';
+import { page, esc, attrs, cx, icon, btn, img, glass, patch, cutout, marquee, reveal, menuAttrs, articleCard, readContent, latestPosts } from './shell.mjs';
 
 // FINDER and FAQ lanes own these modules; a missing or broken module must not break the home page.
 const finderMod = await import('./finder.mjs').catch((e) => { if (e && e.code !== 'ERR_MODULE_NOT_FOUND') console.warn('warning: finder.mjs failed to load: ' + e.message); return null; });
@@ -22,22 +25,26 @@ async function laneSection(mod, fn, ctx, label) {
 
 const listJoin = (a) => (a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1]);
 const STUBBY = /\bSTUB\b/;
-const has = (rel) => fs.existsSync(path.join(ROOT, rel));
-/** the pop-era stickers are retired: categories that still point at one get an embroidered patch instead */
-const cutFor = (id) => (/^pop-/.test(id || '') ? 'patch-leaf' : id);
 
-/** background loop when its files exist (assets/media/<base>.webm + .mp4 + -poster.webp), else the generated still */
-function backdrop({ cls, base, phone, still, label, eager = false }) {
-  const media = `assets/media/${base}`;
-  const ready = has(media + '.webm') && has(media + '.mp4') && has(media + '-poster.webp');
-  const stillImg = img(still, { cls: `cover ${cls}__still`, alt: '', sizes: '100vw', eager });
-  if (!ready) return stillImg;
-  const phoneSrc = phone && has(`assets/media/${phone}`) ? `<source src="/assets/media/${phone}" type="video/mp4" media="(max-width: 699px)">` : '';
-  return `${stillImg}
-      <video class="cover bg-video ${cls}__video" autoplay muted loop playsinline preload="metadata" poster="/${media}-poster.webp" aria-hidden="true" tabindex="-1" data-ai="generated" title="${esc(label)}">
-        ${phoneSrc}<source src="/${media}.webm" type="video/webm"><source src="/${media}.mp4" type="video/mp4">
-      </video>`;
+// ---------- Starlight pieces (classes hm-*, styled in home.css under .page-home / .page-sitemap) ----------
+/** a CSS-only sky layer: FOUNDATION's sky() when shell.mjs exports it, else this page's own scoped layer (.hm-sky).
+ *  opts: stars (true), aurora (true | false), cls. Decorative. */
+function sky(opts = {}) {
+  const { stars = true, aurora = true, cls } = opts;
+  if (typeof shell.sky === 'function') return shell.sky({ stars, aurora, cls });
+  return `<div class="${cx('hm-sky', cls)}" aria-hidden="true">${stars ? '<span class="hm-sky__stars"></span><span class="hm-sky__stars hm-sky__stars--b"></span>' : ''}${aurora ? '<span class="hm-sky__aurora"></span>' : ''}</div>`;
 }
+/** a four-point star sparkle; position and size it with cls (--s size, --d delay) */
+const spark = (cls, style = '') => `<span class="${cx('hm-spark', cls)}"${style ? ` style="${esc(style)}"` : ''} aria-hidden="true"></span>`;
+/** a constellation hairline (a few stars joined by fine lines), used sparingly */
+function constellation(cls) {
+  const pts = [[6, 58], [30, 44], [50, 52], [72, 24], [98, 32], [114, 8]];
+  return `<svg class="${cx('hm-const', cls)}" viewBox="0 0 120 64" aria-hidden="true" focusable="false"><path class="hm-const__line" d="M${pts.map((p) => p.join(' ')).join('L')}"/>${pts.map(([x, y], i) => `<circle class="hm-const__dot" cx="${x}" cy="${y}" r="${i % 2 ? 1.2 : 1.8}"/>`).join('')}</svg>`;
+}
+/** a thin aurora hairline divider */
+const hairline = (cls) => `<span class="${cx('hm-rule', cls)}" aria-hidden="true"></span>`;
+/** the brand star image (site.json brand.star) */
+const brandStar = (ctx, cls, w = 256) => `<img class="${esc(cls)}" src="${esc(ctx.site.brand?.star || '/assets/brand/star-on-dark.png')}" width="${w}" height="${w}" alt="" loading="lazy" decoding="async">`;
 
 function hero(ctx) {
   const groups = ctx.storesByState;
@@ -47,45 +54,44 @@ function hero(ctx) {
   return `
 <section class="hero" aria-labelledby="hero-title">
   <div class="plane-back hero__back">
-    ${backdrop({ cls: 'hero', base: 'hero-iron', phone: 'hero-iron-phone.mp4', still: 'g-hero-jacket', label: 'A leather jacket with an embroidered star-and-leaf patch in a smoky workshop (AI-generated loop)', eager: true })}
-    <div class="hero__scrim"></div>
-    <div class="hero__leaves">${leaves({ tone: 'gold' })}</div>
-    ${halftone({ color: 'gold', at: 'bl', cls: 'hero__dots' })}
-    ${grain()}
-    <div class="vignette"></div>
+    ${sky({ stars: true, aurora: true, cls: 'hero__sky' })}
+    <span class="hero__glow" aria-hidden="true"></span>
   </div>
   <div class="wrap hero__inner">
     <div class="hero__copy">
       <p class="hero__eyebrow"${reveal('fade')}>${patch('The Star Buds Dispensary', { tone: 'gold', icon: 'star' })}</p>
       <h1 id="hero-title" class="hero__title"${reveal('up', 1)}><span class="hero__l1">Shop Premium</span> <span class="hero__l2">Cannabis</span></h1>
-      <div class="hero__rule"${reveal('fade', 2)}>${pinstripe()}</div>
-      <p class="hero__lead"${reveal('up', 2)}>${n} ${n === 1 ? 'location' : 'locations'} in ${esc(listJoin(states))}<span data-store-current hidden>. You're shopping at Star Buds in <strong data-store-field="city"></strong></span>. Choose your location, pick a category and open the live menu.</p>
-      <div class="btn-row hero__cta"${reveal('up', 3)}>
-        ${btn('Find your store', '#locations', { variant: 'gold', size: 'lg', icon: 'pin' })}
-        ${btn('Shop Our Special Offers', '/deals/', { variant: 'ghost', size: 'lg', icon: 'tag' })}
+      <div class="hero__panel"${reveal('up', 2)}>
+        <p class="hero__lead">${n} ${n === 1 ? 'location' : 'locations'} in ${esc(listJoin(states))}<span data-store-current hidden>. You're shopping at Star Buds in <strong data-store-field="city"></strong></span>. Choose your location, pick a category and open the live menu.</p>
+        <div class="btn-row hero__cta">
+          ${btn('Find your store', '#locations', { variant: 'gold', size: 'lg', icon: 'pin' })}
+          ${btn('Shop Our Special Offers', '/deals/', { variant: 'ghost', size: 'lg', icon: 'tag' })}
+        </div>
+        <ul class="hero__states" role="list" aria-label="States">${groups.map((g) => `
+          <li><span class="hero__state">${icon('star')}${esc(g.state.name)}</span></li>`).join('')}
+        </ul>
       </div>
-      <ul class="hero__rockers" role="list" aria-label="States"${reveal('up', 4)}>${groups.map((g) => `
-        <li>${rocker(g.state.name, { tone: 'gold', radius: 260, band: 46, angle: 24, cls: 'hero__rocker' })}</li>`).join('')}
-      </ul>
+    </div>
+    <div class="hero__art" aria-hidden="true">
+      <span class="hero__halo"></span>
+      <svg class="hero__orbit" viewBox="0 0 400 400" focusable="false"><ellipse cx="200" cy="200" rx="194" ry="66" transform="rotate(-14 200 200)"/><ellipse class="hero__orbit-2" cx="200" cy="200" rx="160" ry="150" transform="rotate(20 200 200)"/></svg>
+      ${cutout('cut-bud', { cls: 'hero__bud', depth: 0.06, eager: true, float: 'slow', sizes: '(max-width: 899px) 60vw, 400px' })}
+      ${spark('hero__spark hero__spark--1')}${spark('hero__spark hero__spark--2')}${spark('hero__spark hero__spark--3')}
+      <p class="hero__mark">${brandStar(ctx, 'hero__mark-star', 64)}<span>${esc(ctx.site.brand?.name || 'Star Buds')}</span><span class="hero__mark-dot"></span><span>Est. ${esc(est)}</span></p>
     </div>
   </div>
-  <div class="hero__front" aria-hidden="true">
-    <div class="hero__emblem" data-depth="0.06">${emblem({ top: ctx.site.brand?.name || 'Star Buds', bottom: 'Est. ' + est, star: ctx.site.brand?.star || '/assets/brand/star-on-dark.png', cls: 'hero__emblem-svg' })}</div>
-    ${cutout('cut-bud', { cls: 'hero__bud', depth: 0.12, eager: true, float: 'slow', sizes: '(max-width: 700px) 34vw, 260px' })}
-  </div>
-  <div class="hero__strap">${marquee(ctx.categories.map((c) => c.label))}</div>
+  <div class="hero__strap">${marquee(ctx.categories.map((c) => c.label), { strap: false, cls: 'hero__ticker' })}</div>
 </section>`;
 }
 
 /** fallback when the FINDER lane's module is absent: a plain state-grouped store list */
 function locations(ctx) {
   return `
-<section class="section section--leather locate" id="locations" aria-labelledby="locate-title">
-  <div class="plane-back"><div class="leather-bg"></div>${grain()}</div>
-  ${seam()}
+<section class="section locate" id="locations" aria-labelledby="locate-title">
+  <div class="plane-back">${sky({ stars: true, aurora: false })}</div>
   <div class="wrap">
     <p class="eyebrow">${icon('pin')} Locations</p>
-    <h2 id="locate-title" class="h-display sheen">Choose your location</h2>
+    <h2 id="locate-title" class="h-display">Choose your location</h2>
     <p class="lead">Pick a store to shop its live menu. Your choice is remembered on this device.</p>
     <div class="locate__groups">${ctx.storesByState.map((g) => `
       <div class="locate__group">
@@ -108,22 +114,19 @@ function vibes(ctx) {
   const v = readContent('blog/vibes.json');
   const items = (v && Array.isArray(v.items) ? v.items : []).filter((x) => x && x.label && /^\/(?!\/)/.test(x.href || ''));
   if (!items.length) return '';
-  const art = ['patch-star', 'flash-bud', 'patch-leaf', 'chrome-star'];
   return `
-<section class="section section--oil sb-vibes" aria-labelledby="vibes-title">
-  <div class="plane-back">${leaves({ tone: 'dark', cls: 'sb-vibes__leaves' })}${halftone({ color: 'green', at: 'tl' })}${grain()}<div class="vignette"></div></div>
-  ${seam({ kind: 'stitch' })}
+<section class="section sb-vibes" aria-labelledby="vibes-title">
+  <div class="plane-back">${sky({ stars: true, aurora: false })}<span class="sb-vibes__glow"></span></div>
   <div class="wrap">
     <div class="sb-vibes__head">
       <p class="sb-vibes__eyebrow"${reveal('fade')}>${patch('Star Buds blog', { tone: 'green', icon: 'star' })}</p>
-      <h2 id="vibes-title" class="h-display sb-vibes__title sheen"${reveal('up', 1)}>Find your vibe</h2>
+      <h2 id="vibes-title" class="h-display sb-vibes__title"${reveal('up', 1)}>Find your vibe</h2>
       <p class="lead sb-vibes__lead"${reveal('up', 2)}>Reading from the Star Buds blog, sorted by topic.</p>
     </div>
-    <ul class="sb-vibes__grid" role="list" data-stagger>${items.map((it, i) => `
+    <ul class="sb-vibes__grid" role="list" data-stagger>${items.map((it) => `
       <li class="sb-vibes__item">
         <a class="sb-vibe" href="${esc(it.href)}">
-          <span class="sb-vibe__stitch" aria-hidden="true"></span>
-          <span class="sb-vibe__badge" aria-hidden="true">${img(art[i % art.length], { alt: '', sizes: '72px', cls: 'sb-vibe__badge-img' })}</span>
+          <span class="sb-vibe__orb" aria-hidden="true">${spark('sb-vibe__spark')}</span>
           <span class="sb-vibe__label">${esc(vibeLabel(it.label))}</span>
           ${it.title ? `<span class="sb-vibe__title">${esc(it.title)}</span>` : ''}
           <span class="sb-vibe__cta">Read${icon('arrow')}</span>
@@ -145,19 +148,17 @@ const STATEMENT = {
 function statement(ctx) {
   return `
 <section class="section on-dark sb-statement" aria-labelledby="statement-title">
-  <div class="plane-back"><div class="leather-bg"></div>${leaves({ tone: 'gold', cls: 'sb-statement__leaves' })}${halftone({ color: 'gold', at: 'full', cls: 'sb-statement__dots' })}${grain()}<div class="vignette"></div></div>
-  ${seam({ kind: 'pinstripe' })}
+  <div class="plane-back">${sky({ stars: true, aurora: false })}<span class="sb-statement__glow"></span>${constellation('sb-statement__const')}${constellation('sb-statement__const sb-statement__const--b')}</div>
   <div class="wrap sb-statement__inner">
     <p class="sb-statement__eyebrow"${reveal('fade')}>${patch('In our words', { tone: 'gold', icon: 'star' })}</p>
     <blockquote class="sb-statement__quote" cite="https://www.starbuds.us/about"${reveal('up', 1)}>
       <h2 id="statement-title" class="sb-statement__text">${esc(STATEMENT.quote)}</h2>
     </blockquote>
-    <div class="sb-statement__rule"${reveal('fade', 2)}>${pinstripe()}</div>
+    <div class="sb-statement__rule"${reveal('fade', 2)}>${hairline()}</div>
     <p class="sb-statement__line"${reveal('up', 2)}>${esc(STATEMENT.line)}</p>
     <p class="sb-statement__cite"${reveal('fade', 3)}>Star Buds, <a href="/about-us/">About Us</a></p>
   </div>
-  ${cutout('chrome-star', { cls: 'sb-statement__star', depth: 0.1, float: 'slow', rotate: -10, sizes: '(max-width: 700px) 26vw, 180px' })}
-  ${patchCut('patch-star', { cls: 'sb-statement__patch', depth: -0.08, rotate: 8, sizes: '140px' })}
+  ${spark('sb-statement__spark sb-statement__spark--1')}${spark('sb-statement__spark sb-statement__spark--2')}
 </section>`;
 }
 
@@ -180,17 +181,16 @@ function spotlights(ctx) {
   const cards = SPOT.cards.filter((c) => cats.has(c.cat));
   if (!cards.length) return '';
   return `
-<section class="section section--leather sb-spot" aria-labelledby="spot-title">
-  <div class="plane-back"><div class="leather-bg"></div>${halftone({ color: 'gold', at: 'tr' })}${halftone({ color: 'green', at: 'bl' })}${grain()}</div>
-  ${seam({ kind: 'double' })}
+<section class="section sb-spot" aria-labelledby="spot-title">
+  <div class="plane-back">${sky({ stars: true, aurora: false })}</div>
   <div class="wrap">
     <div class="sb-spot__head">
       <p class="sb-spot__eyebrow"${reveal('fade')}>${patch('Spotlight', { tone: 'gold', icon: 'star' })}</p>
-      <h2 id="spot-title" class="h-display sb-spot__title sheen"${reveal('up', 1)}>${esc(SPOT.title)}</h2>
+      <h2 id="spot-title" class="h-display sb-spot__title"${reveal('up', 1)}>${esc(SPOT.title)}</h2>
       <p class="lead sb-spot__lead"${reveal('up', 2)}>${esc(SPOT.intro)}</p>
     </div>
     <div class="sb-spot__grid">${cards.map((c, i) => `
-      <article class="sb-spot__card sb-spot__card--${esc(c.cat)} glass glass--stitch stitch stitch--draw" aria-labelledby="spot-${esc(c.cat)}"${reveal('up', i + 1)}>
+      <article class="sb-spot__card sb-spot__card--${esc(c.cat)} glass" aria-labelledby="spot-${esc(c.cat)}"${reveal('up', i + 1)}>
         <div class="sb-spot__copy">
           <p class="sb-spot__patch">${patch(c.patch, { tone: i ? 'chrome' : 'green', size: 'sm' })}</p>
           <h3 class="sb-spot__name" id="spot-${esc(c.cat)}">${esc(c.title)}</h3>
@@ -199,8 +199,10 @@ function spotlights(ctx) {
           <div class="btn-row">${btn(c.cta, menuAttrs(c.cat).href, { variant: i ? 'chrome' : 'gold', icon: 'bag', attrs: { 'data-menu-cat': c.cat } })}</div>
         </div>
         <div class="sb-spot__art" aria-hidden="true">
+          <span class="sb-spot__halo"></span>
           <span class="sb-spot__ring"></span>
           ${cutout(c.cut, { cls: 'sb-spot__cut', depth: 0.06, float: 'slow', rotate: c.rot, sizes: '(max-width: 700px) 52vw, 360px' })}
+          ${spark('sb-spot__spark')}
         </div>
       </article>`).join('')}
     </div>
@@ -220,16 +222,15 @@ function fromBlog(ctx) {
     return { ...p, image };
   });
   return `
-<section class="section section--parchment sb-news" aria-labelledby="news-title">
-  <div class="plane-back">${leaves({ tone: 'light' })}${halftone({ color: 'ink', at: 'tl' })}${grain({ cls: 'sb-news__grain' })}</div>
-  ${seam({ kind: 'double' })}
+<section class="section sb-news" aria-labelledby="news-title">
+  <div class="plane-back">${sky({ stars: true, aurora: false })}</div>
   <div class="wrap">
     <div class="sb-news__head">
       <div>
         <p class="sb-news__eyebrow"${reveal('fade')}>${patch('Star Buds blog', { tone: 'red', icon: 'star', size: 'sm' })}</p>
         <h2 id="news-title" class="h-display sb-news__title"${reveal('up', 1)}>From the blog</h2>
       </div>
-      <p class="sb-news__all"${reveal('fade', 2)}>${btn('All articles', '/blog/', { variant: 'dark' })}</p>
+      <p class="sb-news__all"${reveal('fade', 2)}>${btn('All articles', '/blog/', { variant: 'ghost' })}</p>
     </div>
     <ul class="sb-news__grid" role="list" data-stagger>${cards.map((p) => `
       <li class="sb-news__item">${articleCard(p)}</li>`).join('')}
@@ -238,27 +239,29 @@ function fromBlog(ctx) {
 </section>`;
 }
 
+/** category tile art: the cut-* product cut-out floating out of the card; a retired id (site.json still names
+ *  'patch-leaf' for Apparel, and any 'pop-*' sticker) gets the glowing brand star instead */
+function catArt(ctx, id) {
+  if (/^cut-/.test(id || '')) return cutout(id, { cls: 'cat__cut', depth: 0, float: 'slow', sizes: '(max-width: 700px) 30vw, 180px' });
+  return `<span class="cat__star" aria-hidden="true">${brandStar(ctx, 'cat__star-img', 128)}</span>`;
+}
+
 function categories(ctx) {
   return `
-<section class="section section--leather cats" id="shop" aria-labelledby="cats-title">
-  <div class="plane-back">
-    <div class="leather-bg"></div>
-    ${halftone({ color: 'gold', at: 'tr', cls: 'cats__dots' })}
-    ${grain()}
-  </div>
-  ${seam({ kind: 'pinstripe' })}
+<section class="section cats" id="shop" aria-labelledby="cats-title">
+  <div class="plane-back">${sky({ stars: true, aurora: false })}<span class="cats__glow"></span></div>
   <div class="wrap">
     <div class="cats__head">
       <p class="cats__eyebrow"${reveal('fade')}>${patch('Shop All', { tone: 'gold', icon: 'bag' })}</p>
-      <h2 id="cats-title" class="h-display cats__title sheen"${reveal('up', 1)}>Shop by category</h2>
+      <h2 id="cats-title" class="h-display cats__title"${reveal('up', 1)}>Shop by category</h2>
       <p class="lead cats__lead"${reveal('up', 2)}>Each category opens on the live menu<span data-store-current hidden> at <strong data-store-label></strong></span><span data-store-none> of the store you choose</span>.</p>
     </div>
     <ul class="cats__grid" role="list" data-stagger>${ctx.categories.map((c, i) => `
       <li class="cats__item">
-        <a class="cat glass"${attrs(menuAttrs(c.slug))} data-tilt="3">
-          <span class="cat__stitch stitch" aria-hidden="true"></span>
-          ${cutout(cutFor(c.cutout), { cls: 'cat__cut', depth: 0, float: false, sizes: '(max-width: 700px) 30vw, 180px' })}
-          <span class="cat__num numeral" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span>
+        <a class="cat glass"${attrs(menuAttrs(c.slug))}>
+          <span class="cat__halo" aria-hidden="true"></span>
+          ${catArt(ctx, c.cutout)}
+          <span class="cat__num" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span>
           <span class="cat__label">${esc(c.label)}</span>
           <span class="cat__cta"><span>Shop<span class="cat__cta-x"> ${esc(c.label)}</span></span>${icon('arrow')}</span>
         </a>
@@ -278,17 +281,20 @@ function dealsTeaser(ctx) {
   const picks = [...deals.filter((d) => d.group === 'daily'), ...deals].filter((d) => (seen.has(d.state) ? false : seen.add(d.state))).slice(0, 3);
   const splitDeal = (line) => { const m = /^([^:]{3,32}):\s*(.+)$/.exec(line); return m ? [m[1], m[2]] : ['', line]; };
   return `
-<section class="section section--bone deals-teaser" aria-labelledby="deals-title">
-  <div class="plane-back">${leaves({ tone: 'light' })}${halftone({ color: 'ink', at: 'tr' })}${grain({ cls: 'deals-teaser__grain' })}</div>
-  ${seam({ kind: 'double' })}
+<section class="section deals-teaser" aria-labelledby="deals-title">
+  <div class="plane-back">${sky({ stars: true, aurora: false })}<span class="deals-teaser__glow"></span></div>
   <div class="wrap deals-teaser__grid">
+    <div class="deals-teaser__art" aria-hidden="true">
+      <span class="deals-teaser__halo"></span>
+      ${cutout('cut-preroll', { cls: 'deals-teaser__roll', depth: 0.06, float: 'slow', rotate: -16, sizes: '(max-width: 700px) 40vw, 300px' })}
+      ${spark('deals-teaser__spark')}
+    </div>
     <div class="board"${reveal('up')}>
       <div class="board__inner">
         <div class="board__head">
           <p class="board__eyebrow">${patch(ctx.site.promo?.text || 'Deals', { tone: 'red', icon: 'tag', size: 'sm' })}</p>
-          <h2 id="deals-title" class="board__title">${esc(head)}</h2>
+          <h2 id="deals-title" class="h-display board__title">${esc(head)}</h2>
           ${intro.subtitle ? `<p class="board__sub">${esc(intro.subtitle)}</p>` : ''}
-          ${pinstripe({ tone: 'ink', cls: 'board__rule' })}
         </div>
         ${picks.length ? `<ul class="board__rows" role="list">${picks.map((d) => { const [day, deal] = splitDeal(d.items[0]); return `
           <li class="board__row">
@@ -296,14 +302,10 @@ function dealsTeaser(ctx) {
             <span class="board__deal">${day ? `<strong class="board__day">${esc(day)}</strong>` : ''}<span class="board__line">${esc(deal)}</span><span class="board__group">${esc(d.title)}</span></span>
           </li>`; }).join('')}
         </ul>` : ''}
-        <div class="btn-row board__cta">${btn('See all deals', '/deals/', { variant: 'dark' })}</div>
+        <div class="btn-row board__cta">${btn('See all deals', '/deals/', { variant: 'ghost' })}</div>
       </div>
     </div>
-    <div class="deals-teaser__art" aria-hidden="true">
-      ${patchCut('flash-leaf', { cls: 'deals-teaser__flash', depth: 0.08, rotate: 4, sizes: '(max-width: 900px) 50vw, 420px' })}
-    </div>
   </div>
-  ${cutout('cut-preroll', { cls: 'deals-teaser__roll', depth: -0.1, float: 'slow', rotate: -16, sizes: '(max-width: 700px) 46vw, 360px' })}
 </section>`;
 }
 
@@ -314,29 +316,24 @@ function rewardsBand(ctx) {
   return `
 <section class="section rewards-band on-dark" aria-labelledby="rewards-title">
   <div class="plane-back">
-    ${backdrop({ cls: 'rewards-band', base: 'smoke-ember', still: 'g-smoke', label: 'Smoke and golden embers drifting in darkness (AI-generated loop)' })}
-    <div class="rewards-band__shade"></div>
-    ${leaves({ tone: 'gold', cls: 'rewards-band__leaves' })}
-    ${halftone({ color: 'green', at: 'br' })}
-    ${grain()}
+    <span class="rewards-band__aurora"></span>
+    ${sky({ stars: true, aurora: false })}
   </div>
-  ${seam()}
   <div class="wrap rewards-band__grid">
     ${glass(`
       <p class="rewards-band__eyebrow">${patch(r.programName || 'Higher Rewards', { tone: 'green', size: 'sm' })}</p>
-      <h2 id="rewards-title" class="h-display rewards-band__title sheen">${esc(r.title || 'Higher Rewards')}</h2>
+      <h2 id="rewards-title" class="h-display rewards-band__title">${esc(r.title || 'Higher Rewards')}</h2>
       ${paras.map((p) => `<p class="rewards-band__p">${esc(p)}</p>`).join('')}
-      <div class="btn-row rewards-band__cta">${btn('Higher Rewards', '/rewards/', { variant: 'gold' })}${r.joinHref ? btn('Join Higher Rewards', r.joinHref, { variant: 'ghost', icon: 'external', attrs: { target: '_blank', rel: 'noopener' } }) : ''}</div>`, { stitch: true, cls: 'rewards-band__panel', attrs: { 'data-reveal': 'up' } })}
+      <div class="btn-row rewards-band__cta">${btn('Higher Rewards', '/rewards/', { variant: 'gold' })}${r.joinHref ? btn('Join Higher Rewards', r.joinHref, { variant: 'ghost', icon: 'external', attrs: { target: '_blank', rel: 'noopener' } }) : ''}</div>`, { cls: 'rewards-band__panel', attrs: { 'data-reveal': 'up' } })}
     ${apps.ios || apps.android ? glass(`
-      <p class="eyebrow">${icon('phoneApp')} Get the app</p>
+      <p class="eyebrow rewards-band__app-eyebrow">${icon('phoneApp')} Get the app</p>
       <p class="rewards-band__app-title">App Store &amp; Google Play</p>
       <div class="btn-row">
         ${apps.ios ? btn('App Store', apps.ios, { variant: 'chrome', size: 'sm', icon: 'external', attrs: { target: '_blank', rel: 'noopener' } }) : ''}
         ${apps.android ? btn('Google Play', apps.android, { variant: 'chrome', size: 'sm', icon: 'external', attrs: { target: '_blank', rel: 'noopener' } }) : ''}
-      </div>`, { edge: 'chrome', cls: 'rewards-band__app', attrs: { 'data-reveal': 'up', style: '--i:2' } }) : ''}
+      </div>`, { cls: 'rewards-band__app', attrs: { 'data-reveal': 'up', style: '--i:2' } }) : ''}
   </div>
-  ${patchCut('patch-wings', { cls: 'rewards-band__wings', depth: 0.1, rotate: -4, sizes: '(max-width: 700px) 60vw, 380px' })}
-  ${cutout('chrome-star', { cls: 'rewards-band__star', depth: -0.12, float: 'slow', rotate: 12, sizes: '(max-width: 700px) 28vw, 170px' })}
+  ${spark('rewards-band__spark rewards-band__spark--1')}${spark('rewards-band__spark rewards-band__spark--2')}${spark('rewards-band__spark rewards-band__spark--3')}
 </section>`;
 }
 
@@ -347,32 +344,27 @@ function story(ctx) {
   const est = ctx.site.brand?.est || '2013';
   const media = photo
     ? `<figure class="story__frame"${reveal('left')}>
-        <div class="story__mat stitch stitch--draw">${img(photo, { cls: 'story__photo', sizes: '(max-width: 900px) 86vw, 520px' })}</div>
+        <div class="story__mat">${img(photo, { cls: 'story__photo', sizes: '(max-width: 900px) 86vw, 520px' })}</div>
         ${photo.caption || photo.alt ? `<figcaption class="story__cap">${esc(photo.caption || photo.alt)}</figcaption>` : ''}
       </figure>`
     : `<div class="story__frame story__frame--brand"${reveal('left')}>
-        ${leaves({ tone: 'bone' })}
-        <img class="story__star" src="${esc(ctx.site.brand?.star || '/assets/brand/star-on-dark.png')}" width="256" height="256" alt="" loading="lazy" decoding="async">
+        ${brandStar(ctx, 'story__star')}
       </div>`;
   return `
 <section class="section story on-dark" aria-labelledby="story-title">
   <div class="plane-back">
-    ${leaves({ tone: 'bone' })}
+    ${sky({ stars: true, aurora: true, cls: 'story__sky' })}
     <p class="story__est" aria-hidden="true">Est. ${esc(est)}</p>
-    ${halftone({ color: 'gold', at: 'bl' })}
-    ${grain()}
-    <div class="vignette"></div>
   </div>
-  ${seam({ kind: 'double' })}
   <div class="wrap story__grid">
     <div class="story__media">
       ${media}
-      ${patchCut('patch-leaf', { cls: 'story__patch', depth: 0.12, rotate: 6, sizes: '(max-width: 700px) 30vw, 190px' })}
+      ${photo ? `<span class="story__glowstar" aria-hidden="true">${brandStar(ctx, 'story__glowstar-img', 128)}</span>` : ''}
     </div>
     <div class="story__copy"${reveal('right')}>
       ${ctx.site.brand?.tagline ? `<p class="story__eyebrow">${patch(ctx.site.brand.tagline, { tone: 'gold', icon: 'star', size: 'sm' })}</p>` : ''}
       <h2 id="story-title" class="h-display story__title">${esc(a.title || ctx.site.brand?.name || 'Star Buds')}</h2>
-      ${pinstripe({ cls: 'story__rule' })}
+      ${hairline('story__rule')}
       ${paras.map((p) => `<p>${esc(p)}</p>`).join('')}
       <div class="btn-row story__cta">${btn('Find a store', '/dispensaries/', { variant: 'gold', icon: 'pin' })}${btn('Higher Rewards', '/rewards/', { variant: 'ghost' })}</div>
     </div>

@@ -1,5 +1,6 @@
-// resources.mjs - RESOURCES-R2 lane (docs/REVISION-2.md): the content pages, product guides and resource hubs, in
-// Iron Star templates with breadcrumbs, on the page types and URL patterns of the adopted architecture (D1).
+// resources.mjs - RESOURCES-R2 lane (docs/REVISION-2.md), reskinned by RESOURCES-R3 (docs/REVISION-3.md, "Starlight"): the
+// content pages, product guides and resource hubs, with breadcrumbs, on the page types and URL patterns of the adopted
+// architecture (D1). Every band is night sky (rs-sky: CSS stars + an aurora wash); long reads sit on a pearl glass sheet.
 //   /about-us/ /contact/ /careers/ /community/ /media/ /cancer-relief-program/ /eula/ /rewards/terms/  (starbuds.us words, D7)
 //   /products/ + /products/<slug>/                                       (product education text; Colorado-only lines dropped)
 //   /dispensary-guides/ /getting-a-medical-card/(+4) /cannabis-laws-by-state/(+4) /patient-guide/ /faq/
@@ -10,7 +11,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from '../lib/paths.mjs';
-import { page, esc, attrs, cx, icon, btn, img, glass, patch, seal, halftone, leaves, grain, cutout, patchCut, seam, pinstripe, reveal, menuAttrs, hubHero, cardGrid, articleCard, stateSlug } from './shell.mjs';
+import { page, esc, attrs, cx, icon, btn, img, glass, reveal, menuAttrs, hubHero, cardGrid, articleCard, stateSlug } from './shell.mjs';
 
 const read = (rel) => JSON.parse(fs.readFileSync(path.join(ROOT, 'src/content', rel), 'utf8'));
 const readOpt = (rel) => { try { return read(rel); } catch { return null; } };
@@ -116,36 +117,42 @@ export function tidyHtml(html) {
 const subheads = (html, tag = 'h3') => html.replace(/<p>([^<]{2,44})<\/p>/g, (m, t) => (/[.!:;,]$/.test(t.trim()) ? m : `<${tag} class="rs-prose__sub">${t}</${tag}>`));
 const prose = (html, cls = '') => `<div class="${cx('rs-prose', cls)}">${html}</div>`;
 
-// ---------------------------------------------------------------- layout pieces
-const BACK = {
-  leather: () => `<div class="leather-bg"></div>${leaves({ tone: 'gold', cls: 'rs-band__leaves' })}${halftone({ color: 'gold', at: 'tr' })}${grain()}`,
-  ink: () => `${leaves({ tone: 'gold', cls: 'rs-band__leaves rs-band__leaves--faint' })}${halftone({ color: 'green', at: 'bl' })}${grain()}`,
-  green: () => `${leaves({ tone: 'bone', cls: 'rs-band__leaves' })}${halftone({ color: 'gold', at: 'br' })}${grain()}`,
-  bone: () => `${leaves({ tone: 'light' })}${halftone({ color: 'ink', at: 'tr' })}${grain({ cls: 'rs-grain-bone' })}`,
-  parchment: () => `${leaves({ tone: 'light' })}${halftone({ color: 'red', at: 'bl', cls: 'rs-dots-soft' })}${grain({ cls: 'rs-grain-bone' })}`,
-};
-const LIGHT = new Set(['bone', 'parchment']);
+// ---------------------------------------------------------------- layout pieces (revision 3, "Starlight")
+// Every band is night sky. The revision-2 tone names now only pick where the aurora wash sits and its colour, so stacked
+// bands read as one sky. No textures (no leather, leaves, halftone, grain, seams or pinstripes).
+const SKY = { leather: 'green', ink: 'violet', green: 'teal', bone: 'violet', parchment: 'teal' };
+/** CSS-only sky layer for a band's back plane: a star field (::before, slow twinkle) and an aurora wash (::after) */
+const rsSky = (tone) => `<span class="rs-sky rs-sky--${SKY[tone] || 'green'}" aria-hidden="true"></span>`;
+/** a section eyebrow: small caps with a glowing icon (the words unchanged) */
+const eyebrow = (text, ic = 'star') => `<span class="rs-eyebrow">${ic ? icon(ic, 'rs-eyebrow__icon') : ''}<span>${esc(text)}</span></span>`;
+/** a small glass pill label (replaces the embroidered patch): tone 'star' (default) | 'green' | 'violet' */
+const pill = (text, { tone = 'star', icon: ic } = {}) => `<span class="${cx('rs-pill', 'rs-pill--' + tone)}">${ic ? icon(ic, 'rs-pill__icon') : ''}<span>${esc(text)}</span></span>`;
+/** a round glowing orb badge (replaces the revision-2 seal); label and sub stay readable text */
+const orb = ({ label = '', sub = '', cls } = {}) => `<span class="${cx('rs-orb', cls)}"${label ? '' : ' aria-hidden="true"'}>${label ? `<span class="rs-orb__label">${esc(label)}${sub ? `<small>${esc(sub)}</small>` : ''}</span>` : ''}</span>`;
 /**
- * band({ tone, id, eyebrow, eyebrowTone, title, titleTag, intro, body, cls, narrow, z, art }) -> a content section on one of the
- * Iron Star grounds (three planes, a seam at the top, a blackletter heading with a patch eyebrow and a pinstripe).
+ * band({ tone, id, eyebrow, eyebrowIcon, title, titleTag, intro, body, cls, narrow, z, art, sheet }) -> a content section on
+ * the night sky: an eyebrow, a light display heading and a thin aurora rule. `sheet: true` (long reads: legal text, law
+ * and medical-card claims, the patient guide) puts the head and body on a light pearl glass panel (.rs-sheet.on-light).
+ * No reveal on the sheet itself: a very tall element never reaches the reveal threshold.
  */
 function band(o) {
-  const tone = BACK[o.tone] ? o.tone : 'leather';
-  const light = LIGHT.has(tone);
+  const tone = SKY[o.tone] ? o.tone : 'leather';
   const tid = o.id ? `${o.id}-title` : '';
   const head = o.title ? `
     <header class="rs-head${o.center ? ' rs-head--center' : ''}">
-      ${o.eyebrow ? `<p class="rs-head__eyebrow"${reveal('fade')}>${patch(o.eyebrow, { tone: o.eyebrowTone || (light ? 'leather' : 'gold'), icon: o.eyebrowIcon === false ? undefined : (o.eyebrowIcon || 'star'), size: 'sm' })}</p>` : ''}
-      <${o.titleTag || 'h2'} class="h-display rs-head__title sheen"${tid ? ` id="${tid}"` : ''}${reveal('up', 1)}>${esc(o.title)}</${o.titleTag || 'h2'}>
-      <div class="rs-head__rule"${reveal('fade', 2)}>${pinstripe({ tone: light ? 'ink' : 'gold' })}</div>
+      ${o.eyebrow ? `<p class="rs-head__eyebrow"${reveal('fade')}>${eyebrow(o.eyebrow, o.eyebrowIcon === false ? '' : (o.eyebrowIcon || 'star'))}</p>` : ''}
+      <${o.titleTag || 'h2'} class="rs-head__title"${tid ? ` id="${tid}"` : ''}${reveal('up', 1)}>${esc(o.title)}</${o.titleTag || 'h2'}>
+      <span class="rs-head__rule" aria-hidden="true"${reveal('fade', 2)}></span>
       ${o.intro ? `<p class="rs-head__intro"${reveal('up', 2)}>${esc(o.intro)}</p>` : ''}
     </header>` : '';
+  const inner = `${head}
+    ${o.body || ''}`;
   return `
-<section class="${cx('section', 'section--' + tone, light ? 'on-light' : 'on-dark', 'rs-band', 'rs-band--' + tone, o.cls)}"${o.id ? ` id="${esc(o.id)}"` : ''}${tid ? ` aria-labelledby="${tid}"` : o.label ? ` aria-label="${esc(o.label)}"` : ''}${o.z != null ? ` style="z-index:${Number(o.z)}"` : ''}>
-  <div class="plane-back">${BACK[tone]()}</div>
-  ${seam({ kind: light ? 'double' : 'stitch', tone: light ? 'gold' : 'gold' })}
-  <div class="${cx('wrap', o.narrow && 'wrap--narrow', 'rs-band__wrap')}">${head}
-    ${o.body || ''}
+<section class="${cx('section', 'section--ink', 'on-dark', 'rs-band', 'rs-band--' + SKY[tone], o.sheet && 'rs-band--sheet', o.cls)}"${o.id ? ` id="${esc(o.id)}"` : ''}${tid ? ` aria-labelledby="${tid}"` : o.label ? ` aria-label="${esc(o.label)}"` : ''}${o.z != null ? ` style="z-index:${Number(o.z)}"` : ''}>
+  <div class="plane-back">${rsSky(tone)}</div>
+  <div class="${cx('wrap', o.narrow && 'wrap--narrow', 'rs-band__wrap')}">${o.sheet ? `
+    <div class="rs-sheet on-light">${inner}
+    </div>` : inner}
   </div>
   ${o.art || ''}
 </section>`;
@@ -161,7 +168,7 @@ const srcLink = (url, label) => `<a class="rs-src" href="${esc(url)}"${attrs(EXT
 function claimList(claims, { start = 1 } = {}) {
   return `<ol class="rs-claims" role="list" data-stagger>${claims.map((c, i) => `
       <li class="rs-claim">
-        <span class="rs-claim__n numeral numeral--gold" aria-hidden="true">${String(start + i).padStart(2, '0')}</span>
+        <span class="rs-claim__n" aria-hidden="true">${String(start + i).padStart(2, '0')}</span>
         <div class="rs-claim__body">
           <p class="rs-claim__text">${esc(c.claim)}</p>
           <p class="rs-claim__meta">Source: ${srcLink(c.url)} <span class="rs-claim__date">retrieved ${esc(fmtIso(c.retrieved))}</span></p>
@@ -240,8 +247,8 @@ function guidesPage(ctx) {
         ${stateLinks(st)}
       </div>
       <div class="rs-guide__cols">
-        ${glass(`<h3 class="rs-guide__h">${icon('star')} What to bring</h3>${bring.length ? qaBlock(bring) : bringFact.length ? '<p class="rs-guide__empty">From the state:</p>' + claimList(bringFact) : '<p class="rs-guide__empty">Each store page lists the store’s address and phone number.</p>'}`, { tone: LIGHT.has(tone) ? 'bone' : 'smoke', stitch: true, cls: 'rs-guide__panel', attrs: { 'data-reveal': 'up' } })}
-        ${glass(`<h3 class="rs-guide__h">${icon('clock')} Visiting tips</h3>${tips.length ? qaBlock(tips) : `<p class="rs-guide__empty">Hours and services are on each store page.</p>`}<h3 class="rs-guide__h rs-guide__h--gap">${icon('tag')} From the state</h3>${claimList(stateFacts)}`, { tone: LIGHT.has(tone) ? 'bone' : 'smoke', stitch: true, cls: 'rs-guide__panel', attrs: { 'data-reveal': 'up', style: '--i:1' } })}
+        ${glass(`<h3 class="rs-guide__h">${icon('star')} What to bring</h3>${bring.length ? qaBlock(bring) : bringFact.length ? '<p class="rs-guide__empty">From the state:</p>' + claimList(bringFact) : '<p class="rs-guide__empty">Each store page lists the store’s address and phone number.</p>'}`, { cls: 'rs-guide__panel', attrs: { 'data-reveal': 'up' } })}
+        ${glass(`<h3 class="rs-guide__h">${icon('clock')} Visiting tips</h3>${tips.length ? qaBlock(tips) : `<p class="rs-guide__empty">Hours and services are on each store page.</p>`}<h3 class="rs-guide__h rs-guide__h--gap">${icon('tag')} From the state</h3>${claimList(stateFacts)}`, { cls: 'rs-guide__panel', attrs: { 'data-reveal': 'up', style: '--i:1' } })}
       </div>
     </div>`;
     return band({ tone, id: `rs-guide-${st.slug}`, eyebrow: `${st.code} · ${st.stores.length} store${st.stores.length === 1 ? '' : 's'}`, eyebrowIcon: 'pin', title: `${st.name} dispensary guide`, body, z: 6 - i });
@@ -249,7 +256,7 @@ function guidesPage(ctx) {
   const body = `${hubHero({
     eyebrow: 'Resources', title: 'Dispensary Guide',
     intro: 'Visiting a Star Buds dispensary in Mississippi, Oklahoma, Maryland or New York: the stores, what to bring, visiting tips and the state rules in brief.',
-    art: { id: 'flash-leaf', rotate: 4 },
+    art: { id: 'cut-leaf', rotate: 4 },
     crumbs: [{ label: 'Resources' }, { label: 'Dispensary Guide' }],
     actions: sts.map((st) => btn(st.name, `#rs-guide-${st.slug}`, { variant: 'ghost', size: 'sm', icon: 'pin' })).join(''),
   })}${groups}${band({ tone: 'green', label: 'More resources', body: `${note('legal')}${cardGrid([
@@ -271,7 +278,7 @@ function medHub(ctx) {
   const body = `${hubHero({
     eyebrow: 'Resources', title: 'Getting a Medical Card',
     intro: 'How the medical cannabis card works in the four states with Star Buds dispensaries, from each state program’s official pages.',
-    art: { id: 'patch-leaf', rotate: -4 }, crumbs: [{ label: 'Resources' }, { label: 'Getting a Medical Card' }],
+    art: { id: 'cut-tincture', rotate: -4 }, crumbs: [{ label: 'Resources' }, { label: 'Getting a Medical Card' }],
   })}${band({ tone: 'bone', id: 'rs-med-states', eyebrow: 'By state', title: 'Choose your state', body: cardGrid(sts.map((st) => ({
     title: `Get Your Medical Cannabis Card in ${st.name}`, href: `/getting-a-medical-card/${st.slug}/`, eyebrow: st.code, eyebrowTone: 'green',
     text: `Benefits and how to apply, from the ${(lawState(st.slug) || {}).agency || 'state program'}.`, cta: 'How to apply',
@@ -298,7 +305,7 @@ function medBenefits(ctx, st) {
   }
   const deals = (ctx.site.deals || []).filter((d) => d.state === st.code);
   for (const d of deals.filter((x) => x.group === 'medical' || x.group === 'new-medical')) {
-    parts.push(glass(`<p class="rs-deal__tag">${patch('Medical', { tone: 'green', size: 'sm' })}</p><h3 class="rs-deal__title">${esc(d.title)}</h3>${d.intro ? `<p class="rs-deal__intro">${esc(d.intro)}</p>` : ''}${(d.items || []).length ? `<ul class="rs-deal__list" role="list">${d.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}${d.terms ? `<p class="rs-deal__terms">${esc(d.terms)}</p>` : ''}`, { stitch: true, cls: 'rs-deal' }));
+    parts.push(glass(`<p class="rs-deal__tag">${pill('Medical', { tone: 'green' })}</p><h3 class="rs-deal__title">${esc(d.title)}</h3>${d.intro ? `<p class="rs-deal__intro">${esc(d.intro)}</p>` : ''}${(d.items || []).length ? `<ul class="rs-deal__list" role="list">${d.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}${d.terms ? `<p class="rs-deal__terms">${esc(d.terms)}</p>` : ''}`, { cls: 'rs-deal' }));
   }
   if (st.code === 'MS') {
     const daily = deals.find((x) => x.group === 'daily');
@@ -315,10 +322,10 @@ function medState(ctx, st) {
   const body = `${hubHero({
     eyebrow: `${st.name} · Medical card`, eyebrowIcon: 'pin', title: `Get Your Medical Cannabis Card in ${st.name}`,
     intro: [`Benefits and how to apply. The steps below come from the ${law.agency || 'state program'}’s official pages, checked ${RETRIEVED}.`],
-    art: { id: 'patch-star', rotate: 6 },
+    art: { id: 'cut-bud', rotate: 6 },
     crumbs: [{ label: 'Getting a Medical Card', href: '/getting-a-medical-card/' }, { label: st.name }],
     actions: `${btn('How to apply', '#rs-med-apply', { variant: 'gold', icon: 'arrow' })}${law.official ? btn('Official program site', law.official, { variant: 'ghost', icon: 'external', attrs: EXT }) : ''}`,
-  })}${benefits ? band({ tone: 'bone', id: 'rs-med-benefits', eyebrow: 'At Star Buds', title: 'Benefits for card holders', intro: 'What the Star Buds store and deals pages say about medical card holders in this state.', body: `<div class="rs-benefits">${benefits}</div>${stateLinks(st, { law: false, med: false })}`, z: 6 }) : ''}${band({ tone: 'leather', id: 'rs-med-apply', eyebrow: law.agency || 'Official program', title: 'How to apply', body: `${claimList(claims)}${note('medical')}`, z: 5 })}${band({ tone: 'parchment', id: 'rs-med-more', eyebrow: 'From the Star Buds blog', title: 'More to read', body: `<div class="rs-split">${medQuote()}<div class="rs-stack">${glass(`<h3 class="rs-guide__h">${icon('pin')} Star Buds in ${esc(st.name)}</h3>${storeChips(st)}${stateLinks(st, { med: false, deals: false })}`, { tone: 'bone', stitch: true, cls: 'rs-guide__panel' })}</div></div>`, z: 4 })}`;
+  })}${benefits ? band({ tone: 'bone', id: 'rs-med-benefits', eyebrow: 'At Star Buds', title: 'Benefits for card holders', intro: 'What the Star Buds store and deals pages say about medical card holders in this state.', body: `<div class="rs-benefits">${benefits}</div>${stateLinks(st, { law: false, med: false })}`, z: 6 }) : ''}${band({ tone: 'leather', id: 'rs-med-apply', eyebrow: law.agency || 'Official program', title: 'How to apply', body: `${claimList(claims)}${note('medical')}`, z: 5, sheet: true })}${band({ tone: 'parchment', id: 'rs-med-more', eyebrow: 'From the Star Buds blog', title: 'More to read', body: `<div class="rs-split">${medQuote()}<div class="rs-stack">${glass(`<h3 class="rs-guide__h">${icon('pin')} Star Buds in ${esc(st.name)}</h3>${storeChips(st)}${stateLinks(st, { med: false, deals: false })}`, { cls: 'rs-guide__panel' })}</div></div>`, z: 4 })}`;
   return { path: `/getting-a-medical-card/${st.slug}/`, html: page({ ctx, path: `/getting-a-medical-card/${st.slug}/`, bodyClass: 'page-resources page-med-state', title: `Get Your Medical Cannabis Card in ${st.name}`, description: `How to get a medical cannabis card in ${st.name}, from the ${law.agency || 'state program'}’s official pages, and the Star Buds stores in ${st.name}.`, body }) };
 }
 
@@ -329,7 +336,7 @@ function lawsHub(ctx) {
   const body = `${hubHero({
     eyebrow: 'Resources', title: 'Cannabis Laws by State',
     intro: 'The cannabis rules in the four states with Star Buds dispensaries, in plain statements, each linked to the official state page that says it.',
-    art: { id: 'chrome-star', rotate: -8 }, crumbs: [{ label: 'Resources' }, { label: 'State Laws' }],
+    art: { id: 'cut-jar', rotate: -8 }, crumbs: [{ label: 'Resources' }, { label: 'State Laws' }],
   })}${band({ tone: 'bone', id: 'rs-laws-states', eyebrow: 'By state', title: 'Choose your state', body: `${cardGrid(sts.map((st) => {
     const s = (lawClaims(st.slug, ['status'])[0] || {}).claim || '';
     return { title: `${st.name} cannabis laws`, href: `/cannabis-laws-by-state/${st.slug}/`, eyebrow: st.code, eyebrowTone: 'leather', text: s, cta: 'Read the rules' };
@@ -349,10 +356,10 @@ function lawPage(ctx, st) {
   const body = `${hubHero({
     eyebrow: `${st.name} · State laws`, eyebrowIcon: 'pin', title: `${st.name} Cannabis Laws`,
     intro: [`The basics from the ${law.agency || 'state'}’s official pages, checked ${RETRIEVED}. General information, not legal advice.`],
-    art: { id: 'patch-wings', rotate: -3 },
+    art: { id: 'cut-leaf', rotate: -3 },
     crumbs: [{ label: 'State Laws', href: '/cannabis-laws-by-state/' }, { label: st.name }],
     actions: law.official ? btn('Official state site', law.official, { variant: 'ghost', icon: 'external', attrs: EXT }) : '',
-  })}${band({ tone: 'bone', id: 'rs-law', eyebrow: law.agency || st.name, title: `The rules in ${st.name}`, body: `${note('legal')}<div class="rs-topics">${groups}</div>`, z: 6 })}${band({ tone: 'leather', id: 'rs-law-more', eyebrow: 'Star Buds', title: `Shopping in ${st.name}`, body: `<div class="rs-split">${glass(`<h3 class="rs-guide__h">${icon('pin')} The stores</h3>${storeChips(st)}${stateLinks(st, { law: false, guide: true })}`, { stitch: true, cls: 'rs-guide__panel' })}${note('legal')}</div>`, z: 5 })}`;
+  })}${band({ tone: 'bone', id: 'rs-law', eyebrow: law.agency || st.name, title: `The rules in ${st.name}`, body: `${note('legal')}<div class="rs-topics">${groups}</div>`, z: 6, sheet: true })}${band({ tone: 'leather', id: 'rs-law-more', eyebrow: 'Star Buds', title: `Shopping in ${st.name}`, body: `<div class="rs-split">${glass(`<h3 class="rs-guide__h">${icon('pin')} The stores</h3>${storeChips(st)}${stateLinks(st, { law: false, guide: true })}`, { cls: 'rs-guide__panel' })}${note('legal')}</div>`, z: 5 })}`;
   return { path: `/cannabis-laws-by-state/${st.slug}/`, html: page({ ctx, path: `/cannabis-laws-by-state/${st.slug}/`, bodyClass: 'page-resources page-law-state', title: `${st.name} Cannabis Laws`, description: `${st.name} cannabis laws in brief: legal status, age, buying, possession, where use is not allowed and driving, each with its official source.`, body }) };
 }
 
@@ -378,12 +385,12 @@ function patientGuide(ctx) {
       quotes = quoteCard(s.crp.quotes[0], { title: 'Star Buds Cancer Relief Program', href: '/cancer-relief-program/', linkLabel: 'Read the programme and its terms' });
     }
     const extra = s.extra ? `<p class="rs-links"><a class="link-arrow" href="${s.extra.href}">${esc(s.extra.label)}${icon('arrow')}</a></p>` : '';
-    return band({ tone, id: `rs-pg-${s.id}`, eyebrow: `Patient guide · ${String(i + 1).padStart(2, '0')}`, title: s.title, intro: s.intro, body: `<div class="rs-split rs-split--quotes">${quotes}</div>${extra}`, z: 7 - i });
+    return band({ tone, id: `rs-pg-${s.id}`, eyebrow: `Patient guide · ${String(i + 1).padStart(2, '0')}`, title: s.title, intro: s.intro, body: `<div class="rs-split rs-split--quotes">${quotes}</div>${extra}`, z: 7 - i, sheet: true });
   }).join('');
   const body = `${hubHero({
     eyebrow: 'Resources', title: 'Patient Guide',
     intro: 'Short readings from the Star Buds blog on CBD, terpenes, cannabinoids and the endocannabinoid system, plus the medical card and the Cancer Relief Program. Each links to the full post.',
-    art: { id: 'patch-leaf', rotate: 5 }, crumbs: [{ label: 'Resources' }, { label: 'Patient Guide' }],
+    art: { id: 'cut-tincture', rotate: 5 }, crumbs: [{ label: 'Resources' }, { label: 'Patient Guide' }],
     actions: `<nav class="rs-toc" aria-label="Patient guide sections">${SECTIONS.map((s) => `<a class="chip" href="#rs-pg-${s.id}">${esc(s.title)}</a>`).join('')}</nav>`,
   })}${sections}${band({ tone: 'leather', label: 'Note', body: note('medical'), z: 0 })}`;
   return { path: '/patient-guide/', html: page({ ctx, path: '/patient-guide/', bodyClass: 'page-resources page-patient', title: 'Patient Guide', description: 'Readings from the Star Buds blog on CBD, terpenes, cannabinoids and the endocannabinoid system, the medical card and the Star Buds Cancer Relief Program.', body }) };
@@ -430,23 +437,22 @@ function faqPage(ctx) {
   const groupHtml = all.map((g, i) => `
       <div class="rs-faq__group" id="rs-faq-group-${esc(g.id)}"${reveal('up')}>
         <div class="rs-faq__head">
-          <p class="rs-faq__count">${patch(`${g.count} question${g.count === 1 ? '' : 's'}`, { tone: i < groups.length ? 'gold' : 'green', size: 'sm' })}</p>
+          <p class="rs-faq__count">${pill(`${g.count} question${g.count === 1 ? '' : 's'}`, { tone: i < groups.length ? 'star' : 'green' })}</p>
           <h2 class="rs-faq__title" id="rs-faq-${esc(g.id)}-title">${esc(g.title)}</h2>
-          ${pinstripe({ cls: 'rs-faq__rule' })}
+          <span class="rs-faq__rule" aria-hidden="true"></span>
         </div>
         <div class="rs-faq__list">${g.items}
         </div>
       </div>`).join('');
   const body = `${hubHero({
     eyebrow: F.eyebrow || 'FAQ', title: 'Frequently Asked Questions', intro: [F.lede || '', 'Plus every visit question from the Star Buds store pages, by state.'].filter(Boolean),
-    art: { id: 'patch-star', rotate: -6 }, crumbs: [{ label: 'FAQ' }],
+    art: { id: 'cut-preroll', rotate: -6 }, crumbs: [{ label: 'FAQ' }],
     actions: `<nav class="rs-toc" aria-label="FAQ groups">${all.map((g) => `<a class="chip" href="#rs-faq-group-${esc(g.id)}">${esc(g.title)}</a>`).join('')}</nav>`,
   })}
-<section class="section section--leather on-dark rs-band rs-band--leather rs-faq" aria-label="Questions and answers" style="z-index:6">
-  <div class="plane-back">${BACK.leather()}</div>
-  ${seam()}
+<section class="section section--ink on-dark rs-band rs-band--violet rs-faq" aria-label="Questions and answers" style="z-index:6">
+  <div class="plane-back">${rsSky('ink')}</div>
   <div class="wrap rs-band__wrap">
-    <div class="rs-faq__panel glass glass--stitch stitch stitch--draw">${groupHtml}
+    <div class="rs-faq__panel glass">${groupHtml}
       <p class="rs-faq__disclaimer">${icon('star')}<span>${esc(F.disclaimer || '')}</span></p>
     </div>
   </div>
@@ -516,7 +522,7 @@ function guidePage(ctx, g) {
     actions: `${shop}${btn('All product guides', '/products/', { variant: 'ghost', icon: 'arrow' })}`,
   })}${band({ tone: 'bone', id: 'rs-guide-main', eyebrow: g.label, title: `About ${g.label.toLowerCase() === 'cbd' ? 'CBD' : g.label.toLowerCase()}`, body: `
     <div class="rs-media">
-      <figure class="rs-media__fig"${reveal('left')}>${img(photo(G.img, ''), { cls: 'rs-media__img', sizes: '(max-width: 900px) 92vw, 560px' })}<span class="rs-media__stitch stitch" aria-hidden="true"></span></figure>
+      <figure class="rs-media__fig"${reveal('left')}>${img(photo(G.img, ''), { cls: 'rs-media__img', sizes: '(max-width: 900px) 92vw, 560px' })}</figure>
       <div class="rs-media__copy"${reveal('right')}>
         ${eduHtml ? prose(eduHtml) : ''}
         ${tagline && !eduHtml ? `<p class="rs-lead">${esc(tagline)}</p>` : ''}
@@ -542,22 +548,22 @@ function aboutPage(ctx) {
   const person = team.find((x) => x.t === 'heading' && x.level === 1 && !/team starbuds/i.test(plain(x.html)));
   const body = `${hubHero({
     eyebrow: `Est. ${ctx.site.brand?.est || '2013'}`, title: 'About Us', intro: lead ? [plain(lead.html)] : [],
-    art: { id: 'patch-wings', rotate: -4 }, crumbs: [{ label: 'About Us' }],
+    art: { id: 'cut-bud', rotate: -4 }, crumbs: [{ label: 'About Us' }],
     actions: `${btn('Product guides', '/products/', { variant: 'gold' })}${btn('Find a dispensary', '/dispensaries/', { variant: 'ghost', icon: 'pin' })}`,
   })}${band({ tone: 'bone', id: 'rs-about-diff', eyebrow: 'Star Buds', title: diffHead ? tidyCaps(diffHead.html) : 'The Star Buds Difference', body: `<div class="rs-cols">${prose(subheads(tidyHtml(diff ? diff.html : '')), 'rs-prose--lead')}</div>`, narrow: true, z: 6 })}${award ? band({ tone: 'leather', id: 'rs-about-cup', label: 'Cannabis Cup', body: `
     <div class="rs-award">
       <figure class="rs-award__plate"${reveal('left')}>${img(photo('about-cannabis-cup'), { cls: 'rs-award__img', sizes: '(max-width: 700px) 70vw, 380px' })}</figure>
       <div class="rs-award__copy"${reveal('right')}>
-        <p class="rs-head__eyebrow">${patch('2015', { tone: 'gold', icon: 'star', size: 'sm' })}</p>
+        <p class="rs-head__eyebrow">${pill('2015', { tone: 'star', icon: 'star' })}</p>
         <h2 class="rs-award__title">${esc(plain(award.html))}</h2>
         ${awardBtn && awardBtn.href ? btn(tidyCaps(awardBtn.text), awardBtn.href, { variant: 'ghost', icon: 'external', attrs: EXT }) : ''}
       </div>
-      ${seal({ label: 'Cup', sub: 'winners', tone: 'gold', cls: 'rs-award__seal' })}
+      ${orb({ label: 'Cup', sub: 'winners', cls: 'rs-award__seal' })}
     </div>`, z: 5 }) : ''}${person ? band({ tone: 'parchment', id: 'rs-about-team', eyebrow: 'The team', title: 'Team Star Buds', body: `
     <div class="rs-team"${reveal('up')}>
-      <figure class="rs-team__photo">${img(photo('team-master-grower', plain(person.html)), { cls: 'rs-team__img', sizes: '(max-width: 700px) 60vw, 300px' })}<span class="rs-team__stitch stitch" aria-hidden="true"></span></figure>
+      <figure class="rs-team__photo">${img(photo('team-master-grower', plain(person.html)), { cls: 'rs-team__img', sizes: '(max-width: 700px) 60vw, 300px' })}</figure>
       <div class="rs-team__copy">
-        ${featuredLines[0] ? `<p class="rs-team__tag">${patch(tidyCaps(featuredLines[0]), { tone: 'green', size: 'sm' })}</p>` : ''}
+        ${featuredLines[0] ? `<p class="rs-team__tag">${pill(tidyCaps(featuredLines[0]), { tone: 'green' })}</p>` : ''}
         ${featuredLines[1] ? `<p class="rs-team__role">${esc(featuredLines[1])}</p>` : ''}
         <h3 class="rs-team__name">${esc(tidyCaps(person.html))}</h3>
       </div>
@@ -577,18 +583,18 @@ function contactPage(ctx) {
   const sts = states(ctx);
   const dir = sts.map((st) => `
     <div class="rs-dir" id="rs-contact-${st.slug}"${reveal('up')}>
-      <h3 class="rs-dir__state">${patch(st.code, { tone: 'leather', size: 'sm', icon: 'pin' })} <span>${esc(st.name)}</span></h3>
+      <h3 class="rs-dir__state">${pill(st.code, { tone: 'green', icon: 'pin' })} <span>${esc(st.name)}</span></h3>
       <ul class="rs-dir__list" role="list">${st.stores.map((s) => `
         <li>${glass(`
           <h4 class="rs-dir__name"><a href="/stores/${esc(s.slug)}/">${esc(s.name)}</a></h4>
           <p class="rs-dir__addr">${(s.address || []).map(esc).join('<br>')}</p>
           ${s.phone ? `<p class="rs-dir__phone"><a href="tel:${esc(s.tel || s.phone)}">${icon('phone')}${esc(s.phone)}</a></p>` : ''}
-          <p class="rs-dir__links">${s.mapUrl ? `<a href="${esc(s.mapUrl)}"${attrs(EXT)}>${icon('directions')}Directions</a>` : ''}<a href="/stores/${esc(s.slug)}/">${icon('arrow')}Store page</a></p>`, { tone: 'bone', cls: 'rs-dir__card' })}</li>`).join('')}
+          <p class="rs-dir__links">${s.mapUrl ? `<a href="${esc(s.mapUrl)}"${attrs(EXT)}>${icon('directions')}Directions</a>` : ''}<a href="/stores/${esc(s.slug)}/">${icon('arrow')}Store page</a></p>`, { cls: 'rs-dir__card' })}</li>`).join('')}
       </ul>
     </div>`).join('');
   const body = `${hubHero({
     eyebrow: 'Contact', title: 'Contact Us', intro: 'Call or visit your Star Buds store: every store’s address and phone number is below.',
-    art: { id: 'chrome-star', rotate: 10 }, crumbs: [{ label: 'Contact Us' }],
+    art: { id: 'cut-preroll', rotate: 10 }, crumbs: [{ label: 'Contact Us' }],
     actions: sts.map((st) => btn(st.name, `#rs-contact-${st.slug}`, { variant: 'ghost', size: 'sm', icon: 'pin' })).join(''),
   })}${band({ tone: 'bone', id: 'rs-contact-stores', eyebrow: 'Stores', title: 'Call or visit', body: dir, z: 6 })}${workHead ? band({ tone: 'leather', id: 'rs-contact-work', eyebrow: 'Business', title: tidyCaps(workHead.html, 'sentence'), body: `${prose(tidyHtml(workText ? workText.html : ''))}<div class="btn-row">${btn('Get In Touch', '/careers/#business-inquiries', { variant: 'gold' })}</div>`, narrow: true, z: 5 }) : ''}`;
   return { path: '/contact/', html: page({ ctx, path: '/contact/', bodyClass: 'page-resources page-contact', title: 'Contact Us', description: 'Contact Star Buds: the address and phone number of every Star Buds store in Mississippi, Oklahoma, Maryland and New York.', body }) };
@@ -610,24 +616,23 @@ function careersPage(ctx) {
   const applyHref = apply ? mapHref(apply.href) : null;
   const body = `${hubHero({
     eyebrow: 'Careers', title: 'Careers', intro: hiring ? [plain(hiring.html)] : [],
-    art: { id: 'patch-star', rotate: 8 }, crumbs: [{ label: 'About Us', href: '/about-us/' }, { label: 'Careers' }],
+    art: { id: 'cut-jar', rotate: 8 }, crumbs: [{ label: 'About Us', href: '/about-us/' }, { label: 'Careers' }],
     actions: `${posBtn ? btn(tidyCaps(posBtn.text), posBtn.href, { variant: 'gold', icon: 'external', attrs: EXT }) : ''}${btn('Business inquiries', '#business-inquiries', { variant: 'ghost', icon: 'arrow' })}`,
   })}${band({ tone: 'bone', id: 'rs-careers-join', eyebrow: looking ? 'Join the team' : '', title: joinHead ? tidyCaps(joinHead.html) : 'Join us', body: `
     ${looking ? `<p class="rs-kicker">${esc(plain(looking.html))}</p>` : ''}
     ${statement ? `<p class="rs-statement"${reveal('up')}>${esc(plain(statement.html))}</p>` : ''}
     ${joinText ? `<p class="rs-lead">${esc(tidyCaps(joinText.html, 'sentence'))}</p>` : ''}
-    ${applyHref ? `<div class="btn-row">${btn(tidyCaps(apply.text), applyHref.href, { variant: 'dark', icon: 'arrow' })}</div>` : ''}`, narrow: true, z: 6 })}
-<section class="section section--leather on-dark rs-band rs-band--leather" id="business-inquiries" aria-labelledby="business-inquiries-title" style="z-index:5">
-  <div class="plane-back">${BACK.leather()}</div>
-  ${seam()}
+    ${applyHref ? `<div class="btn-row">${btn(tidyCaps(apply.text), applyHref.href, { variant: 'gold', icon: 'arrow' })}</div>` : ''}`, narrow: true, z: 6 })}
+<section class="section section--ink on-dark rs-band rs-band--green" id="business-inquiries" aria-labelledby="business-inquiries-title" style="z-index:5">
+  <div class="plane-back">${rsSky('leather')}</div>
   <div class="wrap wrap--narrow rs-band__wrap">
     <header class="rs-head">
-      <p class="rs-head__eyebrow"${reveal('fade')}>${patch('Work with us', { tone: 'gold', icon: 'star', size: 'sm' })}</p>
-      <h2 class="h-display rs-head__title sheen" id="business-inquiries-title"${reveal('up', 1)}>Business Inquiries</h2>
-      <div class="rs-head__rule">${pinstripe()}</div>
+      <p class="rs-head__eyebrow"${reveal('fade')}>${eyebrow('Work with us', 'star')}</p>
+      <h2 class="rs-head__title" id="business-inquiries-title"${reveal('up', 1)}>Business Inquiries</h2>
+      <span class="rs-head__rule" aria-hidden="true"></span>
     </header>
     ${prose(tidyHtml(wText ? wText.html : ''))}
-    ${solutions.length ? `<h3 class="rs-solutions__h">${esc(solHead ? tidyCaps(solHead.html) : 'Brand Solutions')}</h3><ul class="rs-solutions" role="list">${solutions.map((s) => `<li>${patch(s, { tone: 'gold', icon: 'star' })}</li>`).join('')}</ul>` : ''}
+    ${solutions.length ? `<h3 class="rs-solutions__h">${esc(solHead ? tidyCaps(solHead.html) : 'Brand Solutions')}</h3><ul class="rs-solutions" role="list">${solutions.map((s) => `<li>${pill(s, { tone: 'star', icon: 'star' })}</li>`).join('')}</ul>` : ''}
     <p class="rs-links"><a class="link-arrow" href="/contact/">Contact Us${icon('arrow')}</a></p>
   </div>
 </section>`;
@@ -650,8 +655,8 @@ function communityPage(ctx) {
   const stories = cards.filter((x) => !x.href);
   const body = `${hubHero({
     eyebrow: 'Giving back', title: 'Community', intro: paras[0] ? [plain(paras[0])] : [],
-    art: { id: 'patch-leaf', rotate: -5 }, crumbs: [{ label: 'About Us', href: '/about-us/' }, { label: 'Community' }],
-  })}${band({ tone: 'bone', id: 'rs-community', eyebrow: 'Star Buds', title: 'Doing some good', body: `${paras.slice(1).length ? prose(paras.slice(1).join(''), 'rs-prose--lead') : ''}${cardGrid(linked.map((x) => ({ title: x.title, href: x.href.href, external: x.href.ext, cta: x.label || 'Learn more', eyebrow: x.href.ext ? 'starbuds.us' : 'Programme' })), { cols: 2 })}`, narrow: false, z: 6 })}${stories.length ? band({ tone: 'leather', id: 'rs-community-stories', eyebrow: 'In the community', title: 'Partnerships', body: `<ul class="rs-stories" role="list" data-stagger>${stories.map((s) => `<li>${glass(`<h3 class="rs-story__title">${esc(s.title)}</h3>${prose(s.html, 'rs-prose--card')}`, { stitch: true, cls: 'rs-story' })}</li>`).join('')}</ul>`, z: 5 }) : ''}`;
+    art: { id: 'cut-leaf', rotate: -5 }, crumbs: [{ label: 'About Us', href: '/about-us/' }, { label: 'Community' }],
+  })}${band({ tone: 'bone', id: 'rs-community', eyebrow: 'Star Buds', title: 'Doing some good', body: `${paras.slice(1).length ? prose(paras.slice(1).join(''), 'rs-prose--lead') : ''}${cardGrid(linked.map((x) => ({ title: x.title, href: x.href.href, external: x.href.ext, cta: x.label || 'Learn more', eyebrow: x.href.ext ? 'starbuds.us' : 'Programme' })), { cols: 2 })}`, narrow: false, z: 6 })}${stories.length ? band({ tone: 'leather', id: 'rs-community-stories', eyebrow: 'In the community', title: 'Partnerships', body: `<ul class="rs-stories" role="list" data-stagger>${stories.map((s) => `<li>${glass(`<h3 class="rs-story__title">${esc(s.title)}</h3>${prose(s.html, 'rs-prose--card')}`, { cls: 'rs-story' })}</li>`).join('')}</ul>`, z: 5 }) : ''}`;
   return { path: '/community/', html: page({ ctx, path: '/community/', bodyClass: 'page-resources page-community', title: 'Community', description: paras[0] ? plain(paras[0]) : 'Star Buds in the community.', body }) };
 }
 
@@ -674,7 +679,6 @@ function mediaPage(ctx) {
   const fbHref = embed ? (() => { try { return new URL(embed.src).searchParams.get('href') || ''; } catch { return ''; } })() : '';
   const press = `<ul class="rs-press" role="list" data-stagger>${items.map((x) => `
       <li><a class="rs-press__card glass lift" href="${esc(x.href)}"${attrs(EXT)}>
-        <span class="rs-press__stitch stitch" aria-hidden="true"></span>
         <span class="rs-press__logo">${img(x.photo, { cls: 'rs-press__img', alt: '', sizes: '216px' })}</span>
         <span class="rs-press__outlet">${esc(x.outlet)}</span>
         <h3 class="rs-press__title">${esc(x.title)}</h3>
@@ -684,7 +688,7 @@ function mediaPage(ctx) {
   const recipes = recipeHeads.map((t, i) => ({ title: tidyCaps(t), href: recipeBtns[i] ? recipeBtns[i].href : '' })).filter((r) => r.href);
   const body = `${hubHero({
     eyebrow: 'Media', title: 'In the Press', intro: 'Star Buds in the news: stories and features, each linked to the outlet that published it.',
-    art: { id: 'flash-bud', rotate: 4 }, crumbs: [{ label: 'About Us', href: '/about-us/' }, { label: 'In the Press' }],
+    art: { id: 'cut-bud', rotate: 4 }, crumbs: [{ label: 'About Us', href: '/about-us/' }, { label: 'In the Press' }],
   })}${band({ tone: 'bone', id: 'rs-press', eyebrow: `${items.length} stories`, title: 'Press', body: press, z: 6 })}${kitchen ? band({ tone: 'leather', id: 'rs-kitchen', eyebrow: 'Recipes', title: tidyCaps(kitchen), intro: kitchenSub ? tidyCaps(kitchenSub) : '', body: cardGrid(recipes.map((r) => ({ title: r.title, href: r.href, external: true, eyebrow: 'Recipe (PDF)', cta: 'The recipe' })), { cols: 3 }), z: 5 }) : ''}${yt && fbHref ? band({ tone: 'green', id: 'rs-video', eyebrow: 'Video', title: tidyCaps(yt), body: `<p class="rs-lead">The featured video plays on facebook.com.</p><div class="btn-row">${btn('Watch the video', fbHref, { variant: 'gold', icon: 'external', attrs: EXT })}</div>`, narrow: true, z: 4 }) : ''}`;
   return { path: '/media/', html: page({ ctx, path: '/media/', bodyClass: 'page-resources page-media', title: 'In the Press', description: 'Star Buds in the press: MSNBC, Forbes, Rolling Stone, The Boston Globe and more, plus recipes from Julie’s Kitchen.', body }) };
 }
@@ -698,9 +702,9 @@ function crpPage(ctx) {
   const lede = heads.find((t) => /Discounted/i.test(t));
   const body = `${hubHero({
     eyebrow: sub || 'Star Buds', title: 'Cancer Relief Program', intro: lede ? [lede] : [],
-    art: { id: 'patch-leaf', rotate: 4 }, crumbs: [{ label: 'Community', href: '/community/' }, { label: 'Cancer Relief Program' }],
+    art: { id: 'cut-tincture', rotate: 4 }, crumbs: [{ label: 'Community', href: '/community/' }, { label: 'Cancer Relief Program' }],
     actions: `${btn('Terms & Conditions', '#rs-crp-terms', { variant: 'gold', icon: 'arrow' })}${btn('Find a store', '/dispensaries/', { variant: 'ghost', icon: 'pin' })}`,
-  })}${band({ tone: 'bone', id: 'rs-crp', eyebrow: 'The programme', title: 'Cancer Relief Program', titleTag: 'h2', body: prose(tidyHtml(rich[0] ? rich[0].html : ''), 'rs-prose--lead'), narrow: true, z: 6 })}${rich[1] ? band({ tone: 'leather', id: 'rs-crp-product', eyebrow: 'Hash oil', title: heads.find((t) => /About Our Product/i.test(t)) || 'About Our Product', body: prose(tidyHtml(rich[1].html)), narrow: true, z: 5 }) : ''}${band({ tone: 'parchment', id: 'rs-crp-terms', eyebrow: 'Eligibility', title: (heads.find((t) => /Terms/i.test(t)) || 'Terms & Conditions'), body: `${prose(tidyHtml(rich[2] ? rich[2].html : ''))}${list ? `<ul class="rs-ticks" role="list">${list.items.map((i) => `<li>${icon('star')}<span>${esc(plain(typeof i === 'string' ? i : i.html))}</span></li>`).join('')}</ul>` : ''}<p class="rs-links"><a class="link-arrow" href="/rewards/">Higher Rewards${icon('arrow')}</a><a class="link-arrow" href="/patient-guide/">Patient guide${icon('arrow')}</a></p>`, narrow: true, z: 4 })}`;
+  })}${band({ tone: 'bone', id: 'rs-crp', eyebrow: 'The programme', title: 'Cancer Relief Program', titleTag: 'h2', body: prose(tidyHtml(rich[0] ? rich[0].html : ''), 'rs-prose--lead'), narrow: true, z: 6 })}${rich[1] ? band({ tone: 'leather', id: 'rs-crp-product', eyebrow: 'Hash oil', title: heads.find((t) => /About Our Product/i.test(t)) || 'About Our Product', body: prose(tidyHtml(rich[1].html)), narrow: true, z: 5 }) : ''}${band({ tone: 'parchment', id: 'rs-crp-terms', eyebrow: 'Eligibility', title: (heads.find((t) => /Terms/i.test(t)) || 'Terms & Conditions'), body: `${prose(tidyHtml(rich[2] ? rich[2].html : ''))}${list ? `<ul class="rs-ticks" role="list">${list.items.map((i) => `<li>${icon('star')}<span>${esc(plain(typeof i === 'string' ? i : i.html))}</span></li>`).join('')}</ul>` : ''}<p class="rs-links"><a class="link-arrow" href="/rewards/">Higher Rewards${icon('arrow')}</a><a class="link-arrow" href="/patient-guide/">Patient guide${icon('arrow')}</a></p>`, narrow: true, z: 4, sheet: true })}`;
   return { path: '/cancer-relief-program/', html: page({ ctx, path: '/cancer-relief-program/', bodyClass: 'page-resources page-crp', title: 'Cancer Relief Program', description: data().pages.cancerreliefprogram.description || 'The Star Buds Cancer Relief Program.', body }) };
 }
 
@@ -734,9 +738,9 @@ function eulaPage(ctx) {
   const second = r[1] ? legalHeads(tidyHtml(r[1].html)) : '';
   const body = `${hubHero({
     eyebrow: 'Legal', title: 'End User License Agreement', intro: [p.title],
-    crumbs: [{ label: 'EULA' }], art: { id: 'patch-star', rotate: -4 },
+    crumbs: [{ label: 'EULA' }], art: { id: 'cut-bud', rotate: -4 },
     actions: `${btn('License agreement', '#rs-eula-1', { variant: 'ghost', size: 'sm', icon: 'arrow' })}${btn('Terms & Conditions', '#rs-eula-2', { variant: 'ghost', size: 'sm', icon: 'arrow' })}`,
-  })}${band({ tone: 'bone', id: 'rs-eula-1', label: 'End-User License Agreement', body: `<article class="rs-legal">${first}</article>`, narrow: true, z: 6 })}${band({ tone: 'parchment', id: 'rs-eula-2', label: 'Terms and Conditions', body: `<article class="rs-legal">${second}</article>`, narrow: true, z: 5 })}`;
+  })}${band({ tone: 'bone', id: 'rs-eula-1', label: 'End-User License Agreement', body: `<article class="rs-legal">${first}</article>`, narrow: true, z: 6, sheet: true })}${band({ tone: 'parchment', id: 'rs-eula-2', label: 'Terms and Conditions', body: `<article class="rs-legal">${second}</article>`, narrow: true, z: 5, sheet: true })}`;
   return { path: '/eula/', html: page({ ctx, path: '/eula/', bodyClass: 'page-resources page-legal', title: 'End User License Agreement', description: 'Star Buds App End User License Agreement, Terms and Conditions.', body }) };
 }
 function hrTermsPage(ctx) {
@@ -749,9 +753,9 @@ function hrTermsPage(ctx) {
   }).join('\n');
   const body = `${hubHero({
     eyebrow: 'Higher Rewards', title: 'Higher Rewards Terms & Conditions', intro: ['The terms of the Higher Rewards Loyalty Program, as published by Star Buds.'],
-    crumbs: [{ label: 'Higher Rewards', href: '/rewards/' }, { label: 'Terms & Conditions' }], art: { id: 'patch-wings', rotate: 3 },
+    crumbs: [{ label: 'Higher Rewards', href: '/rewards/' }, { label: 'Terms & Conditions' }], art: { id: 'cut-jar', rotate: 3 },
     actions: btn('Higher Rewards', '/rewards/', { variant: 'ghost', icon: 'arrow' }),
-  })}${band({ tone: 'bone', id: 'rs-hr-terms', label: 'Terms and conditions', body: `<article class="rs-legal">${parts}</article>`, narrow: true, z: 6 })}`;
+  })}${band({ tone: 'bone', id: 'rs-hr-terms', label: 'Terms and conditions', body: `<article class="rs-legal">${parts}</article>`, narrow: true, z: 6, sheet: true })}`;
   return { path: '/rewards/terms/', html: page({ ctx, path: '/rewards/terms/', bodyClass: 'page-resources page-legal', title: 'Higher Rewards Terms & Conditions', description: 'Higher Rewards Loyalty Program terms and conditions: how to sign up, accrue and redeem points.', body }) };
 }
 

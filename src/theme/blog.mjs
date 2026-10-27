@@ -1,21 +1,25 @@
-// blog.mjs - BLOG-R2: the Star Buds blog on the adopted site architecture (docs/REVISION-2.md, D1/D2/D7).
-//   /blog/                    hub: hero (h1), category links with counts, featured post, latest articles, pagination,
-//                             recommended resources, store strip
+// blog.mjs - BLOG-R3: the Star Buds blog in the revision 3 "Starlight" look (docs/REVISION-3.md); the structure is
+// revision 2's (docs/REVISION-2.md, D1/D2/D7).
+//   /blog/                    hub: hero (h1), category pills with counts, featured post, latest articles, pagination,
+//                             recommended resources, store band
 //   /blog/p/<n>/              hub pages 2..N (12 articles per page)
 //   /blog/<cat>/ (+ p/<n>/)   category hubs, 12 per page (Recipes = /blog/recipes/)
-//   /blog/<cat>/<slug>/       articles: breadcrumbs, category patch, date, blackletter h1, hero photo, the post body
-//                             (Star Buds' words verbatim), related (3 from the same category), store strip
+//   /blog/<cat>/<slug>/       articles: a night header (breadcrumbs, category pill, date, light headline), the post
+//                             body (Star Buds' words verbatim) on a pearl reading sheet, related (3 from the same
+//                             category), store band
 // Content: src/content/blog/*.json, written by tools/port-blog.mjs from the starbuds.us capture. The photos are Star
-// Buds' own (assets/photos/blog/, no data-ai). Classes are prefixed bl-; styles in src/styles/blog.css.
-// Shared pieces come from FOUNDATION (hubHero, articleCard, crumbs, patch, btn, img ...). No page script.
+// Buds' own (assets/photos/blog/, no data-ai). Classes are prefixed bl-; styles in src/styles/blog.css. The star field
+// behind each section is this file's own CSS-only sky (.bl-sky). Shared pieces come from FOUNDATION (hubHero,
+// articleCard, crumbs, patch, btn, glass, img, cutout). No page script.
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from '../lib/paths.mjs';
-import { page, esc, cx, icon, btn, img, glass, patch, halftone, leaves, grain, seam, pinstripe, reveal, cutout, patchCut, crumbs, hubHero, articleCard } from './shell.mjs';
+import { page, esc, cx, icon, btn, img, glass, patch, reveal, cutout, crumbs, hubHero, articleCard } from './shell.mjs';
 
 const DIR = path.join(ROOT, 'src/content/blog');
 const PER = 12;
-const ART = { blog: 'flash-leaf', 'cannabis-101': 'patch-leaf', 'health-and-lifestyle': 'patch-star', 'news-and-culture': 'chrome-star', recipes: 'flash-bud', resources: 'patch-wings', 'shopping-and-reviews': 'cut-jar' };
+/** the floating product cut-out of each hub and article header (revision 3: cut-* only; the patch and flash art is retired) */
+const ART = { blog: 'cut-bud', 'cannabis-101': 'cut-leaf', 'health-and-lifestyle': 'cut-tincture', 'news-and-culture': 'cut-preroll', recipes: 'cut-gummies', resources: 'cut-vape', 'shopping-and-reviews': 'cut-jar' };
 const EXT = /^https?:\/\//i;
 
 // ---------------------------------------------------------------- data
@@ -33,7 +37,7 @@ function load() {
 
 // ---------------------------------------------------------------- small helpers
 const plain = (html) => String(html || '').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, ' ').trim();
-/** mostly upper-case text (blackletter is never set in capitals: such titles and headings switch to Oswald) */
+/** mostly upper-case text (such titles and headings get a smaller, tracked size) */
 function capsy(text) {
   const letters = String(text).replace(/[^A-Za-z]/g, '');
   if (letters.length < 4) return false;
@@ -52,14 +56,16 @@ function photo(im, { cls, sizes = '100vw', eager = false, alt } = {}) {
   return img({ src: im.src, w: im.w, h: im.h, alt: im.alt || '' }, { cls, eager, alt: alt ?? (im.alt || ''), attrs: extra });
 }
 
-/** front-plane art from the generated set (decorative) */
+/** front-plane art: a floating product cut-out (decorative) */
 function art(id, cls) {
   if (!id) return '';
-  if (/^(patch-|chrome-star|flash-)/.test(id)) return patchCut(id, { cls: cx(cls, id === 'patch-star' && 'bl-art--small'), depth: 0.05, sizes: '(max-width: 700px) 30vw, 220px' });
   return cutout(id, { cls, depth: 0.05, float: 'slow', sizes: '(max-width: 700px) 30vw, 240px' });
 }
 
-/** a card for a listing (FOUNDATION's articleCard); all-caps titles get the Oswald variant */
+/** a CSS-only star field with soft aurora washes (decorative; .bl-sky in blog.css) */
+const sky = (cls) => `<span class="${cx('bl-sky', cls)}" aria-hidden="true"></span>`;
+
+/** a card for a listing (FOUNDATION's articleCard); all-caps titles get a smaller, tracked variant */
 const card = (p, o = {}) => `<li class="bl-grid__item">${articleCard({ title: p.title, href: p.href, date: p.date, category: p.category, categoryLabel: p.categoryLabel, excerpt: p.excerpt, image: p.image ? { src: p.image.src, w: p.image.w, h: p.image.h, alt: '' } : null }, { level: o.level || 3, cls: cx('bl-card', capsy(p.title) && 'bl-card--caps') })}</li>`;
 const grid = (list, o = {}) => `<ul class="${cx('bl-grid', o.cls)}" role="list" data-stagger>${list.map((p) => card(p, o)).join('')}</ul>`;
 
@@ -82,19 +88,21 @@ function pager(base, n, total) {
   return `<nav class="bl-pager" aria-label="Pagination">${step(n - 1, 'prev', 'Previous')}<ol class="bl-pager__nums" role="list">${nums}</ol>${step(n + 1, 'next', 'Next')}</nav>`;
 }
 
+/** the store call to action closing every blog page: an aurora band */
 function storeStrip(ctx) {
   const states = ctx.storesByState.map((g) => g.state.name);
   return `
 <section class="section on-dark bl-cta" aria-labelledby="bl-cta-title">
-  <div class="plane-back">${leaves({ tone: 'bone', cls: 'bl-cta__leaves' })}${halftone({ color: 'gold', at: 'br' })}${grain()}</div>
-  ${seam({ kind: 'stitch', tone: 'gold' })}
-  <div class="wrap bl-cta__inner">
-    <div class="bl-cta__copy"${reveal('up')}>
-      <p class="bl-cta__eyebrow">${patch('Star Buds stores', { tone: 'gold', size: 'sm', icon: 'pin' })}</p>
-      <h2 id="bl-cta-title" class="bl-cta__title">Find your store</h2>
-      ${states.length ? `<p class="bl-cta__text">Star Buds stores in ${esc(listJoin(states))}.</p>` : ''}
+  <div class="wrap">
+    <div class="bl-cta__band">
+      ${sky('bl-sky--band')}
+      <div class="bl-cta__copy"${reveal('up')}>
+        <p class="bl-cta__eyebrow">${patch('Star Buds stores', { tone: 'gold', size: 'sm', icon: 'pin' })}</p>
+        <h2 id="bl-cta-title" class="bl-cta__title">Find your store</h2>
+        ${states.length ? `<p class="bl-cta__text">Star Buds stores in ${esc(listJoin(states))}.</p>` : ''}
+      </div>
+      <div class="bl-cta__actions"${reveal('up', 1)}>${btn('Find your store', '/dispensaries/', { variant: 'light', size: 'lg', icon: 'pin' })}</div>
     </div>
-    <div class="bl-cta__actions"${reveal('up', 1)}>${btn('Find your store', '/dispensaries/', { variant: 'gold', size: 'lg', icon: 'pin' })}</div>
   </div>
 </section>`;
 }
@@ -107,7 +115,6 @@ function featured(p) {
     <article class="${cx('bl-feature', !im && 'bl-feature--plain')}" aria-labelledby="bl-feature-title"${reveal('up')}>
       ${im ? `<div class="bl-feature__media">${photo(im, { cls: 'bl-feature__img', sizes: '(max-width: 899px) 92vw, 760px', eager: true, alt: '' })}</div>` : ''}
       ${glass(`
-        <span class="bl-feature__stitch stitch" aria-hidden="true"></span>
         <p class="bl-feature__kicker">${patch('Featured', { tone: 'gold', size: 'sm', icon: 'star' })}${patch(p.categoryLabel, { tone: 'green', size: 'sm' })}</p>
         <h2 id="bl-feature-title" class="${cx('bl-feature__title', caps && 'bl-feature__title--caps')}"><a class="bl-feature__link" href="${esc(p.href)}">${esc(p.title)}</a></h2>
         <p class="bl-feature__date"><time datetime="${esc(p.date)}">${esc(p.dateText)}</time>${r.readTime ? `<span aria-hidden="true">${icon('star', 'bl-dot')}</span><span>${esc(r.readTime)}</span>` : ''}</p>
@@ -128,6 +135,7 @@ function hubPage(ctx, data, n, pages) {
       ? [`Guides, news, recipes and reviews from Star Buds: ${data.posts.length} articles in ${data.cats.length} categories, newest first.`]
       : [`Page ${n} of ${pages}: older articles from Star Buds, newest first.`],
     art: ART.blog,
+    cls: 'bl-hub',
     crumbs: n === 1 ? [{ label: 'Blog' }] : [{ label: 'Blog', href: '/blog/' }, { label: `Page ${n}` }],
   });
   // recommended resources: the newest Resources articles that page 1 does not already show
@@ -135,7 +143,7 @@ function hubPage(ctx, data, n, pages) {
   const recs = n === 1 ? data.posts.filter((p) => p.category === 'resources' && !shown.has(p.slug)).slice(0, 3) : [];
   const body = `${head}
 <section class="section bl-feed" aria-labelledby="bl-feed-title">
-  <div class="plane-back">${halftone({ color: 'green', at: 'tl' })}${grain()}</div>
+  <div class="plane-back">${sky()}</div>
   <div class="wrap">
     ${catNav(data, null, n === 1)}
     ${n === 1 && data.posts[0] ? featured(data.posts[0]) : ''}
@@ -148,8 +156,7 @@ function hubPage(ctx, data, n, pages) {
   </div>
 </section>${recs.length ? `
 <section class="section bl-recs" aria-labelledby="bl-recs-title">
-  <div class="plane-back"><div class="leather-bg"></div>${leaves({ tone: 'gold', cls: 'bl-recs__leaves' })}${grain()}</div>
-  ${seam({ kind: 'double' })}
+  <div class="plane-back">${sky('bl-sky--soft')}</div>
   <div class="wrap">
     <div class="bl-feed__head">
       <h2 id="bl-recs-title" class="bl-feed__title">Recommended resources</h2>
@@ -173,11 +180,12 @@ function categoryPage(ctx, data, cat, n, pages, list) {
     title: cat.label,
     intro: n === 1 ? [cat.blurb, `${cat.count} ${cat.count === 1 ? 'article' : 'articles'}, newest first.`] : [cat.blurb, `Page ${n} of ${pages}.`],
     art: ART[cat.slug],
+    cls: 'bl-hub',
     crumbs: n === 1 ? [{ label: 'Blog', href: '/blog/' }, { label: cat.label }] : [{ label: 'Blog', href: '/blog/' }, { label: cat.label, href: base }, { label: `Page ${n}` }],
   });
   const body = `${head}
 <section class="section bl-feed" aria-labelledby="bl-feed-title">
-  <div class="plane-back">${halftone({ color: 'green', at: 'tl' })}${grain()}</div>
+  <div class="plane-back">${sky()}</div>
   <div class="wrap">
     ${catNav(data, cat.slug, n === 1)}
     <div class="bl-feed__head">
@@ -244,41 +252,40 @@ function articlePage(ctx, data, p) {
     r.updated ? `<span>Updated ${esc(r.updated)}</span>` : '',
   ].filter(Boolean).join(`<span aria-hidden="true">${icon('star', 'bl-dot')}</span>`);
   const heroHtml = hero ? `
-    <figure class="bl-hero" style="--bl-ar:${(hero.w / hero.h).toFixed(4)}"${reveal('up')}>
-      <div class="bl-hero__frame"><span class="bl-hero__stitch stitch" aria-hidden="true"></span>${photo(hero, { cls: 'bl-hero__img', sizes: '(max-width: 1140px) 94vw, 1100px', eager: true })}</div>
-      ${hero.caption ? `<figcaption>${esc(hero.caption)}</figcaption>` : ''}
-    </figure>` : '';
+        <figure class="bl-hero" style="--bl-ar:${(hero.w / hero.h).toFixed(4)}"${reveal('up')}>
+          <div class="bl-hero__frame">${photo(hero, { cls: 'bl-hero__img', sizes: '(max-width: 1020px) 92vw, 860px', eager: true })}</div>
+          ${hero.caption ? `<figcaption>${esc(hero.caption)}</figcaption>` : ''}
+        </figure>` : '';
   const body = `
 <article class="bl-post" aria-labelledby="bl-title">
   <header class="${cx('section', 'on-dark', 'bl-head', hero && 'bl-head--hero')}">
-    <div class="plane-back"><div class="leather-bg"></div>${leaves({ tone: 'gold', cls: 'bl-head__leaves' })}${halftone({ color: 'gold', at: 'tr' })}${grain()}<div class="vignette"></div></div>
+    <div class="plane-back">${sky('bl-sky--head')}</div>
     <div class="wrap bl-head__inner">
       ${crumbs([{ label: 'Blog', href: '/blog/' }, { label: cat.label, href: `/blog/${cat.slug}/` }, { label: r.title }], { cls: 'bl-crumbs' })}
       <p class="bl-head__meta"${reveal('fade')}><a class="bl-head__cat" href="/blog/${esc(cat.slug)}/">${patch(cat.label, { tone: 'green', icon: 'star' })}</a><span class="bl-head__date">${meta}</span></p>
-      <h1 id="bl-title" class="${cx('bl-title', caps && 'bl-title--caps', !caps && 'sheen')}"${reveal('up', 1)}>${esc(r.title)}</h1>
-      <div class="bl-head__rule"${reveal('fade', 2)}>${pinstripe()}</div>
-      ${r.tags && r.tags.length ? `<ul class="bl-tags" role="list" aria-label="Tags">${r.tags.map((t) => `<li>${patch(t, { tone: 'leather', size: 'sm' })}</li>`).join('')}</ul>` : ''}
+      <h1 id="bl-title" class="${cx('bl-title', caps && 'bl-title--caps')}"${reveal('up', 1)}>${esc(r.title)}</h1>
+      <div class="bl-head__rule" aria-hidden="true"${reveal('fade', 2)}></div>
+      ${r.tags && r.tags.length ? `<ul class="bl-tags" role="list" aria-label="Tags">${r.tags.map((t) => `<li><span class="bl-tag">${esc(t)}</span></li>`).join('')}</ul>` : ''}
     </div>
     ${art(ART[p.category], 'bl-head__art')}
   </header>
-  <div class="${cx('section', 'section--bone', 'bl-body', !hero && 'bl-body--plain')}">
-    ${seam({ kind: 'stitch', tone: 'gold' })}
+  <div class="${cx('section', 'bl-body', !hero && 'bl-body--plain')}">
     <div class="wrap">
-      ${heroHtml}
-      <div class="bl-prose">
+      <div class="bl-sheet on-light">${heroHtml}
+        <div class="bl-prose">
 ${r.blocks.map(blockHtml).join('\n')}
+        </div>
+        <footer class="bl-end">
+          <div class="bl-end__rule" aria-hidden="true"></div>
+          <p class="bl-end__note">Published on the Star Buds blog on <time datetime="${esc(r.date)}">${esc(r.dateText)}</time>${r.updated ? `, updated ${esc(r.updated)}` : ''}.</p>
+          <div class="btn-row bl-end__links">${btn(`More in ${cat.label}`, `/blog/${cat.slug}/`, { variant: 'primary' })}${btn('All articles', '/blog/', { variant: 'ghost' })}</div>
+        </footer>
       </div>
-      <footer class="bl-end">
-        <div class="bl-end__rule">${pinstripe({ tone: 'ink' })}</div>
-        <p class="bl-end__note">Published on the Star Buds blog on <time datetime="${esc(r.date)}">${esc(r.dateText)}</time>${r.updated ? `, updated ${esc(r.updated)}` : ''}.</p>
-        <div class="btn-row bl-end__links">${btn(`More in ${cat.label}`, `/blog/${cat.slug}/`, { variant: 'primary' })}${btn('All articles', '/blog/', { variant: 'ghost' })}</div>
-      </footer>
     </div>
   </div>
 </article>${more.length ? `
 <section class="section bl-related" aria-labelledby="bl-related-title">
-  <div class="plane-back">${halftone({ color: 'green', at: 'tl' })}${grain()}</div>
-  ${seam({ kind: 'double' })}
+  <div class="plane-back">${sky('bl-sky--soft')}</div>
   <div class="wrap">
     <div class="bl-feed__head">
       <h2 id="bl-related-title" class="bl-feed__title">Related articles</h2>

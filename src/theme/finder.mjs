@@ -4,10 +4,12 @@
 // Copy: store facts from site.json; everything else is neutral UI (BUILD-CONTRACT 2).
 // Every link is rendered here: internal store-page links root-absolute (the preview rewrite prefixes HTML attributes),
 // external ones absolute (liveUrl, mapUrl). src/scripts/finder.js only reads them.
+// Revision 3 ("Starlight", docs/REVISION-3.md): a night map (dark glass states, the Star Buds states glowing aurora
+// green, glowing star pins), frosted glass list and card; decorative markup only, every hook finder.js reads is kept.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { esc, attrs, icon, cutout, imgUrl } from './shell.mjs';
+import { esc, attrs, icon, cutout } from './shell.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const readJson = (rel) => JSON.parse(fs.readFileSync(path.join(ROOT, rel), 'utf8'));
@@ -44,46 +46,23 @@ function hoursSummary(hours) {
   return runs.map((r) => (r.from === r.to ? SHORT[r.from] : SHORT[r.from] + '–' + SHORT[r.to]) + ' ' + fmtRange(r.time)).join(' · ');
 }
 
-/** a curved rocker patch (SVG textPath on an arc) with a twill fill and a stitched border */
-function rocker({ id, text, cls = '', r1 = 300, thick = 46, deg = 26 }) {
-  const a = (deg * Math.PI) / 180, r2 = r1 - thick, pad = 6;
-  const w = Math.ceil(2 * r1 * Math.sin(a)) + pad * 2;
-  const cx = w / 2, cy = r1 + pad;
-  const h = Math.ceil(cy - r2 * Math.cos(a)) + pad;
-  const P = (r, t) => [(cx + r * Math.sin(t)).toFixed(1), (cy - r * Math.cos(t)).toFixed(1)].join(' ');
-  const band = (o, i) => `M${P(o, -a)} A${o} ${o} 0 0 1 ${P(o, a)} L${P(i, a)} A${i} ${i} 0 0 0 ${P(i, -a)}Z`;
-  const s = 5; // stitch inset
-  const sa = a - s / r1;
-  const stitch = `M${P(r1 - s, -sa)} A${r1 - s} ${r1 - s} 0 0 1 ${P(r1 - s, sa)} L${P(r2 + s, sa)} A${r2 + s} ${r2 + s} 0 0 0 ${P(r2 + s, -sa)}Z`;
-  const rt = r2 + thick * 0.3; // text baseline radius
-  return `<svg class="rocker ${cls}" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" aria-hidden="true" focusable="false">
-    <defs>
-      <pattern id="${id}-twill" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="5" class="rocker__ground"/><path d="M0 0V5" class="rocker__twill"/></pattern>
-      <path id="${id}-arc" d="M${P(rt, -a - 0.2)} A${rt} ${rt} 0 0 1 ${P(rt, a + 0.2)}"/>
-    </defs>
-    <path class="rocker__shadow" d="${band(r1, r2)}" transform="translate(0 3)"/>
-    <path class="rocker__band" d="${band(r1, r2)}" fill="url(#${id}-twill)"/>
-    <path class="rocker__stitch" d="${stitch}"/>
-    <text class="rocker__text"><textPath href="#${id}-arc" startOffset="50%" text-anchor="middle" data-finder-rocker-text>${esc(text)}</textPath></text>
-  </svg>`;
-}
-
-/** the chrome-star pin (drawn at 1px = 1 unit; finder.js scales it to a constant screen size) */
+/** the glowing star pin (drawn at 1px = 1 unit; finder.js scales it to a constant screen size). Revision 3: a soft
+ *  starlight halo that twinkles (desynced per pin by --tw), a small night-glass disc and a pale-gold star. */
 function starPoints(r, ri) {
   const pts = [];
   for (let i = 0; i < 10; i++) { const t = (Math.PI / 5) * i - Math.PI / 2, rr = i % 2 ? ri : r; pts.push((rr * Math.cos(t)).toFixed(2) + ',' + (rr * Math.sin(t)).toFixed(2)); }
   return pts.join(' ');
 }
 
-function pin(s) {
+function pin(s, i) {
   const [x, y] = MAP.points[s.slug];
   const side = LABEL[s.slug] || 'r';
   const lab = { l: { x: -15, y: 4, a: 'end' }, r: { x: 15, y: 4, a: 'start' }, t: { x: 0, y: -16, a: 'middle' }, b: { x: 0, y: 25, a: 'middle' } }[side];
-  return `<a class="pin" href="/stores/${esc(s.slug)}/" data-finder-pin="${esc(s.slug)}" data-state="${esc(s.state)}" data-x="${x}" data-y="${y}" transform="translate(${x} ${y}) scale(1.3)" aria-label="${esc(s.city)}, ${esc(s.state)}: ${esc(s.name)}">
+  return `<a class="pin" href="/stores/${esc(s.slug)}/" data-finder-pin="${esc(s.slug)}" data-state="${esc(s.state)}" data-x="${x}" data-y="${y}" transform="translate(${x} ${y}) scale(1.3)" style="--tw:${((i * 0.83) % 4.2).toFixed(2)}s" aria-label="${esc(s.city)}, ${esc(s.state)}: ${esc(s.name)}">
           <circle class="pin__hit" r="17"/>
-          <circle class="pin__badge" r="11" stroke="url(#fmap-gold)"/>
-          <circle class="pin__stitch" r="8.4"/>
-          <polygon class="pin__star" fill="url(#fmap-chrome)" points="${starPoints(7.2, 3)}"/>
+          <circle class="pin__halo" r="16" fill="url(#fmap-halo)"/>
+          <circle class="pin__badge" r="7.8"/>
+          <polygon class="pin__star" fill="url(#fmap-star)" points="${starPoints(6.2, 2.6)}"/>
           <text class="pin__label" x="${lab.x}" y="${lab.y}" text-anchor="${lab.a}">${esc(s.city)}</text>
         </a>`;
 }
@@ -97,23 +76,25 @@ function mapSvg(ctx) {
   return `<svg class="fmap" viewBox="${MAP.viewBox.join(' ')}" preserveAspectRatio="xMidYMid meet" data-finder-svg role="group" aria-labelledby="finder-map-title">
       <title id="finder-map-title">Map of the ${ctx.stores.length} Star Buds locations in ${esc(listJoin(ctx.storesByState.map((g) => g.state.name)))}</title>
       <defs>
-        <pattern id="fmap-hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(-38)"><rect width="4" height="4" class="fmap__hatch-bg"/><path d="M0 0V4" class="fmap__hatch-line"/></pattern>
-        <linearGradient id="fmap-chrome" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7F7F5"/><stop offset=".38" stop-color="#B9BEC2"/><stop offset=".52" stop-color="#5D6368"/><stop offset=".7" stop-color="#E9EBEC"/><stop offset="1" stop-color="#8D9398"/></linearGradient>
-        <linearGradient id="fmap-gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3DD9A"/><stop offset=".34" stop-color="#D9B45E"/><stop offset=".54" stop-color="#9C7A2E"/><stop offset=".74" stop-color="#E4C273"/><stop offset="1" stop-color="#B08A3A"/></linearGradient>
-        <path id="fmap-coast" d="${MAP.coast}"/>
+        <linearGradient id="fmap-glass" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="975" y2="610"><stop offset="0" stop-color="#8D7BFF" stop-opacity=".2"/><stop offset=".55" stop-color="#FFFFFF" stop-opacity=".055"/><stop offset="1" stop-color="#38E1D0" stop-opacity=".12"/></linearGradient>
+        <radialGradient id="fmap-halo"><stop offset="0" stop-color="#FFF8E1" stop-opacity=".85"/><stop offset=".3" stop-color="#FFE9A8" stop-opacity=".34"/><stop offset="1" stop-color="#FFE9A8" stop-opacity="0"/></radialGradient>
+        <linearGradient id="fmap-star" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#FFF1C9"/><stop offset="1" stop-color="#FFE9A8"/></linearGradient>
+        <path id="fmap-coast" d="${MAP.coast}" vector-effect="non-scaling-stroke"/>
+        ${ours.map((s) => `<path id="fmap-d-${codeOf[s.id]}" d="${s.d}" vector-effect="non-scaling-stroke"/>`).join('')}
       </defs>
       <path class="fmap__grat" d="${MAP.graticule}"/>
       <g class="fmap__water" aria-hidden="true">
-        <use href="#fmap-coast" class="fmap__wl fmap__wl--3"/><use href="#fmap-coast" class="fmap__wl fmap__wl--3b"/>
-        <use href="#fmap-coast" class="fmap__wl fmap__wl--2"/><use href="#fmap-coast" class="fmap__wl fmap__wl--2b"/>
-        <use href="#fmap-coast" class="fmap__wl fmap__wl--1"/><use href="#fmap-coast" class="fmap__wl fmap__wl--1b"/>
+        <use href="#fmap-coast" class="fmap__wl fmap__wl--3"/><use href="#fmap-coast" class="fmap__wl fmap__wl--2"/><use href="#fmap-coast" class="fmap__wl fmap__wl--1"/>
       </g>
       <g class="fmap__land" aria-hidden="true">
-        ${others.map((s) => `<path class="st" fill="url(#fmap-hatch)" d="${s.d}"/>`).join('')}
+        ${others.map((s) => `<path class="st" fill="url(#fmap-glass)" d="${s.d}"/>`).join('')}
       </g>
       <use href="#fmap-coast" class="fmap__coast" aria-hidden="true"/>
+      <g class="fmap__halo" aria-hidden="true">
+        ${ours.map((s) => `<use href="#fmap-d-${codeOf[s.id]}" class="fmap__halo-u fmap__halo-u--wide"/><use href="#fmap-d-${codeOf[s.id]}" class="fmap__halo-u"/>`).join('')}
+      </g>
       <g class="fmap__ours">
-        ${ours.map((s) => `<path class="st st--sb" d="${s.d}" data-finder-state="${codeOf[s.id]}" data-bbox="${s.bbox.join(' ')}"><title>${esc(s.name)}: ${count[codeOf[s.id]] || 0} ${count[codeOf[s.id]] === 1 ? 'location' : 'locations'}</title></path>`).join('')}
+        ${ours.map((s) => `<use href="#fmap-d-${codeOf[s.id]}" class="st st--sb" data-finder-state="${codeOf[s.id]}" data-bbox="${s.bbox.join(' ')}"><title>${esc(s.name)}: ${count[codeOf[s.id]] || 0} ${count[codeOf[s.id]] === 1 ? 'location' : 'locations'}</title></use>`).join('')}
       </g>
       <g class="fmap__pins">
         ${ctx.stores.filter((s) => MAP.points[s.slug]).map(pin).join('')}
@@ -180,9 +161,9 @@ export function finderSection(ctx, opts = {}) {
   return `
 <section class="section finder on-dark${cls ? ' ' + esc(cls) : ''}" id="locations" aria-labelledby="finder-title" data-finder>
   <div class="plane-back finder__back">
-    <span class="finder__leather" style="background-image:url('${imgUrl('g-leather', 1440)}')"></span>
-    <span class="finder__dots"></span>
-    <span class="finder__grain"></span>
+    <span class="finder__aurora"></span>
+    <span class="finder__stars"></span>
+    <span class="finder__stars finder__stars--b"></span>
   </div>
   <div class="wrap finder__wrap">
     <header class="finder__head">
@@ -211,16 +192,13 @@ export function finderSection(ctx, opts = {}) {
       </div>
       <div class="finder__mapcol" data-reveal="up" style="--i:2">
         <div class="finder__frame" data-finder-frame>
-          <span class="finder__corner finder__corner--tl" aria-hidden="true"></span><span class="finder__corner finder__corner--tr" aria-hidden="true"></span>
-          <span class="finder__corner finder__corner--bl" aria-hidden="true"></span><span class="finder__corner finder__corner--br" aria-hidden="true"></span>
           <div class="finder__viewport" data-finder-viewport>
             ${mapSvg(ctx)}
           </div>
-          <div class="finder__cartouche">${rocker({ id: 'frk', text: 'All Locations', cls: 'finder__rocker' })}</div>
+          <div class="finder__cartouche" aria-hidden="true"><span class="finder__place"><span data-finder-rocker-text>All Locations</span></span></div>
           <button type="button" class="finder__reset" data-finder-reset hidden>${icon('arrow')}All states</button>
-          <svg class="finder__compass" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="27" class="cmp__ring"/><circle cx="32" cy="32" r="22.5" class="cmp__stitch"/><polygon class="cmp__star" points="32,9 36,28 55,32 36,36 32,55 28,36 9,32 28,28"/><polygon class="cmp__n" points="32,9 36,28 32,32 28,28"/><text x="32" y="7" class="cmp__label">N</text></svg>
           <p class="finder__credit">Map: U.S. Census Bureau shapes via us-atlas · pins: OpenStreetMap Nominatim</p>
-          ${cutout('patch-wings', { cls: 'finder__wings', depth: 0.08, float: 'slow', sizes: '(max-width: 700px) 150px, 230px' })}
+          ${cutout('cut-jar', { cls: 'finder__bud', depth: 0.08, float: 'slow', rotate: 10, sizes: '(max-width: 700px) 110px, 190px' })}
         </div>
         <div class="finder__cards" data-finder-cards>
         ${ctx.stores.map((s) => card(s, stateBy[s.state])).join('')}
@@ -228,6 +206,5 @@ export function finderSection(ctx, opts = {}) {
       </div>
     </div>
   </div>
-  ${cutout('flash-leaf', { cls: 'finder__flash', depth: -0.1, float: 'slow', sizes: '(max-width: 700px) 120px, 210px' })}
 </section>`;
 }

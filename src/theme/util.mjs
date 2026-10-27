@@ -1,6 +1,8 @@
-// util.mjs - "Iron Star" markup helpers (FOUNDATION, revision 1). Re-exported by shell.mjs: import from './shell.mjs'.
-// Every helper returns an HTML string. See docs/DESIGN.md for the API and the class names they emit.
-// Legacy Pop Glass helpers (sticker, starburst, glass({pop})) still work and now render Iron Star pieces.
+// util.mjs - "Starlight" markup helpers (FOUNDATION-R3; signatures unchanged since revision 1). Re-exported by
+// shell.mjs: import from './shell.mjs'. Every helper returns an HTML string. See docs/DESIGN.md for the API and classes.
+// The Iron Star and Pop Glass helpers (patch, rocker, seal, emblem, seam, pinstripe, halftone, grain, leaves, patchCut,
+// sticker, starburst) keep their signatures and now render Starlight pieces: glass pills, glowing orbs, aurora
+// hairlines, star sparkles, faint star dust. New in revision 3: sky() and spark().
 import { img, picture, imgUrl, generated } from '../lib/images.mjs';
 
 export { img, picture, imgUrl, generated };
@@ -49,10 +51,11 @@ export function icon(name, cls = '') {
 const BTN_ALIAS = { pop: 'gold' };
 /**
  * btn(label, href, opts) -> <a class="btn btn--<variant>">. href null -> <button type="button">.
- * opts: variant 'primary' (brand green, gold edge) | 'gold' (antique gold; legacy 'pop') | 'chrome' | 'light' (bone)
- *       | 'ghost' (outline; bone on dark, ink on bone) | 'dark' (jet, gold edge); size 'sm' | 'lg';
- *       icon (icon name, default 'arrow'; false for none); cls; attrs {} (e.g. data-menu-cat); html (label is raw HTML).
- * Every button gets a one-pass metal sheen on hover and a 1px press.
+ * opts: variant 'primary' (aurora gradient fill, dark text) | 'gold' / legacy 'pop' (= primary) | 'chrome' | 'light'
+ *       (light glass, dark text) | 'ghost' (glass outline; light on night, dark on pearl) | 'dark' (night glass);
+ *       size 'sm' | 'lg'; icon (icon name, default 'arrow'; false for none); cls; attrs {} (e.g. data-menu-cat);
+ *       html (label is raw HTML).
+ * Pill-shaped; on hover a button lifts 2px, its edge glows and a soft shine passes once.
  */
 export function btn(label, href, opts = {}) {
   const { variant = 'primary', size, icon: ic = 'arrow', cls, attrs: a = {}, html = false } = opts;
@@ -68,181 +71,178 @@ export const menuAttrs = (cat = '') => ({ href: '/dispensaries/', 'data-menu-cat
 /** attributes for a link to the chosen store's page (falls back to /dispensaries/) */
 export const storeLinkAttrs = () => ({ href: '/dispensaries/', 'data-store-link': '' });
 
-// ---------- smoked glass ----------
+// ---------- frosted glass ----------
 /**
- * glass(innerHtml, opts) -> smoked-glass panel (blur 20px, gold hairline edge, faint top sheen, bone text).
- * opts: tag ('div'), cls, tone 'smoke' (default; legacy 'dark'/'light' = smoke) | 'bone' (light glass, ink text),
- *       stitch (true = inner stitched border that draws in on reveal; legacy name `pop`), edge 'gold' (default) | 'chrome',
- *       lift (true = hover lift + gold glow; links/buttons lift anyway), attrs {}.
+ * glass(innerHtml, opts) -> frosted-glass panel: --glass-fill, a 1px bright edge, a soft shine, --glass-blur, radius
+ * --r-lg, light text. opts: tag ('div'), cls, tone 'smoke' (default; legacy 'dark'/'light' = smoke) | 'bone' (light
+ * pearl glass, dark text), stitch / pop (accepted, no effect since revision 3), edge 'gold' (default) | 'chrome' (a
+ * brighter edge), lift (true = hover lift + edge glow; links/buttons lift anyway), attrs {}.
  */
 export function glass(inner, opts = {}) {
-  const { tag = 'div', cls, tone, stitch, pop, edge, lift, attrs: a = {} } = opts;
-  const st = stitch ?? pop ?? false;
-  return `<${tag} class="${cx('glass', tone === 'bone' && 'glass--bone', st && 'glass--stitch stitch stitch--draw', edge === 'chrome' && 'glass--chrome', lift && 'lift', cls)}"${attrs(a)}>${inner}</${tag}>`;
+  const { tag = 'div', cls, tone, edge, lift, attrs: a = {} } = opts;
+  return `<${tag} class="${cx('glass', tone === 'bone' && 'glass--bone', edge === 'chrome' && 'glass--chrome', lift && 'lift', cls)}"${attrs(a)}>${inner}</${tag}>`;
 }
 
-// ---------- embroidered patches ----------
+// ---------- glass pills (formerly embroidered patches) ----------
 const TONES = ['gold', 'bone', 'green', 'red', 'leather', 'chrome'];
 const LEGACY_TONE = { yellow: 'gold', lime: 'green', pink: 'red', coral: 'red', paper: 'bone', ink: 'leather' };
 const tone = (t, d = 'gold') => (TONES.includes(t) ? t : LEGACY_TONE[t] || d);
 
 /**
- * patch(text, { tone: 'gold'|'bone'|'green'|'red'|'leather', size: 'sm'|'md'|'lg', icon, cls, html, tag }) ->
- * a straight embroidered tab: twill fill, merrowed edge, inner stitch line, Oswald caps. For section eyebrows and labels.
+ * patch(text, { tone: 'gold'|'bone'|'green'|'red'|'leather'|'chrome', size: 'sm'|'md'|'lg', icon, cls, html, tag }) ->
+ * a small glass pill label (Manrope 600 caps, --track-caps): gold = starlight text, green = aurora green, red = rose
+ * (deals), bone = pearl text, leather/chrome = plain white. For section eyebrows and labels; it turns dark on pearl.
  */
 export function patch(text, opts = {}) {
   const { size = 'md', icon: ic, cls, html = false, tag = 'span' } = opts;
   return `<${tag} class="${cx('patch', 'patch--' + tone(opts.tone), size !== 'md' && 'patch--' + size, cls)}">${ic ? icon(ic, 'patch__icon') : ''}<span class="patch__text">${html ? text : esc(text)}</span></${tag}>`;
 }
-/** legacy: sticker(text, { color, tilt, cls }) -> patch() (no tilt any more; colours map yellow->gold, lime->green, pink/coral->red, paper->bone) */
+/** legacy: sticker(text, { color, tilt, cls }) -> patch() (no tilt; colours map yellow->gold, lime->green, pink/coral->red, paper->bone) */
 export function sticker(text, opts = {}) {
   return patch(text, { tone: opts.color || 'gold', size: 'sm', cls: opts.cls, html: opts.html });
 }
 
 /**
- * seal({ label, sub, tone, cls }) -> round stitched badge (twill disc, merrowed rim, inner stitch ring). Size it with
- * `--size` (default 120px). label/sub are escaped. Decorative (aria-hidden) when there is no label.
+ * seal({ label, sub, tone, cls }) -> a round glowing orb badge (frosted disc, bright rim, soft halo in the tone's
+ * colour). Size it with `--size` (default 120px). label/sub are escaped. Decorative (aria-hidden) when there is no label.
  */
 export function seal(opts = {}) {
   const { label = '', sub = '', cls } = opts;
   return `<span class="${cx('seal', 'seal--' + tone(opts.tone || opts.color), cls)}"${label ? '' : ' aria-hidden="true"'}>`
     + (label ? `<span class="seal__label">${esc(label)}${sub ? `<small>${esc(sub)}</small>` : ''}</span>` : '') + '</span>';
 }
-/** legacy: starburst({ label, sub, color, cls }) -> seal() (the cartoon starburst is gone) */
+/** legacy: starburst({ label, sub, color, cls }) -> seal() */
 export const starburst = (opts = {}) => seal({ label: opts.label, sub: opts.sub, tone: opts.color || 'gold', cls: opts.cls });
 
-// ---------- rocker patches (curved banners, SVG textPath) ----------
-const f1 = (n) => +n.toFixed(1);
-function arcBand(R, r, a, pos) {
-  const s = Math.sin(a), c = Math.cos(a), k = pos === 'bottom' ? 1 : -1;
-  const pt = (rad, side) => `${f1(side * rad * s)} ${f1(k * rad * c)}`;
-  const sw = pos === 'bottom' ? [0, 1] : [1, 0];
-  return `M${pt(R, -1)}A${R} ${R} 0 0 ${sw[0]} ${pt(R, 1)}L${pt(r, 1)}A${r} ${r} 0 0 ${sw[1]} ${pt(r, -1)}Z`;
-}
-function arcLine(rad, a, pos) {
-  const s = Math.sin(a), c = Math.cos(a), k = pos === 'bottom' ? 1 : -1;
-  return `M${f1(-rad * s)} ${f1(k * rad * c)}A${f1(rad)} ${f1(rad)} 0 0 ${pos === 'bottom' ? 0 : 1} ${f1(rad * s)} ${f1(k * rad * c)}`;
-}
-function twill(id) {
-  return `<pattern id="${id}" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect class="tw1" width="5" height="5"/><rect class="tw2" width="2.2" height="5"/></pattern>`;
-}
-/** rocker band + stitch + text, centred on (0,0) (the circle centre); returns SVG children */
-function rockerParts(text, { R, band, a, pos, fs }) {
-  const r = R - band, m = R - band / 2;
-  const id = uid('rk'), tw = uid('tw');
-  const len = 2 * a * m;
-  const size = f1(fs || Math.min(band * 0.64, (len * 0.84) / Math.max(4, String(text).length * 0.5)));
-  const tr = pos === 'bottom' ? m + size * 0.3 : m - size * 0.3;
-  const inA = a - 7 / m;
-  return {
-    defs: twill(tw),
-    body: `<path class="sb-rocker__band" d="${arcBand(R, r, a, pos)}" fill="url(#${tw})"/>`
-      + `<path class="sb-rocker__stitch" d="${arcBand(R - 6, r + 6, inA, pos)}"/>`
-      + `<path id="${id}" d="${arcLine(tr, a + 0.2, pos)}" fill="none" stroke="none"/>`
-      + `<text class="sb-rocker__text" font-size="${size}"><textPath href="#${id}" startOffset="50%" text-anchor="middle">${esc(text)}</textPath></text>`,
-  };
-}
+// ---------- labels (formerly curved rocker banners) ----------
 /**
- * rocker(text, { pos: 'top'|'bottom', tone: 'gold'|'bone'|'green'|'red', radius 300, band 58, angle 34 (half-angle, deg),
- *   cls, label (aria-label; default = text), decorative }) -> curved embroidered banner (SVG, blackletter on twill,
- *   merrowed edge + stitch). Width follows CSS (it scales); height follows the viewBox.
+ * rocker(text, { pos, tone, radius, band, angle, cls, label, decorative }) -> a plain glass pill label carrying the
+ * text (class sb-rocker; no SVG arc since revision 3). The accessible text is unchanged: the visible text, or `label`
+ * (read instead of the text) when it differs; decorative = aria-hidden. radius/band/angle are accepted and ignored.
  */
 export function rocker(text, opts = {}) {
-  const { pos = 'top', radius: R = 300, band = 58, angle = 34, cls, decorative = false } = opts;
-  const a = (angle * Math.PI) / 180, r = R - band, pad = 6;
-  const minX = -R * Math.sin(a) - pad, w = 2 * R * Math.sin(a) + 2 * pad;
-  const y0 = pos === 'bottom' ? r * Math.cos(a) - pad : -R - pad;
-  const h = (pos === 'bottom' ? R : -r * Math.cos(a)) - (pos === 'bottom' ? r * Math.cos(a) : -R) + 2 * pad;
-  const p = rockerParts(text, { R, band, a, pos });
-  const aria = decorative ? ' aria-hidden="true"' : ` role="img" aria-label="${esc(opts.label || text)}"`;
-  return `<svg class="${cx('sb-rocker', 'sb-rocker--' + tone(opts.tone), 'sb-rocker--' + pos, cls)}" viewBox="${f1(minX)} ${f1(y0)} ${f1(w)} ${f1(h)}"${aria} focusable="false"><defs>${p.defs}</defs>${p.body}</svg>`;
+  const { pos = 'top', cls, decorative = false } = opts;
+  const c = cx('sb-rocker', 'sb-rocker--' + tone(opts.tone), 'sb-rocker--' + pos, cls);
+  if (decorative) return `<span class="${c}" aria-hidden="true">${esc(text)}</span>`;
+  const label = opts.label && opts.label !== text ? opts.label : '';
+  return label
+    ? `<span class="${c}"><span aria-hidden="true">${esc(text)}</span><span class="sr-only">${esc(label)}</span></span>`
+    : `<span class="${c}">${esc(text)}</span>`;
 }
 
 /**
- * emblem({ top: 'Star Buds', bottom: 'Est. 2013', star: '/assets/brand/star-on-dark.png', tone: 'gold', cls, label })
- * -> the three-piece patch: top rocker, a round centre patch carrying the brand star, bottom rocker (one SVG, 400x400).
- * Size it with CSS width. role="img" with an aria-label built from the texts.
+ * emblem({ top: 'Star Buds', bottom: 'Est. 2013', star: '/assets/brand/star-on-dark.png', tone, cls, label }) -> the
+ * brand star mark with a soft aurora halo and a thin glass ring (<span class="emblem" role="img">). Size it with CSS
+ * width (it is square). The aria-label is built from the texts, as before.
  */
 export function emblem(opts = {}) {
   const { top = 'Star Buds', bottom = 'Est. 2013', star = '/assets/brand/star-on-dark.png', cls } = opts;
-  const R = 190, band = 58, a = (62 * Math.PI) / 180;
-  const t = rockerParts(top, { R, band, a, pos: 'top' });
-  const b = rockerParts(bottom, { R, band, a, pos: 'bottom' });
-  const tw = uid('tw');
-  return `<svg class="${cx('emblem', 'sb-rocker--' + tone(opts.tone), cls)}" viewBox="-200 -200 400 400" role="img" aria-label="${esc(opts.label || `${top} - ${bottom}`)}" focusable="false"><defs>${t.defs}${b.defs}${twill(tw)}</defs>`
-    + `<g class="emblem__top">${t.body}</g>`
-    + `<g class="emblem__centre"><circle class="emblem__disc" r="112" fill="url(#${tw})"/><circle class="emblem__ring" r="103"/><circle class="emblem__inner" r="92"/>`
-    + `<image href="${esc(star)}" x="-74" y="-78" width="148" height="148" preserveAspectRatio="xMidYMid meet"/></g>`
-    + `<g class="emblem__bottom">${b.body}</g></svg>`;
+  return `<span class="${cx('emblem', cls)}" role="img" aria-label="${esc(opts.label || `${top} - ${bottom}`)}">`
+    + `<span class="emblem__halo"></span><span class="emblem__ring"></span>`
+    + `<img class="emblem__star" src="${esc(star)}" width="256" height="256" alt="" decoding="async"></span>`;
 }
 
-// ---------- screen-print layers ----------
-const HT_LEGACY = { yellow: 'gold', lime: 'gold', pink: 'green', paper: 'bone', coral: 'red' };
-/** halftone({ color: 'gold'|'green'|'bone'|'ink'|'red', at: 'tr'|'tl'|'br'|'bl'|'top'|'bottom'|'full', cls }) -> large, low-contrast screen-print dots (absolute; put it in a back plane) */
-export const halftone = (opts = {}) => `<span class="${cx('halftone', 'halftone--' + (HT_LEGACY[opts.color] || opts.color || 'gold'), 'halftone--' + (opts.at || 'tr'), opts.cls)}" aria-hidden="true"></span>`;
+// ---------- the sky: star fields, aurora, sparkles (revision 3) ----------
+const SPARK_SIZES = ['xs', 'sm', 'md', 'lg'];
+/**
+ * spark({ size: 'xs'|'sm'|'md' (default)|'lg', cls, style }) -> one CSS four-point star sparkle with a soft glow
+ * (decorative, aria-hidden; twinkles slowly, still under reduced motion). Inline-block; position it with cls/style.
+ */
+export function spark(opts = {}) {
+  const { size = 'md', cls, style } = opts;
+  return `<span class="${cx('sb-spark', SPARK_SIZES.includes(size) && size !== 'md' && 'sb-spark--' + size, cls)}"${attrs({ style: style || false })} aria-hidden="true"></span>`;
+}
 
+/**
+ * sky({ stars: true | 'faint' | 'dense' | false, aurora: true | 'green' | 'violet' | 'teal' | false, cls }) -> a
+ * CSS-only background layer (absolute, inset 0, aria-hidden): a star field that twinkles slowly plus soft aurora blobs
+ * that drift. Put it in a section's .plane-back (or any positioned box). Defaults: stars true, aurora true.
+ */
+export function sky(opts = {}) {
+  const { stars = true, aurora = true, cls } = opts;
+  const st = stars
+    ? `<span class="${cx('sb-sky__stars', typeof stars === 'string' && 'sb-sky__stars--' + stars)}"></span>${stars === 'faint' ? '' : '<span class="sb-sky__stars sb-sky__stars--twinkle"></span>'}`
+    : '';
+  const au = aurora ? `<span class="${cx('sb-sky__aurora', typeof aurora === 'string' && 'sb-sky__aurora--' + aurora)}"></span>` : '';
+  return `<span class="${cx('sb-sky', cls)}" aria-hidden="true">${au}${st}</span>`;
+}
+
+// ---------- retired texture layers ----------
+/** halftone(opts) -> '' since revision 3 (no textures). Kept so older calls still build. */
+export const halftone = () => '';
+
+/** leaves({ tone, cls }) -> a faint star dust layer since revision 3 (absolute, inset 0, aria-hidden; the class
+ *  names leaves / leaves--<tone> / cls stay, so section CSS that sizes or masks it keeps working) */
 const LEAF_LEGACY = { pop: 'gold', lime: 'gold' };
-/** brand leaves wallpaper (pattern-buds.webp as a duotone): leaves({ tone: 'gold' (gold on ink) | 'dark' (green on ink) | 'bone' (bone lines, for green grounds) | 'light' (faint ink on bone), cls }) */
 export const leaves = (opts = {}) => `<span class="${cx('leaves', 'leaves--' + (LEAF_LEGACY[opts.tone] || opts.tone || 'gold'), opts.cls)}" aria-hidden="true"></span>`;
 
-/** grain({ cls }) -> film/print grain overlay (absolute, inset 0) */
-export const grain = (opts = {}) => `<span class="${cx('grain', opts.cls)}" aria-hidden="true"></span>`;
+/** grain(opts) -> '' since revision 3 (no textures). */
+export const grain = () => '';
 
 // ---------- cut-outs ----------
+/** generated ids retired in revision 3 (the biker patch, chrome and flash art, and the older pop art): cutout() and
+ *  patchCut() render a small CSS star cluster in their place, and the shell never shows them */
+export const RETIRED_ART = /^(patch-(wings|leaf|star)|chrome-star|flash-(leaf|bud)|pop-)/;
+export const isRetiredArt = (id) => typeof id === 'string' && RETIRED_ART.test(id);
+function sparkCluster({ cls, depth, style, alt }) {
+  return `<span class="${cx('cutout', 'cutout--spark', cls)}"${attrs({ 'data-depth': depth || false, style: style || false, role: alt ? 'img' : false, 'aria-label': alt || false, 'aria-hidden': alt ? false : 'true' })}>`
+    + '<span class="sb-spark sb-spark--lg cutout__spark cutout__spark--a"></span><span class="sb-spark sb-spark--sm cutout__spark cutout__spark--b"></span><span class="sb-spark sb-spark--xs cutout__spark cutout__spark--c"></span></span>';
+}
 /**
- * cutout(id, opts) -> front-plane cut-out: <span class="cutout ..." data-depth><img class="cutout__img"></span>.
+ * cutout(id, opts) -> front-plane cut-out: <span class="cutout ..." data-depth><img class="cutout__img"></span>, a
+ * product cut-out ('cut-bud', 'cut-vape', ...) that floats gently (bob 8px) inside a soft aurora halo.
  * opts: cls (position it in your CSS), depth (parallax factor, e.g. 0.15 = drifts against scroll; negative = with it),
- *       float ('slow'|'fast'|false: a slow, heavy drift), alt ('' = decorative, the default), sizes (rendered width),
- *       eager, rotate (deg), style.
+ *       float ('slow' 9s | 'fast' 6.5s | false), alt ('' = decorative, the default), sizes (rendered width), eager,
+ *       rotate (deg), style.
+ * A retired id (RETIRED_ART: patch-*, chrome-star, flash-*) renders a square cluster of three star sparkles instead
+ * (class cutout--spark, same positioning classes; role="img" + aria-label when alt is given).
  */
 export function cutout(id, opts = {}) {
   const { cls, depth = 0.12, float = 'slow', alt = '', sizes = '(max-width: 700px) 45vw, 420px', eager = false, rotate, style = '' } = opts;
   const st = (rotate != null ? `--rot:${Number(rotate)}deg;` : '') + style;
+  if (isRetiredArt(id)) return sparkCluster({ cls, depth, style: st, alt });
   return `<span class="${cx('cutout', cls)}"${attrs({ 'data-depth': depth || false, style: st || false, 'aria-hidden': alt ? false : 'true' })}>`
     + img(id, { alt, sizes, eager, cls: cx('cutout__img', float && 'float', float && 'float--' + float) }) + '</span>';
 }
 /**
- * patchCut(id, opts) -> an embroidered patch cut-out ('patch-wings', 'patch-leaf', 'patch-star' (keep <= 140px wide),
- * 'chrome-star', 'flash-leaf', 'flash-bud') with a sewn-on shadow and a slight resting tilt (opts.rotate, default -3).
- * Same options as cutout(); float defaults to false.
+ * patchCut(id, opts) -> legacy name for the patch cut-outs. The patch ids are retired, so it renders the star cluster
+ * (see cutout()); a cut-* id renders that cut-out (no float unless opts.float). Same options as cutout().
  */
 export function patchCut(id, opts = {}) {
-  return cutout(id, { float: false, rotate: -3, ...opts, cls: cx('cutout--patch', opts.cls) });
+  return cutout(id, { float: false, ...opts, cls: cx('cutout--patch', opts.cls) });
 }
 
-// ---------- stitching and flourishes ----------
+// ---------- hairlines ----------
 /**
- * seam({ kind: 'stitch'|'double'|'pinstripe', tone: 'gold'|'bone', cls }) -> a stitched seam across the section edge
- * (a welt line plus a dashed thread that draws in when it scrolls into view). Default: at the section TOP;
- * cls 'seam--bottom' puts it at the bottom. Legacy kinds zig/wave/scallop = 'stitch'; `color` is ignored.
+ * seam({ kind: 'stitch'|'double'|'pinstripe', tone: 'gold'|'bone', cls }) -> a thin aurora hairline across the section
+ * edge that draws out from the centre when it scrolls into view. Default: at the section TOP; cls 'seam--bottom' puts
+ * it at the bottom. kind 'pinstripe' adds a star sparkle at the centre; 'double' = 'stitch'; tone 'bone' = a dark
+ * hairline for pearl grounds. Legacy kinds zig/wave/scallop = 'stitch'; `color` is ignored.
  */
 export function seam(opts = {}) {
   const kind = ['double', 'pinstripe'].includes(opts.kind) ? opts.kind : 'stitch';
   const t = opts.tone === 'bone' ? 'bone' : 'gold';
-  const rows = kind === 'double'
-    ? '<line class="seam__thread" x1="0" y1="7" x2="1440" y2="7"/><line class="seam__thread" x1="0" y1="17" x2="1440" y2="17"/>'
-    : '<line class="seam__thread" x1="0" y1="12" x2="1440" y2="12"/>';
-  const mid = kind === 'pinstripe' ? `<span class="seam__flourish">${pinstripe({ tone: t })}</span>` : '';
-  return `<div class="${cx('seam', 'seam--' + kind, 'seam--' + t, opts.cls)}" aria-hidden="true"><svg class="seam__svg" viewBox="0 0 1440 24" preserveAspectRatio="none" focusable="false"><line class="seam__welt" x1="0" y1="1" x2="1440" y2="1"/>${rows}</svg>${mid}</div>`;
+  return `<div class="${cx('seam', 'seam--' + kind, 'seam--' + t, opts.cls)}" aria-hidden="true"><span class="seam__line"></span>${kind === 'pinstripe' ? '<span class="sb-spark sb-spark--sm seam__star"></span>' : ''}</div>`;
 }
 
-/** pinstripe({ tone: 'gold'|'bone'|'ink', cls }) -> a symmetric hand-lettering flourish (SVG, 240x24) for dividers */
+/** pinstripe({ tone: 'gold'|'bone'|'ink', cls }) -> a short divider: two fading aurora hairlines with a star sparkle
+ *  between them (<span class="pinstripe">, 240px wide by default, 12px tall; width follows CSS) */
 export function pinstripe(opts = {}) {
-  const half = 'M106 12C95 4 82 3 74 9.5C67 15 73 21.5 80 17.5C85 14.5 81 8.5 75 11.5C66 16 56 12 50 12H6';
-  const half2 = 'M100 15.5C92 19 86 19.5 83 18';
-  return `<svg class="${cx('pinstripe', 'pinstripe--' + (opts.tone || 'gold'), opts.cls)}" viewBox="0 0 240 24" aria-hidden="true" focusable="false"><g class="pinstripe__line"><path d="${half}"/><path d="${half2}"/><path d="${half}" transform="matrix(-1 0 0 1 240 0)"/><path d="${half2}" transform="matrix(-1 0 0 1 240 0)"/></g><path class="pinstripe__gem" d="M120 4.5L124.5 12L120 19.5L115.5 12Z"/><circle class="pinstripe__dot" cx="4" cy="12" r="1.6"/><circle class="pinstripe__dot" cx="236" cy="12" r="1.6"/></svg>`;
+  return `<span class="${cx('pinstripe', 'pinstripe--' + (opts.tone || 'gold'), opts.cls)}" aria-hidden="true"><span class="pinstripe__line"></span><span class="sb-spark sb-spark--sm pinstripe__star"></span><span class="pinstripe__line pinstripe__line--end"></span></span>`;
 }
 
-/** marquee(items[], { cls, sep: '★', strap: true }) -> infinite ticker; by default a leather strap with stitched edges
- *  and blackletter names (content duplicated for the loop; the copy is aria-hidden) */
+/** marquee(items[], { cls, sep: '★', strap: true }) -> infinite ticker: a clean frosted-glass band (strap) with light
+ *  Manrope names; the default separator renders as a star sparkle (content duplicated for the loop; the copy is
+ *  aria-hidden) */
 export function marquee(items, opts = {}) {
   const { cls, sep = '★', strap = true } = opts;
-  const run = items.map((t) => `<span class="marquee__item">${esc(t)}</span><span class="marquee__sep" aria-hidden="true">${esc(sep)}</span>`).join('');
+  const sp = sep === '★' ? '<span class="sb-spark sb-spark--sm"></span>' : esc(sep);
+  const run = items.map((t) => `<span class="marquee__item">${esc(t)}</span><span class="marquee__sep" aria-hidden="true">${sp}</span>`).join('');
   return `<div class="${cx('marquee', strap && 'marquee--strap', cls)}"><div class="marquee__track"><div class="marquee__run">${run}</div><div class="marquee__run" aria-hidden="true">${run}</div></div></div>`;
 }
 
 /** data-reveal attributes: reveal('up'|'left'|'right'|'scale'|'wipe'|'fade', delayIndex?) -> ' data-reveal="up" style="--i:2"'
- *  (legacy 'pop' = 'scale'). Reveals are a weighty fade-up with a slight blur-out. */
+ *  (legacy 'pop' = 'scale'). Reveals fade up while a soft blur clears. */
 export const reveal = (kind = 'up', i) => ` data-reveal="${esc(kind === 'pop' ? 'scale' : kind)}"${i != null ? ` style="--i:${Number(i)}"` : ''}`;
 
 /** "MS: Pearl" (template switcher label) */
@@ -277,37 +277,35 @@ export function crumbs(items = [], opts = {}) {
   }).join('')}</ol></nav>`;
 }
 
-const PATCH_ART = /^(patch-|chrome-star|flash-)/;
-/** front-plane art for hubHero / cardGrid: a generated id ('patch-wings', 'flash-leaf', 'cut-bud') or { id, rotate, cls } */
+/** front-plane art for hubHero / cardGrid: a generated id ('cut-bud', 'cut-vape', ... ; a retired patch/chrome/flash id
+ *  renders the star cluster) or { id, rotate, cls, sizes, depth } */
 function heroArt(art, cls) {
   if (!art) return '';
   const a = typeof art === 'string' ? { id: art } : art;
-  const o = { cls: cx(cls, a.id === 'patch-star' && 'sb-art--small', a.cls), depth: a.depth ?? 0.1, sizes: a.sizes || '(max-width: 700px) 34vw, 300px' };
+  const o = { cls: cx(cls, isRetiredArt(a.id) && 'sb-art--small', a.cls), depth: a.depth ?? 0.1, sizes: a.sizes || '(max-width: 700px) 34vw, 300px' };
   if (a.rotate != null) o.rotate = a.rotate;
-  return PATCH_ART.test(a.id) ? patchCut(a.id, o) : cutout(a.id, { float: 'slow', ...o });
+  return isRetiredArt(a.id) ? patchCut(a.id, o) : cutout(a.id, { float: 'slow', ...o });
 }
 
 /**
  * hubHero({ eyebrow, title, intro, art, crumbs, actions, tone, id, cls, eyebrowTone, eyebrowIcon }) -> the hero band of a
  * hub or landing page, carrying the page's ONE <h1> (do not add another h1 to the body).
- *  eyebrow: patch text (escaped) ; title: the h1 text (escaped) ; intro: a string, an array of strings (escaped
- *  paragraphs) or { html } (raw) ; art: a generated image id or { id, rotate, cls, sizes } hung in the front plane
- *  (decorative: 'patch-wings', 'patch-leaf', 'patch-star' (kept <= 140px), 'chrome-star', 'flash-leaf', 'flash-bud',
- *  'cut-bud', 'cut-vape', ...) ; crumbs: crumbs() items, rendered above the eyebrow ; actions: raw HTML (e.g. btn() calls)
- *  ; tone: 'leather' (default) | 'green' | 'ink' ; id: the h1 id (default 'page-title').
- * The section has z-index 7 so its art can hang across the seam into the next section.
+ *  eyebrow: pill text (escaped) ; title: the h1 text (escaped) ; intro: a string, an array of strings (escaped
+ *  paragraphs) or { html } (raw) ; art: a generated image id or { id, rotate, cls, sizes } floating in the front plane
+ *  ('cut-bud', 'cut-vape', ... ; a retired patch/chrome/flash id becomes a small star cluster) ; crumbs: crumbs()
+ *  items, rendered above the eyebrow ; actions: raw HTML (e.g. btn() calls) ; tone: 'leather' (default: star field +
+ *  aurora) | 'green' (a greener aurora) | 'ink' (faint stars) ; id: the h1 id (default 'page-title').
+ * The section has z-index 7 so its art can float across the hairline into the next section.
  */
 export function hubHero(o = {}) {
   const { eyebrow, title = '', intro, art, actions = '', tone: tn = 'leather', id = 'page-title', cls, eyebrowTone = 'gold', eyebrowIcon = 'star' } = o;
   const t = ['leather', 'green', 'ink'].includes(tn) ? tn : 'leather';
   const paras = intro == null ? '' : typeof intro === 'object' && !Array.isArray(intro) ? (intro.html || '') : [].concat(intro).filter(Boolean).map((p) => `<p>${esc(p)}</p>`).join('');
-  const back = t === 'green'
-    ? `${leaves({ tone: 'bone', cls: 'sb-hub-hero__leaves' })}${halftone({ color: 'gold', at: 'tr' })}${grain()}<div class="vignette"></div>`
-    : `${t === 'leather' ? '<div class="leather-bg"></div>' : ''}${leaves({ tone: 'gold', cls: 'sb-hub-hero__leaves' })}${halftone({ color: 'gold', at: 'tr' })}${grain()}<div class="vignette"></div>`;
+  const back = sky({ stars: t === 'ink' ? 'faint' : true, aurora: t === 'green' ? 'green' : true, cls: 'sb-hub-hero__sky' });
   return `
 <section class="${cx('section', 'on-dark', 'sb-hub-hero', 'sb-hub-hero--' + t, art && 'sb-hub-hero--art', cls)}" aria-labelledby="${esc(id)}">
   <div class="plane-back">${back}</div>
-  ${seam({ kind: 'double', cls: 'seam--bottom' })}
+  ${seam({ cls: 'seam--bottom' })}
   <div class="wrap sb-hub-hero__inner">
     ${o.crumbs ? crumbs(o.crumbs, { cls: 'sb-hub-hero__crumbs' }) : ''}
     <div class="sb-hub-hero__copy">
@@ -324,9 +322,9 @@ export function hubHero(o = {}) {
 
 /**
  * cardGrid(items, { cls, cols: 2|3|4 (default 3), level: 2|3|4 (heading level, default 3), stagger: true }) -> a responsive
- * grid of stitched smoked-glass link cards (<ul class="sb-cards">). Each item:
+ * grid of frosted-glass link cards (<ul class="sb-cards">). Each item:
  *  { title, href, text, eyebrow, eyebrowTone, meta, image (photo object { src, w, h, alt } or a generated id), art (a
- *    generated cut-out id hung over the card's top-right corner), cta (default 'Read more'; false = none),
+ *    generated cut-out id floating over the card's top-right corner; a retired id = a star cluster), cta (default 'Read more'; false = none),
  *    external (true = new tab + external icon), menuCat ('flower' ... = a live-menu link handled by site.js; href is then
  *    the /stores/ fallback), attrs {} }.
  * A card without href renders as a plain panel (no link). Text is escaped; `html: true` on an item takes text as raw HTML.
@@ -343,7 +341,6 @@ export function cardGrid(items = [], opts = {}) {
     return `
     <li class="sb-cards__item">
       <${tag} class="${cx('sb-card', 'glass', link && 'lift', it.image && 'sb-card--media', it.art && 'sb-card--art')}"${link ? attrs({ ...link, ...extra }) : attrs(extra)}>
-        <span class="sb-card__stitch stitch" aria-hidden="true"></span>
         ${media}${it.art ? heroArt({ id: it.art, depth: 0, sizes: '(max-width: 700px) 30vw, 170px' }, 'sb-card__art') : ''}
         <span class="sb-card__body">
           ${it.eyebrow ? `<span class="sb-card__eyebrow">${patch(it.eyebrow, { tone: it.eyebrowTone || 'gold', size: 'sm' })}</span>` : ''}
@@ -362,16 +359,16 @@ export function cardGrid(items = [], opts = {}) {
 /**
  * articleCard(post, { level: 2|3 (default 3), cls, eager, sizes }) -> a blog post card (<article class="sb-article">):
  *  post = { title, href, date ('YYYY-MM-DD'), category, categoryLabel, excerpt, image: { src, w, h, alt } }.
- * A stitched smoked-glass card: the photo (warm duotone at rest, full colour on hover), a category patch, the date and
- * the title, whose link is stretched over the whole card. A missing image fails the build (img()); pass image: null for
- * a card with the brand leaves panel instead.
+ * A frosted-glass card: the photo (slightly cool at rest, full colour on hover), a category pill, the date and the
+ * title, whose link is stretched over the whole card. A missing image fails the build (img()); pass image: null for a
+ * card with a small night-sky panel and the brand star instead.
  */
 export function articleCard(post = {}, opts = {}) {
   const { level = 3, cls, eager = false, sizes = '(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 400px' } = opts;
   const h = level === 2 ? 'h2' : 'h3';
   const media = post.image && post.image.src
     ? img(post.image, { cls: 'sb-article__img', alt: post.image.alt || '', sizes, eager, attrs: post.image.srcset ? { srcset: post.image.srcset, sizes } : {} })
-    : `<span class="sb-article__blank">${leaves({ tone: 'gold' })}<img class="sb-article__star" src="/assets/brand/star-on-dark.png" width="256" height="256" alt="" loading="lazy" decoding="async"></span>`;
+    : `<span class="sb-article__blank">${sky({ stars: true, aurora: 'violet' })}<img class="sb-article__star" src="/assets/brand/star-on-dark.png" width="256" height="256" alt="" loading="lazy" decoding="async"></span>`;
   return `<article class="${cx('sb-article', 'glass', cls)}">
     <div class="sb-article__media">${media}</div>
     <div class="sb-article__body">

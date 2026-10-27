@@ -1,15 +1,14 @@
-# Star Buds Shop: "Iron Star" redesign concept
+# Star Buds Shop: "Starlight" redesign concept
 
 A redesign concept for [shop.starbuds.us](https://shop.starbuds.us/), Star Buds' online menu for its Mississippi,
 Oklahoma, Maryland and New York dispensaries. It is a complete visual overhaul that keeps the brand: the STAR★BUDS
-wordmark, its greens, its friendly, confident tone, and its engraved leaves wallpaper. The look is **Old English
-biker pop art over smoked glass**:
+wordmark, its greens and its friendly, confident tone. The look is **ethereal glassmorphism that plays on the name**:
+simple, clean and modern.
 
-- blackletter rockers and embroidered patches, leather, chrome and gold;
-- smoked-glass panels with stitched edges over slow-moving smoke and leather backdrops;
-- tattoo-flash illustrations, screen-print halftone, and the leaves wallpaper in gold;
-- patches and product cut-outs that break out of their frames and across sections;
-- scroll-choreographed reveals and tactile hover states.
+- a deep night sky with soft star fields and aurora glows in the brand greens, teal and violet;
+- frosted glass panels with fine bright edges, on night, or on light pearl glass for long reads;
+- the brand star as a glowing mark, and the products floating like stars with a gentle halo;
+- one clean typeface, generous space, gentle reveals and soft hover glows.
 
 The site's structure follows a large multi-state dispensary operator's site: its menu order and mega menus, footer,
 page types, section order and URL patterns. Every word and fact on it is Star Buds' own, taken from starbuds.us and the

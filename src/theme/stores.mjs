@@ -1,20 +1,37 @@
-// stores.mjs - LOCATIONS lane (revision 2, "Iron Star"): the 12 store pages /stores/<slug>/ in the location-page order
+// stores.mjs - LOCATIONS lane (revision 3, "Starlight"): the 12 store pages /stores/<slug>/ in the location-page order
 // of the revision 2 target architecture (docs/REVISION-2.md: H1 store name; rewards sign-up strip; dispensary details;
 // more information; visiting the state's stores (visit Q&As + an amenities grid); state deals; state FAQs; dispensaries
 // nearby), plus /stores/ as a redirect stub to /dispensaries/. Shared location pieces (store card, breadcrumbs, state
-// FAQ, deals lookup, state URLs) are exported for states.mjs, which renders /dispensaries/ and the state pages.
+// FAQ, deals lookup, state URLs, the lane's sky / sparkle / pill pieces) are exported for states.mjs, which renders
+// /dispensaries/ and the state pages.
 // Copy: site.json / faq.json text and the captured Star Buds pages (www.starbuds.us, 2026-10-23) only, plus neutral
-// UI labels. Reviews and lounges are omitted (no Star Buds source). Store photos are real captured photos; stores
-// without one get a leather tile with the city in blackletter (never a generated stand-in for a store).
-// Classes: st- (shared store card), sp- (store page), sh- (breadcrumbs and the state FAQ, shared with states.mjs).
-import { page, esc, attrs, icon, btn, img, glass, patch, seal, rocker, halftone, leaves, grain, cutout, patchCut, seam, pinstripe, marquee, reveal, menuAttrs, liveMenu } from './shell.mjs';
+// UI labels. Reviews and lounges are omitted (no Star Buds source). Store photos are real captured photos in rounded
+// glass frames; stores without one get a night tile with the brand star and the city in light type (never a generated
+// stand-in for a store). Revision 3 look (docs/REVISION-3.md): night sky + aurora, frosted glass, star sparkles,
+// floating cut-* product cut-outs; no leather, stitches, rockers, patches, halftone or grain.
+// Classes: st- (shared store card, sky, sparkle, pill), sp- (store page), sh- (breadcrumbs and the state FAQ, shared
+// with states.mjs).
+import { page, esc, attrs, icon, btn, img, glass, patch, seal, cutout, marquee, reveal, menuAttrs, liveMenu } from './shell.mjs';
 import * as SHELL from './shell.mjs';
 import { faqData } from './faq.mjs';
 
 const TZ = { MS: 'America/Chicago', OK: 'America/Chicago', MD: 'America/New_York', NY: 'America/New_York' };
-/** per state: [product cut-out crossing a seam, embroidered patch / chrome / flash cut-out] */
-const STATE_CUT = { MS: ['cut-bud', 'patch-leaf'], OK: ['cut-jar', 'patch-wings'], MD: ['cut-gummies', 'flash-bud'], NY: ['cut-preroll', 'chrome-star'] };
+/** per state: the product cut-out that floats across the hero edge */
+const STATE_CUT = { MS: 'cut-bud', OK: 'cut-jar', MD: 'cut-gummies', NY: 'cut-preroll' };
 const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+// ---------- shared Starlight pieces (lane-scoped, CSS only; stores.css) ----------
+/** sky(variant) -> a night-sky back layer: aurora washes + two star fields (the far one twinkles). Put it in .plane-back.
+ *  Variants: '' (violet top right, green bottom left), 'hero', 'green', 'teal', 'rose' (deals), 'dusk' (raised night). */
+export const sky = (v = '') => `<div class="st-sky${v ? ' st-sky--' + v : ''}" aria-hidden="true"><span class="st-sky__aurora"></span><span class="st-sky__stars"></span><span class="st-sky__stars st-sky__stars--far"></span></div>`;
+/** spark(cls, size?) -> a four-point star sparkle with a soft halo (absolute; position it with cls) */
+export const spark = (cls = '', size) => `<span class="st-spark${cls ? ' ' + cls : ''}"${size ? ` style="--s:${Number(size)}px"` : ''} aria-hidden="true"></span>`;
+/** pill(text, { cls, hidden, star }) -> a plain glass pill label (state names); hidden = decorative (aria-hidden) */
+export const pill = (text, { cls = '', hidden = false, star = true } = {}) => `<span class="st-pill${cls ? ' ' + cls : ''}"${hidden ? ' aria-hidden="true"' : ''}>${star ? icon('star', 'st-pill__star') : ''}<span class="st-pill__text">${esc(text)}</span></span>`;
+/** the thin aurora hairline under a hero title */
+export const line = (cls = '') => `<span class="st-line${cls ? ' ' + cls : ''}" aria-hidden="true"></span>`;
+/** retired revision 1-2 artwork (patches, chrome star, tattoo flash): never referenced in revision 3 */
+const RETIRED = /^(patch-|flash-|chrome-star|pop-)/;
 
 export const STATE_SLUG = { MS: 'mississippi', OK: 'oklahoma', MD: 'maryland', NY: 'new-york' };
 export const stateHref = (code) => `/dispensaries/${STATE_SLUG[code] || String(code).toLowerCase()}/`;
@@ -31,9 +48,11 @@ export const EXT = { target: '_blank', rel: 'noopener' };
 const hasHours = (s) => Array.isArray(s.hours) && s.hours.length > 0;
 export const stateOf = (ctx, code) => (ctx.states || []).find((x) => x.code === code) || { code, name: code };
 const json = (o) => JSON.stringify(o).replace(/</g, '\\u003c');
-/** the pop-era stickers are retired: a category that still points at one gets an embroidered patch (as on the home page) */
-const cutFor = (id) => (/^pop-/.test(id || '') ? 'patch-leaf' : id);
-const starSrc = (ctx) => ctx.site.brand?.star || '/assets/brand/star-on-dark.png';
+/** a category whose artwork is retired (apparel: patch-leaf) shows the glowing brand star instead of a cut-out */
+const isRetired = (id) => RETIRED.test(id || '');
+export const starSrc = (ctx) => ctx.site.brand?.star || '/assets/brand/star-on-dark.png';
+/** the brand star as a glowing mark (decorative) */
+export const starMark = (ctx, cls = '', { eager = false } = {}) => `<span class="st-star${cls ? ' ' + cls : ''}" aria-hidden="true"><img class="st-star__img" src="${esc(starSrc(ctx))}" width="256" height="256" alt=""${eager ? '' : ' loading="lazy"'} decoding="async"></span>`;
 /** "Star Buds <gold>Lawton</gold>": the brand words plain, the rest in antique gold */
 const nameHtml = (name, cls) => {
   const m = /^(Star Buds)\s+(.+)$/.exec(name);
@@ -59,10 +78,8 @@ function storeTile(ctx, s, sizes) {
     return `<div class="st-card__media">${img(s.photo, { cls: 'st-card__photo', sizes })}<span class="st-card__sheen" aria-hidden="true"></span></div>`;
   }
   return `<div class="st-card__media st-tile" aria-hidden="true">
-      ${leaves({ tone: 'gold', cls: 'st-tile__leaves' })}
-      ${halftone({ color: 'gold', at: 'br', cls: 'st-tile__dots' })}
-      ${grain()}
-      <img class="st-tile__star" src="${esc(starSrc(ctx))}" width="256" height="256" alt="" loading="lazy" decoding="async">
+      ${sky('tile')}
+      ${starMark(ctx, 'st-tile__star')}
       <span class="st-tile__city">${esc(s.city)}</span>
     </div>`;
 }
@@ -75,7 +92,7 @@ export function storeCard(ctx, s, { level = 'h3', sizes = '(max-width: 700px) 88
   const st = stateOf(ctx, s.state);
   const href = `/stores/${s.slug}/`;
   return `
-      <article class="st-card glass glass--stitch stitch stitch--draw lift" data-tilt="2">
+      <article class="st-card glass lift" data-tilt="2">
         ${storeTile(ctx, s, sizes)}
         ${patch(s.state, { tone: 'gold', size: 'sm', cls: 'st-card__state' })}
         ${pickButton(s)}
@@ -151,7 +168,7 @@ export function faqList(items, { name = 'sh-faq', menuHref = null } = {}) {
   const ld = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: items.map((it) => ({ '@type': 'Question', name: it.q, acceptedAnswer: { '@type': 'Answer', text: it.answer.join(' ') + (it.disclaimer ? ' ' + it.disclaimer : '') } })) }).replace(/</g, '\\u003c');
   return `<div class="sh-faq__list" data-stagger>${items.map((it, i) => `
         <details class="sh-faq__item" name="${esc(name)}"${i === 0 ? ' open' : ''}>
-          <summary class="sh-faq__q"><span class="sh-faq__n numeral numeral--gold" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span><span class="sh-faq__qt">${esc(it.q)}</span><span class="sh-faq__tog" aria-hidden="true">${icon('plus', 'sh-faq__plus')}${icon('minus', 'sh-faq__minus')}</span></summary>
+          <summary class="sh-faq__q"><span class="sh-faq__n" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span><span class="sh-faq__qt">${esc(it.q)}</span><span class="sh-faq__tog" aria-hidden="true">${icon('plus', 'sh-faq__plus')}${icon('minus', 'sh-faq__minus')}</span></summary>
           <div class="sh-faq__a">
             ${it.answer.map((p) => `<p>${rich(p)}</p>`).join('\n            ')}
             ${it.disclaimer ? `<p class="sh-faq__note">${esc(it.disclaimer)}</p>` : ''}
@@ -303,53 +320,39 @@ function hoursTable(s) {
         </table>`;
 }
 
-// 1. H1 store name, live menu, "Make this my store", photo (or leather tile) and the status card
+// 1. H1 store name, live menu, "Make this my store", photo in a glass frame (or the night tile) and the status card
 function storeHero(ctx, s) {
   const st = stateOf(ctx, s.state);
-  const [cutA, cutB] = STATE_CUT[s.state] || ['cut-bud', 'patch-leaf'];
+  const cutA = STATE_CUT[s.state] || 'cut-bud';
   const photo = s.photo && s.photo.src ? s.photo : null;
-  const patchEl = patchCut(cutB, { cls: `sp-print__patch sp-print__patch--${esc(cutB)}`, depth: 0.06, rotate: 4, sizes: '(max-width: 700px) 30vw, 220px' });
-  const pin = cutout('chrome-star', { cls: 'sp-print__pin', depth: 0, float: false, rotate: 8, eager: true, sizes: '80px' });
   const frame = photo
     ? `<figure class="sp-print"${reveal('right')}>
           <div class="sp-print__paper">
-            <div class="sp-print__window">${img(photo, { cls: 'sp-print__photo', eager: true, sizes: '(max-width: 900px) 84vw, 540px' })}${halftone({ color: 'ink', at: 'full', cls: 'sp-print__dots' })}</div>
+            <div class="sp-print__window">${img(photo, { cls: 'sp-print__photo', eager: true, sizes: '(max-width: 900px) 84vw, 540px' })}</div>
             <figcaption class="sp-print__cap">${esc(photo.alt)}</figcaption>
           </div>
-          ${pin}
-          ${patchEl}
+          ${spark('sp-print__spark', 30)}
         </figure>`
     : `<div class="sp-print sp-print--tile" aria-hidden="true"${reveal('right')}>
-          <div class="sp-print__tile stitch stitch--draw">
-            ${leaves({ tone: 'gold' })}
-            ${halftone({ color: 'gold', at: 'br' })}
-            ${grain()}
-            <img class="sp-print__star" src="${esc(starSrc(ctx))}" width="256" height="256" alt="" decoding="async">
-            <span class="sp-print__mark"><span class="sp-print__city">${esc(s.city)}</span>${rocker(st.name, { pos: 'bottom', tone: 'gold', radius: 260, band: 46, angle: 26, decorative: true, cls: 'sp-print__rocker' })}</span>
+          <div class="sp-print__tile">
+            ${sky('tile')}
+            ${starMark(ctx, 'sp-print__star', { eager: true })}
+            <span class="sp-print__mark"><span class="sp-print__city">${esc(s.city)}</span><span class="sp-print__state">${esc(st.name)}</span></span>
           </div>
-          ${pin}
-          ${patchEl}
+          ${spark('sp-print__spark', 30)}
         </div>`;
   const nameLine = s.name && s.name !== shortName(s) ? `<p class="sp-hero__name">${esc(s.name)}</p>` : '';
   const ticker = [s.city, st.name, 'Star Buds', 'Est. ' + (ctx.site.brand?.est || '2013'), ...ctx.categories.slice(0, 5).map((c) => c.label)];
   return `
 <section class="section sp-hero on-dark" aria-labelledby="sp-title">
-  <div class="plane-back">
-    <div class="leather-bg"></div>
-    ${img('g-smoke', { cls: 'cover sp-hero__smoke', alt: '', sizes: '100vw', eager: true })}
-    <div class="sp-hero__scrim"></div>
-    <div class="sp-hero__leaves">${leaves({ tone: 'gold' })}</div>
-    ${halftone({ color: 'gold', at: 'tr', cls: 'sp-hero__dots' })}
-    ${grain()}
-    <div class="vignette"></div>
-  </div>
+  <div class="plane-back">${sky('hero')}</div>
   <div class="wrap sp-hero__crumbs">${crumbs([{ label: 'Home', href: '/' }, { label: 'Dispensaries', href: '/dispensaries/' }, { label: st.name, href: stateHref(s.state) }, { label: shortName(s) }])}</div>
   <div class="wrap sp-hero__grid">
     <div class="sp-hero__copy"${reveal('up')}>
-      <div class="sp-hero__tags">${rocker(st.name, { tone: 'gold', radius: 260, band: 46, angle: 24, cls: 'sp-hero__rocker' })}${patch(s.state, { tone: 'green', size: 'sm', cls: 'sp-hero__code' })}</div>
+      <div class="sp-hero__tags">${pill(st.name, { cls: 'sp-hero__state' })}${patch(s.state, { tone: 'green', size: 'sm', cls: 'sp-hero__code' })}</div>
       <h1 id="sp-title" class="sp-hero__title">${nameHtml(shortName(s), 'sp-hero__city')}</h1>
       ${nameLine}
-      ${pinstripe({ cls: 'sp-hero__rule' })}
+      ${line('sp-hero__rule')}
       <div class="btn-row sp-hero__cta">
         ${btn('Shop this store', s.liveUrl || liveMenu(ctx, s.slug), { variant: 'gold', size: 'lg', icon: 'bag', attrs: EXT })}
         ${btn(`${icon('star', 'sp-pick__star')}<span class="st-pick__off">Make this my store</span><span class="st-pick__on">This is my store</span>`, null, { variant: 'ghost', icon: false, html: true, cls: 'sp-pick', attrs: { 'data-store-pick': s.slug, 'data-no-toast': true, 'aria-pressed': 'false' } })}
@@ -366,13 +369,14 @@ function storeHero(ctx, s) {
           <li>${icon('pin')}<span>${(s.address || []).map(esc).join('<br>')}</span></li>
           ${s.phone ? `<li>${icon('phone')}<a href="tel:${esc(s.tel || s.phone)}">${esc(s.phone)}</a></li>` : ''}
         </ul>
-        ${s.mapUrl ? `<a class="link-arrow sp-card__map" href="${esc(s.mapUrl)}" target="_blank" rel="noopener">Get directions${icon('external')}</a>` : ''}`, { stitch: true, cls: 'sp-card', attrs: { 'data-reveal': 'up', style: '--i:2' } })}
+        ${s.mapUrl ? `<a class="link-arrow sp-card__map" href="${esc(s.mapUrl)}" target="_blank" rel="noopener">Get directions${icon('external')}</a>` : ''}`, { cls: 'sp-card', attrs: { 'data-reveal': 'up', style: '--i:2' } })}
     </div>
   </div>
   <div class="sp-hero__front" aria-hidden="true">
     ${cutout(cutA, { cls: 'sp-hero__cut', depth: 0.14, float: 'slow', rotate: -8, eager: true, sizes: '(max-width: 700px) 34vw, 260px' })}
+    ${spark('sp-hero__spark sp-hero__spark--a', 22)}${spark('sp-hero__spark sp-hero__spark--b', 14)}
   </div>
-  <div class="sp-ticker" aria-hidden="true">${marquee(ticker)}</div>
+  <div class="sp-ticker" aria-hidden="true">${marquee(ticker, { strap: false, cls: 'sp-ticker__mq' })}</div>
 </section>`;
 }
 
@@ -387,7 +391,7 @@ function rewardsStrip(ctx, s) {
   const title = bs.intro ? `${st.name} Higher Rewards` : (r.title || 'Higher Rewards');
   return `
 <section class="section sp-rw on-dark" aria-labelledby="sp-rw-title">
-  <div class="plane-back">${leaves({ tone: 'gold', cls: 'sp-rw__leaves' })}${halftone({ color: 'gold', at: 'br', cls: 'sp-rw__dots' })}${grain()}</div>
+  <div class="plane-back">${sky('dusk')}</div>
   <div class="wrap">
     <div class="sp-rw__inner"${reveal('up')}>
       <div class="sp-rw__copy">
@@ -408,15 +412,10 @@ function rewardsStrip(ctx, s) {
 // 3. "<Store> dispensary details": address, directions, phone, hours with open/closed, live menu
 function storeDetails(ctx, s) {
   return `
-<section class="section section--bone sp-info" id="details" aria-labelledby="sp-info-title">
-  <div class="plane-back">
-    ${leaves({ tone: 'light', cls: 'sp-info__leaves' })}
-    ${halftone({ color: 'ink', at: 'br' })}
-    ${grain({ cls: 'sp-info__grain' })}
-  </div>
-  ${seam({ kind: 'double' })}
+<section class="section sp-info on-dark" id="details" aria-labelledby="sp-info-title">
+  <div class="plane-back">${sky('teal')}</div>
   <div class="wrap">
-    <div class="sp-info__panel stitch stitch--draw"${reveal('up')}>
+    <div class="sp-info__panel"${reveal('up')}>
       <p class="sp-info__eyebrow">${patch('Dispensary details', { tone: 'gold', icon: 'pin', size: 'sm' })}</p>
       <h2 id="sp-info-title" class="h-display sp-info__title">${esc(shortName(s))} dispensary details</h2>
       ${statusBlock(s)}
@@ -458,43 +457,34 @@ function storeMore(ctx, s) {
   ].filter(Boolean);
   const list = `<ul class="sp-more__links" role="list" data-stagger>${links.map(([l, h, ic]) => `<li><a class="sp-more__link" href="${esc(h)}"><span class="sp-more__ic">${amIcon(ic)}</span><span class="sp-more__lt">${esc(l)}</span>${icon('arrow', 'sp-more__arrow')}</a></li>`).join('')}</ul>`;
   return `
-<section class="section section--green sp-about on-dark${about.length ? '' : ' sp-about--links'}" aria-labelledby="sp-about-title">
+<section class="section sp-about on-dark${about.length ? '' : ' sp-about--links'}" aria-labelledby="sp-about-title">
   <div class="plane-back">
-    ${leaves({ tone: 'bone' })}
+    ${sky('green')}
     <p class="sp-about__word" aria-hidden="true">${esc(s.city)}</p>
-    ${halftone({ color: 'gold', at: 'tr' })}
-    ${grain()}
-    <div class="vignette"></div>
   </div>
-  ${seam({ kind: 'double' })}
   <div class="wrap sp-about__grid">
     <div class="sp-about__head">
       <p class="sp-about__eyebrow"${reveal('fade')}>${patch(shortName(s), { tone: 'gold', icon: 'star', size: 'sm' })}</p>
       <h2 id="sp-about-title" class="h-display sp-about__title"${reveal('up', 1)}>More <span class="gold-text">information</span></h2>
-      ${pinstripe({ cls: 'sp-about__rule' })}
-      <div class="sp-about__rocker"${reveal('up', 2)}>${rocker(st.name, { pos: 'bottom', tone: 'gold', radius: 260, band: 46, angle: 26, decorative: true })}</div>
+      ${line('sp-about__rule')}
+      <div class="sp-about__rocker"${reveal('up', 2)}>${pill(st.name, { hidden: true })}</div>
     </div>
     <div class="sp-about__body">
       ${about.length ? glass(`
         ${about.map((p) => `<p>${esc(p)}</p>`).join('')}
-        ${social.length ? `<div class="btn-row sp-about__social">${social.map((x) => btn(x.label, x.href, { variant: 'chrome', size: 'sm', icon: 'external', attrs: EXT })).join('')}</div>` : ''}`, { stitch: true, cls: 'sp-about__copy', attrs: { 'data-reveal': 'right' } }) : ''}
+        ${social.length ? `<div class="btn-row sp-about__social">${social.map((x) => btn(x.label, x.href, { variant: 'chrome', size: 'sm', icon: 'external', attrs: EXT })).join('')}</div>` : ''}`, { cls: 'sp-about__copy', attrs: { 'data-reveal': 'right' } }) : ''}
       ${list}
     </div>
   </div>
-  ${patchCut('patch-star', { cls: 'sp-about__patch', depth: 0.1, rotate: -4, sizes: '140px' })}
+  ${spark('sp-about__patch', 34)}
 </section>`;
 }
 
 // 5. Categories: each opens the live menu of this store (kept from revision 1)
 function storeShop(ctx, s) {
   return `
-<section class="section section--leather sp-shop" id="shop" aria-labelledby="sp-shop-title">
-  <div class="plane-back">
-    <div class="st-ground"></div>
-    ${leaves({ tone: 'gold', cls: 'st-ground__leaves' })}
-    ${halftone({ color: 'gold', at: 'tr', cls: 'sp-shop__dots' })}
-    ${grain()}
-  </div>
+<section class="section sp-shop on-dark" id="shop" aria-labelledby="sp-shop-title">
+  <div class="plane-back">${sky()}</div>
   <div class="wrap">
     <div class="sp-shop__head">
       <p class="sp-shop__eyebrow"${reveal('fade')}>${patch(`Shop ${s.city}`, { tone: 'gold', icon: 'bag' })}</p>
@@ -504,9 +494,9 @@ function storeShop(ctx, s) {
     <ul class="sp-cats" role="list" data-stagger>${ctx.categories.map((c, i) => `
       <li class="sp-cats__item">
         <a class="sp-cat glass" href="${esc(liveMenu(ctx, s.slug, c.slug))}" target="_blank" rel="noopener" data-tilt="3">
-          <span class="sp-cat__stitch stitch" aria-hidden="true"></span>
-          ${cutout(cutFor(c.cutout), { cls: 'sp-cat__cut', depth: 0, float: false, sizes: '(max-width: 700px) 30vw, 180px' })}
-          <span class="sp-cat__num numeral" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span>
+          <span class="sp-cat__halo" aria-hidden="true"></span>
+          ${isRetired(c.cutout) ? starMark(ctx, 'sp-cat__cut sp-cat__cut--star') : cutout(c.cutout, { cls: 'sp-cat__cut', depth: 0, float: false, sizes: '(max-width: 700px) 30vw, 180px' })}
+          <span class="sp-cat__num" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span>
           <span class="sp-cat__label">${esc(c.label)}</span>
           <span class="sp-cat__cta"><span>Shop<span class="sp-cat__cta-x"> ${esc(c.label)}</span></span>${icon('arrow')}</span>
         </a>
@@ -531,7 +521,7 @@ function storeVisit(ctx, s) {
       <h3 class="sp-visit__h3">${patch('Know before you go', { tone: 'green', icon: 'star', size: 'sm' })}</h3>
       ${visit.map((v, i) => `
       <details class="sp-faq__item"${i === 0 ? ' open' : ''}>
-        <summary class="sp-faq__q"><span class="sp-faq__n numeral numeral--gold" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span><span class="sp-faq__qt">${esc(v.q)}</span><span class="sp-faq__tog" aria-hidden="true">${icon('plus', 'sp-faq__plus')}${icon('minus', 'sp-faq__minus')}</span></summary>
+        <summary class="sp-faq__q"><span class="sp-faq__n" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span><span class="sp-faq__qt">${esc(v.q)}</span><span class="sp-faq__tog" aria-hidden="true">${icon('plus', 'sp-faq__plus')}${icon('minus', 'sp-faq__minus')}</span></summary>
         <p class="sp-faq__a">${esc(v.a)}</p>
       </details>`).join('')}
     </div>` : '';
@@ -546,9 +536,8 @@ function storeVisit(ctx, s) {
       <p class="sp-amen__src">From the ${esc(shortName(s))} pages on starbuds.us.</p>
     </div>` : '';
   return `
-<section class="section section--parchment sp-visit" aria-labelledby="sp-visit-title">
-  <div class="plane-back">${leaves({ tone: 'light', cls: 'sp-visit__leaves' })}${halftone({ color: 'ink', at: 'tl' })}${grain({ cls: 'sp-info__grain' })}</div>
-  ${seam({ kind: 'stitch', tone: 'gold' })}
+<section class="section sp-visit on-dark" aria-labelledby="sp-visit-title">
+  <div class="plane-back">${sky('dusk')}</div>
   <div class="wrap">
     <div class="sp-visit__head">
       <p class="sp-visit__eyebrow"${reveal('fade')}>${patch(`Visiting · ${s.state}`, { tone: 'leather', size: 'sm' })}</p>
@@ -559,7 +548,7 @@ function storeVisit(ctx, s) {
       ${amen}
     </div>
   </div>
-  ${patchCut('patch-leaf', { cls: 'sp-visit__patch', depth: 0.08, rotate: 6, sizes: '(max-width: 700px) 80px, 140px' })}
+  ${spark('sp-visit__patch', 30)}
 </section>`;
 }
 
@@ -580,8 +569,7 @@ function storeDeals(ctx, s) {
       <div class="btn-row sp-deals__cta">${btn('Open the live menu', s.liveUrl || liveMenu(ctx, s.slug), { variant: 'gold', icon: 'external', attrs: EXT })}${btn('All deals', '/deals/', { variant: 'ghost' })}</div>`;
   return `
 <section class="section sp-deals on-dark" aria-labelledby="sp-deals-title">
-  <div class="plane-back">${img('g-smoke', { cls: 'cover sp-deals__smoke', alt: '', sizes: '100vw' })}<div class="sp-deals__shade"></div>${halftone({ color: 'red', at: 'tr', cls: 'sp-deals__dots' })}${grain()}</div>
-  ${seam()}
+  <div class="plane-back">${sky('rose')}</div>
   <div class="wrap sp-deals__grid">
     <div class="sp-deals__copy"${reveal('up')}>
       <p class="sp-deals__eyebrow">${patch('Deals', { tone: 'red', icon: 'tag', size: 'sm' })}</p>
@@ -598,9 +586,8 @@ function storeFaq(ctx, s) {
   const items = stateFaq(ctx, s.state, { visit: false });
   if (!items.length) return '';
   return `
-<section class="section section--bone sh-faq sp-sfaq" id="faqs" aria-labelledby="sp-faq-title">
-  <div class="plane-back">${leaves({ tone: 'light', cls: 'sp-info__leaves' })}${halftone({ color: 'ink', at: 'br' })}${grain({ cls: 'sp-info__grain' })}</div>
-  ${seam({ kind: 'double' })}
+<section class="section sh-faq sp-sfaq on-dark" id="faqs" aria-labelledby="sp-faq-title">
+  <div class="plane-back">${sky('teal')}</div>
   <div class="wrap sh-faq__wrap">
     <div class="sh-faq__head">
       <p class="sh-faq__eyebrow"${reveal('fade')}>${patch('FAQ', { tone: 'leather', size: 'sm' })}</p>
@@ -635,24 +622,18 @@ function storeNearby(ctx, s) {
       <p class="lead sp-near__lead"${reveal('up', 2)}>More Star Buds locations.</p>
     </div>
     <div class="sp-near__states" data-stagger>${groups.map((g) => glass(`
-      <h3 class="sp-near__state"><a class="sp-near__statelink" href="${esc(stateHref(g.state.code))}"><span class="sr-only">${esc(g.state.name)}</span>${rocker(g.state.name, { tone: 'gold', radius: 260, band: 46, angle: 24, decorative: true, cls: 'sp-near__rocker' })}</a></h3>
-      <ul class="sp-near__chips" role="list">${g.stores.map((x) => `<li><a class="chip" href="/stores/${esc(x.slug)}/">${icon('pin')}${esc(x.city)}</a></li>`).join('')}</ul>`, { stitch: true, cls: 'sp-near__group' })).join('')}
+      <h3 class="sp-near__state"><a class="sp-near__statelink" href="${esc(stateHref(g.state.code))}"><span class="sr-only">${esc(g.state.name)}</span><span class="sp-near__name" aria-hidden="true">${esc(g.state.name)}</span>${icon('arrow', 'sp-near__arrow')}</a></h3>
+      <ul class="sp-near__chips" role="list">${g.stores.map((x) => `<li><a class="chip" href="/stores/${esc(x.slug)}/">${icon('pin')}${esc(x.city)}</a></li>`).join('')}</ul>`, { cls: 'sp-near__group' })).join('')}
     </div>`;
   }
   return `
-<section class="section section--leather sp-near" aria-labelledby="sp-near-title">
-  <div class="plane-back">
-    <div class="st-ground"></div>
-    ${leaves({ tone: 'gold', cls: 'st-ground__leaves' })}
-    ${halftone({ color: 'gold', at: 'bl' })}
-    ${grain()}
-  </div>
-  ${seam({ kind: 'pinstripe' })}
+<section class="section sp-near on-dark" aria-labelledby="sp-near-title">
+  <div class="plane-back">${sky()}</div>
   <div class="wrap">
     ${inner}
     <div class="btn-row sp-near__all">${btn(`${st.name} dispensaries`, stateHref(s.state), { variant: 'gold', icon: 'pin' })}${btn('All dispensaries', '/dispensaries/', { variant: 'ghost', icon: 'arrow' })}</div>
   </div>
-  ${patchCut(others.length ? 'flash-bud' : 'chrome-star', { cls: 'sp-near__cut' + (others.length ? '' : ' sp-near__cut--chrome'), depth: 0.1, rotate: others.length ? 4 : 10, sizes: '(max-width: 700px) 26vw, 180px' })}
+  ${spark('sp-near__cut', 32)}
 </section>`;
 }
 
@@ -700,7 +681,7 @@ function storesStub(ctx) {
   <link rel="canonical" href="/dispensaries/">
   <meta http-equiv="refresh" content="0; url=/dispensaries/">
   <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
-  <style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0B0B0A;color:#EFE6D2;font:16px/1.5 system-ui,sans-serif;text-align:center}a{color:#E8CB7A}h1{font-size:1.4rem;font-weight:600}</style>
+  <style>body{margin:0;min-height:100vh;display:grid;place-items:center;padding:0 16px;background:radial-gradient(ellipse 70% 50% at 80% 0%,rgba(141,123,255,.22),transparent 70%),radial-gradient(ellipse 60% 50% at 0% 100%,rgba(46,229,157,.16),transparent 70%),#060918;color:#F3F5FF;font:16px/1.6 Manrope,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;text-align:center}main{padding:32px 36px;border:1px solid rgba(255,255,255,.16);border-radius:24px;background:rgba(255,255,255,.06);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px)}a{color:#2EE59D}h1{font-size:1.6rem;font-weight:300;letter-spacing:-.02em}</style>
 </head>
 <body>
   <main id="main">

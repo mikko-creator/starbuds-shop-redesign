@@ -1,15 +1,16 @@
-// shell.mjs - page shell (FOUNDATION, Iron Star; revision 2 adds the large-operator site architecture): head, promo bar
-// with "Pick up at" (the store switcher), sticky header with the main nav in that site's order (Shop, Explore, Rewards,
-// Resources, Dispensaries) and three mega menus, the phone drawer (the megas as accordions), age gate, footer (its column
-// structure, Star Buds items), scripts. The nav and footer data live in src/content/ia.json (docs/REVISION-2.md).
+// shell.mjs - page shell (FOUNDATION; revision 2 architecture, revision 3 "Starlight" look): head, promo bar with
+// "Pick up at" (the store switcher), a frosted-glass sticky header with the main nav in that site's order (Shop, Explore,
+// Rewards, Resources, Dispensaries) and three frosted mega menus, the phone drawer (the megas as accordions) over the
+// night sky, age gate (a glass card over the sky), footer (its column structure, Star Buds items), scripts. The nav and
+// footer data live in src/content/ia.json (docs/REVISION-2.md).
 // Page modules call page({ title, description, body, bodyClass, ctx, path, head, scripts, crumbs }) and use the helpers
 // re-exported from util.mjs. API: docs/DESIGN.md.
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from '../lib/paths.mjs';
-import { esc, attrs, cx, uid, icon, btn, img, picture, imgUrl, glass, patch, sticker, seal, starburst, rocker, emblem, halftone, leaves, grain, cutout, patchCut, seam, pinstripe, marquee, reveal, menuAttrs, storeLinkAttrs, storeLabel, liveMenu, crumbs, hubHero, cardGrid, articleCard, fmtDate, stateSlug } from './util.mjs';
+import { esc, attrs, cx, uid, icon, btn, img, picture, imgUrl, glass, patch, sticker, seal, starburst, rocker, emblem, halftone, leaves, grain, cutout, patchCut, seam, pinstripe, marquee, reveal, menuAttrs, storeLinkAttrs, storeLabel, liveMenu, crumbs, hubHero, cardGrid, articleCard, fmtDate, stateSlug, sky, spark, RETIRED_ART, isRetiredArt } from './util.mjs';
 
-export { esc, attrs, cx, uid, icon, btn, img, picture, imgUrl, glass, patch, sticker, seal, starburst, rocker, emblem, halftone, leaves, grain, cutout, patchCut, seam, pinstripe, marquee, reveal, menuAttrs, storeLinkAttrs, storeLabel, liveMenu, crumbs, hubHero, cardGrid, articleCard, fmtDate, stateSlug };
+export { esc, attrs, cx, uid, icon, btn, img, picture, imgUrl, glass, patch, sticker, seal, starburst, rocker, emblem, halftone, leaves, grain, cutout, patchCut, seam, pinstripe, marquee, reveal, menuAttrs, storeLinkAttrs, storeLabel, liveMenu, crumbs, hubHero, cardGrid, articleCard, fmtDate, stateSlug, sky, spark, RETIRED_ART, isRetiredArt };
 
 export const CSS_ORDER = ['tokens', 'base', 'components', 'motion', 'home', 'finder', 'faq', 'stores', 'states', 'content', 'resources', 'blog'];
 
@@ -98,14 +99,15 @@ function linkAttrs(it, path) {
   return a;
 }
 function mmLink(it, path, { thumbs = false } = {}) {
-  const thumb = thumbs && it.cutout ? `<span class="mm-link__thumb" aria-hidden="true">${img(/^pop-/.test(it.cutout) ? 'patch-leaf' : it.cutout, { alt: '', sizes: '44px', cls: 'mm-link__img' })}</span>` : '';
+  // a category whose cut-out is retired art (Apparel = 'patch-leaf' in site.json) shows a star sparkle in the halo
+  const thumb = thumbs && it.cutout ? `<span class="${cx('mm-link__thumb', isRetiredArt(it.cutout) && 'mm-link__thumb--spark')}" aria-hidden="true">${isRetiredArt(it.cutout) ? spark({ size: 'sm', cls: 'mm-link__spark' }) : img(it.cutout, { alt: '', sizes: '44px', cls: 'mm-link__img' })}</span>` : '';
   return `<a class="${cx('mm-link', thumb && 'mm-link--thumb')}"${attrs(linkAttrs(it, path))}>${thumb}<span class="mm-link__text"><span class="mm-link__label">${esc(it.label)}</span>${it.note ? `<span class="mm-link__note">${esc(it.note)}</span>` : ''}</span>${it.external ? icon('external', 'mm-link__ext') : ''}</a>`;
 }
 function mmGroup(g, idp, path) {
   if (g.states) {
     return g.states.map((s) => `
           <div class="mm-group mm-group--state">
-            <a class="mm-state" href="${esc(s.hub)}"${s.hub === path ? ' aria-current="page"' : ''}>${rocker(s.name, { tone: 'gold', radius: 260, band: 46, angle: 26, cls: 'mm-state__rocker', decorative: true })}<span class="mm-state__label"><span class="sr-only">${esc(s.name)} </span>Dispensaries${icon('arrow')}</span></a>
+            <a class="mm-state" href="${esc(s.hub)}"${s.hub === path ? ' aria-current="page"' : ''}><span class="mm-state__name" aria-hidden="true">${spark({ size: 'xs', cls: 'mm-state__spark' })}${esc(s.name)}</span><span class="mm-state__label"><span class="sr-only">${esc(s.name)} </span>Dispensaries${icon('arrow')}</span></a>
             <ul class="mm-group__list" role="list" aria-label="${esc(s.name)} stores">${s.stores.map((it) => `<li>${mmLink(it, path)}</li>`).join('')}</ul>
           </div>`).join('');
   }
@@ -113,20 +115,24 @@ function mmGroup(g, idp, path) {
   const hid = `${idp}-${g.id}`;
   return `
           <div class="${cx('mm-group', 'mm-group--' + g.id)}">
-            <p class="mm-group__head" id="${hid}">${patch(g.heading, { tone: 'gold', size: 'sm' })}</p>
+            <p class="mm-group__head" id="${hid}">${spark({ size: 'xs', cls: 'mm-group__spark' })}<span class="mm-group__label">${esc(g.heading)}</span></p>
             ${g.note ? `<p class="mm-group__note">${esc(g.note)}</p>` : ''}
             <ul class="${cx('mm-group__list', g.id === 'categories' && 'mm-group__list--cats')}" role="list" aria-labelledby="${hid}">${g.items.map((it) => `<li>${mmLink(it, path, { thumbs: g.id === 'categories' })}</li>`).join('')}</ul>
           </div>`;
 }
 function mmFeature(f) {
   if (!f || !f.href) return '';
-  const patchy = /^(patch-|chrome-star|flash-)/.test(f.art || '');
-  // a tile that shows a post photo carries no extra art (the patch would sit on the title)
-  const art = f.art && !f.image ? `<span class="${cx('mm-feature__art', patchy && 'mm-feature__art--patch')}" aria-hidden="true">${img(f.art, { alt: '', sizes: '200px', cls: 'mm-feature__art-img' })}</span>` : '';
+  const retired = isRetiredArt(f.art || '');
+  // a tile that shows a post photo carries no extra art (it would sit on the title); retired art = a star cluster
+  const art = f.art && !f.image
+    ? (retired
+      ? `<span class="mm-feature__art mm-feature__art--spark" aria-hidden="true">${spark({ size: 'lg', cls: 'mm-feature__spark mm-feature__spark--a' })}${spark({ size: 'sm', cls: 'mm-feature__spark mm-feature__spark--b' })}${spark({ size: 'xs', cls: 'mm-feature__spark mm-feature__spark--c' })}</span>`
+      : `<span class="mm-feature__art" aria-hidden="true">${img(f.art, { alt: '', sizes: '200px', cls: 'mm-feature__art-img float float--slow' })}</span>`)
+    : '';
   const photo = f.image ? `<span class="mm-feature__photo">${img(f.image, { alt: '', sizes: '320px', cls: 'mm-feature__photo-img' })}</span>` : '';
   return `
           <a class="${cx('mm-feature', photo && 'mm-feature--photo')}" href="${esc(f.href)}">
-            <span class="mm-feature__stitch" aria-hidden="true"></span>
+            <span class="mm-feature__glow" aria-hidden="true"></span>
             ${photo}${art}
             <span class="mm-feature__body">
               ${f.eyebrow ? `<span class="mm-feature__eyebrow">${patch(f.eyebrow, { tone: f.eyebrow === 'Deals' ? 'red' : 'green', size: 'sm', icon: f.eyebrow === 'Deals' ? 'tag' : undefined })}</span>` : ''}
@@ -144,8 +150,8 @@ function megaPanel(n, path) {
   const first = n.id === 'explore'; // the large operator's Explore opens on Deals: the feature tile leads there
   return `
       <div class="${cx('mm-menu', 'mm-menu--' + n.id)}" id="${idp}" data-mega-panel hidden>
-        <div class="mm-menu__panel stitch">
-          ${halftone({ color: 'gold', at: 'tr', cls: 'mm-menu__dots' })}
+        <div class="mm-menu__panel">
+          ${sky({ stars: 'faint', aurora: n.id === 'explore' ? 'green' : n.id === 'resources' ? 'violet' : 'teal', cls: 'mm-menu__sky' })}
           <div class="mm-menu__grid">${first ? feat : ''}
             <div class="mm-menu__groups">${groups}
             </div>${first ? '' : feat}
@@ -238,7 +244,7 @@ function header(ctx, path) {
       </div>
     </div>
     <div class="switcher" id="store-switcher" data-switcher hidden>
-      <div class="switcher__panel glass glass--stitch stitch is-in">
+      <div class="switcher__panel glass">
         <div class="switcher__head">
           <p class="switcher__title">${esc(pickLabel)}</p>
           <p class="switcher__current" data-store-current hidden>Shopping at <strong data-store-label></strong></p>
@@ -251,7 +257,7 @@ function header(ctx, path) {
     </div>
   </header>
   <div class="drawer" id="drawer" data-drawer hidden>
-    ${leaves({ tone: 'gold', cls: 'drawer__leaves' })}
+    ${sky({ stars: true, aurora: true, cls: 'drawer__sky' })}
     <div class="drawer__panel">
       <nav aria-label="Main (menu)"><ul class="drawer__nav" role="list">${drawerNav}
       </ul></nav>
@@ -269,8 +275,8 @@ function ageGate(ctx) {
   const est = ctx.site.brand?.est || '2013';
   return `
   <div class="agegate" data-agegate role="dialog" aria-modal="true" aria-labelledby="agegate-title" aria-describedby="agegate-body">
-    <div class="agegate__veil">${leaves({ tone: 'gold', cls: 'agegate__leaves' })}${halftone({ color: 'gold', at: 'full' })}${grain()}</div>
-    <div class="agegate__panel glass glass--stitch stitch is-in">
+    <div class="agegate__veil">${sky({ stars: true, aurora: true, cls: 'agegate__sky' })}</div>
+    <div class="agegate__panel glass">
       ${emblem({ top: ctx.site.brand?.name || 'Star Buds', bottom: 'Est. ' + est, star: ctx.site.brand?.star || '/assets/brand/star-on-dark.png', cls: 'agegate__emblem' })}
       <p class="agegate__title" id="agegate-title">${esc(g.title || 'Are you 21 years of age or older?')}</p>
       ${pinstripe({ cls: 'agegate__rule' })}
@@ -298,9 +304,8 @@ function footer(ctx, path) {
   const legal = (site.legal || []).filter((l) => !/eula/i.test(l.label)); // EULA is a page of its own now (/eula/)
   return `
   <footer class="site-footer">
-    ${leaves({ tone: 'gold', cls: 'site-footer__leaves' })}
-    ${grain()}
-    ${seam({ kind: 'double', cls: 'site-footer__seam' })}
+    ${sky({ stars: 'faint', aurora: true, cls: 'site-footer__sky' })}
+    ${seam({ cls: 'site-footer__seam' })}
     <div class="site-footer__inner sb-foot">
       <div class="footer-brand">
         <a href="/" class="footer-brand__logo"><img src="${esc(site.brand?.logoOnDark || '/assets/brand/logo-on-dark.png')}" width="1417" height="430" alt="${esc(site.brand?.name || 'Star Buds')}" loading="lazy" decoding="async"></a>
@@ -313,7 +318,7 @@ function footer(ctx, path) {
       </div>
       <div class="footer-col sb-foot__store">
         <p class="footer__heading">${esc(I.promo.pickLabel || 'Pick up at')}</p>
-        <div class="sb-foot__card stitch is-in" data-store-current hidden>
+        <div class="sb-foot__card" data-store-current hidden>
           <p class="sb-foot__name" data-store-field="name"></p>
           <p class="sb-foot__addr" data-store-field="address"></p>
           <p class="sb-foot__links"><a data-store-tel hidden href="#main">${icon('phone')}<span data-store-field="phone"></span></a><a data-store-map hidden href="#main" target="_blank" rel="noopener">${icon('directions')}Directions</a></p>
@@ -328,7 +333,7 @@ function footer(ctx, path) {
       ${col(F.more, 'sb-foot__more')}
       ${social.length ? `<div class="footer-col sb-foot__social"><p class="footer__heading">Follow</p><ul role="list">${social.map((s) => `<li><a href="${esc(s.href)}" target="_blank" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ul></div>` : ''}
     </div>
-    <div class="site-footer__mark" aria-hidden="true">${pinstripe({ cls: 'site-footer__flourish' })}<span class="site-footer__est">Est. ${esc(est)}</span>${pinstripe({ cls: 'site-footer__flourish' })}</div>
+    <div class="site-footer__mark" aria-hidden="true"><span class="site-footer__flourish"></span><img class="site-footer__star" src="${esc(site.brand?.star || '/assets/brand/star-on-dark.png')}" width="256" height="256" alt="" loading="lazy" decoding="async"><span class="site-footer__est">Est. ${esc(est)}</span><span class="site-footer__flourish site-footer__flourish--end"></span></div>
     <div class="site-footer__legal">
       <div class="sb-foot__fine">
         ${site.ageGate?.body ? `<p class="sb-foot__age">${patch('21+', { tone: 'red', size: 'sm' })}<span>${esc(site.ageGate.body)}</span></p>` : ''}
@@ -371,14 +376,12 @@ export function page({ title, description = '', body, bodyClass = '', ctx, path 
   <title>${esc(full)}</title>
   <meta name="description" content="${esc(description)}">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#0B0B0A">
+  <meta name="theme-color" content="#060918">
   <meta name="color-scheme" content="dark">
   <meta property="og:title" content="${esc(full)}">
   <meta property="og:description" content="${esc(description)}">
   <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
   <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
-  <link rel="preload" href="/assets/fonts/GrenzeGotisch-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/Oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   ${css}
   <script>${HEAD_SCRIPT}</script>

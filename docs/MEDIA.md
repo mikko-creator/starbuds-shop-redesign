@@ -61,6 +61,13 @@ riding. The biker character comes from the patches, the lettering, the leather a
 The revision retires the first design's pop-art files: `pop-star.png`, `pop-bud.png`, `g-hero.jpg`, `g-glass.jpg`,
 `g-glass-dark.jpg`, `hero-pop.*` and `glass-dark.*`. They are no longer in the repository; the product cut-outs stay.
 
+## Revision 3 (2026-10-27): "Starlight"
+
+The site moved to a simple, clean ethereal glassmorphism look that plays on the name Star Buds. It uses no new
+generated media: the night sky, star fields and aurora glows are drawn in CSS. The product cut-outs (`cut-*.png`)
+stay, floating like stars, and so do all real photos. The Iron Star patches, chrome star, tattoo flash, leather and
+jacket stills and the `hero-iron` loop are no longer used on any page.
+
 ## The leaves pattern
 
 `assets/brand/pattern-buds.webp` is Star Buds' engraved botanical wallpaper (leaves, roses and cannabis leaves), taken

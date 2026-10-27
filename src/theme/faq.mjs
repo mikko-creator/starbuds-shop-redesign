@@ -2,10 +2,10 @@
 // imports it with a tolerant dynamic import and places it after the rewards band.
 // Content: src/content/faq.json (captured Star Buds copy with per-answer sources, plus neutral general answers).
 // Markup: <details>/<summary> accordions (work without JS), one exclusive accordion per group (the `name`
-// attribute), FAQPage JSON-LD. Styles: src/styles/faq.css ("Iron Star": leather panel, rocker-patch group
-// headings, stitched dividers, chrome plus/minus toggles).
+// attribute), FAQPage JSON-LD. Styles: src/styles/faq.css (revision 3 "Starlight": a calm night ground, frosted
+// glass accordion panels, plain group headings, aurora hairline dividers, thin glowing plus/minus lines).
 import fs from 'node:fs';
-import { esc, attrs, imgUrl, cutout, reveal, menuAttrs } from './shell.mjs';
+import { esc, attrs, cutout, reveal, menuAttrs } from './shell.mjs';
 
 const FAQ_FILE = new URL('../content/faq.json', import.meta.url);
 
@@ -72,36 +72,6 @@ const LINKS = {
 const rich = (s) => esc(s).replace(/“([^”]+)”/g, '<span class="faq__quote">“$1”</span>');
 
 
-/** Curved rocker patch (SVG): twill fill, merrowed gold edge, bone stitching, blackletter text on an arc. */
-function rocker(label) {
-  const L = [...label].length;
-  const size = Math.max(22, Math.min(34, Math.round(345 / (L * 0.5))));
-  return `<svg class="faq__rocker" viewBox="0 0 400 110" aria-hidden="true" focusable="false">
-        <path class="faq__rocker-band" d="M10 58 Q200 -18 390 58 L384 104 Q200 36 16 104 Z"/>
-        <path class="faq__rocker-sheen" d="M10 58 Q200 -18 390 58 L384 104 Q200 36 16 104 Z"/>
-        <path class="faq__rocker-stitch" d="M22 63 Q200 -11 378 63"/>
-        <path class="faq__rocker-stitch" d="M26 98 Q200 30 374 98"/>
-        <text class="faq__rocker-shadow" style="font-size:${size}px"><textPath href="#faq-arc" startOffset="50%" text-anchor="middle">${esc(label)}</textPath></text>
-        <text class="faq__rocker-text" style="font-size:${size}px"><textPath href="#faq-arc" startOffset="50%" text-anchor="middle">${esc(label)}</textPath></text>
-      </svg>`;
-}
-
-// Shared SVG defs: the twill fill, the gold thread gradient and the text arc.
-const DEFS = `<svg class="faq__defs" width="0" height="0" aria-hidden="true" focusable="false">
-    <defs>
-      <pattern id="faq-twill" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-        <rect width="5" height="5" fill="#0E3B25"/><rect width="2.2" height="5" fill="#13492E"/>
-      </pattern>
-      <linearGradient id="faq-thread" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#F3DD98"/><stop offset=".5" stop-color="#E8CB7A"/><stop offset="1" stop-color="#B38A35"/>
-      </linearGradient>
-      <linearGradient id="faq-sheen" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".28"/>
-      </linearGradient>
-      <path id="faq-arc" d="M13 88 Q200 20 387 88"/>
-    </defs>
-  </svg>`;
-
 const STAR = '<svg class="faq__star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 1.8l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9l7.1-.6z"/></svg>';
 
 function item(it, n, group, data) {
@@ -144,7 +114,7 @@ export function faqSection(ctx) {
       <div class="faq__divider" aria-hidden="true"><span class="faq__divider-line"></span>${STAR}<span class="faq__divider-line"></span></div>` : ''}
       <div class="faq__group" id="faq-group-${esc(g.id)}"${reveal('up')}>
         <div class="faq__group-head">
-          <h3 class="faq__group-title"><span class="faq__sr">${esc(g.title)}</span>${rocker(g.title)}</h3>
+          <h3 class="faq__group-title">${esc(g.title)}</h3>
           <p class="faq__count" aria-hidden="true">${count} question${count === 1 ? '' : 's'}</p>
         </div>
         <div class="faq__list">${items}
@@ -155,11 +125,10 @@ export function faqSection(ctx) {
   return `
 <section class="section faq" id="faq" aria-labelledby="faq-title">
   <div class="faq__back" aria-hidden="true">
-    <span class="faq__dots faq__dots--tl"></span>
-    <span class="faq__dots faq__dots--br"></span>
-    <span class="faq__grain"></span>
+    <span class="faq__aurora"></span>
+    <span class="faq__stars"></span>
+    <span class="faq__stars faq__stars--b"></span>
   </div>
-  ${DEFS}
   <div class="wrap faq__wrap">
     <header class="faq__head"${reveal('up')}>
       <p class="faq__tab"><span>${esc(data.eyebrow || 'FAQ')}</span></p>
@@ -167,16 +136,13 @@ export function faqSection(ctx) {
       ${data.lede ? `<p class="faq__lede">${esc(data.lede)}</p>` : ''}
     </header>
     <div class="faq__frame">
-      <div class="faq__panel" style="--faq-leather:url('${esc(imgUrl('g-leather', 1280))}')">
-        <span class="faq__stitch" aria-hidden="true"></span>
+      <div class="faq__panel">
         ${groups}
         <p class="faq__disclaimer">${STAR}<span>${esc(data.disclaimer)}</span></p>
       </div>
-      ${cutout('patch-leaf', { cls: 'faq__patch', depth: 0.1, float: 'slow', rotate: 8, sizes: '(max-width: 700px) 96px, 168px' })}
-      ${cutout('chrome-star', { cls: 'faq__chrome', depth: -0.08, float: false, rotate: -12, sizes: '(max-width: 700px) 56px, 92px' })}
+      ${cutout('cut-leaf', { cls: 'faq__leaf', depth: 0.1, float: 'slow', rotate: 12, sizes: '(max-width: 700px) 84px, 150px' })}
     </div>
   </div>
-  ${cutout('flash-leaf', { cls: 'faq__flash', depth: 0.16, float: 'slow', rotate: -10, sizes: '(max-width: 700px) 150px, 250px' })}
   <script type="application/ld+json">${jsonLd(data)}</script>
 </section>`;
 }

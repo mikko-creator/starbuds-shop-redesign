@@ -1,106 +1,89 @@
-/* tokens.css - "Iron Star" design tokens (FOUNDATION, revision 1). Table + usage: docs/DESIGN.md
-   Old English biker pop-art: jet, leather and bone grounds; brand green and antique gold accents; chrome as a gradient;
-   oxblood red for deal urgency only. */
+/* tokens.css - "Starlight" design tokens (revision 3; table + usage: docs/DESIGN.md).
+   Ethereal glassmorphism for Star Buds: a deep indigo night sky, aurora washes in the brand greens with teal and violet,
+   frosted glass, starlight accents, one clean sans. The Iron Star names at the bottom stay as aliases, so older markup
+   resolves to the new palette. */
 :root {
-  /* grounds */
-  --ink: #0B0B0A;          /* jet: page ground, text on bone */
-  --leather: #15120E;      /* leather black: dark sections */
-  --oil: #1D1A16;          /* raised dark surfaces */
-  --bone: #EFE6D2;         /* light sections, text on dark */
-  --parchment: #E3D4B5;    /* secondary light ground */
-  /* accents */
+  /* sky grounds */
+  --night: #060918;        /* page ground */
+  --night-2: #0B1030;      /* raised night sections */
+  --dusk: #161B48;         /* indigo surfaces */
+  --pearl: #F4F3FF;        /* light "dawn" surfaces and long reads */
+  --pearl-2: #E8E7FA;
+
+  /* brand + aurora */
   --green: #006937;        /* brand green */
-  --green-deep: #0E3B25;
-  --green-glow: #2E9B5A;   /* sparingly: lines and glows on dark */
-  --gold: #C9A24A;         /* antique gold: rules, stitches, eyebrows */
-  --gold-hi: #E8CB7A;
-  --red: #9E2A22;          /* oxblood: deal urgency only */
-  --chrome: linear-gradient(180deg, #F7F7F5 0%, #B9BEC2 38%, #5D6368 52%, #E9EBEC 70%, #8D9398 100%);
-  --gold-grad: linear-gradient(180deg, #F3DD9A 0%, #D9B45E 34%, #9C7A2E 54%, #E4C273 74%, #B08A3A 100%);
+  --green-deep: #0B3D2A;
+  --green-glow: #2EE59D;   /* aurora green: glows, focus, active states */
+  --teal: #38E1D0;
+  --violet: #8D7BFF;
+  --rose: #FF8FB8;         /* deal urgency only */
+  --star: #FFE9A8;         /* starlight */
+  --star-hi: #FFF8E1;
   --white: #FFFFFF;
+  --aurora: linear-gradient(115deg, #2EE59D 0%, #38E1D0 34%, #8D7BFF 72%, #FF8FB8 100%);
+  --aurora-soft: linear-gradient(115deg, rgba(46, 229, 157, .9) 0%, rgba(56, 225, 208, .85) 40%, rgba(141, 123, 255, .85) 100%);
+  --starlight: linear-gradient(180deg, #FFFFFF 0%, #FFF1C9 46%, #CFC8FF 100%);
 
   /* text */
-  --text-dark: #1A1712;                    /* body text on bone */
-  --text-dark-soft: rgba(26, 23, 18, .74);
-  --text-light: var(--bone);               /* body text on dark */
-  --text-light-soft: rgba(239, 230, 210, .74);
-  --rule-dark: rgba(239, 230, 210, .16);   /* hairlines on dark */
-  --rule-light: rgba(26, 23, 18, .2);      /* hairlines on bone */
+  --text-light: #F3F5FF;                   /* body text on night */
+  --text-light-soft: rgba(226, 231, 255, .72);
+  --text-dark: #141833;                    /* body text on pearl */
+  --text-dark-soft: rgba(20, 24, 51, .7);
+  --rule-dark: rgba(255, 255, 255, .12);   /* hairlines on night */
+  --rule-light: rgba(20, 24, 51, .12);     /* hairlines on pearl */
 
-  /* legacy aliases (Pop Glass names, kept so older markup keeps working; new code uses the names above) */
-  --paper: var(--bone);
-  --mist: var(--parchment);
-  --charcoal: var(--oil);
-  --green-ink: var(--leather);
-  --green-bright: var(--green-glow);
-  --coral: var(--red);
-  --pop-yellow: var(--gold);
-  --pop-pink: var(--red);
-  --pop-lime: var(--gold-hi);
-  --ink-soft: var(--text-dark-soft);
-  --paper-soft: var(--text-light-soft);
+  /* glass */
+  --glass-fill: rgba(255, 255, 255, .06);
+  --glass-fill-strong: rgba(255, 255, 255, .1);
+  --glass-edge: rgba(255, 255, 255, .16);
+  --glass-edge-hi: rgba(255, 255, 255, .34);
+  --glass-light-fill: rgba(255, 255, 255, .58);
+  --glass-light-edge: rgba(255, 255, 255, .8);
+  --glass-shine: linear-gradient(135deg, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, 0) 42%);
+  --glass-blur: blur(22px) saturate(140%);
 
-  /* type */
-  --font-black: "Grenze Gotisch", "Grenze Gotisch Fallback", "Old English Text MT", Georgia, serif; /* display only */
-  --font-display: "Oswald", "Oswald Fallback", "Arial Narrow", Impact, sans-serif;                   /* uppercase UI */
+  /* type: one family, Manrope (variable 200-800) */
+  --font-display: "Manrope", "Manrope Fallback", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   --font-body: "Manrope", "Manrope Fallback", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  --fs-hero: clamp(3.2rem, 1.5rem + 6.2vw, 7.6rem);
-  --fs-h2: clamp(2.5rem, 1.5rem + 3.8vw, 5rem);
-  --fs-h3: clamp(1.45rem, 1.15rem + 1vw, 2.05rem);
-  --fs-lead: clamp(1.06rem, 1rem + .35vw, 1.28rem);
+  --fw-display: 300;       /* large headings: light and airy */
+  --fs-hero: clamp(2.7rem, 1.6rem + 4.6vw, 6rem);
+  --fs-h2: clamp(2.1rem, 1.4rem + 2.6vw, 3.9rem);
+  --fs-h3: clamp(1.3rem, 1.1rem + .7vw, 1.75rem);
+  --fs-lead: clamp(1.06rem, 1rem + .35vw, 1.25rem);
   --fs-body: 1.0625rem;
   --fs-small: .875rem;
   --fs-tiny: .75rem;
-  --lh-tight: .95;
-  --lh-body: 1.65;
+  --lh-tight: 1.04;
+  --lh-body: 1.7;
   --track-caps: .16em;
+  --track-display: -.025em;
 
   /* layout */
-  --maxw: 1280px;
+  --maxw: 1240px;
   --gutter: clamp(16px, 4vw, 56px);
-  --section-y: clamp(84px, 9vw, 150px);
+  --section-y: clamp(80px, 9vw, 140px);
   --promo-h: 34px;
   --header-h: 76px;
 
-  /* shape: crisp, tailored corners (no bubbles) */
-  --r-sm: 3px;
-  --r-md: 6px;
-  --r-lg: 10px;
-  --r-xl: 14px;
+  /* shape: soft and rounded */
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-xl: 32px;
   --r-pill: 999px;
-  --outline: 1px solid var(--gold);
+  --outline: 1px solid var(--glass-edge);
 
-  /* depth */
-  --shadow-leather: 0 34px 70px -30px rgba(0, 0, 0, .9), 0 10px 24px -12px rgba(0, 0, 0, .7);
-  --shadow-leather-hover: 0 46px 90px -30px rgba(0, 0, 0, .95), 0 16px 34px -14px rgba(0, 0, 0, .8);
-  --shadow-soft: 0 24px 60px -26px rgba(0, 0, 0, .55);
-  --shadow-cut: drop-shadow(0 22px 24px rgba(0, 0, 0, .55)) drop-shadow(0 4px 5px rgba(0, 0, 0, .45));
-  --glow-gold: 0 0 0 1px rgba(201, 162, 74, .7), 0 0 28px -4px rgba(201, 162, 74, .45);
-  /* legacy shadow names */
-  --shadow-pop: var(--shadow-leather);
-  --shadow-pop-hover: var(--shadow-leather-hover);
+  /* depth and glow */
+  --shadow-soft: 0 30px 80px -40px rgba(2, 3, 18, .7);
+  --shadow-float: 0 40px 90px -44px rgba(3, 4, 24, .95), 0 10px 30px -18px rgba(3, 4, 24, .7);
+  --shadow-float-hover: 0 50px 110px -44px rgba(3, 4, 24, .95), 0 0 0 1px var(--glass-edge-hi), 0 0 40px -10px rgba(141, 123, 255, .45);
+  --shadow-cut: drop-shadow(0 26px 30px rgba(3, 4, 20, .6)) drop-shadow(0 0 22px rgba(141, 123, 255, .22));
+  --glow-star: 0 0 24px rgba(255, 233, 168, .55);
+  --glow-aurora: 0 0 44px -8px rgba(46, 229, 157, .5);
 
-  /* smoked glass */
-  --glass-smoke: rgba(18, 16, 13, .62);
-  --glass-smoke-strong: rgba(14, 12, 10, .78);
-  --glass-bone: rgba(239, 230, 210, .72);
-  --glass-blur: blur(20px) saturate(125%);
-  --glass-edge: rgba(201, 162, 74, .55);
-  --glass-edge-chrome: rgba(220, 224, 228, .35);
-  /* legacy glass names */
-  --glass-light: var(--glass-bone);
-  --glass-dark: var(--glass-smoke);
-
-  /* stitching */
-  --stitch: rgba(201, 162, 74, .75);
-  --stitch-bone: rgba(239, 230, 210, .55);
-  --stitch-dash: 7px;
-  --stitch-gap: 5px;
-
-  /* motion: weighty, never bouncy */
-  --ease-out: cubic-bezier(.16, .84, .24, 1);
-  --ease-heavy: cubic-bezier(.22, .9, .18, 1);
-  --ease-pop: var(--ease-heavy); /* legacy name: no overshoot any more */
+  /* motion: floaty, gentle */
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-float: cubic-bezier(.45, 0, .2, 1);
   --t-fast: .2s;
   --t-med: .5s;
   --t-slow: 1.1s;
@@ -112,6 +95,47 @@
   --z-header: 50;
   --z-drawer: 60;
   --z-gate: 100;
+
+  /* ---- aliases: Iron Star (revision 1-2) and Pop Glass names resolve to Starlight ---- */
+  --ink: var(--night);
+  --leather: var(--night-2);
+  --oil: var(--dusk);
+  --bone: var(--pearl);
+  --parchment: var(--pearl-2);
+  --gold: var(--star);
+  --gold-hi: var(--star-hi);
+  --red: var(--rose);
+  --chrome: var(--starlight);
+  --gold-grad: var(--starlight);
+  --font-black: var(--font-display);
+  --glass-smoke: var(--glass-fill);
+  --glass-smoke-strong: var(--glass-fill-strong);
+  --glass-bone: var(--glass-light-fill);
+  --glass-edge-chrome: var(--glass-edge);
+  --glass-light: var(--glass-light-fill);
+  --glass-dark: var(--glass-fill);
+  --stitch: rgba(255, 255, 255, .16);
+  --stitch-bone: rgba(20, 24, 51, .14);
+  --stitch-dash: 0px;
+  --stitch-gap: 0px;
+  --shadow-leather: var(--shadow-float);
+  --shadow-leather-hover: var(--shadow-float-hover);
+  --glow-gold: var(--glow-star);
+  --ease-heavy: var(--ease-out);
+  --ease-pop: var(--ease-out);
+  --paper: var(--bone);
+  --mist: var(--parchment);
+  --charcoal: var(--oil);
+  --green-ink: var(--leather);
+  --green-bright: var(--green-glow);
+  --coral: var(--red);
+  --pop-yellow: var(--gold);
+  --pop-pink: var(--red);
+  --pop-lime: var(--gold-hi);
+  --ink-soft: var(--text-dark-soft);
+  --paper-soft: var(--text-light-soft);
+  --shadow-pop: var(--shadow-leather);
+  --shadow-pop-hover: var(--shadow-leather-hover);
 }
 @media (max-width: 999px) {
   :root { --header-h: 64px; --promo-h: 32px; }

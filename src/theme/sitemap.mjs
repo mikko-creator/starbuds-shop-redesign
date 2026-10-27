@@ -1,7 +1,13 @@
 // sitemap.mjs - /site-map/ (FOUNDATION-R2): every page in ctx.pages (the pages rendered before this module; index.mjs
 // renders it last), grouped by section, each titled from its own <title>. Redirect stubs (meta refresh) and the 404 page
-// are left out. Iron Star: a hubHero, stitched smoked-glass panels with patch headings, blog posts by category.
-import { page, esc, icon, patch, hubHero, grain, halftone, leaves, seam, reveal } from './shell.mjs';
+// are left out. Starlight (HOME-R3, revision 3): a hubHero, clean frosted-glass panels on a night sky (styled in
+// home.css under .page-sitemap), pill counts, blog posts by category.
+import * as shell from './shell.mjs';
+import { page, esc, icon, patch, hubHero, reveal } from './shell.mjs';
+
+/** the night-sky back layer: FOUNDATION's sky() when shell.mjs exports it, else home.css's scoped .hm-sky layer */
+const sky = () => (typeof shell.sky === 'function' ? shell.sky({ stars: true, aurora: false })
+  : '<div class="hm-sky" aria-hidden="true"><span class="hm-sky__stars"></span><span class="hm-sky__stars hm-sky__stars--b"></span></div>');
 
 const SECTIONS = [
   { id: 'shop', title: 'Shop and save', match: (p) => p === '/' || /^\/(deals|rewards|products)\//.test(p) },
@@ -46,14 +52,14 @@ export function render(ctx) {
   const catTitle = (c) => (hubs.find((h) => h.path === `/blog/${c}/`) || {}).title || c.replace(/-/g, ' ');
   const total = all.length;
   const panel = (g, i) => `
-      <section class="sb-map__group sb-map__group--${g.id} glass glass--stitch stitch stitch--draw" aria-labelledby="map-${g.id}"${reveal('up', i % 3)}>
+      <section class="sb-map__group sb-map__group--${g.id} glass" aria-labelledby="map-${g.id}"${reveal('up', i % 3)}>
         <h2 class="sb-map__title" id="map-${g.id}">${esc(g.title)}</h2>
         <p class="sb-map__count">${patch(`${g.items.length} ${g.items.length === 1 ? 'page' : 'pages'}`, { tone: 'gold', size: 'sm' })}</p>
         ${list(g.items, PATH)}
       </section>`;
   const small = groups.filter((g) => g.id !== 'blog' && g.items.length);
   const blogPanel = blog.items.length ? `
-    <section class="sb-map__group sb-map__group--blog glass glass--stitch stitch stitch--draw" aria-labelledby="map-blog"${reveal('up')}>
+    <section class="sb-map__group sb-map__group--blog glass" aria-labelledby="map-blog"${reveal('up')}>
       <h2 class="sb-map__title" id="map-blog">Blog</h2>
       <p class="sb-map__count">${patch(`${blog.items.length} pages`, { tone: 'gold', size: 'sm' })}</p>
       ${hubs.length ? list(hubs.sort(byPath), PATH) : ''}
@@ -65,10 +71,9 @@ export function render(ctx) {
       </div>
     </section>` : '';
   const body = `
-${hubHero({ eyebrow: 'Star Buds', title: 'Site Map', intro: `Every page of this site, by section: ${total} pages.`, art: 'patch-wings', crumbs: [{ label: 'Site Map' }], id: 'map-h1' })}
+${hubHero({ eyebrow: 'Star Buds', title: 'Site Map', intro: `Every page of this site, by section: ${total} pages.`, art: 'cut-jar', crumbs: [{ label: 'Site Map' }], id: 'map-h1' })}
 <section class="section section--ink sb-map" aria-label="All pages">
-  <div class="plane-back">${leaves({ tone: 'dark', cls: 'sb-map__leaves' })}${halftone({ color: 'gold', at: 'bl' })}${grain()}</div>
-  ${seam({ kind: 'stitch' })}
+  <div class="plane-back">${sky()}<span class="sb-map__glow"></span></div>
   <div class="wrap">
     <div class="sb-map__grid">${small.map(panel).join('')}
     </div>
