@@ -1,6 +1,20 @@
-# Star Buds shop redesign: "Iron Star" design system
+# Star Buds shop redesign: "Starlight" design system
 
-## Concept
+## Current system: Starlight (revision 3)
+
+**Starlight** is ethereal glassmorphism that plays on the name Star Buds: simple, clean and modern.
+
+- **Grounds:** a deep indigo night sky (`--night`, `--night-2`, `--dusk`) with soft CSS star fields and aurora glows in the brand greens, teal and violet. Long reads (blog articles, legal pages, law and medical-card claims) sit on light pearl glass (`--pearl`).
+- **Glass:** frosted panels with a fine bright edge and a soft shine (`--glass-fill`, `--glass-edge`, `--glass-shine`, `--glass-blur`), rounded 16-32px.
+- **Accents:** aurora gradient (`--aurora`) for primary buttons and highlights, starlight (`--star`) for small marks, rose (`--rose`) for deal urgency only.
+- **Type:** one family, Manrope: large display headings at weight 300 with tight tracking, caps eyebrows at 600, body at 400.
+- **Homage to the name:** the brand star as a glowing mark, star sparkles and twinkling star fields, and the product cut-outs floating like stars with a halo and an orbit hairline.
+- **Motion:** gentle float, slow twinkle, fade-up reveals with a clearing blur, soft hover glows; none of it under `prefers-reduced-motion: reduce`.
+
+Tokens live in `src/styles/tokens.css`; the older Iron Star and Pop Glass token names are aliases onto the Starlight values. The helper functions in `src/theme/util.mjs` and `src/theme/shell.mjs` keep the signatures documented below, but render the Starlight look: `patch()` is a glass pill, `seal()` a glowing orb, `rocker()` a plain label, `emblem()` the glowing brand star, `seam()`/`pinstripe()` an aurora hairline, `grain()`/`halftone()`/`leaves()` render nothing, and the retired patch and tattoo art becomes a small star sparkle.
+
+## Earlier system: Iron Star (revisions 1-2, kept for reference)
+### Concept
 
 **Iron Star** is Old English biker pop-art, kept clean and modern. It borrows from a vintage club jacket and its
 patches: blackletter rocker lettering, embroidered twill patches with merrowed edges, black leather, smoked glass,
@@ -42,7 +56,7 @@ section.
 - `patch-star.png` no wider than ~140px (at a large size its star-in-circle can read as a pentacle);
 - the blank ribbon on `flash-leaf.png` stays blank: never put fake text on it.
 
-## Tokens (`src/styles/tokens.css`)
+### Tokens (`src/styles/tokens.css`)
 
 | Token | Value | Use |
 |---|---|---|
@@ -74,7 +88,7 @@ them:
 - `--pop-yellow` = gold, `--pop-pink` = red, `--pop-lime` = gold-hi;
 - `--shadow-pop` = leather shadow, `--glass-light` / `--glass-dark` = bone / smoke glass.
 
-## Page API (for the STORES-R1 and CONTENT-R1 lanes)
+### Page API (for the STORES-R1 and CONTENT-R1 lanes)
 
 A page module exports `render(ctx)` and returns `[{ path, html }]`. Paths end in `/` (written as `index.html`), except
 `'/404.html'`. Import everything from `./shell.mjs`:
@@ -267,7 +281,7 @@ absolute `liveUrl` / `mapUrl`, and internal links from hrefs already rendered in
 - Yes stores `1`; No shows a short message.
 - The page stays in the DOM.
 
-## Media
+### Media
 
 - **Hero:**
   - loop: `assets/media/hero-iron.webm` / `.mp4`, poster `hero-iron-poster.webp`, `hero-iron-phone.mp4` below 700px;
@@ -282,7 +296,7 @@ absolute `liveUrl` / `mapUrl`, and internal links from hrefs already rendered in
     names the page.
   - A category that still points at a `pop-*` cut-out gets `patch-leaf` on the home page.
 
-## Build
+### Build
 
 `node src/build.mjs [--out dir]` uses Node builtins plus `cwebp` (and `webpmux`, to attach the IPTC "AI-generated"
 XMP label to every WebP variant of `assets/generated/`). Variants are cached in `tmp/img-cache/`.

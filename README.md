@@ -40,7 +40,7 @@ legal advice, and link each statement to its official source.
 - [docs/STRUCTURE.md](docs/STRUCTURE.md): the shop's structure and architecture, how they were captured, how the
   redesign maps them, and the architecture adopted in revision 2
 - [docs/LOCATIONS.md](docs/LOCATIONS.md): every location, with its address, phone, hours and source
-- [docs/DESIGN.md](docs/DESIGN.md): the Iron Star design system: tokens, layers, motion, components
+- [docs/DESIGN.md](docs/DESIGN.md): the Starlight design system: tokens, glass, motion, components
 - [docs/MEDIA.md](docs/MEDIA.md): the generated stills (fal.ai) and motion loops (Higgsfield), and how they are labelled
 - [src/content/vendor/README.md](src/content/vendor/README.md): the map data and its licence
 
