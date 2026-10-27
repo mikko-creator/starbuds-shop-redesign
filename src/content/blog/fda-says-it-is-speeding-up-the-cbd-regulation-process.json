@@ -1,0 +1,42 @@
+{
+  "slug": "fda-says-it-is-speeding-up-the-cbd-regulation-process",
+  "category": "news-and-culture",
+  "categoryReason": "A news link-out: federal CBD regulation (2019).",
+  "title": "FDA Says It Is Speeding Up The CBD Regulation Process",
+  "date": "2019-07-16",
+  "dateText": "Jul 16, 2019",
+  "readTime": "1 min read",
+  "excerpt": "The Food and Drug Administration (FDA) said on Friday that it was “expediting” its efforts to develop rules for CBD and plans to issue a report on the department’s progress by early fall…",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/7effdd9acdb5-855.webp",
+    "w": 855,
+    "h": 554,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/7effdd9acdb5-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/7effdd9acdb5-855.webp",
+        "w": 855
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/7effdd9acdb5-640.webp",
+    "w": 640,
+    "h": 415,
+    "alt": "",
+    "srcset": "/assets/photos/blog/7effdd9acdb5-640.webp 640w, /assets/photos/blog/7effdd9acdb5-855.webp 855w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "The Food and Drug Administration (FDA) said on Friday that it was “expediting” its efforts to develop rules for CBD and plans to issue a report on the department’s progress by early fall. To read more on this story, head here: <a href=\"http://www.marijuanamoment.net/fda-says-it-is-speeding-up-the-cbd-regulation-process/\">https://www.marijuanamoment.net/fda-says-it-is-speeding-up-the-cbd-regulation-process/</a>"
+    }
+  ],
+  "source": "single-post__2019__07__16__fda-says-it-is-speeding-up-the-cbd-regulation-process.json",
+  "legacyPath": "/single-post/2019/07/16/fda-says-it-is-speeding-up-the-cbd-regulation-process"
+}

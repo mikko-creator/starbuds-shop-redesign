@@ -1,0 +1,35 @@
+{
+  "note": "Find your vibe: Star Buds articles by topic. Reading links only (the live menus cannot filter by feeling), and no label promises an effect. Left out for lack of a post on the topic: pain relief (no post is about pain; D9); energy (no post is about it); appetite (no post is about it; the recipes are recipes).",
+  "items": [
+    {
+      "label": "Read: cannabis and sleep",
+      "href": "/blog/health-and-lifestyle/the-sleepy-side-of-cannabis-exploring-its-impact-on-sleep/",
+      "title": "The Sleepy Side of Cannabis: Exploring Its Impact on Sleep",
+      "topic": "sleep"
+    },
+    {
+      "label": "Read: strains and laughter",
+      "href": "/blog/shopping-and-reviews/which-strain-makes-you-laugh-the-most/",
+      "title": "Which Strain Makes You Laugh the Most?",
+      "topic": "laughter"
+    },
+    {
+      "label": "Read: a chill night in",
+      "href": "/blog/shopping-and-reviews/the-best-cannabis-products-for-a-chill-night-in/",
+      "title": "The Best Cannabis Products for a Chill Night In",
+      "topic": "a night in"
+    },
+    {
+      "label": "Read: cannabis and creativity",
+      "href": "/blog/shopping-and-reviews/cannabis-and-creativity-how-certain-strains-can-spark-your-next-great-idea/",
+      "title": "Cannabis and Creativity: How Certain Strains Can Spark Your Next Great Idea",
+      "topic": "creativity"
+    },
+    {
+      "label": "Read: CBD and other cannabinoids",
+      "href": "/blog/resources/thc-cbd-cbn-more-understanding-the-most-common-cannabinoids/",
+      "title": "THC, CBD, CBN & More: Understanding the Most Common Cannabinoids",
+      "topic": "CBD"
+    }
+  ]
+}

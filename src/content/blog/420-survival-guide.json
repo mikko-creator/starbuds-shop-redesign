@@ -1,0 +1,81 @@
+{
+  "slug": "420-survival-guide",
+  "category": "news-and-culture",
+  "categoryReason": "4/20 culture: a guide to the day (2018).",
+  "title": "420 Survival Guide",
+  "date": "2018-04-18",
+  "dateText": "Apr 18, 2018",
+  "readTime": "2 min read",
+  "excerpt": "It’s April 20th, 8:00 am, and the sound of your alarm clock goes off. You roll over, check your phone, and light the pre-roll you scooped at Starbuds for only $4.20 the day before. It’s a…",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/b4c121abb610-1280.webp",
+    "w": 1280,
+    "h": 1280,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/b4c121abb610-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/b4c121abb610-1280.webp",
+        "w": 1280
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/b4c121abb610-640.webp",
+    "w": 640,
+    "h": 640,
+    "alt": "",
+    "srcset": "/assets/photos/blog/b4c121abb610-640.webp 640w, /assets/photos/blog/b4c121abb610-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "It’s April 20th, 8:00 am, and the sound of your alarm clock goes off. You roll over, check your phone, and light the pre-roll you scooped at Starbuds for only $4.20 the day before. It’s a big day for all us cannabis enthusiasts and we’ve got a lot of ground to cover, cannabis to consume, and friends to celebrate with. First things first, you need to assemble the essentials for the day and that backpack is fundamental in making sure you survive 4/20 in Denver."
+    },
+    {
+      "t": "p",
+      "html": "What To Pack"
+    },
+    {
+      "t": "p",
+      "html": "Activities abound on this day and you’ve got to make sure you pack the essential tools. Snacks and munchies to sustain you throughout the day are crucial, along with a water bottle to keep hydrated. You’ll want a tapestry or blanket for chilling out in parks, and sunglasses, sunscreen or a hat because we all know that mile high sun can burn you without mercy. Most importantly, of course, is your consuming kit. We’ve all got one; the little pouch you carry around with your nugs, bowl, lighters, rolling papers, hash pens, and pokey tool. This will be essential to the execution of a proper 4/20. Other fun things to include in your backpack to liven up the holiday are:"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "<a href=\"http://rainbowoptx.com\">Mood Boosting Colored Sunglasses</a>",
+        "Portable Speaker for jamming out",
+        "A <a href=\"http://www.amazon.com/smokebuddy-Jr-Black-Personal-Filter/dp/B009V16BM0/ref=sr_1_2?s=home-garden&amp;ie=UTF8&amp;qid=1522868788&amp;sr=1-2&amp;keywords=smoke+buddy\">smoke buddy</a>",
+        "Fun and easily transportable outdoor/board games like dominoes, dice or cards, or a ball to play games with",
+        "Chalk and/or glow sticks",
+        "Art supplies"
+      ]
+    },
+    {
+      "t": "p",
+      "html": "What To Do"
+    },
+    {
+      "t": "p",
+      "html": "After you’ve loaded up with the necessary tools, check out our <a href=\"/blog/news-and-culture/natives-guide-to-420/\">Native’s Guide to 4/20</a> to find out where to go and what to do. Hit up an day long 4/20 event like the one at Civic Park, catch one of the dozens of concerts going on, do something out of the box like a paint and smoke class, or catch some fresh air on a nice hike. With so much to choose from on this day there’s no reason you should spend it caged up inside your house! This is a perfect day to really experience Denver culture."
+    },
+    {
+      "t": "p",
+      "html": "What To Do When You Need a Break From The Festivities"
+    },
+    {
+      "t": "p",
+      "html": "When you can feel a crash coming on and really need a break we recommend chilling out in one of the many parks around Denver, or slipping into a movie theater for a midday break (Super Troopers 2 is premiering on 4/20!. However, if your ride or die won't let you rest and you need to rally simply grab a CBD cold brew coffee from <a href=\"http://www.carbondenver.com\">Carbon Cafe and Bar</a>. This little cafe is the perfect place to retreat to for a midday intermission, with a dimly lit atmosphere and an incredible menu."
+    },
+    {
+      "t": "p",
+      "html": "It’s going to be a long day folks, we'll see you out there! Make sure you get to the Starbuds <a href=\"/dispensaries/\">location</a> nearest you to stock up on the best deals and supplies for your 4/20 ride and remember public consumption is illegal in Colorado. For more on this and additional info surrounding cannabis laws and guidelines in Colorado visit: <a href=\"http://goodtoknowcolorado.com/\">Good To Know Colorado</a>"
+    }
+  ],
+  "source": "single-post__2018__04__18__420-survival-guide.json",
+  "legacyPath": "/single-post/2018/04/18/420-survival-guide"
+}

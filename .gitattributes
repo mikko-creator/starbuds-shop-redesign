@@ -4,3 +4,6 @@ docs/BUILD-CONTRACT.md export-ignore
 docs/QA.md export-ignore
 audit export-ignore
 docs/REVISION-1.md export-ignore
+docs/REVISION-2.md export-ignore
+docs/QA-R2.md export-ignore
+docs/FACTS-R2.md export-ignore

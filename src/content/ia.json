@@ -1,0 +1,115 @@
+{
+  "_about": "Revision 2 header and footer data (FOUNDATION-R2), written from docs/REVISION-2.md 'Header' and 'Footer': the nav order, mega-menu groups and footer columns follow the large multi-state operator's site; every item is a Star Buds page or a Star Buds source. Rendered by src/theme/shell.mjs. A group with \"from\" is filled at build time: \"site.categories\" = the 9 shop categories of site.json as live-menu links (data-menu-cat, rewritten by site.js); \"resources/products.json\" = the product guides RESOURCES-R2 writes ({guides:[{slug,label,href}]}), else \"fallback\"; \"blog/vibes.json\" = the reading list BLOG-R2 writes ({items:[{label,href,title}]}), else \"fallback\"; \"site.storesByState\" = the 12 shop stores of site.json by state. Notes (\"note\") are neutral UI glue and state no Star Buds fact.",
+  "promo": {
+    "text": "Shop Our Special Offers",
+    "href": "/deals/",
+    "pickLabel": "Pick up at",
+    "_omitted": "Delivery (no shop-state delivery in the sources), My Account (no Star Buds accounts on this site), chat (none)."
+  },
+  "nav": [
+    { "id": "shop", "label": "Shop", "menuCat": "" },
+    {
+      "id": "explore",
+      "label": "Explore",
+      "mega": {
+        "feature": {
+          "eyebrow": "Deals",
+          "titleFrom": "site.promo.text",
+          "textFrom": "site.dealsIntro.subtitle",
+          "href": "/deals/",
+          "cta": "See all deals",
+          "art": "cut-preroll"
+        },
+        "groups": [
+          { "id": "categories", "heading": "Categories", "from": "site.categories", "note": "Opens the live menu of your store" },
+          { "id": "guides", "heading": "Product guides", "from": "resources/products.json", "lead": { "label": "All product guides", "href": "/products/" }, "fallback": [] },
+          { "id": "vibes", "heading": "Find your vibe", "from": "blog/vibes.json", "note": "Reading from the Star Buds blog", "fallback": [{ "label": "Blog", "href": "/blog/" }] }
+        ]
+      }
+    },
+    { "id": "rewards", "label": "Rewards", "href": "/rewards/" },
+    {
+      "id": "resources",
+      "label": "Resources",
+      "mega": {
+        "groups": [
+          {
+            "id": "resources",
+            "heading": "Resources",
+            "items": [
+              { "label": "Dispensary Guide", "href": "/dispensary-guides/", "note": "Visiting a Star Buds store, state by state" },
+              { "label": "Getting a Medical Card", "href": "/getting-a-medical-card/", "note": "How each state's medical program works" },
+              { "label": "State Laws", "href": "/cannabis-laws-by-state/", "note": "Cannabis rules in Mississippi, Oklahoma, Maryland and New York" },
+              { "label": "Blog", "href": "/blog/", "note": "Articles from Star Buds" },
+              { "label": "Recipes", "href": "/blog/recipes/", "note": "Cooking articles from the blog" },
+              { "label": "Patient Guide", "href": "/patient-guide/", "note": "CBD, terpenes, cannabinoids and more" }
+            ]
+          }
+        ],
+        "feature": {
+          "eyebrow": "From the blog",
+          "from": "blog/index.json",
+          "fallback": { "title": "The Star Buds blog", "href": "/blog/", "cta": "Read the blog" },
+          "cta": "Read the article",
+          "art": "patch-leaf"
+        }
+      }
+    },
+    {
+      "id": "dispensaries",
+      "label": "Dispensaries",
+      "href": "/dispensaries/",
+      "mega": {
+        "groups": [
+          { "id": "states", "from": "site.storesByState", "hubHref": "/dispensaries/{state}/" },
+          {
+            "id": "more",
+            "heading": "More Star Buds",
+            "items": [
+              { "label": "Star Buds Colorado", "href": "https://www.starbudscolorado.com/", "external": true },
+              { "label": "Star Buds Illinois", "href": "https://starbudsillinois.us/", "external": true }
+            ]
+          }
+        ],
+        "feature": {
+          "eyebrow": "All locations",
+          "title": "Dispensaries",
+          "href": "/dispensaries/",
+          "cta": "All locations",
+          "art": "chrome-star"
+        }
+      }
+    }
+  ],
+  "footer": {
+    "main": {
+      "heading": "Star Buds",
+      "items": [
+        { "label": "Home", "href": "/" },
+        { "label": "Shop", "menuCat": "" },
+        { "label": "Rewards", "href": "/rewards/" },
+        { "label": "Blog", "href": "/blog/" },
+        { "label": "Dispensaries", "href": "/dispensaries/" }
+      ]
+    },
+    "more": {
+      "heading": "More information",
+      "items": [
+        { "label": "Getting a Medical Card", "href": "/getting-a-medical-card/" },
+        { "label": "About Us", "href": "/about-us/" },
+        { "label": "Contact Us", "href": "/contact/" },
+        { "label": "FAQ", "href": "/faq/" },
+        { "label": "Careers", "href": "/careers/" },
+        { "label": "Community", "href": "/community/" },
+        { "label": "In the Press", "href": "/media/" },
+        { "label": "Cancer Relief Program", "href": "/cancer-relief-program/" },
+        { "label": "EULA", "href": "/eula/" },
+        { "label": "Higher Rewards Terms", "href": "/rewards/terms/" },
+        { "label": "Site Map", "href": "/site-map/" }
+      ]
+    },
+    "social": [],
+    "_socialNote": "No brand-wide Star Buds social links in site.json or the starbuds.us capture: the only ones (facebook.com/starbudsbmore, instagram.com/star.budsmd) sit on maryland.json and belong to the Baltimore store, so the brand footer carries none.",
+    "_omitted": "Licences (none published for the shop stores), privacy / consumer-health-data / accessibility pages (not captured; the live shop's Privacy Policy and Terms Of Use stay linked in the legal strip), chat, parent-company link."
+  }
+}

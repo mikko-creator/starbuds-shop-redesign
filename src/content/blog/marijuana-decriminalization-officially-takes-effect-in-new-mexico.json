@@ -1,0 +1,53 @@
+{
+  "slug": "marijuana-decriminalization-officially-takes-effect-in-new-mexico",
+  "category": "news-and-culture",
+  "categoryReason": "A news link-out: state law (2019).",
+  "title": "Marijuana Decriminalization Officially Takes Effect In New Mexico",
+  "date": "2019-07-01",
+  "dateText": "Jul 1, 2019",
+  "updated": "Sep 20, 2024",
+  "readTime": "1 min read",
+  "excerpt": "New Mexico’s marijuana decriminalization went into effect on Monday, about three months after the reform legislation was signed into law by Gov. Michelle Lujan Grisham (D).",
+  "tags": [],
+  "hero": null,
+  "image": {
+    "src": "/assets/photos/blog/53cda27f43c6-640.webp",
+    "w": 640,
+    "h": 427,
+    "alt": "",
+    "srcset": "/assets/photos/blog/53cda27f43c6-640.webp 640w, /assets/photos/blog/53cda27f43c6-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "New Mexico’s marijuana decriminalization went into effect on Monday, about three months after the reform legislation was signed into law by Gov. Michelle Lujan Grisham (D)."
+    },
+    {
+      "t": "p",
+      "html": "Head over to Marijuana Moment to read more about it -"
+    },
+    {
+      "t": "p",
+      "html": "<a href=\"http://www.marijuanamoment.net/marijuana-decriminalization-officially-takes-effect-in-new-mexico/\">https://www.marijuanamoment.net/marijuana-decriminalization-officially-takes-effect-in-new-mexico/</a>"
+    },
+    {
+      "t": "img",
+      "src": "/assets/photos/blog/53cda27f43c6-1280.webp",
+      "w": 1280,
+      "h": 853,
+      "srcset": [
+        {
+          "src": "/assets/photos/blog/53cda27f43c6-640.webp",
+          "w": 640
+        },
+        {
+          "src": "/assets/photos/blog/53cda27f43c6-1280.webp",
+          "w": 1280
+        }
+      ],
+      "alt": ""
+    }
+  ],
+  "source": "single-post__2019__07__01__marijuana-decriminalization-officially-takes-effect-in-new-mexico.json",
+  "legacyPath": "/single-post/2019/07/01/marijuana-decriminalization-officially-takes-effect-in-new-mexico"
+}

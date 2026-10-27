@@ -1,0 +1,403 @@
+{
+  "slug": "the-endocannabinoid-system-everything-you-need-to-know",
+  "category": "cannabis-101",
+  "categoryReason": "Explains the endocannabinoid system: science basics.",
+  "title": "The Endocannabinoid System: Everything You Need to Know",
+  "date": "2020-08-04",
+  "dateText": "Aug 4, 2020",
+  "updated": "Jan 21, 2021",
+  "readTime": "10 min read",
+  "excerpt": "What if we told you that along with your digestive, respiratory, and nervous system, your body is equipped with a perfectly designed system to process cannabis? And not only that, but your…",
+  "tags": [
+    "THC",
+    "CBD",
+    "Endocannabinoid System",
+    "Cannabis",
+    "Marijuana",
+    "Medical Marijuana",
+    "Weed",
+    "Anxiety",
+    "Cannabis Science",
+    "Depression",
+    "Dispensary",
+    "ECS",
+    "Lack of Appetite",
+    "Medical Cannabis",
+    "Weed Science"
+  ],
+  "hero": null,
+  "image": null,
+  "blocks": [
+    {
+      "t": "p",
+      "html": "What if we told you that along with your digestive, respiratory, and nervous system, your body is equipped with a perfectly designed system to process cannabis? And not only that, but your body produces cannabinoids naturally, all on its own?"
+    },
+    {
+      "t": "p",
+      "html": "That's right, we're talking about the endocannabinoid system, and if you've been wondering how it all works, keep reading because this article is for you!"
+    },
+    {
+      "t": "h2",
+      "html": "What is the Endocannabinoid System (ECS)?"
+    },
+    {
+      "t": "p",
+      "html": "The endocannabinoid system (ECS) is an important part of how the human body maintains function and health. It plays a role in all our major body systems and helps to fine-tune many of our body's essential functions. It affects everything from appetite, sleep, pain, memory, inflammation, mood, and more."
+    },
+    {
+      "t": "p",
+      "html": "By regulating homeostasis, the ECS ensures that all parts of the body are working in harmony with one another."
+    },
+    {
+      "t": "p",
+      "html": "Here's how!"
+    },
+    {
+      "t": "h2",
+      "html": "What is Homeostasis?"
+    },
+    {
+      "t": "p",
+      "html": "To understand how the ECS works in the body, it is crucial to understand the concept of homeostasis. Homeostasis refers to how the body regulates things like water content, blood sugar, and more. For our bodies to function the right way, conditions need to be balanced so we stay healthy and can feel our best."
+    },
+    {
+      "t": "p",
+      "html": "You can think of it like Goldilocks and her three bears -- we can't be too hot, or too cold, but just right. Our bodies have a fantastic ability to create homeostasis by using a negative feedback system. That means it is continuously monitoring itself, so when something goes wrong, it can be corrected. And that is the primary job of the endocannabinoid system."
+    },
+    {
+      "t": "h2",
+      "html": "Why Didn't I Learn About the ECS in School?"
+    },
+    {
+      "t": "p",
+      "html": "You remember your days in school learning about all the major systems of the human body. We are taught about the respiratory, circulatory, reproductive, and digestive systems. But what about the ECS?"
+    },
+    {
+      "t": "p",
+      "html": "Unless you are a scientist or work in medical cannabis, you are probably only now learning about this mysterious system. The good news is that the ECS is finally being recognized as the most important physiologic system involved in establishing and maintaining human health."
+    },
+    {
+      "t": "p",
+      "html": "Pretty incredible, right?"
+    },
+    {
+      "t": "h2",
+      "html": "How Did We Discover the Endocannabinoid System?"
+    },
+    {
+      "t": "p",
+      "html": "We have only known about the ECS for about 25 years. Dr. L.A. Matsuda first discovered it in the 1990s. Scientists were trying to figure out how <a href=\"http://en.wikipedia.org/wiki/Tetrahydrocannabinol\">THC</a>, the primary intoxicating compound in cannabis, affected our bodies."
+    },
+    {
+      "t": "p",
+      "html": "What they found out was nothing short of amazing. Scientists were able to reveal a web of receptors, biochemical pathways, and enzymes involved in how cannabis interacts with our body. And the discovery of these receptors made scientists curious about why we have them."
+    },
+    {
+      "t": "p",
+      "html": "Does the body make its own naturally occurring compounds to interact with these receptors? Why would our bodies produce these types of receptors if we didn't have naturally occurring cannabinoids that bind with them?"
+    },
+    {
+      "t": "p",
+      "html": "These questions led to the discovery of our body's own cannabinoid compounds called endocannabinoids (\"endo\" meaning from inside the body), which are very similar to the ones created by the cannabis plant."
+    },
+    {
+      "t": "p",
+      "html": "Even though researchers were focused on uncovering this system in humans and other mammals, it turns out that we share these neurochemicals with almost all members of the animal kingdom, including birds, fish, amphibians. We now understand that the ECS has been evolving for over 600 million years!"
+    },
+    {
+      "t": "p",
+      "html": "Because the ECS has been around for so long, it has become connected with many of our neurological and physiological functions. But for now, we will just go over the basics of this remarkable system."
+    },
+    {
+      "t": "p",
+      "html": "The three main pieces to the puzzle are:"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Endocannabinoids (eCBs)",
+        "Cannabinoid receptors",
+        "Enzymes that break down eCBs"
+      ]
+    },
+    {
+      "t": "p",
+      "html": "Let's explore how these three components work to and function in the ECS"
+    },
+    {
+      "t": "h2",
+      "html": "The Three Components of the Endocannabinoid System"
+    },
+    {
+      "t": "h3",
+      "html": "<strong>Endocannabinoids (eCBs)</strong>"
+    },
+    {
+      "t": "p",
+      "html": "You have probably heard of neurotransmitters like dopamine and serotonin. They act as chemical messengers of our nervous system, sending messages back and forth between receptors in our body. Endocannabinoids also work as messengers and are produced throughout the whole body."
+    },
+    {
+      "t": "p",
+      "html": "The two main eCBs are Anandamide (AEA) and 2-ArachidonoylGlyerol (2-AG). They bind with cannabinoid receptors, just like the cannabinoids found in cannabis (THC)."
+    },
+    {
+      "t": "p",
+      "html": "<strong>Anandamide</strong> was named after the Sanskrit word Ananda, meaning \"bliss.\" It is involved in many functions, like memory and appetite. Scientists even think it's responsible for the \"<a href=\"http://www.scientificamerican.com/article/new-brain-effects-behind-runner-s-high/\"><strong>runner’s high</strong></a>” we experience after an intense workout!"
+    },
+    {
+      "t": "p",
+      "html": "<strong>2-ArachidonoylGlyerol (2-AG)</strong> doesn’t have as cool of a name, but it’s also a vital molecule that’s been linked to our emotional and cardiovascular health. You know that great feeling you get after an orgasm? You can thank 2-AG."
+    },
+    {
+      "t": "h3",
+      "html": "<strong>Cannabinoid Receptors</strong>"
+    },
+    {
+      "t": "p",
+      "html": "If you think of the cCBs as the messengers traveling on horseback, then cannabinoid receptors are the guards at the castle wall, waiting for the arrival of the messengers. Receptors sit on the surfaces of cells and wait for neurotransmitters to bind with them."
+    },
+    {
+      "t": "p",
+      "html": "We have cannabinoid receptors throughout our body, helping to guard a large variety of cells and their responses. The type of receptor depends on the type of cell it sits on, which are responsive to different types of eCBs. The two receptors involved in the ECS are CB1 and CB2."
+    },
+    {
+      "t": "p",
+      "html": "<strong>CB1 receptors</strong> are responsible for a healthy brain. They can help moderate things like mood, memory, and perception of pain. They are also responsible for the psychoactive effects that happen when THC binds with them."
+    },
+    {
+      "t": "p",
+      "html": "<strong>CB2 receptors</strong> are usually found sitting on immune system cells. They work to moderate inflammation. When you use cannabis to treat conditions due to an overactive immune system, you are engaging the CB2 receptors."
+    },
+    {
+      "t": "h3",
+      "html": "<strong>Enzymes</strong>"
+    },
+    {
+      "t": "p",
+      "html": "Now that we’ve gone over the system of messengers and receivers, let's talk about how they are created. eCBs are lipid-based, meaning they are made from fat. And our bodies have many different types of enzymes that work to convert fat into anandamide and 2-AG. When it’s time for your body to produce eCBs, enzymes take action to make it happen."
+    },
+    {
+      "t": "p",
+      "html": "Not only do enzymes create eCBs, but they also work to kill the messenger. Once the eCBs have delivered the message, the body has a way to stop them. When that time comes, transport proteins work to move the eCBs to storage sites where they are degraded by enzymes."
+    },
+    {
+      "t": "p",
+      "html": "The two enzymes we know the most about are:"
+    },
+    {
+      "t": "p",
+      "html": "<strong>FAAH</strong> – which works to degrade anandamide"
+    },
+    {
+      "t": "p",
+      "html": "<strong>MAGL</strong> – which works to break down 2-AG"
+    },
+    {
+      "t": "p",
+      "html": "Got it? We know that’s a lot of information to digest, so check out this helpful video for a visual breakdown of what we just went over."
+    },
+    {
+      "t": "p",
+      "html": "Now let us move on to the real start of the show: cannabis!"
+    },
+    {
+      "t": "h2",
+      "html": "Cannabinoids: How the Cannabis Plant Interacts With the Body"
+    },
+    {
+      "t": "p",
+      "html": "So now that you know the basics of the ECS and how it works, let's talk about how the cannabis plant fits into the picture."
+    },
+    {
+      "t": "p",
+      "html": "Cannabinoids are the chemical compounds produced by cannabis flowers and are the key to providing relief from an array of symptoms like nausea, inflammation, and pain."
+    },
+    {
+      "t": "p",
+      "html": "You are probably familiar with THC and CBD, but there have been over 100 different types of cannabinoids discovered in the cannabis plant that we are learning more about every day. Since the cannabis plant creates them, they are also known as “phytocannabinods,” (phyto meaning “plant”)."
+    },
+    {
+      "t": "p",
+      "html": "They work their magic by mimicking endocannabinoids, the compounds we naturally produce. To put it simply, cannabinoids can mediate the communication work of the endocannabinoid system. They can step in to do the job when there is a problem or deficiency with our ECS."
+    },
+    {
+      "t": "p",
+      "html": "When you consume cannabis, the cannabinoids bind to the CB1, and CB2 receptors just like the endocannabinoids do. Different cannabinoids produce different effects, which depend on which receptors they bind with."
+    },
+    {
+      "t": "p",
+      "html": "For example, THC binds strongly with the receptors in the brain (CB1), while CBN (cannabinol) binds strongly with CB2 receptors found throughout the body."
+    },
+    {
+      "t": "p",
+      "html": "If you’ve ever wondered why one plant can provide so much variety when it comes to uses and effects -- it’s the cannabinoids! Each strain has a variety of different combinations and amounts. Two of the most popular and abundant cannabinoids are THC and CBD."
+    },
+    {
+      "t": "p",
+      "html": "Let’s take a look at what these two power-packed cannabinoids can offer."
+    },
+    {
+      "t": "h3",
+      "html": "<strong>THC</strong>"
+    },
+    {
+      "t": "p",
+      "html": "THC gets the greatest attention because it is the most plentifully and provides us with the signature “high” associated with cannabis. It’s also praised for its potent medical effects, which help patients all over the world."
+    },
+    {
+      "t": "p",
+      "html": "So how is THC typically used, and what can it help with?"
+    },
+    {
+      "t": "p",
+      "html": "One of the most common uses of THC is for pain relief. Pain is one of the most common reasons people use cannabis, and THC plays a starring role in the pain-fighting power of the plant. While many cannabinoids can offer some relief from pain, studies show that <a href=\"http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2503660/\">THC can provide the highest level of support</a> – beating alternatives like CBD."
+    },
+    {
+      "t": "p",
+      "html": "Others love THC for its mood-boosting capability. Studies have shown that <a href=\"http://www.sciencedirect.com/science/article/pii/S0091305710000730\">THC can even act as an antidepressant</a>, uplifting a low mood and soothing anxiety."
+    },
+    {
+      "t": "p",
+      "html": "Additionally, THC has been shown to help with things like muscle spasms, nausea, and sleep disorders. It’s a potent anti-inflammatory, antioxidant, and can help protect brain cells. People love it for its ability to fight pain, anxiety, and to <a href=\"http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2828614/\">reduce inflammation</a>."
+    },
+    {
+      "t": "p",
+      "html": "While THC has a lot to offer, it’s psychotropic properties can be a bit too much for some cannabis users. Depending on the dose, it has the potential to cause side effects like confusion, short term memory loss, anxiety, and shifts in the perception of time."
+    },
+    {
+      "t": "p",
+      "html": "Fortunately, these effects can usually be mitigated by lowering your dose and combining THC with other cannabinoids like CBD."
+    },
+    {
+      "t": "h3",
+      "html": "<strong>CBD</strong>"
+    },
+    {
+      "t": "p",
+      "html": "Known as the “non-psychoactive cannabinoid, CBD has gained a lot of popularity in recent years. The truth is, CBD isn’t exactly non-psychoactive, because it can alter your mood by soothing anxiety and easing depression."
+    },
+    {
+      "t": "p",
+      "html": "But the biggest draw to CBD is that it doesn’t produce the type of disorienting effects that come with THC. CBD lovers report that it helps them feel better while keeping their minds sharp and functional."
+    },
+    {
+      "t": "p",
+      "html": "And get this! According to the World Health Organization, CBD has the power to help epilepsy, psychosis, Parkinson’s, and Alzheimer’s disease, as well as other severe conditions. We’re only just beginning to uncover the therapeutic potential of this fantastic cannabinoid!"
+    },
+    {
+      "t": "p",
+      "html": "While cannabinoids on their own can provide us with remarkable effects, their benefits really shine when used together. Let’s take a look at the synergistic combination of these compounds and how we can reap the most benefits by using them together."
+    },
+    {
+      "t": "h2",
+      "html": "The Entourage Effect"
+    },
+    {
+      "t": "p",
+      "html": "Now that you are familiar with the natural benefits of the two main cannabis compounds – THC and CBD – let’s take a look at how these and other cannabinoids work together to deliver the full potential of cannabis."
+    },
+    {
+      "t": "p",
+      "html": "The reason cannabis enthusiasts care about the ratios of THC and CBD is because these compounds work together in tandem. This phenomenon is known as the entourage effect. The entourage effect is the idea that the different properties of cannabis act together in a synergistic way that enhances the therapeutic effects of one another."
+    },
+    {
+      "t": "p",
+      "html": "Basically, you get more bang for your buck when you use everything the cannabis plant has to offer. The bottom line is that while cannabinoids are beneficial on their own, using them together creates a more powerful effect."
+    },
+    {
+      "t": "h2",
+      "html": "Endocannabinoid deficiency"
+    },
+    {
+      "t": "p",
+      "html": "So, we know that cannabinoids from cannabis can offer relief for people suffering from a variety of chronic illnesses. But if our bodies produce their own endocannabinoids, why would we need to supplement with plant cannabinoids?"
+    },
+    {
+      "t": "p",
+      "html": "That’s a great question, and scientists think it might have something to do with our bodies not producing enough of these essential endocannabinoids."
+    },
+    {
+      "t": "p",
+      "html": "In fact, Ethan Russo M.D., Director of Research and Development of the International Cannabis and Cannabinoids Institute, has a theory that an <a href=\"http://www.ncbi.nlm.nih.gov/pmc/articles/PMC5576607/\">endocannabinoid deficiency</a> might be the leading cause of conditions like fibromyalgia, irritable bowel syndrome, migraines, and other treatment-resistant conditions."
+    },
+    {
+      "t": "p",
+      "html": "Because the ECS plays a part in all our major bodily systems, it’s dysfunction could potentially cause a variety of conditions."
+    },
+    {
+      "t": "p",
+      "html": "When we use cannabis, natural plant cannabinoids help support our ECS and enhance the signaling. That means that the cannabis plant can act as a medicine to our most crucial physiologic healing system."
+    },
+    {
+      "t": "p",
+      "html": "Science has a long way to go before we fully understand everything about how cannabis works and the best ways to apply it as a medicine. But what we know so far is very promising, and researchers are working every day to unlock its potential."
+    },
+    {
+      "t": "h2",
+      "html": "The Treatment Potential of Cannabis"
+    },
+    {
+      "t": "p",
+      "html": "Before cannabis became illegal in the 1930s, it had been used for thousands of years to treat a large number of conditions and ailments like headaches, pain, nausea, and depression. And believe it or not, most American households in the 1800s had a bottle of cannabis tincture in their medicine cabinet!"
+    },
+    {
+      "t": "p",
+      "html": "Old-time doctors and ancient healers might not have known how the cannabis plant worked, but it worked well, and its effectiveness provided the groundwork for later scientific breakthroughs. When the ECS was discovered, it revealed a biological explanation for the therapeutic effects of the cannabis plant and sparked a growing interest in medicinal cannabis."
+    },
+    {
+      "t": "p",
+      "html": "So why don’t doctors today know more about cannabis? Unfortunately, the research is limited."
+    },
+    {
+      "t": "p",
+      "html": "The biggest reason we are only now unlocking the science behind the medicinal benefits of cannabis is because of its DEA listing as a schedule 1 drug. Because of this, researchers need a special license to study the plant in the US. But the good news is countries like Israel have been able to study it for decades, and the research is promising."
+    },
+    {
+      "t": "p",
+      "html": "What we know for sure form studies conducted in the US and around the world is that cannabis has been used to successfully treat a number of conditions, including:"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Appetite loss",
+        "Cancer",
+        "Alzheimer’s disease",
+        "Crohn’s disease",
+        "Epilepsy",
+        "Mental health",
+        "Eating disorders",
+        "Glaucoma",
+        "Muscle spasms",
+        "Multiple sclerosis",
+        "Pain",
+        "Nausea"
+      ]
+    },
+    {
+      "t": "h2",
+      "html": "A Summary of the Endocannabinoid System"
+    },
+    {
+      "t": "p",
+      "html": "Let’s take a moment to go over what we just learned so that you can take with you everything you need to know about the endocannabinoid system and feel empowered to reap the benefits of cannabis!"
+    },
+    {
+      "t": "p",
+      "html": "The ECS is made up of endocannabinoids, receptors, and enzymes and provides the body with a vital way of maintaining homeostasis. It makes sure that our cells and systems stay in the Goldilocks zone, where everything is balanced just right."
+    },
+    {
+      "t": "p",
+      "html": "The ECS becomes activated when needed, and consuming the cannabinoids from cannabis can help it along if it becomes unbalanced or depleted."
+    },
+    {
+      "t": "p",
+      "html": "Scientists are still learning more about this fantastic system every day, but what we do know can help us appreciate why we have an ECS and the potential for cannabis therapies as a medical treatment."
+    },
+    {
+      "t": "p",
+      "html": "We hope this article was able to answer all of your questions about the ECS and its functions. If you are excited about using cannabis and experiencing the ECS in action for yourself, please come down and see us at one of our many locations. Our knowledgeable staff will be happy to answer your product questions and help you find the perfect solution for your needs!"
+    }
+  ],
+  "source": "single-post__2020__08__03__the-endocannabinoid-system-everything-you-need-to-know.json",
+  "legacyPath": "/single-post/2020/08/03/the-endocannabinoid-system-everything-you-need-to-know"
+}

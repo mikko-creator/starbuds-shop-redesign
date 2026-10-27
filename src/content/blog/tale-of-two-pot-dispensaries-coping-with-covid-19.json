@@ -1,0 +1,49 @@
+{
+  "slug": "tale-of-two-pot-dispensaries-coping-with-covid-19",
+  "category": "news-and-culture",
+  "categoryReason": "A news link-out: dispensaries during COVID-19 (2020).",
+  "title": "Tale Of Two Pot Dispensaries: Coping with COVID-19",
+  "date": "2020-04-13",
+  "dateText": "Apr 13, 2020",
+  "readTime": "1 min read",
+  "excerpt": "It was the worst of times; it was the best of times. For two cannabis businesses, one based in Colorado and the other in Massachusetts, it’s been a mixture of both during the COVID-19…",
+  "tags": [],
+  "hero": null,
+  "image": {
+    "src": "/assets/photos/blog/07744888435d-640.webp",
+    "w": 640,
+    "h": 350,
+    "alt": "",
+    "srcset": "/assets/photos/blog/07744888435d-640.webp 640w, /assets/photos/blog/07744888435d-749.webp 749w"
+  },
+  "blocks": [
+    {
+      "t": "img",
+      "src": "/assets/photos/blog/07744888435d-749.webp",
+      "w": 749,
+      "h": 410,
+      "srcset": [
+        {
+          "src": "/assets/photos/blog/07744888435d-640.webp",
+          "w": 640
+        },
+        {
+          "src": "/assets/photos/blog/07744888435d-749.webp",
+          "w": 749
+        }
+      ],
+      "alt": ""
+    },
+    {
+      "t": "p",
+      "html": "It was the worst of times; it was the best of times. For two cannabis businesses, one based in Colorado and the other in Massachusetts, it’s been a mixture of both during the COVID-19 pandemic."
+    },
+    {
+      "t": "link",
+      "href": "http://www.forbes.com/sites/irisdorbian/2020/04/13/tale-of-two-dispensaries-coping-with-covid-19",
+      "text": "READ THE FULL ARTICLE HERE"
+    }
+  ],
+  "source": "single-post__2020__04__13__tale-of-two-pot-dispensaries-coping-with-covid-19.json",
+  "legacyPath": "/single-post/2020/04/13/tale-of-two-pot-dispensaries-coping-with-covid-19"
+}

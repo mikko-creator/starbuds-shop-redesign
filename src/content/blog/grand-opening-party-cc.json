@@ -1,0 +1,82 @@
+{
+  "slug": "grand-opening-party-cc",
+  "category": "news-and-culture",
+  "categoryReason": "Store events: the Commerce City grand opening party (2017).",
+  "title": "GRAND OPENING PARTY CC",
+  "date": "2017-07-06",
+  "dateText": "Jul 6, 2017",
+  "readTime": "1 min read",
+  "excerpt": "Don't miss our Grand Opening Event happening at our newest location in Commerce City, July 7th 11am-4pm. We're happy to have our eighth convenient location & can't wait to share some of our…",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/9378f8a6d5a5-1280.webp",
+    "w": 1280,
+    "h": 958,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/9378f8a6d5a5-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/9378f8a6d5a5-1280.webp",
+        "w": 1280
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/9378f8a6d5a5-640.webp",
+    "w": 640,
+    "h": 479,
+    "alt": "",
+    "srcset": "/assets/photos/blog/9378f8a6d5a5-640.webp 640w, /assets/photos/blog/9378f8a6d5a5-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "Don't miss our Grand Opening Event happening at our newest location in Commerce City, July 7th 11am-4pm."
+    },
+    {
+      "t": "p",
+      "html": "We're happy to have our eighth convenient location &amp; can't wait to share some of our most exclusive deals,"
+    },
+    {
+      "t": "p",
+      "html": "prizes, and more! Our ribbon cutting ceremony with the Commerce City Chamber of Commerce will start off"
+    },
+    {
+      "t": "p",
+      "html": "the event at 11AM followed by a TON of fun."
+    },
+    {
+      "t": "p",
+      "html": "FLO 107.1 will be there set up with a LIVE DJ, doing shout outs, giveaways &amp; playing the hottest new hits!"
+    },
+    {
+      "t": "p",
+      "html": "Have you ever wanted to get chauffeured around with your friends in a CUSTOM, decked out Mercedes Sprinter Van?"
+    },
+    {
+      "t": "p",
+      "html": "Starbuds will be RAFFLING off 2 hours for you and your friends to go wherever you want in Colorado, so make to"
+    },
+    {
+      "t": "p",
+      "html": "sure stop by the store to enter."
+    },
+    {
+      "t": "p",
+      "html": "Not only will we be giving away a TON of cool gifts, we will have one of a kind deals from us and our excluive Vendors (High Tech, Ripple by Stillwater &amp; Taste Budz) who will be doing Buy One Get One for a Penny deals that are OUT of this world!"
+    },
+    {
+      "t": "p",
+      "html": "We cant wait to see you there!"
+    },
+    {
+      "t": "p",
+      "html": "(21+ only welcome)"
+    }
+  ],
+  "source": "single-post__2017__07__06__grand-opening-party-cc.json",
+  "legacyPath": "/single-post/2017/07/06/grand-opening-party-cc"
+}

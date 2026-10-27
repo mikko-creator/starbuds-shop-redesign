@@ -1,0 +1,50 @@
+{
+  "slug": "dope-cup-2017",
+  "category": "news-and-culture",
+  "categoryReason": "Events: the 2017 Dope Cup.",
+  "title": "Dope Cup 2017",
+  "date": "2017-08-21",
+  "dateText": "Aug 21, 2017",
+  "readTime": "1 min read",
+  "excerpt": "Starbuds had an amazing time at this years Dope Cup. It was a wonderful turn out and we appreciate everyone who stopped by our booth to say hi. Pootie Tang adds yet another win under its…",
+  "tags": [],
+  "hero": null,
+  "image": null,
+  "blocks": [
+    {
+      "t": "p",
+      "html": "Starbuds had an amazing time at this years Dope Cup. It was a wonderful turn out and we appreciate everyone who stopped by our booth to say hi. Pootie Tang adds yet another win under its belt and took home the runner up Best Sativa. We had a great time hanging out with everyone &amp; we're definitely looking forward to many more"
+    },
+    {
+      "t": "p",
+      "html": "Dope Cups to come!"
+    },
+    {
+      "t": "p",
+      "html": "Check out some of the awesome photos below!"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "starbuds16",
+        "starbuds15",
+        "starbuds14",
+        "starbuds13",
+        "starbuds12",
+        "starbuds11",
+        "starbuds10",
+        "starbuds9",
+        "starbuds8",
+        "starbuds7",
+        "starbuds6",
+        "starbuds5",
+        "starbuds1",
+        "starbuds2",
+        "starbuds4",
+        "starbuds3"
+      ]
+    }
+  ],
+  "source": "single-post__2017__08__21__dope-cup-2017.json",
+  "legacyPath": "/single-post/2017/08/21/dope-cup-2017"
+}

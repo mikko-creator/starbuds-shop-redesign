@@ -1,0 +1,47 @@
+{
+  "slug": "southern-alberta-researchers-say-medical-cannabis-could-help-fight-covid-19",
+  "category": "news-and-culture",
+  "categoryReason": "A news link-out: research reported in 2020.",
+  "title": "Southern Alberta researchers say medical cannabis could help fight COVID-19",
+  "date": "2020-04-24",
+  "dateText": "Apr 24, 2020",
+  "readTime": "1 min read",
+  "excerpt": "Researchers at the University of Lethbridge say while clinical trials still need to be done, data they’ve been collecting over the past four years shows promise that some cannabis extracts…",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/a09d7251e745-1280.webp",
+    "w": 1280,
+    "h": 853,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/a09d7251e745-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/a09d7251e745-1280.webp",
+        "w": 1280
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/a09d7251e745-640.webp",
+    "w": 640,
+    "h": 427,
+    "alt": "",
+    "srcset": "/assets/photos/blog/a09d7251e745-640.webp 640w, /assets/photos/blog/a09d7251e745-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "Researchers at the University of Lethbridge say while clinical trials still need to be done, data they’ve been collecting over the past four years shows promise that some cannabis extracts may help in the prevention and treatment of COVID-19."
+    },
+    {
+      "t": "link",
+      "href": "http://calgary.ctvnews.ca/southern-alberta-researchers-say-medical-cannabis-could-help-fight-covid-19-1.4906249",
+      "text": "READ THE ARTICLE HERE"
+    }
+  ],
+  "source": "single-post__2020__04__24__southern-alberta-researchers-say-medical-cannabis-could-help-fight-covid-19.json",
+  "legacyPath": "/single-post/2020/04/24/southern-alberta-researchers-say-medical-cannabis-could-help-fight-covid-19"
+}

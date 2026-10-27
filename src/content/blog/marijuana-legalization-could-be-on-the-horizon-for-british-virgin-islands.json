@@ -1,0 +1,42 @@
+{
+  "slug": "marijuana-legalization-could-be-on-the-horizon-for-british-virgin-islands",
+  "category": "news-and-culture",
+  "categoryReason": "A news link-out: legalization abroad (2019).",
+  "title": "Marijuana Legalization Could Be On The Horizon For British Virgin Islands",
+  "date": "2019-07-16",
+  "dateText": "Jul 16, 2019",
+  "readTime": "1 min read",
+  "excerpt": "The British Virgin Islands (BVI) could soon have a bill to legalize marijuana before the legislature, according to a government official. Read more about this story here…",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/6ee33372c836-814.webp",
+    "w": 814,
+    "h": 536,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/6ee33372c836-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/6ee33372c836-814.webp",
+        "w": 814
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/6ee33372c836-640.webp",
+    "w": 640,
+    "h": 421,
+    "alt": "",
+    "srcset": "/assets/photos/blog/6ee33372c836-640.webp 640w, /assets/photos/blog/6ee33372c836-814.webp 814w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "The British Virgin Islands (BVI) could soon have a bill to legalize marijuana before the legislature, according to a government official. Read more about this story here: <a href=\"http://www.marijuanamoment.net/marijuana-legalization-could-be-on-the-horizon-for-british-virgin-islands/\">https://www.marijuanamoment.net/marijuana-legalization-could-be-on-the-horizon-for-british-virgin-islands/</a>"
+    }
+  ],
+  "source": "single-post__2019__07__16__marijuana-legalization-could-be-on-the-horizon-for-british-virgin-islands.json",
+  "legacyPath": "/single-post/2019/07/16/marijuana-legalization-could-be-on-the-horizon-for-british-virgin-islands"
+}

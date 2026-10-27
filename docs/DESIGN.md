@@ -89,9 +89,11 @@ export function render(ctx) {
 }
 ```
 
-`page({ title, description, body, bodyClass, ctx, path, head, scripts })` returns the whole document: the head (with
-`noindex`), skip link, promo bar, sticky header with the Locations switcher, mobile drawer, `<main id="main">` wrapping
-`body`, the footer, the age gate and `#sb-data` (store JSON for site.js).
+`page({ title, description, body, bodyClass, ctx, path, head, scripts, crumbs })` returns the whole document: the head
+(with `noindex`), skip link, promo bar (with "Pick up at", the store switcher), sticky header with the main nav and its
+mega menus, mobile drawer, `<main id="main">` wrapping `body`, the footer, the age gate and `#sb-data` (store JSON for
+site.js). `crumbs` (optional, revision 2) renders a thin breadcrumb bar at the top of `<main>`; pages built on
+`hubHero()` pass their crumbs to hubHero instead.
 
 - `title`: " | Star Buds" is appended unless the title already contains "Star Buds".
 - `body`: must contain exactly one `<h1>`. The build warns otherwise.
@@ -102,8 +104,49 @@ export function render(ctx) {
 **`ctx`:** `site` (the whole site.json), `stores`, `states`, `storesByState` (`[{ state, stores }]`, only states that
 have stores, in site.json order), `categories`, `dataSource`, `cssFiles`.
 
-**Stylesheet order:** tokens, base, components, motion, home, finder, faq, stores, content. A file outside that list
-is not linked; the build prints a warning.
+**Stylesheet order:** tokens, base, components, motion, home, finder, faq, stores, states, content, resources, blog (a
+missing file is skipped). A file outside that list is not linked; the build prints a warning. Template modules
+(`src/theme/index.mjs`): home, stores, states, content, resources, blog, sitemap (a missing file is skipped; sitemap
+renders last and reads `ctx.pages`).
+
+### Revision 2 shell: the large operator's site architecture with Star Buds items (FOUNDATION-R2)
+
+- **Nav data** lives in `src/content/ia.json` (written from docs/REVISION-2.md "Header" and "Footer"). Groups with
+  `"from"` are filled at build time by `navData(ctx)` in shell.mjs: `site.categories` (the 9 shop categories as live-menu
+  links), `resources/products.json` (`{guides:[{slug,label,href}]}`, RESOURCES-R2; else only `/products/`),
+  `blog/vibes.json` (`{items:[{label,href,title}]}`, BLOG-R2; else one "Blog" link), `site.storesByState` (the 12 stores,
+  state hubs `/dispensaries/<stateSlug>/`), and the Resources tile from `blog/index.json` (the newest post; else
+  `/blog/`). The files are read once per build, tolerant of absence. shell.mjs also exports `readContent(rel)` (JSON
+  under `src/content/`, `null` when absent) and `latestPosts(n)` (newest posts of `blog/index.json`).
+- **Promo bar:** the offers link (centred) and `.sb-pick`, the "Pick up at" button (`data-switch-toggle`, shows the
+  chosen store via `data-store-label`), hidden below 700px. The header's `.store-chip` (>= 1280px) keeps its space but
+  only fades in once the promo bar has scrolled away (`.site-header.is-scrolled`).
+- **Main nav, in this order:** Shop (live menu, `data-menu-cat=""`) · Explore (mega) · Rewards `/rewards/` · Resources
+  (mega) · Dispensaries (mega). A mega entry is `li.nav__item.mm-item[data-mega-item] > button.nav__link.mm-toggle
+  [data-mega-toggle][aria-expanded][aria-controls="mm-<id>"]` plus `div.mm-menu#mm-<id>[data-mega-panel][hidden]`. The
+  button gets `.is-active` when the page belongs to that section; links inside get `aria-current="page"`.
+- **Mega panels** (`mm-` classes): `.mm-menu` hangs from the sticky header (its containing block) at full width, inside
+  the viewport from 1024 to 1920px; `.mm-menu__panel` is stitched smoked glass (`z-index: var(--z-drawer)` inside the
+  header's stacking context), `.mm-menu__grid` = feature tile + `.mm-menu__groups` (columns split by stitched dashed
+  dividers). Group heads are small gold patches (`.mm-group__head`), Dispensaries uses a state rocker per state
+  (`.mm-state`). Links: `.mm-link` (+ `__thumb` cut-out for categories, `__note`, `__ext`). Feature tile: `.mm-feature`
+  (leather, stitched edge, a cut-out or patch hanging over its corner, or the newest post's photo). Explore opens on
+  the Deals tile (left); Resources and Dispensaries put the tile on the right; below 1280px the Dispensaries tile is
+  dropped (its "All locations" link stays in `.mm-menu__foot`).
+- **Phone drawer:** the same items; each mega is an accordion `li.mm-acc > button.drawer__link.mm-acc__btn[data-acc]
+  [aria-expanded][aria-controls="dr-<id>"]` + `div.mm-acc__panel#dr-<id>[hidden]` with chrome plus/minus
+  (`.mm-acc__sign`). Then "Pick up at" (the store chooser) and Shop now.
+- **Footer** (`.sb-foot`): brand (logo, tagline, apps) | "Pick up at" = the chosen store card (`data-store-field` name
+  and address, tel, directions, View store, Change store; a chooser button when none) | "Star Buds" (Home, Shop,
+  Rewards, Blog, Dispensaries) | "More information" (11 links, two columns) | legal strip: the 21+ / medical-card line
+  (the age gate's captured sentence), the redesign fine print, the live shop's Privacy Policy and Terms Of Use. No
+  social links: none brand-wide in the sources (see ia.json `_socialNote`).
+- **Fallback hrefs:** `menuAttrs()` and `storeLinkAttrs()` fall back to `/dispensaries/` (revision 2; `/stores/` is a
+  redirect stub).
+
+**Site map** (`src/theme/sitemap.mjs`, `/site-map/`): every page in `ctx.pages` except redirect stubs and the 404, titled
+from its `<title>` (" | Star Buds" removed), grouped Shop and save / Dispensaries / Resources / About Star Buds / Blog
+(posts under their category) / More pages, in path order. Classes `sb-map*` (components.css).
 
 ### Helpers (all return HTML strings)
 
@@ -129,6 +172,20 @@ is not linked; the build prints a warning.
 | `marquee(items, { sep, cls, strap: true })` | infinite ticker; by default a leather strap with stitched edges and blackletter names. The duplicate run is aria-hidden |
 | `reveal(kind, i?)` | attribute string `data-reveal="up"` (plus an `--i` stagger delay). Kinds: `up fade left right scale wipe` |
 | `menuAttrs(cat)`, `storeLinkAttrs()`, `storeLabel(store)`, `liveMenu(ctx, slug, cat?)` | live-menu link attributes (`cat ''` = the store's menu home); chosen-store page link attributes; `"MS: Pearl"`; static live-menu URL |
+
+### Revision 2 page helpers (FOUNDATION-R2; import from `./shell.mjs`; CSS in components.css, classes `sb-*`)
+
+```js
+import { page, crumbs, hubHero, cardGrid, articleCard, fmtDate, stateSlug } from './shell.mjs';
+```
+
+| Helper | Output |
+|---|---|
+| `crumbs(items, { cls })` | visual breadcrumb `<nav class="sb-crumbs" aria-label="Breadcrumb"><ol>`; `items` = `[{ label, href }]`, the LAST item is the current page (text, `aria-current="page"`). "Home" `/` is prepended unless `items[0].href === '/'`. No BreadcrumbList JSON-LD (the pitch has no production origin). Bone/ink colours inside `.section--bone` / `.on-light` |
+| `hubHero({ eyebrow, title, intro, art, crumbs, actions, tone, id, cls, eyebrowTone, eyebrowIcon })` | the hero band of a hub or landing page, **carrying the page's one `<h1>`** (`id` default `page-title`). `intro`: string, array of strings (escaped `<p>`s) or `{ html }`. `art`: a generated id (`'patch-wings'`, `'flash-leaf'`, `'chrome-star'`, `'cut-bud'` …) or `{ id, rotate, cls, sizes }`, hung in the front plane (patch-star is capped at 140px). `crumbs`: crumbs() items, shown above the eyebrow. `actions`: raw HTML (btn() calls). `tone`: `leather` (default) / `green` / `ink`. Section `z-index: 7`; a double seam at its bottom |
+| `cardGrid(items, { cls, cols: 2\|3\|4, level: 2\|3\|4, stagger })` | `<ul class="sb-cards">` of stitched smoked-glass link cards. Item: `{ title, href, text, eyebrow, eyebrowTone, meta, image (photo object or generated id), art (generated cut-out over the top-right corner), cta (default 'Read more'; false = none), external, menuCat (live-menu link via site.js), attrs, html }`. No `href` = a plain panel |
+| `articleCard(post, { level, cls, eager, sizes })` | `<article class="sb-article">` blog card: `post = { title, href, date, category, categoryLabel, excerpt, image: { src, w, h, alt } }`. Photo in a warm duotone (full colour on hover), category patch (green), `<time>`, the title link stretched over the card. A missing photo file fails the build; `image: null` shows the brand leaves panel |
+| `fmtDate(iso)`, `stateSlug(name)` | `'2024-03-05'` → `'March 5, 2024'`; `'New York'` → `'new-york'` (the `/dispensaries/<state>/` slug) |
 
 **Legacy helpers** still work: `sticker(text, { color })` renders `patch()` (yellow→gold, lime→green, pink/coral→red,
 paper→bone) and `starburst({ label, color })` renders `seal()`. Old halftone and leaves colour names map onto the new
@@ -156,8 +213,13 @@ ones. Do not use them in new code.
   rules for its own SVGs. Do not add new unscoped component names that could collide; prefix lane classes with the
   lane's own block name.
 - **Depth rule:** a section that has cut-outs hanging out of its bottom needs a higher `z-index` than the next section.
-  Give `.section` an explicit `z-index` on your page. The home page uses hero 9, categories 6, deals 5, rewards 4,
-  story 2. `.section` clips horizontal overflow (`overflow-x: clip`) but lets cut-outs cross vertically.
+  Give `.section` an explicit `z-index` on your page. The home page (revision 2 order) uses hero 9, finder 7
+  (finder.css), categories 6, Find your vibe 5, deals 5, statement 4, spotlights 3, rewards 3, From the blog 2, FAQ 3
+  (faq.css), story 1; `hubHero()` sections use 7. `.section` clips horizontal overflow (`overflow-x: clip`) but lets
+  cut-outs cross vertically.
+- **Class prefixes (revision 2):** FOUNDATION `mm-` (mega menus and drawer accordions) and `sb-` (shared helpers,
+  promo pick-up, footer, site map, the new home sections `sb-vibes`, `sb-statement`, `sb-spot`, `sb-news`); BLOG `bl-`;
+  LOCATIONS `st-`, `sp-`, `sh-`; RESOURCES `rs-`. No new unscoped element or generic class rules.
 
 ### Data attributes (handled by `src/scripts/site.js` on every page)
 
@@ -175,9 +237,18 @@ ones. Do not use them in new code.
 | `[data-tilt="3"]` | pointer 3D tilt (max degrees; fine pointers only). Pair it with `.glass`; keep patches at 2 or less |
 | `[data-tabs]` + `[role=tab][aria-controls][data-tab-state]` | tabs; the initial tab follows the chosen store's state |
 | `video.bg-video` | autoplays muted, pauses off-screen, never plays under reduced motion. Put a `.cover` still `<img>` beneath it |
+| `[data-mega-item]` > `button[data-mega-toggle][aria-controls]` + `[data-mega-panel]` | revision 2 mega menu (>= 1000px): click toggles (a click on a menu opened by hover pins it), hover intent with a mouse (150ms open, 280ms close), Escape closes and returns focus to the button, focus leaving the item or a click outside closes, one open at a time; the store switcher closes it |
+| `button[data-acc][aria-controls]` | drawer accordion: toggles `aria-expanded` and the panel's `hidden` |
 
 **JS events and API:** `document` fires `sb:store` (`detail` = store or null). `window.SB` exposes `setStore(slug)`,
-`openChooser()`, `menuUrl(store, cat)`, `current` and `data`.
+`openChooser()`, `menuUrl(store, cat)`, `closeMega()`, `current` and `data`. Escape on the store switcher returns focus to
+the toggle that opened it (promo "Pick up at", header chip or footer button).
+
+**Home page (revision 2 order, home.mjs):** hero, finder (`finder.mjs`), Shop by category, Find your vibe (vibes.json;
+omitted when absent), deals board, brand statement band (Star Buds' own words quoted verbatim from the starbuds.us about
+page, cited in home.mjs), Flower and Vapes spotlights (open the chosen store's `flower` / `vaporizers` menu; copy from the
+starbuds.us products page), rewards band, From the blog (3 newest of `blog/index.json` via `articleCard()`; omitted when
+absent), FAQ (`faq.mjs`), story.
 
 **Preview rule:** never put a quoted JS string that starts with `/` in page scripts. Build external links from the
 absolute `liveUrl` / `mapUrl`, and internal links from hrefs already rendered in the HTML.

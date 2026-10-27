@@ -4,6 +4,8 @@
 // highlighted, but no word is changed. Rewards prize tiers (prize:true, 250K-point cars) are left out on purpose.
 // Local classes are prefixed dl- (deals), rw- (rewards), nf- (not found); styles live in src/styles/content.css.
 // Pop-era pieces are gone: no sticker()/starburst(), no pop-* cut-outs, no g-hero/g-glass*/glass-dark media.
+// Revision 2 (RESOURCES-R2): breadcrumbs (page({ crumbs })), links to /rewards/terms/ and to the state deals pages
+// /dispensaries/<state>/deals/ (LOCATIONS-R2 builds them), and /dispensaries/ in place of the /stores/ redirect stub.
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from '../lib/paths.mjs';
@@ -58,6 +60,9 @@ function accentLast(text, n, cls) {
 }
 
 const stateName = (ctx, code) => (ctx.states.find((s) => s.code === code) || {}).name || code;
+const stateSlugOf = (ctx, code) => String(stateName(ctx, code)).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const DEAL_PAGES = new Set(['MS', 'OK', 'MD']); // states with a /dispensaries/<state>/deals/ page (LOCATIONS-R2)
+const dealLinks = (ctx, codes) => codes.filter((c) => DEAL_PAGES.has(c)).map((c) => `<a class="link-arrow" href="/dispensaries/${stateSlugOf(ctx, c)}/deals/">${esc(stateName(ctx, c))} deals${icon('arrow')}</a>`).join('');
 const termsLine = (t) => (t ? `<p class="dl-terms">${esc(t)}</p>` : '');
 const sentences = (p) => String(p || '').split(/(?<=[.!?])\s+/).filter(Boolean);
 
@@ -172,6 +177,7 @@ function dealsHero(ctx, codes) {
       <nav class="dl-jump" aria-label="Deals by state"${reveal('up', 4)}>
         ${codes.map((c) => `<a class="dl-jump__link" href="#dl-${c.toLowerCase()}">${rocker(stateName(ctx, c), { tone: 'gold', radius: 260, band: 46, angle: 24, decorative: true, cls: 'dl-jump__rocker' })}<span class="sr-only">${esc(stateName(ctx, c))}</span></a>`).join('')}
       </nav>
+      <p class="dl-more"${reveal('up', 5)}>${dealLinks(ctx, codes)}<a class="link-arrow" href="/rewards/terms/">Higher Rewards terms${icon('arrow')}</a></p>
     </div>
     <div class="dl-hero__art" aria-hidden="true">
       <div class="dl-sheet" data-depth="0.05">
@@ -321,7 +327,8 @@ function dealsOutro(ctx, quietCodes) {
       <p class="dl-quiet__tag">${patch(r.programName || 'Higher Rewards', { tone: 'green', size: 'sm' })}</p>
       <h2 class="dl-quiet__title">${esc(r.title || 'Higher Rewards')}</h2>
       ${(r.paragraphs || [])[0] ? `<p>${esc(sentences(r.paragraphs[0])[0])}</p>` : ''}
-      <div class="btn-row">${btn('Higher Rewards', '/rewards/', { variant: 'gold' })}${btn('Find a store', '/stores/', { variant: 'ghost', icon: 'pin' })}</div>`, { edge: 'chrome', cls: 'dl-outro__rewards', attrs: { 'data-reveal': 'up', style: '--i:1' } })}
+      <div class="btn-row">${btn('Higher Rewards', '/rewards/', { variant: 'gold' })}${btn('Find a store', '/dispensaries/', { variant: 'ghost', icon: 'pin' })}</div>
+      <p class="dl-outro__terms"><a class="link-arrow" href="/rewards/terms/">Higher Rewards terms${icon('arrow')}</a></p>`, { edge: 'chrome', cls: 'dl-outro__rewards', attrs: { 'data-reveal': 'up', style: '--i:1' } })}
   </div>
   ${patchCut('patch-wings', { cls: 'dl-outro__wings', depth: 0.05, rotate: -4, sizes: '(max-width: 700px) 50vw, 300px' })}
 </section>`;
@@ -352,7 +359,7 @@ function dealsPage(ctx) {
   return {
     path: '/deals/',
     html: page({
-      ctx, path: '/deals/', bodyClass: 'page-deals',
+      ctx, path: '/deals/', bodyClass: 'page-deals', crumbs: [{ label: 'Deals' }],
       title: 'Deals',
       description: `${ctx.site.dealsIntro?.subtitle || 'Daily deals at Star Buds.'} Daily deals by state: ${withDeals.map((c) => stateName(ctx, c)).join(', ')}.`,
       body,
@@ -517,9 +524,10 @@ function rwApps(ctx) {
       <hr class="rule-stitch">
       <p class="rw-apps__terms-title">${icon('tag')} Terms</p>
       <div class="rw-apps__links">
-        ${r.termsHref ? `<a class="link-arrow" href="${esc(r.termsHref)}"${attrs(EXT)}>Terms and conditions${icon('external')}</a>` : ''}
+        <a class="link-arrow" href="/rewards/terms/">Terms and conditions${icon('arrow')}</a>
         ${r.loginHref ? `<a class="link-arrow" href="${esc(r.loginHref)}"${attrs(EXT)}>Log in${icon('external')}</a>` : ''}
         <a class="link-arrow" href="/deals/">Deals${icon('arrow')}</a>
+        ${dealLinks(ctx, (ctx.storesByState || []).map((g) => g.state.code))}
       </div>
     </div>
   </div>
@@ -532,7 +540,7 @@ function rewardsPage(ctx) {
   return {
     path: '/rewards/',
     html: page({
-      ctx, path: '/rewards/', bodyClass: 'page-rewards',
+      ctx, path: '/rewards/', bodyClass: 'page-rewards', crumbs: [{ label: 'Higher Rewards' }],
       title: r.title || 'Higher Rewards',
       description: s[0] || 'Higher Rewards at Star Buds.',
       body: [rwHero(ctx), rwSteps(ctx), rwTiers(ctx), rwApps(ctx)].join('\n'),
@@ -560,7 +568,7 @@ function notFoundPage(ctx) {
       <p class="nf__lead">This page isn't here. Head back home, or choose your location and open its live menu.</p>
       <div class="btn-row">
         ${btn('Back to home', '/', { variant: 'gold', size: 'lg' })}
-        ${btn('Find a store', '/stores/', { variant: 'ghost', icon: 'pin' })}
+        ${btn('Find a store', '/dispensaries/', { variant: 'ghost', icon: 'pin' })}
       </div>
       <p class="nf__more"><a class="link-arrow" href="/deals/">Deals${icon('arrow')}</a> <a class="link-arrow" href="/rewards/">Higher Rewards${icon('arrow')}</a></p>`, { stitch: true, cls: 'nf__panel', attrs: { 'data-reveal': 'up' } })}
     <div class="nf__art" aria-hidden="true">

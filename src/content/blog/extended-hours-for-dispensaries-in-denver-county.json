@@ -1,0 +1,42 @@
+{
+  "slug": "extended-hours-for-dispensaries-in-denver-county",
+  "category": "news-and-culture",
+  "categoryReason": "Local news: Denver dispensary hours (2017).",
+  "title": "Extended Hours for Dispensaries in Denver County",
+  "date": "2017-04-27",
+  "dateText": "Apr 27, 2017",
+  "readTime": "1 min read",
+  "excerpt": "On Monday, April 24th, 2017, the Denver City Council voted to allow extended hours for dispensaries in the city. Operating hours were previously 8 a.m. to 7 p.m., but as of May 1st, 2017…",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/5a0ec0b3238a-1080.webp",
+    "w": 1080,
+    "h": 730,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/5a0ec0b3238a-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/5a0ec0b3238a-1080.webp",
+        "w": 1080
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/5a0ec0b3238a-640.webp",
+    "w": 640,
+    "h": 433,
+    "alt": "",
+    "srcset": "/assets/photos/blog/5a0ec0b3238a-640.webp 640w, /assets/photos/blog/5a0ec0b3238a-1080.webp 1080w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "On Monday, April 24th, 2017, the Denver City Council voted to allow extended hours for dispensaries in the city. Operating hours were previously 8 a.m. to 7 p.m., but as of May 1st, 2017, stores may stay open until 10 p.m.! It's 8:00 and you forgot to get a few joints for the night? Have no fear, Starbuds' Denver locations have you covered. We're looking forward to serving Denver's night owls!"
+    }
+  ],
+  "source": "single-post__2017__04__27__extended-hours-for-dispensaries-in-denver-county.json",
+  "legacyPath": "/single-post/2017/04/27/extended-hours-for-dispensaries-in-denver-county"
+}

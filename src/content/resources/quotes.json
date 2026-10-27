@@ -1,0 +1,80 @@
+{
+ "note": "RESOURCES-R2: short verbatim excerpts (at most 2 sentences each) from Star Buds posts, checked by exact substring against the capture when ported. Used by /patient-guide/ and the medical-card pages.",
+ "posts": {
+  "cbd": {
+   "wixSlug": "2017__01__19__five-facts-that-you-should-know-about-cbd",
+   "slug": "five-facts-that-you-should-know-about-cbd",
+   "title": "Five facts that you should know about CBD",
+   "date": "2017-01-19T18:56:00.000Z",
+   "dateText": "Jan 19, 2017",
+   "updatedText": "",
+   "url": "https://www.starbuds.us/single-post/2017/01/19/five-facts-that-you-should-know-about-cbd",
+   "quotes": [
+    "CBD is one of over 60 compounds found in cannabis that belong to a class of molecules called cannabinoids. Of these compounds, CBD and THC are usually present in the highest concentrations, and are therefore the most recognized and studied.",
+    "Unlike THC, CBD does not cause a high."
+   ],
+   "source": "starbuds-reforge/src/content/pages/single-post__2017__01__19__five-facts-that-you-should-know-about-cbd.json"
+  },
+  "terpenes": {
+   "wixSlug": "unlock-the-power-of-cannabis-terpenes-aroma-effects-benefits",
+   "slug": "unlock-the-power-of-cannabis-terpenes-aroma-effects-benefits",
+   "title": "Unlock the Power of Cannabis Terpenes: Aroma, Effects & Benefits",
+   "date": "2025-02-20T08:00:00.000Z",
+   "dateText": "Feb 20, 2025",
+   "updatedText": "",
+   "url": "https://www.starbuds.us/single-post/unlock-the-power-of-cannabis-terpenes-aroma-effects-benefits",
+   "quotes": [
+    "Terpenes are naturally occurring compounds found in many plants, including cannabis. They’re responsible for the smell of pine trees, citrus fruits, lavender—and yes, your favorite cannabis strains."
+   ],
+   "source": "starbuds-reforge/src/content/pages/single-post__unlock-the-power-of-cannabis-terpenes-aroma-effects-benefits.json"
+  },
+  "cannabinoids": {
+   "wixSlug": "thc-cbd-cbn-more-understanding-the-most-common-cannabinoids",
+   "slug": "thc-cbd-cbn-more-understanding-the-most-common-cannabinoids",
+   "title": "THC, CBD, CBN & More: Understanding the Most Common Cannabinoids",
+   "date": "2026-06-23T07:00:00.000Z",
+   "dateText": "Jun 23",
+   "updatedText": "",
+   "url": "https://www.starbuds.us/single-post/thc-cbd-cbn-more-understanding-the-most-common-cannabinoids",
+   "quotes": [
+    "Many shoppers immediately look at THC percentage when choosing cannabis. While THC certainly plays an important role, it's only one of more than one hundred naturally occurring cannabinoids found in the cannabis plant.",
+    "CBN is a cannabinoid that develops naturally as THC ages."
+   ],
+   "source": "starbuds-reforge/src/content/pages/single-post__thc-cbd-cbn-more-understanding-the-most-common-cannabinoids.json"
+  },
+  "ecs": {
+   "wixSlug": "2020__08__03__the-endocannabinoid-system-everything-you-need-to-know",
+   "slug": "the-endocannabinoid-system-everything-you-need-to-know",
+   "title": "The Endocannabinoid System: Everything You Need to Know",
+   "date": "2020-08-04T13:00:00.000Z",
+   "dateText": "Aug 4, 2020",
+   "updatedText": "Updated: Jan 21, 2021",
+   "url": "https://www.starbuds.us/single-post/2020/08/03/the-endocannabinoid-system-everything-you-need-to-know",
+   "quotes": [
+    "The endocannabinoid system (ECS) is an important part of how the human body maintains function and health. It plays a role in all our major body systems and helps to fine-tune many of our body's essential functions."
+   ],
+   "source": "starbuds-reforge/src/content/pages/single-post__2020__08__03__the-endocannabinoid-system-everything-you-need-to-know.json"
+  },
+  "medical-card": {
+   "wixSlug": "2020__11__10__how-to-get-your-medical-cannabis-card",
+   "slug": "how-to-get-your-medical-cannabis-card",
+   "title": "How to Get Your Medical Cannabis Card",
+   "date": "2020-11-10T18:42:04.929Z",
+   "dateText": "Nov 10, 2020",
+   "updatedText": "Updated: Sep 20, 2024",
+   "url": "https://www.starbuds.us/single-post/2020/11/10/how-to-get-your-medical-cannabis-card",
+   "quotes": [
+    "As much as legalized cannabis has exploded over the past decade, each state still has their own laws about who has access. In many states, medical use has become legal, but recreational use is not.",
+    "Each state has its own rules and steps to take to become a medical patient, which can make getting your card seem complicated."
+   ],
+   "source": "starbuds-reforge/src/content/pages/single-post__2020__11__10__how-to-get-your-medical-cannabis-card.json"
+  },
+  "cancer-relief": {
+   "page": "cancerreliefprogram",
+   "quotes": [
+    "Eligible customers (see Terms and Conditions) may purchase one gram of select hash oil each month for just one dollar ($1)."
+   ],
+   "source": "starbuds-reforge/src/content/pages/cancerreliefprogram.json"
+  }
+ }
+}

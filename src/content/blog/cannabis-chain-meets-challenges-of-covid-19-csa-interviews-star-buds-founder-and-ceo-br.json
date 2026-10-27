@@ -1,0 +1,51 @@
+{
+  "slug": "cannabis-chain-meets-challenges-of-covid-19-csa-interviews-star-buds-founder-and-ceo-br",
+  "category": "news-and-culture",
+  "categoryReason": "Press: an interview with the Star Buds founder and CEO (2020).",
+  "title": "\"Cannabis chain meets challenges of COVID-19\" - CSA interviews Star Buds founder and CEO,",
+  "date": "2020-04-01",
+  "dateText": "Apr 1, 2020",
+  "readTime": "1 min read",
+  "excerpt": "\"Starbuds is leveraging omnichannel technology and social distancing to ensure customer and employee safety during the COVID-19 pandemic.",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/357c9cfe1bff-1280.webp",
+    "w": 1280,
+    "h": 720,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/357c9cfe1bff-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/357c9cfe1bff-1280.webp",
+        "w": 1280
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/357c9cfe1bff-640.webp",
+    "w": 640,
+    "h": 360,
+    "alt": "",
+    "srcset": "/assets/photos/blog/357c9cfe1bff-640.webp 640w, /assets/photos/blog/357c9cfe1bff-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "\"Starbuds is leveraging omnichannel technology and social distancing to ensure customer and employee safety during the COVID-19 pandemic."
+    },
+    {
+      "t": "p",
+      "html": "The Colorado-based operator of recreational and medicinal cannabis dispensaries operates 20 locations in Colorado, Oklahoma, and Maryland. Chain Store Age recently spoke with Brian Ruden, CEO and co-founder of Starbuds, about how the company is specifically dealing with COVID-19 issues in Colorado, where it operates 13 dispensaries.\""
+    },
+    {
+      "t": "link",
+      "href": "http://chainstoreage.com/csa-exclusive-cannabis-chain-meets-challenges-covid-19",
+      "text": "READ THE REST OF THE ARTICLE HERE"
+    }
+  ],
+  "source": "single-post__2020__04__01__cannabis-chain-meets-challenges-of-covid-19-csa-interviews-star-buds-founder-and-ceo-br.json",
+  "legacyPath": "/single-post/2020/04/01/cannabis-chain-meets-challenges-of-covid-19-csa-interviews-star-buds-founder-and-ceo-br"
+}

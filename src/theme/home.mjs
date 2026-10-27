@@ -1,10 +1,15 @@
-// home.mjs - the home page (FOUNDATION, Iron Star). Sections: hero, store finder (FINDER lane), categories, deals
-// teaser, rewards band, FAQ (FAQ lane), brand story. Copy: captured site.json text + template phrases + neutral UI
-// labels only (BUILD-CONTRACT 2).
+// home.mjs - the home page (FOUNDATION, Iron Star; revision 2 = the large operator's home order, docs/REVISION-2.md
+// "Home"). Sections: hero, store finder (finder.mjs), Shop by category (its "Shop Our Brands" slot), Find your vibe
+// (its "Shop by Effect" slot; src/content/blog/vibes.json from BLOG-R2, omitted when absent), deals teaser (its "Locally
+// Grown Goods" slot), brand statement band (Star Buds' own words, verbatim), Flower and Vapes spotlights (its product
+// rails; no live product data, so spotlight cards open the chosen store's menu), rewards band, From the blog (3 newest
+// of src/content/blog/index.json, omitted when absent), FAQ (faq.mjs), brand story.
+// Copy: captured site.json text, Star Buds' own words quoted verbatim from the starbuds.us capture (each cited below),
+// and neutral UI labels only (BUILD-CONTRACT 2, REVISION-2 D2/D3). No text from the other operator's site.
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT } from '../lib/paths.mjs';
-import { page, esc, attrs, icon, btn, img, glass, patch, rocker, emblem, halftone, leaves, grain, cutout, patchCut, seam, pinstripe, marquee, reveal, menuAttrs } from './shell.mjs';
+import { page, esc, attrs, icon, btn, img, glass, patch, rocker, emblem, halftone, leaves, grain, cutout, patchCut, seam, pinstripe, marquee, reveal, menuAttrs, articleCard, readContent, latestPosts } from './shell.mjs';
 
 // FINDER and FAQ lanes own these modules; a missing or broken module must not break the home page.
 const finderMod = await import('./finder.mjs').catch((e) => { if (e && e.code !== 'ERR_MODULE_NOT_FOUND') console.warn('warning: finder.mjs failed to load: ' + e.message); return null; });
@@ -88,7 +93,147 @@ function locations(ctx) {
         <ul class="locate__chips" role="list">${g.stores.map((s) => `<li><a class="chip" href="/stores/${esc(s.slug)}/" data-store-pick="${esc(s.slug)}" data-no-toast>${icon('pin')}${esc(s.city)}</a></li>`).join('')}</ul>
       </div>`).join('')}
     </div>
-    <a class="link-arrow" href="/stores/">All locations${icon('arrow')}</a>
+    <a class="link-arrow" href="/dispensaries/">All locations${icon('arrow')}</a>
+  </div>
+</section>`;
+}
+
+/** Find your vibe (the large operator's "Shop by Effect" slot, REVISION-2 D9): reading from the Star Buds blog grouped
+ *  by BLOG-R2 (src/content/blog/vibes.json {items:[{label,href,title}]}). Never a promise of effects: each tile is an
+ *  article link. Omitted when the file is absent or empty. */
+/** the topic for the big tile label: BLOG-R2's "Read: cannabis and sleep" -> "Cannabis and sleep" (the tile's own "Read"
+ *  call to action and the article title keep it labelled as reading, D9) */
+const vibeLabel = (l) => { const t = String(l).replace(/^read:\s*/i, ''); return t.charAt(0).toUpperCase() + t.slice(1); };
+function vibes(ctx) {
+  const v = readContent('blog/vibes.json');
+  const items = (v && Array.isArray(v.items) ? v.items : []).filter((x) => x && x.label && /^\/(?!\/)/.test(x.href || ''));
+  if (!items.length) return '';
+  const art = ['patch-star', 'flash-bud', 'patch-leaf', 'chrome-star'];
+  return `
+<section class="section section--oil sb-vibes" aria-labelledby="vibes-title">
+  <div class="plane-back">${leaves({ tone: 'dark', cls: 'sb-vibes__leaves' })}${halftone({ color: 'green', at: 'tl' })}${grain()}<div class="vignette"></div></div>
+  ${seam({ kind: 'stitch' })}
+  <div class="wrap">
+    <div class="sb-vibes__head">
+      <p class="sb-vibes__eyebrow"${reveal('fade')}>${patch('Star Buds blog', { tone: 'green', icon: 'star' })}</p>
+      <h2 id="vibes-title" class="h-display sb-vibes__title sheen"${reveal('up', 1)}>Find your vibe</h2>
+      <p class="lead sb-vibes__lead"${reveal('up', 2)}>Reading from the Star Buds blog, sorted by topic.</p>
+    </div>
+    <ul class="sb-vibes__grid" role="list" data-stagger>${items.map((it, i) => `
+      <li class="sb-vibes__item">
+        <a class="sb-vibe" href="${esc(it.href)}">
+          <span class="sb-vibe__stitch" aria-hidden="true"></span>
+          <span class="sb-vibe__badge" aria-hidden="true">${img(art[i % art.length], { alt: '', sizes: '72px', cls: 'sb-vibe__badge-img' })}</span>
+          <span class="sb-vibe__label">${esc(vibeLabel(it.label))}</span>
+          ${it.title ? `<span class="sb-vibe__title">${esc(it.title)}</span>` : ''}
+          <span class="sb-vibe__cta">Read${icon('arrow')}</span>
+        </a>
+      </li>`).join('')}
+    </ul>
+    <p class="sb-vibes__more"${reveal('fade')}><a class="link-arrow" href="/blog/">All articles${icon('arrow')}</a></p>
+  </div>
+</section>`;
+}
+
+/** Brand statement band (the large operator's statement slot): Star Buds' own words, quoted verbatim from
+ *  C:/Users/Dell/starbuds-reforge/src/content/pages/about.json (the starbuds.us /about capture of 2026-10-23), section s2,
+ *  the "rich" block under "The Star Buds Difference". The second quote keeps the capture's no-break space. */
+const STATEMENT = {
+  quote: 'From the moment you step into our dispensaries, you\'ll feel the difference.',
+  line: 'At Star Buds, we pride ourselves on\u00a0Shining High Above the Rest.',
+};
+function statement(ctx) {
+  return `
+<section class="section on-dark sb-statement" aria-labelledby="statement-title">
+  <div class="plane-back"><div class="leather-bg"></div>${leaves({ tone: 'gold', cls: 'sb-statement__leaves' })}${halftone({ color: 'gold', at: 'full', cls: 'sb-statement__dots' })}${grain()}<div class="vignette"></div></div>
+  ${seam({ kind: 'pinstripe' })}
+  <div class="wrap sb-statement__inner">
+    <p class="sb-statement__eyebrow"${reveal('fade')}>${patch('In our words', { tone: 'gold', icon: 'star' })}</p>
+    <blockquote class="sb-statement__quote" cite="https://www.starbuds.us/about"${reveal('up', 1)}>
+      <h2 id="statement-title" class="sb-statement__text">${esc(STATEMENT.quote)}</h2>
+    </blockquote>
+    <div class="sb-statement__rule"${reveal('fade', 2)}>${pinstripe()}</div>
+    <p class="sb-statement__line"${reveal('up', 2)}>${esc(STATEMENT.line)}</p>
+    <p class="sb-statement__cite"${reveal('fade', 3)}>Star Buds, <a href="/about-us/">About Us</a></p>
+  </div>
+  ${cutout('chrome-star', { cls: 'sb-statement__star', depth: 0.1, float: 'slow', rotate: -10, sizes: '(max-width: 700px) 26vw, 180px' })}
+  ${patchCut('patch-star', { cls: 'sb-statement__patch', depth: -0.08, rotate: 8, sizes: '140px' })}
+</section>`;
+}
+
+/** Flower and Vapes spotlights (the large operator's two product rails). No live product data, so each card opens the
+ *  chosen store's flower / vape menu (data-menu-cat). Copy: products.json of the starbuds.us capture
+ *  (C:/Users/Dell/starbuds-reforge/src/content/pages/products.json): the intro and the availability line verbatim (the
+ *  latter case-tidied from all caps), the STRAINS and VAPES tile lines case-tidied; the STRAINS line stops before
+ *  ", including our Cannabis Cup-winning Pootie Tang", a Colorado strain the shop stores do not list. */
+const SPOT = {
+  title: 'What are you in the mood for?',
+  intro: 'Flower? Concentrates? Edibles? At Star Buds, we have all those products and more!',
+  note: 'Product selection and availability varies by location.',
+  cards: [
+    { cat: 'flower', patch: 'Flower', title: 'Flower', text: 'We have a variety of strains to meet your specific needs.', cta: 'Shop flower', cut: 'cut-bud', rot: -8 },
+    { cat: 'vaporizers', patch: 'Vaporizers', title: 'Vapes', text: 'Vape pens are a discreet and convenient way to consume marijuana and cannabis products.', cta: 'Shop vapes', cut: 'cut-vape', rot: 10 },
+  ],
+};
+function spotlights(ctx) {
+  const cats = new Set(ctx.categories.map((c) => c.slug));
+  const cards = SPOT.cards.filter((c) => cats.has(c.cat));
+  if (!cards.length) return '';
+  return `
+<section class="section section--leather sb-spot" aria-labelledby="spot-title">
+  <div class="plane-back"><div class="leather-bg"></div>${halftone({ color: 'gold', at: 'tr' })}${halftone({ color: 'green', at: 'bl' })}${grain()}</div>
+  ${seam({ kind: 'double' })}
+  <div class="wrap">
+    <div class="sb-spot__head">
+      <p class="sb-spot__eyebrow"${reveal('fade')}>${patch('Spotlight', { tone: 'gold', icon: 'star' })}</p>
+      <h2 id="spot-title" class="h-display sb-spot__title sheen"${reveal('up', 1)}>${esc(SPOT.title)}</h2>
+      <p class="lead sb-spot__lead"${reveal('up', 2)}>${esc(SPOT.intro)}</p>
+    </div>
+    <div class="sb-spot__grid">${cards.map((c, i) => `
+      <article class="sb-spot__card sb-spot__card--${esc(c.cat)} glass glass--stitch stitch stitch--draw" aria-labelledby="spot-${esc(c.cat)}"${reveal('up', i + 1)}>
+        <div class="sb-spot__copy">
+          <p class="sb-spot__patch">${patch(c.patch, { tone: i ? 'chrome' : 'green', size: 'sm' })}</p>
+          <h3 class="sb-spot__name" id="spot-${esc(c.cat)}">${esc(c.title)}</h3>
+          <p class="sb-spot__text">${esc(c.text)}</p>
+          <p class="sb-spot__store"><span data-store-current hidden>On the live menu at <strong data-store-label></strong></span><span data-store-none>Choose your location to open its menu</span></p>
+          <div class="btn-row">${btn(c.cta, menuAttrs(c.cat).href, { variant: i ? 'chrome' : 'gold', icon: 'bag', attrs: { 'data-menu-cat': c.cat } })}</div>
+        </div>
+        <div class="sb-spot__art" aria-hidden="true">
+          <span class="sb-spot__ring"></span>
+          ${cutout(c.cut, { cls: 'sb-spot__cut', depth: 0.06, float: 'slow', rotate: c.rot, sizes: '(max-width: 700px) 52vw, 360px' })}
+        </div>
+      </article>`).join('')}
+    </div>
+    <p class="sb-spot__note"${reveal('fade')}>${icon('star')}<span>${esc(SPOT.note)}</span>${icon('star')}</p>
+  </div>
+</section>`;
+}
+
+/** From the blog: the 3 newest posts of src/content/blog/index.json (BLOG-R2); a post whose image file is not there
+ *  yet gets the brand panel (and a warning) instead of failing the build. Omitted when the index is absent. */
+function fromBlog(ctx) {
+  const posts = latestPosts(3);
+  if (!posts.length) return '';
+  const cards = posts.map((p) => {
+    let image = p.image && p.image.src ? p.image : null;
+    if (image && !fs.existsSync(path.join(ROOT, String(image.src).replace(/^\//, '')))) { console.warn(`warning: home From the blog: image not found ${image.src} (${p.href}); brand panel used`); image = null; }
+    return { ...p, image };
+  });
+  return `
+<section class="section section--parchment sb-news" aria-labelledby="news-title">
+  <div class="plane-back">${leaves({ tone: 'light' })}${halftone({ color: 'ink', at: 'tl' })}${grain({ cls: 'sb-news__grain' })}</div>
+  ${seam({ kind: 'double' })}
+  <div class="wrap">
+    <div class="sb-news__head">
+      <div>
+        <p class="sb-news__eyebrow"${reveal('fade')}>${patch('Star Buds blog', { tone: 'red', icon: 'star', size: 'sm' })}</p>
+        <h2 id="news-title" class="h-display sb-news__title"${reveal('up', 1)}>From the blog</h2>
+      </div>
+      <p class="sb-news__all"${reveal('fade', 2)}>${btn('All articles', '/blog/', { variant: 'dark' })}</p>
+    </div>
+    <ul class="sb-news__grid" role="list" data-stagger>${cards.map((p) => `
+      <li class="sb-news__item">${articleCard(p)}</li>`).join('')}
+    </ul>
   </div>
 </section>`;
 }
@@ -105,7 +250,7 @@ function categories(ctx) {
   <div class="wrap">
     <div class="cats__head">
       <p class="cats__eyebrow"${reveal('fade')}>${patch('Shop All', { tone: 'gold', icon: 'bag' })}</p>
-      <h2 id="cats-title" class="h-display cats__title sheen"${reveal('up', 1)}>Categories</h2>
+      <h2 id="cats-title" class="h-display cats__title sheen"${reveal('up', 1)}>Shop by category</h2>
       <p class="lead cats__lead"${reveal('up', 2)}>Each category opens on the live menu<span data-store-current hidden> at <strong data-store-label></strong></span><span data-store-none> of the store you choose</span>.</p>
     </div>
     <ul class="cats__grid" role="list" data-stagger>${ctx.categories.map((c, i) => `
@@ -229,7 +374,7 @@ function story(ctx) {
       <h2 id="story-title" class="h-display story__title">${esc(a.title || ctx.site.brand?.name || 'Star Buds')}</h2>
       ${pinstripe({ cls: 'story__rule' })}
       ${paras.map((p) => `<p>${esc(p)}</p>`).join('')}
-      <div class="btn-row story__cta">${btn('Find a store', '/stores/', { variant: 'gold', icon: 'pin' })}${btn('Higher Rewards', '/rewards/', { variant: 'ghost' })}</div>
+      <div class="btn-row story__cta">${btn('Find a store', '/dispensaries/', { variant: 'gold', icon: 'pin' })}${btn('Higher Rewards', '/rewards/', { variant: 'ghost' })}</div>
     </div>
   </div>
 </section>`;
@@ -241,7 +386,9 @@ export async function render(ctx) {
   let finder = await laneSection(finderMod, 'finderSection', ctx, 'finder.mjs');
   if (finder && !/id="locations"/.test(finder)) finder = '<span id="locations" class="anchor-target" aria-hidden="true"></span>' + finder;
   const faq = await laneSection(faqMod, 'faqSection', ctx, 'faq.mjs');
-  const body = [hero(ctx), finder || locations(ctx), categories(ctx), dealsTeaser(ctx), rewardsBand(ctx), faq, story(ctx)].filter(Boolean).join('\n');
+  // revision 2 order (docs/REVISION-2.md "Home"): hero, finder, categories, vibes, deals, statement, spotlights, rewards,
+  // blog, FAQ, story. vibes and blog are omitted while BLOG-R2's data files do not exist.
+  const body = [hero(ctx), finder || locations(ctx), categories(ctx), vibes(ctx), dealsTeaser(ctx), statement(ctx), spotlights(ctx), rewardsBand(ctx), fromBlog(ctx), faq, story(ctx)].filter(Boolean).join('\n');
   return [{
     path: '/',
     html: page({

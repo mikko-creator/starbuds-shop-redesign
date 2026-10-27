@@ -11,6 +11,10 @@ biker pop art over smoked glass**:
 - patches and product cut-outs that break out of their frames and across sections;
 - scroll-choreographed reveals and tactile hover states.
 
+The site's structure follows a large multi-state dispensary operator's site: its menu order and mega menus, footer,
+page types, section order and URL patterns. Every word and fact on it is Star Buds' own, taken from starbuds.us and the
+shop, except the law and medical-card summaries, which cite official state sources.
+
 **Preview:** https://mikko-creator.github.io/starbuds-shop-redesign/ (not indexed by search engines). The age gate
 remembers a "Yes" in your browser.
 
@@ -18,20 +22,24 @@ remembers a "Yes" in your browser.
 
 | Page | What it shows |
 |---|---|
-| `/` | Hero on a looping motion backdrop; a store finder with a map of the four states (search, state tabs, "Near me", a card for each store); the nine shop categories; deals; rewards; a cannabis FAQ; the brand story |
-| `/stores/` | All 12 shop locations, grouped by state |
-| `/stores/<slug>/` | One page per store, on the shop's own URLs: address, directions, call, categories, about, and hours with a live open/closed status where starbuds.us lists hours (6 of the 12) |
-| `/deals/`, `/rewards/` | Deals and the rewards programme, using the copy published on starbuds.us |
+| `/` | Hero on a looping motion backdrop; a store finder with a map of the four states; shop by category; "Find your vibe" (Star Buds articles); deals; the brand statement; flower and vape spotlights; rewards; the latest articles; a cannabis FAQ; the brand story |
+| `/dispensaries/` and a page per state | All 12 shop locations with the map, then each state's stores, deals and questions |
+| `/stores/<slug>/` | One page per store, on the shop's own URLs: details, directions, call, hours with a live open/closed status where starbuds.us lists hours (6 of the 12), visiting tips, deals, FAQs and nearby stores |
+| `/deals/`, `/dispensaries/<state>/deals/`, `/rewards/` | Deals by state and the Higher Rewards programme with its terms, using the copy published on starbuds.us |
+| `/blog/` | 94 Star Buds articles from starbuds.us in six categories: Cannabis 101, Health & Lifestyle, News & Culture, Recipes, Resources, Shopping & Reviews |
+| `/dispensary-guides/`, `/getting-a-medical-card/`, `/cannabis-laws-by-state/`, `/patient-guide/`, `/faq/` | Resources: visiting guides, a medical-card page and a law page for each state, a patient guide and the full FAQ |
+| `/about-us/`, `/careers/`, `/community/`, `/media/`, `/cancer-relief-program/`, `/products/` | Star Buds' company pages and product guides |
 
 The online ordering itself stays on the existing Dutchie storefront. Category tiles and "Shop" buttons deep-link to the
 live menu of the store the visitor chose, which the header's location switcher and the store finder remember. No
 product, price or offer is invented. The FAQ's shop answers quote starbuds.us; its cannabis-basics answers are general
-information written for this concept, not medical advice.
+information written for this concept, not medical advice. The law and medical-card pages are general information, not
+legal advice, and link each statement to its official source.
 
 ## Docs
 
-- [docs/STRUCTURE.md](docs/STRUCTURE.md): the shop's structure and architecture, how they were captured, and how the
-  redesign maps them
+- [docs/STRUCTURE.md](docs/STRUCTURE.md): the shop's structure and architecture, how they were captured, how the
+  redesign maps them, and the architecture adopted in revision 2
 - [docs/LOCATIONS.md](docs/LOCATIONS.md): every location, with its address, phone, hours and source
 - [docs/DESIGN.md](docs/DESIGN.md): the Iron Star design system: tokens, layers, motion, components
 - [docs/MEDIA.md](docs/MEDIA.md): the generated stills (fal.ai) and motion loops (Higgsfield), and how they are labelled

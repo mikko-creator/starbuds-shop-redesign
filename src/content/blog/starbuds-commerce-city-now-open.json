@@ -1,0 +1,44 @@
+{
+  "slug": "starbuds-commerce-city-now-open",
+  "category": "news-and-culture",
+  "categoryReason": "Store news: the Commerce City opening (2017).",
+  "title": "Starbuds Commerce City NOW OPEN!",
+  "date": "2017-06-12",
+  "dateText": "Jun 12, 2017",
+  "readTime": "1 min read",
+  "excerpt": "We're happy to announce that we've opened our eighth location in Commerce City, located at 5844 Dahlia St.,Commerce City, CO. We will be holding a Grand Opening Day in the next few weeks…",
+  "tags": [],
+  "hero": null,
+  "image": {
+    "src": "/assets/photos/blog/b8c2f8c10fab-609.webp",
+    "w": 609,
+    "h": 462,
+    "alt": "",
+    "srcset": "/assets/photos/blog/b8c2f8c10fab-609.webp 609w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "We're happy to announce that we've opened our eighth location in Commerce City, located at 5844 Dahlia St.,Commerce City, CO. We will be holding a Grand Opening Day in the next few weeks that will include vendors, ribbon cutting, food, fun &amp; much more. Our hours are 8AM-10PM DAILY, so make sure you stop by and check it out!"
+    },
+    {
+      "t": "p",
+      "html": "We look forward to seeing you!"
+    },
+    {
+      "t": "img",
+      "src": "/assets/photos/blog/b8c2f8c10fab-609.webp",
+      "w": 609,
+      "h": 462,
+      "srcset": [
+        {
+          "src": "/assets/photos/blog/b8c2f8c10fab-609.webp",
+          "w": 609
+        }
+      ],
+      "alt": ""
+    }
+  ],
+  "source": "single-post__2017__06__12__starbuds-commerce-city-now-open.json",
+  "legacyPath": "/single-post/2017/06/12/starbuds-commerce-city-now-open"
+}

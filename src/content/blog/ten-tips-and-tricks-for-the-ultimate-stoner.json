@@ -1,0 +1,56 @@
+{
+  "slug": "ten-tips-and-tricks-for-the-ultimate-stoner",
+  "category": "cannabis-101",
+  "categoryReason": "Practical consumer tips: gear and storage basics.",
+  "title": "Ten Tips and Tricks for the Ultimate Cannabis Consumer",
+  "date": "2016-09-01",
+  "dateText": "Sep 1, 2016",
+  "readTime": "3 min read",
+  "excerpt": "We know smoking weed can be a little bit stressful. Breaking bowls, spilling weed, lighting your hair on fire while trying to light a joint in a moving car with the window down. There’s…",
+  "tags": [],
+  "hero": null,
+  "image": {
+    "src": "/assets/photos/blog/5e117336bc00-465.webp",
+    "w": 465,
+    "h": 310,
+    "alt": "",
+    "srcset": "/assets/photos/blog/5e117336bc00-465.webp 465w"
+  },
+  "blocks": [
+    {
+      "t": "img",
+      "src": "/assets/photos/blog/5e117336bc00-465.webp",
+      "w": 465,
+      "h": 310,
+      "srcset": [
+        {
+          "src": "/assets/photos/blog/5e117336bc00-465.webp",
+          "w": 465
+        }
+      ],
+      "alt": ""
+    },
+    {
+      "t": "p",
+      "html": "We know smoking weed can be a little bit stressful. Breaking bowls, spilling weed, lighting your hair on fire while trying to light a joint in a moving car with the window down. There’s many ways a peaceful smoke session can turn in to a nightmare. It’s important to know a few stoner life hacks in order to keep things easy. The following is a list of stoner hacks that you can use in order to keep your smoking stress free!"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Putting a CD over your glass bowl will help to prevent you from spilling any weed! The center of the CD is small enough to keep the weed in but at the same time, keeps it from spilling out.",
+        "Have a clogged bowl? Pipe cleaners actually do work! They are perfect for sticking through your glass and scraping out the nasty resin on the inside. The best part? They’re super cheap and disposable so once they’re covered in grime, you can just toss them in the trash can!",
+        "Marijuana loses potency if you let light and heat get to it while it’s being stored. Fix this by cutting a roll of black construction paper and fixing it inside of your jar. This will keep your weed fresher for longer and prevent the light from getting in and ruining your buds!",
+        "If you don’t have a grinder around, you can use this simple method! Take a penny and clean it well, preferably with rubbing alcohol. Put the penny and your weed in a small pill bottle or jar and shake it vigorously. The penny will grind up the bud for you and it’ll leave you with the keif!",
+        "Having troubles with munchies? Schedule your smoking times around meal times. This way, you won’t eat as much because you’ll be eating at normal times anyway. This one is a little easier said than done, as I myself have trouble containing the munchies after I’ve smoked enough.",
+        "Grandparents sending you a bunch of birthday cards? Cut them up and use them as makeshift crutches if you don’t have any around! The hard paper will support your joint and make it easier to pass back and forth when you’re smoking with your friends!",
+        "Enjoy weed with a bit of fruity flavor? Place a few nuts in a leftover blunt wrapper and let them chill for a bit! The packaging will give your buds a little extra flavor and you can enjoy some strawberry flavored weed in your next bowl!",
+        "Finding a good playlist online will help to keep your high level and enjoyable. If you’re not watching TV, music is the next best thing. Sometimes even better, rather than you wasting brain cells on the television. Slacker Radio is a great place to listen to music!",
+        "Putting a mint in your mouth when you have the munchies is a great way to curb your appetite! Mints also help with cotton mouth and the sometimes bad breath that comes with it! Keep a box of Altoids in your pocket at all times to avoid over eating and dying for a drink!",
+        "Did you know that a Nintendo Gamecube controller is the perfect place to hold your bong head up while you pack it? If you happen to still have a Gamecube, you can use the controller this way to make sure that you’re not accidentally dumping out all of your weed.",
+        "Some people like to blot honey on their joints in order to keep it from burning too quickly while smoking. This also will help with that awful canoe effect that sometimes happens, when the joint burns unevenly while being smoked."
+      ]
+    }
+  ],
+  "source": "single-post__2016__09__01__ten-tips-and-tricks-for-the-ultimate-stoner.json",
+  "legacyPath": "/single-post/2016/09/01/ten-tips-and-tricks-for-the-ultimate-stoner"
+}

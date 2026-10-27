@@ -1,0 +1,52 @@
+{
+  "slug": "denver-420-rally-license-banned-for-3-years",
+  "category": "news-and-culture",
+  "categoryReason": "Local news: the Denver 4/20 rally permit (2017).",
+  "title": "Denver 420 Rally permit banned for 3 years",
+  "date": "2017-05-22",
+  "dateText": "May 22, 2017",
+  "readTime": "1 min read",
+  "excerpt": "http://www.westword.com/news/denver-420-rally-organizer-fined-banned-from-parks-permits-for-three-years-9080365 Check out the article from the Westword above citing all of the violations…",
+  "tags": [],
+  "hero": null,
+  "image": {
+    "src": "/assets/photos/blog/76efcc519a00-640.webp",
+    "w": 640,
+    "h": 360,
+    "alt": "",
+    "srcset": "/assets/photos/blog/76efcc519a00-640.webp 640w, /assets/photos/blog/76efcc519a00-745.webp 745w"
+  },
+  "blocks": [
+    {
+      "t": "img",
+      "src": "/assets/photos/blog/76efcc519a00-745.webp",
+      "w": 745,
+      "h": 419,
+      "srcset": [
+        {
+          "src": "/assets/photos/blog/76efcc519a00-640.webp",
+          "w": 640
+        },
+        {
+          "src": "/assets/photos/blog/76efcc519a00-745.webp",
+          "w": 745
+        }
+      ],
+      "alt": ""
+    },
+    {
+      "t": "p",
+      "html": "<a href=\"http://www.westword.com/news/denver-420-rally-organizer-fined-banned-from-parks-permits-for-three-years-9080365\">http://www.westword.com/news/denver-420-rally-organizer-fined-banned-from-parks-permits-for-three-years-9080365</a>"
+    },
+    {
+      "t": "p",
+      "html": "Check out the article from the Westword above citing all of the violations that occurred this year during the 4/20 rally at Civic Center Park in Denver. According to Parks &amp; Recreation, over 15 violations took place here at the event,"
+    },
+    {
+      "t": "p",
+      "html": "from not having enough trash bins, to not enough security at the gates &amp; several noise complaints. It's very unfortunate everything was not up to code as we are very lucky to have this event here in Denver. Fines weigh out to over $11,000 and the city is still awaiting a response from the event holders. Do you think the city is being too hard on the event holders or should they have made sure to go the extra mile to be more compliant with the city regulations? What are your thoughts?"
+    }
+  ],
+  "source": "single-post__2017__05__22__denver-420-rally-license-banned-for-3-years.json",
+  "legacyPath": "/single-post/2017/05/22/denver-420-rally-license-banned-for-3-years"
+}

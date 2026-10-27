@@ -1,0 +1,11 @@
+{
+  "note": "RESOURCES-R2: the product guides built at /products/<slug>/ from the starbuds.us product pages (cbd, concentrates, edibles, topicals, vapes). FOUNDATION lists them in the Explore mega menu (the Brands slot of the adopted architecture). The hub is /products/.",
+  "hub": { "label": "Product guides", "href": "/products/" },
+  "guides": [
+    { "slug": "cbd", "label": "CBD", "href": "/products/cbd/", "menuCat": "" },
+    { "slug": "concentrates", "label": "Concentrates", "href": "/products/concentrates/", "menuCat": "concentrates" },
+    { "slug": "edibles", "label": "Edibles", "href": "/products/edibles/", "menuCat": "edibles" },
+    { "slug": "topicals", "label": "Topicals", "href": "/products/topicals/", "menuCat": "topicals" },
+    { "slug": "vapes", "label": "Vapes", "href": "/products/vapes/", "menuCat": "vaporizers" }
+  ]
+}

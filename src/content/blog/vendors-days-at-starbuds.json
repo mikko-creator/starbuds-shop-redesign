@@ -1,0 +1,88 @@
+{
+  "slug": "vendors-days-at-starbuds",
+  "category": "news-and-culture",
+  "categoryReason": "Store events: vendor days (2017).",
+  "title": "Vendors Days at Starbuds!",
+  "date": "2017-09-05",
+  "dateText": "Sep 5, 2017",
+  "readTime": "1 min read",
+  "excerpt": "Exciting things are happening at ALL Starbuds locations. We have a schedule of vendor days where some of the best companies out there set up in Starbuds talking to our customers",
+  "tags": [],
+  "hero": null,
+  "image": {
+    "src": "/assets/photos/blog/bb7eeab9a1f1-368.webp",
+    "w": 368,
+    "h": 408,
+    "alt": "",
+    "srcset": "/assets/photos/blog/bb7eeab9a1f1-368.webp 368w"
+  },
+  "blocks": [
+    {
+      "t": "img",
+      "src": "/assets/photos/blog/bb7eeab9a1f1-368.webp",
+      "w": 368,
+      "h": 408,
+      "srcset": [
+        {
+          "src": "/assets/photos/blog/bb7eeab9a1f1-368.webp",
+          "w": 368
+        }
+      ],
+      "alt": ""
+    },
+    {
+      "t": "p",
+      "html": "Exciting things are happening at ALL Starbuds locations. We have a schedule of vendor days"
+    },
+    {
+      "t": "p",
+      "html": "where some of the best companies out there set up in Starbuds talking to our customers"
+    },
+    {
+      "t": "p",
+      "html": "about their products and giving EXCLUSIVE deals."
+    },
+    {
+      "t": "p",
+      "html": "Here is a list of the current vendors who will be set up over the next few weeks,"
+    },
+    {
+      "t": "p",
+      "html": "make sure you stop by to check them out!"
+    },
+    {
+      "t": "p",
+      "html": "9.6.2017 (2:00 PM - 5:00 PM) Nature's High Edibles @ Starbuds DU"
+    },
+    {
+      "t": "p",
+      "html": "9.7.2017 (12:30 PM - 2:30 PM) CSC @ Starbuds Brighton"
+    },
+    {
+      "t": "p",
+      "html": "(3:00 PM- 6:00 PM) 1906 @ Starbuds Brighton"
+    },
+    {
+      "t": "p",
+      "html": "9.8.2017- (11:00 AM- 3:00 PM) Northern Standard @ Starbuds Brighton"
+    },
+    {
+      "t": "p",
+      "html": "9.8.2017- (2:00 PM - 6:00 PM) Lovia @ Starbuds Commerce City"
+    },
+    {
+      "t": "p",
+      "html": "9.15.2017- (2:00 PM- 5:00 PM) O-Pen Vape @ Starbuds Commerce City"
+    },
+    {
+      "t": "p",
+      "html": "9.15.2017- (1:30 PM - 3:30 PM) Cheeba Chews @ Starbuds Commerce City"
+    },
+    {
+      "t": "p",
+      "html": "Stay tuned for updates on more vendors coming soon!"
+    }
+  ],
+  "source": "single-post__2017__09__05__vendors-days-at-starbuds.json",
+  "legacyPath": "/single-post/2017/09/05/vendors-days-at-starbuds"
+}

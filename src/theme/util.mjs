@@ -62,11 +62,11 @@ export function btn(label, href, opts = {}) {
   return href == null ? `<button type="button" class="${c}"${attrs(a)}>${inner}</button>` : `<a class="${c}" href="${esc(href)}"${attrs(a)}>${inner}</a>`;
 }
 
-/** attributes for a live-menu link: href falls back to /stores/ until a store is chosen; site.js rewrites it.
- *  cat '' -> the chosen store's live menu home; 'flower' -> .../products/flower */
-export const menuAttrs = (cat = '') => ({ href: '/stores/', 'data-menu-cat': cat });
-/** attributes for a link to the chosen store's page (falls back to /stores/) */
-export const storeLinkAttrs = () => ({ href: '/stores/', 'data-store-link': '' });
+/** attributes for a live-menu link: href falls back to /dispensaries/ (revision 2; /stores/ is a redirect stub) until a
+ *  store is chosen; site.js rewrites it. cat '' -> the chosen store's live menu home; 'flower' -> .../products/flower */
+export const menuAttrs = (cat = '') => ({ href: '/dispensaries/', 'data-menu-cat': cat });
+/** attributes for a link to the chosen store's page (falls back to /dispensaries/) */
+export const storeLinkAttrs = () => ({ href: '/dispensaries/', 'data-store-link': '' });
 
 // ---------- smoked glass ----------
 /**
@@ -249,3 +249,136 @@ export const reveal = (kind = 'up', i) => ` data-reveal="${esc(kind === 'pop' ? 
 export const storeLabel = (s) => `${s.state}: ${s.city}`;
 /** live menu URL for a store (+ category) */
 export const liveMenu = (ctx, slug, cat = '') => `${ctx.site.shopOrigin || 'https://shop.starbuds.us'}/stores/${slug}/${cat ? 'products/' + cat : ''}`;
+
+// ---------- revision 2 shared page helpers (FOUNDATION-R2; classes prefixed sb-) ----------
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+/** '2024-03-05' (or an ISO date-time) -> 'March 5, 2024'; anything unparseable is returned as given */
+export function fmtDate(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(iso || ''));
+  return m ? `${MONTHS[Number(m[2]) - 1]} ${Number(m[3])}, ${m[1]}` : String(iso || '');
+}
+
+/** state name -> URL slug used by /dispensaries/<state>/ ('New York' -> 'new-york') */
+export const stateSlug = (name) => String(name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+/**
+ * crumbs(items, { cls }) -> visual breadcrumb trail (no BreadcrumbList JSON-LD: the pitch has no production origin).
+ * items: [{ label, href }]; the LAST item is the current page (plain text, aria-current="page"; its href is ignored).
+ * "Home" (/) is prepended unless items[0].href is '/'. Works on dark grounds; inside .section--bone / .on-light it turns ink.
+ */
+export function crumbs(items = [], opts = {}) {
+  const list = items.length && items[0].href === '/' ? items : [{ label: 'Home', href: '/' }, ...items];
+  return `<nav class="${cx('sb-crumbs', opts.cls)}" aria-label="Breadcrumb"><ol class="sb-crumbs__list" role="list">${list.map((it, i) => {
+    const last = i === list.length - 1;
+    const inner = last || !it.href
+      ? `<span class="sb-crumbs__here"${last ? ' aria-current="page"' : ''}>${esc(it.label)}</span>`
+      : `<a class="sb-crumbs__link" href="${esc(it.href)}">${esc(it.label)}</a>`;
+    return `<li class="sb-crumbs__item">${inner}${last ? '' : icon('star', 'sb-crumbs__sep')}</li>`;
+  }).join('')}</ol></nav>`;
+}
+
+const PATCH_ART = /^(patch-|chrome-star|flash-)/;
+/** front-plane art for hubHero / cardGrid: a generated id ('patch-wings', 'flash-leaf', 'cut-bud') or { id, rotate, cls } */
+function heroArt(art, cls) {
+  if (!art) return '';
+  const a = typeof art === 'string' ? { id: art } : art;
+  const o = { cls: cx(cls, a.id === 'patch-star' && 'sb-art--small', a.cls), depth: a.depth ?? 0.1, sizes: a.sizes || '(max-width: 700px) 34vw, 300px' };
+  if (a.rotate != null) o.rotate = a.rotate;
+  return PATCH_ART.test(a.id) ? patchCut(a.id, o) : cutout(a.id, { float: 'slow', ...o });
+}
+
+/**
+ * hubHero({ eyebrow, title, intro, art, crumbs, actions, tone, id, cls, eyebrowTone, eyebrowIcon }) -> the hero band of a
+ * hub or landing page, carrying the page's ONE <h1> (do not add another h1 to the body).
+ *  eyebrow: patch text (escaped) ; title: the h1 text (escaped) ; intro: a string, an array of strings (escaped
+ *  paragraphs) or { html } (raw) ; art: a generated image id or { id, rotate, cls, sizes } hung in the front plane
+ *  (decorative: 'patch-wings', 'patch-leaf', 'patch-star' (kept <= 140px), 'chrome-star', 'flash-leaf', 'flash-bud',
+ *  'cut-bud', 'cut-vape', ...) ; crumbs: crumbs() items, rendered above the eyebrow ; actions: raw HTML (e.g. btn() calls)
+ *  ; tone: 'leather' (default) | 'green' | 'ink' ; id: the h1 id (default 'page-title').
+ * The section has z-index 7 so its art can hang across the seam into the next section.
+ */
+export function hubHero(o = {}) {
+  const { eyebrow, title = '', intro, art, actions = '', tone: tn = 'leather', id = 'page-title', cls, eyebrowTone = 'gold', eyebrowIcon = 'star' } = o;
+  const t = ['leather', 'green', 'ink'].includes(tn) ? tn : 'leather';
+  const paras = intro == null ? '' : typeof intro === 'object' && !Array.isArray(intro) ? (intro.html || '') : [].concat(intro).filter(Boolean).map((p) => `<p>${esc(p)}</p>`).join('');
+  const back = t === 'green'
+    ? `${leaves({ tone: 'bone', cls: 'sb-hub-hero__leaves' })}${halftone({ color: 'gold', at: 'tr' })}${grain()}<div class="vignette"></div>`
+    : `${t === 'leather' ? '<div class="leather-bg"></div>' : ''}${leaves({ tone: 'gold', cls: 'sb-hub-hero__leaves' })}${halftone({ color: 'gold', at: 'tr' })}${grain()}<div class="vignette"></div>`;
+  return `
+<section class="${cx('section', 'on-dark', 'sb-hub-hero', 'sb-hub-hero--' + t, art && 'sb-hub-hero--art', cls)}" aria-labelledby="${esc(id)}">
+  <div class="plane-back">${back}</div>
+  ${seam({ kind: 'double', cls: 'seam--bottom' })}
+  <div class="wrap sb-hub-hero__inner">
+    ${o.crumbs ? crumbs(o.crumbs, { cls: 'sb-hub-hero__crumbs' }) : ''}
+    <div class="sb-hub-hero__copy">
+      ${eyebrow ? `<p class="sb-hub-hero__eyebrow"${reveal('fade')}>${patch(eyebrow, { tone: eyebrowTone, icon: eyebrowIcon || undefined })}</p>` : ''}
+      <h1 id="${esc(id)}" class="h-display sb-hub-hero__title sheen"${reveal('up', 1)}>${esc(title)}</h1>
+      <div class="sb-hub-hero__rule"${reveal('fade', 2)}>${pinstripe()}</div>
+      ${paras ? `<div class="sb-hub-hero__intro lead"${reveal('up', 2)}>${paras}</div>` : ''}
+      ${actions ? `<div class="btn-row sb-hub-hero__actions"${reveal('up', 3)}>${actions}</div>` : ''}
+    </div>
+  </div>
+  ${heroArt(art, 'sb-hub-hero__art')}
+</section>`;
+}
+
+/**
+ * cardGrid(items, { cls, cols: 2|3|4 (default 3), level: 2|3|4 (heading level, default 3), stagger: true }) -> a responsive
+ * grid of stitched smoked-glass link cards (<ul class="sb-cards">). Each item:
+ *  { title, href, text, eyebrow, eyebrowTone, meta, image (photo object { src, w, h, alt } or a generated id), art (a
+ *    generated cut-out id hung over the card's top-right corner), cta (default 'Read more'; false = none),
+ *    external (true = new tab + external icon), menuCat ('flower' ... = a live-menu link handled by site.js; href is then
+ *    the /stores/ fallback), attrs {} }.
+ * A card without href renders as a plain panel (no link). Text is escaped; `html: true` on an item takes text as raw HTML.
+ */
+export function cardGrid(items = [], opts = {}) {
+  const { cls, cols = 3, level = 3, stagger = true } = opts;
+  const h = `h${[2, 3, 4].includes(level) ? level : 3}`;
+  const cards = items.map((it) => {
+    const link = it.menuCat != null ? menuAttrs(it.menuCat) : it.href ? { href: it.href } : null;
+    const extra = { ...(it.external ? { target: '_blank', rel: 'noopener' } : {}), ...(it.attrs || {}) };
+    const tag = link ? 'a' : 'div';
+    const cta = it.cta === false ? '' : `<span class="sb-card__cta">${esc(it.cta || (it.menuCat != null ? 'Shop the menu' : 'Read more'))}${icon(it.external ? 'external' : 'arrow')}</span>`;
+    const media = it.image ? `<span class="sb-card__media">${img(it.image, { cls: 'sb-card__img', alt: '', sizes: '(max-width: 700px) 92vw, 420px' })}</span>` : '';
+    return `
+    <li class="sb-cards__item">
+      <${tag} class="${cx('sb-card', 'glass', link && 'lift', it.image && 'sb-card--media', it.art && 'sb-card--art')}"${link ? attrs({ ...link, ...extra }) : attrs(extra)}>
+        <span class="sb-card__stitch stitch" aria-hidden="true"></span>
+        ${media}${it.art ? heroArt({ id: it.art, depth: 0, sizes: '(max-width: 700px) 30vw, 170px' }, 'sb-card__art') : ''}
+        <span class="sb-card__body">
+          ${it.eyebrow ? `<span class="sb-card__eyebrow">${patch(it.eyebrow, { tone: it.eyebrowTone || 'gold', size: 'sm' })}</span>` : ''}
+          <${h} class="sb-card__title">${esc(it.title)}</${h}>
+          ${it.text ? `<span class="sb-card__text">${it.html ? it.text : esc(it.text)}</span>` : ''}
+          ${it.meta ? `<span class="sb-card__meta">${esc(it.meta)}</span>` : ''}
+          ${link ? cta : ''}
+        </span>
+      </${tag}>
+    </li>`;
+  }).join('');
+  return `<ul class="${cx('sb-cards', 'sb-cards--' + ([2, 3, 4].includes(cols) ? cols : 3), cls)}" role="list"${stagger ? ' data-stagger' : ''}>${cards}
+  </ul>`;
+}
+
+/**
+ * articleCard(post, { level: 2|3 (default 3), cls, eager, sizes }) -> a blog post card (<article class="sb-article">):
+ *  post = { title, href, date ('YYYY-MM-DD'), category, categoryLabel, excerpt, image: { src, w, h, alt } }.
+ * A stitched smoked-glass card: the photo (warm duotone at rest, full colour on hover), a category patch, the date and
+ * the title, whose link is stretched over the whole card. A missing image fails the build (img()); pass image: null for
+ * a card with the brand leaves panel instead.
+ */
+export function articleCard(post = {}, opts = {}) {
+  const { level = 3, cls, eager = false, sizes = '(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 400px' } = opts;
+  const h = level === 2 ? 'h2' : 'h3';
+  const media = post.image && post.image.src
+    ? img(post.image, { cls: 'sb-article__img', alt: post.image.alt || '', sizes, eager, attrs: post.image.srcset ? { srcset: post.image.srcset, sizes } : {} })
+    : `<span class="sb-article__blank">${leaves({ tone: 'gold' })}<img class="sb-article__star" src="/assets/brand/star-on-dark.png" width="256" height="256" alt="" loading="lazy" decoding="async"></span>`;
+  return `<article class="${cx('sb-article', 'glass', cls)}">
+    <div class="sb-article__media">${media}</div>
+    <div class="sb-article__body">
+      <p class="sb-article__meta">${post.categoryLabel ? patch(post.categoryLabel, { tone: 'green', size: 'sm', cls: 'sb-article__cat' }) : ''}${post.date ? `<time class="sb-article__date" datetime="${esc(String(post.date).slice(0, 10))}">${esc(fmtDate(post.date))}</time>` : ''}</p>
+      <${h} class="sb-article__title"><a class="sb-article__link" href="${esc(post.href || '#')}">${esc(post.title)}</a></${h}>
+      ${post.excerpt ? `<p class="sb-article__excerpt">${esc(post.excerpt)}</p>` : ''}
+      <span class="sb-article__more" aria-hidden="true">Read the article${icon('arrow')}</span>
+    </div>
+  </article>`;
+}

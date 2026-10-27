@@ -85,6 +85,7 @@ const ctx = {
 
 // ---------- render ----------
 const pages = new Map();
+ctx.pages = pages; // revision 2: modules rendered later (sitemap) can list the pages rendered before them
 for (const name of MODULES) {
   const file = path.join(ROOT, 'src/theme', name + '.mjs');
   if (!fs.existsSync(file)) fail('unknown template module: ' + name);

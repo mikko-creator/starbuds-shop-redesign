@@ -1,0 +1,49 @@
+{
+  "slug": "as-cities-declare-cannabis-an-essential-business-heres-how-businesses-are-rallying-to-hel",
+  "category": "news-and-culture",
+  "categoryReason": "A news link-out: cannabis as an essential business (2020).",
+  "title": "As Cities Declare Cannabis An 'Essential Business,' Here's How Businesses Are Rallying T",
+  "date": "2020-03-23",
+  "dateText": "Mar 23, 2020",
+  "readTime": "1 min read",
+  "excerpt": "If there is any good news coming out of the coronavirus crisis, it may be city officials' decision to classify cannabis as an \"essential business.\"",
+  "tags": [],
+  "hero": null,
+  "image": {
+    "src": "/assets/photos/blog/31f81e4c698f-640.webp",
+    "w": 640,
+    "h": 350,
+    "alt": "",
+    "srcset": "/assets/photos/blog/31f81e4c698f-640.webp 640w, /assets/photos/blog/31f81e4c698f-749.webp 749w"
+  },
+  "blocks": [
+    {
+      "t": "img",
+      "src": "/assets/photos/blog/31f81e4c698f-749.webp",
+      "w": 749,
+      "h": 410,
+      "srcset": [
+        {
+          "src": "/assets/photos/blog/31f81e4c698f-640.webp",
+          "w": 640
+        },
+        {
+          "src": "/assets/photos/blog/31f81e4c698f-749.webp",
+          "w": 749
+        }
+      ],
+      "alt": ""
+    },
+    {
+      "t": "p",
+      "html": "If there is any good news coming out of the coronavirus crisis, it may be city officials' decision to classify cannabis as an \"essential business.\""
+    },
+    {
+      "t": "link",
+      "href": "http://www.greenentrepreneur.com/article/347831",
+      "text": "READ MORE HERE"
+    }
+  ],
+  "source": "single-post__2020__03__23__as-cities-declare-cannabis-an-essential-business-heres-how-businesses-are-rallying-to-hel.json",
+  "legacyPath": "/single-post/2020/03/23/as-cities-declare-cannabis-an-essential-business-heres-how-businesses-are-rallying-to-hel"
+}

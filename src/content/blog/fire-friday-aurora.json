@@ -1,0 +1,68 @@
+{
+  "slug": "fire-friday-aurora",
+  "category": "news-and-culture",
+  "categoryReason": "Store events: Aurora (2017).",
+  "title": "FIRE FRIDAY : AURORA",
+  "date": "2017-07-31",
+  "dateText": "Jul 31, 2017",
+  "readTime": "1 min read",
+  "excerpt": "Join us Friday, August 4th for Fire Friday! Starbuds Aurora will be having a special event this Friday from 4-6 PM and we'd love for you to be a part of it!",
+  "tags": [],
+  "hero": null,
+  "image": {
+    "src": "/assets/photos/blog/6562a65258d3-640.webp",
+    "w": 640,
+    "h": 509,
+    "alt": "",
+    "srcset": "/assets/photos/blog/6562a65258d3-640.webp 640w, /assets/photos/blog/6562a65258d3-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "Join us Friday, August 4th for Fire Friday! Starbuds Aurora will be having a special event this Friday from 4-6 PM and we'd love for you to be a part of it!"
+    },
+    {
+      "t": "p",
+      "html": "FLO 107.1 will be on site broadcasting LIVE &amp; Kaviar will be set up doing buy one get one for $1 Kaviar Kones."
+    },
+    {
+      "t": "p",
+      "html": "Not only will we have killer deals on Kaviar, we aslo have 4 gram eighths and DOUBLE rewards points on purchases"
+    },
+    {
+      "t": "p",
+      "html": "for all loyalty members. If you aren't already a part of our Higher Rewards Program, make sure you sign up in store with one of our friendly budtenders, OR sign up on our website<a href=\"/rewards/\"> here! </a>"
+    },
+    {
+      "t": "p",
+      "html": "Starbuds is a proud sponsor of the first ever Colorado Dope Cup brought to you by Dope Magazine. The event is free for anyone 21+ and will be held August 13th at Cluster Studios, 3881 Steele St, Denver, CO 80205. In order to RSVP and attend the event you need to sign up online, <a href=\"http://dopecupco.dopemagazine.com/rsvp/\">here. </a><a href=\"http://dopecupco.dopemagazine.com/rsvp/\">We will be giving away VIP tickets to the Dope Cup at our</a>"
+    },
+    {
+      "t": "p",
+      "html": "<a href=\"http://dopecupco.dopemagazine.com/rsvp/\">Fire Friday event, so don't miss out on your chance to win and join us in store.</a>"
+    },
+    {
+      "t": "img",
+      "src": "/assets/photos/blog/6562a65258d3-1280.webp",
+      "w": 1280,
+      "h": 1017,
+      "srcset": [
+        {
+          "src": "/assets/photos/blog/6562a65258d3-640.webp",
+          "w": 640
+        },
+        {
+          "src": "/assets/photos/blog/6562a65258d3-1280.webp",
+          "w": 1280
+        }
+      ],
+      "alt": ""
+    },
+    {
+      "t": "p",
+      "html": "We look forward to seeing everyone!!!"
+    }
+  ],
+  "source": "single-post__2017__07__31__fire-friday-aurora.json",
+  "legacyPath": "/single-post/2017/07/31/fire-friday-aurora"
+}

@@ -1,0 +1,112 @@
+{
+  "slug": "why-cannabis-smells-so-strong-and-what-that-aroma-actually-means",
+  "category": "cannabis-101",
+  "categoryReason": "Explains cannabis aroma and terpenes: plant basics.",
+  "title": "Why Cannabis Smells So Strong, And What That Aroma Actually Means",
+  "date": "2026-01-22",
+  "dateText": "Jan 22, 2026",
+  "readTime": "2 min read",
+  "excerpt": "Walk into a dispensary and you’ll notice it immediately: that unmistakable cannabis aroma. Some strains smell citrusy, others earthy, gassy, or even sweet like dessert. But that smell isn’t…",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/e662c7a3cc0f-1280.webp",
+    "w": 1280,
+    "h": 853,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/e662c7a3cc0f-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/e662c7a3cc0f-1280.webp",
+        "w": 1280
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/e662c7a3cc0f-640.webp",
+    "w": 640,
+    "h": 427,
+    "alt": "",
+    "srcset": "/assets/photos/blog/e662c7a3cc0f-640.webp 640w, /assets/photos/blog/e662c7a3cc0f-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "Walk into a dispensary and you’ll notice it immediately: that unmistakable cannabis aroma. Some strains smell citrusy, others earthy, gassy, or even sweet like dessert. But that smell isn’t just for show. It’s actually one of the best clues to how a cannabis product might make you feel."
+    },
+    {
+      "t": "p",
+      "html": "At <strong>Star Buds</strong>, we encourage customers to trust their nose. Here’s why cannabis smells the way it does, and how to use aroma to shop smarter."
+    },
+    {
+      "t": "h2",
+      "html": "The Science Behind the Smell: Terpenes"
+    },
+    {
+      "t": "p",
+      "html": "The scent of cannabis comes from compounds called <strong>terpenes</strong>, which are naturally found in many plants, including citrus fruits, pine trees, and lavender. Terpenes don’t just create smell — they also influence effects."
+    },
+    {
+      "t": "p",
+      "html": "Common examples include:"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "<strong>Limonene</strong> – citrus scent, often associated with uplifting or mood-boosting effects",
+        "<strong>Myrcene</strong> – earthy, musky aroma, commonly linked to relaxation",
+        "<strong>Caryophyllene</strong> – spicy, peppery smell, sometimes connected to stress relief",
+        "<strong>Pinene</strong> – fresh pine scent, often associated with alertness"
+      ]
+    },
+    {
+      "t": "p",
+      "html": "Two strains with similar THC levels can feel very different depending on their terpene profile. That’s why experienced cannabis consumers often shop by smell rather than potency alone."
+    },
+    {
+      "t": "h2",
+      "html": "Why Fresh Cannabis Smells Better"
+    },
+    {
+      "t": "p",
+      "html": "Fresh cannabis retains more terpenes. Over time, exposure to air, heat, and light can cause these compounds to break down, reducing both aroma and effectiveness."
+    },
+    {
+      "t": "p",
+      "html": "Shopping at a licensed dispensary like Star Buds helps ensure:"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Proper storage conditions",
+        "Fresh inventory rotation",
+        "Accurate labeling and testing"
+      ]
+    },
+    {
+      "t": "h2",
+      "html": "How to Use Smell When Choosing Cannabis"
+    },
+    {
+      "t": "p",
+      "html": "Next time you visit a dispensary:"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Notice which aromas you naturally enjoy",
+        "Ask about terpene profiles",
+        "Try different scent categories (fruity, gassy, herbal, sweet)",
+        "Keep track of which ones match your preferred experience"
+      ]
+    },
+    {
+      "t": "p",
+      "html": "Your nose is a powerful guide, and learning to trust it can make your cannabis experience more consistent and enjoyable."
+    }
+  ],
+  "source": "single-post__why-cannabis-smells-so-strong-and-what-that-aroma-actually-means.json",
+  "legacyPath": "/single-post/why-cannabis-smells-so-strong-and-what-that-aroma-actually-means"
+}

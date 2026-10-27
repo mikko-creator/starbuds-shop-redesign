@@ -1,0 +1,56 @@
+{
+  "slug": "phish-fans-rejoice-fluffhead-kush-is-here",
+  "category": "news-and-culture",
+  "categoryReason": "Store news: a strain release timed to a concert (2017).",
+  "title": "Phish Fans REJOICE! Fluffhead Kush is here.",
+  "date": "2017-08-31",
+  "dateText": "Aug 31, 2017",
+  "readTime": "1 min read",
+  "excerpt": "Phish is ending it's summer tour here in Colorado at Dick's Sporting Goods....and we have a treat for all fans! FLUFFHEAD KUSH IS HERE!",
+  "tags": [],
+  "hero": null,
+  "image": {
+    "src": "/assets/photos/blog/ed4bd6d00e26-640.webp",
+    "w": 640,
+    "h": 366,
+    "alt": "",
+    "srcset": "/assets/photos/blog/ed4bd6d00e26-640.webp 640w, /assets/photos/blog/ed4bd6d00e26-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "Phish is ending it's summer tour here in Colorado at Dick's Sporting Goods....and we have a treat for all fans!"
+    },
+    {
+      "t": "p",
+      "html": "FLUFFHEAD KUSH IS HERE!"
+    },
+    {
+      "t": "p",
+      "html": "Starbuds Commerce City is just a few minutes down the road from Dick's, so stop by and stock up before the weekend! Mention this ad &amp; receive 10% off your entire purchase."
+    },
+    {
+      "t": "p",
+      "html": "ONLY VALID AT OUR COMMERCE CITY STORE, 5844 Dahlia St. Open Daily 8am- 10pm!"
+    },
+    {
+      "t": "img",
+      "src": "/assets/photos/blog/ed4bd6d00e26-1280.webp",
+      "w": 1280,
+      "h": 732,
+      "srcset": [
+        {
+          "src": "/assets/photos/blog/ed4bd6d00e26-640.webp",
+          "w": 640
+        },
+        {
+          "src": "/assets/photos/blog/ed4bd6d00e26-1280.webp",
+          "w": 1280
+        }
+      ],
+      "alt": ""
+    }
+  ],
+  "source": "single-post__2017__08__31__phish-fans-rejoice-fluffhead-kush-is-here.json",
+  "legacyPath": "/single-post/2017/08/31/phish-fans-rejoice-fluffhead-kush-is-here"
+}

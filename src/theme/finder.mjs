@@ -164,7 +164,13 @@ function card(s, state) {
         </article>`;
 }
 
-export function finderSection(ctx) {
+/**
+ * finderSection(ctx, opts?) -> the finder section (render it at most once per page: its ids are fixed).
+ * opts (revision 2, LOCATIONS: the same finder on /dispensaries/): eyebrow ('Store finder'), title ('Find your store'),
+ * lead (default: the store count line), cls (extra class on the section). No opts = the home-page output, unchanged.
+ */
+export function finderSection(ctx, opts = {}) {
+  const { eyebrow = 'Store finder', title = 'Find your store', lead = null, cls = '' } = opts;
   const stateBy = Object.fromEntries(ctx.states.map((s) => [s.code, s]));
   const groups = ctx.storesByState;
   const n = ctx.stores.length;
@@ -172,7 +178,7 @@ export function finderSection(ctx) {
   if (missing.length) console.warn('warning: finder: no map point for ' + missing.join(', ') + ' (run node tools/geo-build.mjs)');
   const tab = (code, label, count, pressed) => `<button type="button" class="ftab" data-finder-tab="${esc(code)}" aria-pressed="${pressed}"><span class="ftab__label">${esc(label)}</span><span class="ftab__n">${count}</span>${code !== 'all' && stateBy[code] ? `<span class="sr-only"> ${esc(stateBy[code].name)}</span>` : ''}</button>`;
   return `
-<section class="section finder on-dark" id="locations" aria-labelledby="finder-title" data-finder>
+<section class="section finder on-dark${cls ? ' ' + esc(cls) : ''}" id="locations" aria-labelledby="finder-title" data-finder>
   <div class="plane-back finder__back">
     <span class="finder__leather" style="background-image:url('${imgUrl('g-leather', 1440)}')"></span>
     <span class="finder__dots"></span>
@@ -180,9 +186,9 @@ export function finderSection(ctx) {
   </div>
   <div class="wrap finder__wrap">
     <header class="finder__head">
-      <p class="finder__tab" data-reveal="up"><span>Store finder</span></p>
-      <h2 class="finder__title" id="finder-title" data-reveal="up" style="--i:1">Find your store</h2>
-      <p class="finder__lead" data-reveal="up" style="--i:2">${n} ${n === 1 ? 'location' : 'locations'} in ${esc(listJoin(groups.map((g) => g.state.name)))}. Pick a pin or a store for its hours, directions and live menu.</p>
+      <p class="finder__tab" data-reveal="up"><span>${esc(eyebrow)}</span></p>
+      <h2 class="finder__title" id="finder-title" data-reveal="up" style="--i:1">${esc(title)}</h2>
+      <p class="finder__lead" data-reveal="up" style="--i:2">${lead != null ? esc(lead) : `${n} ${n === 1 ? 'location' : 'locations'} in ${esc(listJoin(groups.map((g) => g.state.name)))}. Pick a pin or a store for its hours, directions and live menu.`}</p>
     </header>
     <div class="finder__grid">
       <div class="finder__list" data-reveal="up" style="--i:1">

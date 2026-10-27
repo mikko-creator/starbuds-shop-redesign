@@ -1,0 +1,1572 @@
+{
+ "note": "RESOURCES-R2: verbatim starbuds.us page captures (2026-10-23) used by src/theme/resources.mjs. Blocks unchanged from the capture; see the lane report for what the renderer drops.",
+ "captured": "2026-10-23",
+ "pages": {
+  "about": {
+   "source": "starbuds-reforge/src/content/pages/about.json",
+   "url": "https://www.starbuds.us/about",
+   "title": "About | Star Buds Marijuana Dispensary | Colorado, Illinois, Mississippi, Oklahoma, New York, Maryland",
+   "h1": "We are home to a top-notch selection of strains, including our signature Cannabis Cup-winning sativa, plus a wide array of popular concentrates, edibles, tinctures and more. Check out our products!",
+   "description": "Star Buds Dispensaries | CBD and THC Marijuana Dispensary | Flower, Concentrates, Edibles, Topicals and Tinctures",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "image",
+       "src": "https://static.wixstatic.com/media/553d0f_6849937938d44b3da3cc629ed33a8556~mv2.png",
+       "alt": "Starbuds_US_Main_Est2013_HorizontalWordm",
+       "href": null,
+       "w": 600,
+       "h": 185,
+       "caption": ""
+      },
+      {
+       "t": "heading",
+       "level": 4,
+       "html": "We are home to a top-notch selection of strains, including our signature Cannabis Cup-winning sativa, plus a wide array of popular concentrates, edibles, tinctures and more. Check out our products!"
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 4,
+       "html": "The Star Buds Difference"
+      },
+      {
+       "t": "divider"
+      },
+      {
+       "t": "rich",
+       "html": "<p>Welcome to Star Buds, your premier destination for exceptional cannabis. With locations spanning across Colorado, Maryland, Mississippi, Illinois, and Oklahoma, we're proud to offer unparalleled service and product selection. From the moment you step into our dispensaries, you'll feel the difference. No more waiting in lobbies, ordering on an iPad, or settling for subpar products—our welcoming atmosphere invites you to fully immerse yourself while our knowledgeable, attentive team guides you through a personalized customer service experience.</p>\n<p>​</p>\n<p>Ready for the perks?</p>\n<p>When you sign up for our rewards program (it's totally free, by the way), you'll unlock instant benefits. With every purchase, earn valuable points that can be redeemed for savings on an extensive range of premium cannabis products and accessories. As a member of our Higher Rewards Loyalty Program, you'll also enjoy priority access to exclusive discounts and special Star Buds events. <a href=\"/rewards/\" target=\"_self\">Learn More »</a></p>\n<p>​</p>\n<p>The Star Buds Community</p>\n<p>Community is at the heart of everything we do. Through our <a href=\"/cancerreliefprogram/\" target=\"_self\">Cancer Relief Program</a>, we extend discounted access to cannabis products to those in need. We're also dedicated to honoring our veterans, providing ongoing discounts, and continuously seeking ways to make a positive impact in our communities.</p>\n<p>​</p>\n<p>At Star Buds, we pride ourselves on Shining High Above the Rest.</p>\n<p>Your journey with us is guaranteed to be nothing short of extraordinary.</p>"
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "image",
+       "src": "https://static.wixstatic.com/media/553d0f_973f653d1f7a49fea87b579ad9be4096~mv2.png",
+       "alt": "high times cannabis cup winner 2015 best sativa, pootie tang",
+       "href": "https://www.cannabiscup.com/past-winners/",
+       "w": 379,
+       "h": 296,
+       "caption": ""
+      },
+      {
+       "t": "heading",
+       "level": 5,
+       "html": "PROUD WINNERS OF THE 2015 CANNABIS CUP FOR BEST SATIVA IN COLORADO"
+      },
+      {
+       "t": "button",
+       "text": "LEARN MORE",
+       "href": "https://www.cannabiscup.com/past-winners/#denver-",
+       "external": true
+      }
+     ]
+    }
+   ]
+  },
+  "team-starbuds": {
+   "source": "starbuds-reforge/src/content/pages/team-starbuds.json",
+   "url": "https://www.starbuds.us/team-starbuds",
+   "title": "TEAM STAR BUDS | Star Buds",
+   "h1": "team starbuds",
+   "description": "",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "team starbuds"
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "rich",
+       "html": "<p>HOW LONG HAVE YOU BEEN WITH STARBUDS?</p>\n<p>​</p>\n<p>​</p>\n<p>​</p>\n<p>FAVORITE INDICA?</p>\n<p>​</p>\n<p>​</p>\n<p>​</p>\n<p>FAVORITE SATIVA?</p>\n<p>​</p>\n<p>​</p>\n<p>FAVORITE INDICA?</p>"
+      },
+      {
+       "t": "rich",
+       "html": "<p>FEATURED</p>\n<p>Master Grower</p>"
+      },
+      {
+       "t": "divider"
+      },
+      {
+       "t": "rich",
+       "html": "<p>FEATURED</p>\n<p>Master Grower</p>"
+      },
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "DAN MORGAN"
+      },
+      {
+       "t": "image",
+       "src": "https://static.wixstatic.com/media/553d0f_aeb8a2450d4b441581d7b97aeea9c679~mv2.jpg",
+       "alt": "",
+       "href": null,
+       "w": 350,
+       "h": 389,
+       "caption": ""
+      },
+      {
+       "t": "heading",
+       "level": 4,
+       "html": "DAN MORGAN"
+      }
+     ]
+    }
+   ]
+  },
+  "contact": {
+   "source": "starbuds-reforge/src/content/pages/contact.json",
+   "url": "https://www.starbuds.us/contact",
+   "title": "Contact | Star Buds Marijuana Dispensary | Colorado",
+   "h1": "CONTACT",
+   "description": "Star Buds Dispensaries | CBD and THC Marijuana Dispensary | Flower, Concentrates, Edibles, Topicals and Tinctures",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "columns",
+       "cols": [
+        {
+         "bg": null,
+         "blocks": [
+          {
+           "t": "form",
+           "title": "Thanks! Your Message has been sent. We will get back to you as soon as possible!",
+           "fields": [
+            {
+             "type": "text",
+             "label": "Name *",
+             "name": "name-*",
+             "required": true,
+             "options": []
+            },
+            {
+             "type": "email",
+             "label": "Email *",
+             "name": "email",
+             "required": true,
+             "options": []
+            },
+            {
+             "type": "tel",
+             "label": "Phone No.",
+             "name": "phone",
+             "required": false,
+             "options": []
+            },
+            {
+             "type": "text",
+             "label": "Store Location",
+             "name": "store-location",
+             "required": false,
+             "options": []
+            },
+            {
+             "type": "text",
+             "label": "Subject",
+             "name": "subject",
+             "required": false,
+             "options": []
+            },
+            {
+             "type": "textarea",
+             "label": "Message",
+             "name": "",
+             "required": false,
+             "options": []
+            }
+           ],
+           "submit": "Send",
+           "blocks": [
+            {
+             "t": "rich",
+             "html": "<p>Thanks! Your Message has been sent. We will get back to you as soon as possible!</p>"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "CONTACT"
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 2,
+       "html": "INTERESTED IN WORKING WITH US?"
+      },
+      {
+       "t": "divider"
+      },
+      {
+       "t": "rich",
+       "html": "<p>Starbuds is a retail-focused cannabis company based out of Colorado. As pioneers in the industry with experience in all facets of cannabis from retail to cultivation to manufacturing, Starbuds is seeking to work with partners across the United States.</p>"
+      },
+      {
+       "t": "button",
+       "text": "Get In Touch",
+       "href": "/workwithus/",
+       "external": false
+      }
+     ]
+    }
+   ]
+  },
+  "careers": {
+   "source": "starbuds-reforge/src/content/pages/careers.json",
+   "url": "https://www.starbuds.us/careers",
+   "title": "Careers | Star Buds Marijuana Dispensary | Colorado",
+   "h1": "CAREERS",
+   "description": "Star Buds, is looking to hire smart people who thrive in fast-pace, team oriented environments in the communities of Denver, Aurora & Pueblo. Send us your resume",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "CAREERS"
+      },
+      {
+       "t": "rich",
+       "html": "<p>Now Hiring For All Positions In Colorado!</p>"
+      },
+      {
+       "t": "button",
+       "text": "SEE AVAILABLE COLORADO POSITIONS",
+       "href": "https://www.indeed.com/cmp/Schwazze/jobs",
+       "external": true
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "rich",
+       "html": "<p>WE'RE LOOKING FOR THOSE THAT ARE PASSIONATE, UNAPOLOGETICALLY COMMITTED, &amp; HAVE HUNGER FOR SUCCESS.</p>"
+      },
+      {
+       "t": "heading",
+       "level": 2,
+       "html": "We hire smart people who thrive in a fast-paced, team oriented environment, where everyday brings a new challenge. If you have been looking for an opportunity that allows you to become part of something bigger, something great, we want to talk to you!"
+      },
+      {
+       "t": "columns",
+       "cols": [
+        {
+         "bg": null,
+         "blocks": [
+          {
+           "t": "heading",
+           "level": 1,
+           "html": "INTERESTED IN JOINING US?"
+          },
+          {
+           "t": "rich",
+           "html": "<p>NOW HIRING BUDTENDERS, SEND US YOUR RESUME!</p>"
+          },
+          {
+           "t": "button",
+           "text": "APPLY NOW",
+           "href": "mailto:CONTACT@STARBUDS.US?subject=Interested in joining the Starbuds Team?",
+           "external": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "workwithus": {
+   "source": "starbuds-reforge/src/content/pages/workwithus.json",
+   "url": "https://www.starbuds.us/workwithus",
+   "title": "WORK WITH US | Star Buds",
+   "h1": "BUSINESS INQUIRIES",
+   "description": "",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "columns",
+       "cols": [
+        {
+         "bg": null,
+         "blocks": [
+          {
+           "t": "rich",
+           "html": "<p>Star Buds is a retail-focused cannabis company based out of Colorado. As pioneers in the industry with experience in all facets of cannabis from retail to cultivation to manufacturing, Star Buds is seeking to work with partners across the United States.</p>\n<p>The Star Buds team has helped win highly competitive licenses in Hawaii, Louisiana, Massachusetts, and Maryland. We work with our partners</p>\n<p>to help them be highly successful in their cannabis business. Star Buds can provide help winning license applications, finding and securing real estate locations, providing branding, marketing, operational, accounting and compliance expertise. Star Buds believes providing the best customer service in the industry will allow us to grow to be the most successful cannabis retailer in America.</p>"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "BUSINESS INQUIRIES"
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "columns",
+       "cols": [
+        {
+         "bg": null,
+         "blocks": [
+          {
+           "t": "heading",
+           "level": 1,
+           "html": "BRAND SOLUTIONS"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "columns",
+       "cols": [
+        {
+         "bg": {
+          "image": "https://static.wixstatic.com/media/0e4af9d92b404903b674276377301988.jpg",
+          "color": null
+         },
+         "blocks": [
+          {
+           "t": "rich",
+           "html": "<p>Licensing</p>"
+          }
+         ]
+        },
+        {
+         "bg": {
+          "image": "https://static.wixstatic.com/media/a4dc4a37e4904958aa58ff268caf9820.jpg",
+          "color": null
+         },
+         "blocks": [
+          {
+           "t": "rich",
+           "html": "<p>OPERATIONS</p>"
+          }
+         ]
+        },
+        {
+         "bg": {
+          "image": "https://static.wixstatic.com/media/34ea9c8b307142318556706b9f298f13.jpeg",
+          "color": null
+         },
+         "blocks": [
+          {
+           "t": "rich",
+           "html": "<p>Marketing</p>"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "columns",
+       "cols": [
+        {
+         "bg": null,
+         "blocks": [
+          {
+           "t": "heading",
+           "level": 2,
+           "html": "GET IN TOUCH"
+          },
+          {
+           "t": "form",
+           "title": "Success! Message received.",
+           "fields": [
+            {
+             "type": "text",
+             "label": "Name *",
+             "name": "name-*",
+             "required": true,
+             "options": []
+            },
+            {
+             "type": "email",
+             "label": "Email *",
+             "name": "email",
+             "required": true,
+             "options": []
+            },
+            {
+             "type": "text",
+             "label": "Subject",
+             "name": "subject",
+             "required": false,
+             "options": []
+            },
+            {
+             "type": "textarea",
+             "label": "Message",
+             "name": "",
+             "required": false,
+             "options": []
+            }
+           ],
+           "submit": "Send",
+           "blocks": [
+            {
+             "t": "rich",
+             "html": "<p>Success! Message received.</p>"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "html",
+       "html": "<p>Get In Touch</p>"
+      }
+     ]
+    }
+   ]
+  },
+  "community": {
+   "source": "starbuds-reforge/src/content/pages/community.json",
+   "url": "https://www.starbuds.us/community",
+   "title": "Community | Star Buds Marijuana Dispensary | Colorado",
+   "h1": "COMMUNITY",
+   "description": "Star Buds Dispensaries | CBD and THC Marijuana Dispensary | Flower, Concentrates, Edibles, Topicals and Tinctures",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "COMMUNITY"
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "rich",
+       "html": "<p>At Star Buds, we care about our customers and our communities.</p>\n<p>​</p>\n<p>Star Buds embraces the idea that a business should give something back to the customers and communities supporting it. Beyond our daily mission of providing top quality products and customer service, we strive to find unique opportunities to do some good.</p>"
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "repeater",
+       "items": [
+        {
+         "blocks": [
+          {
+           "t": "heading",
+           "level": 4,
+           "html": "CDOT D.U.I. CAMPAIGN"
+          },
+          {
+           "t": "button",
+           "text": "LEARN MORE",
+           "href": "/cdot/",
+           "external": false
+          }
+         ]
+        },
+        {
+         "blocks": [
+          {
+           "t": "heading",
+           "level": 4,
+           "html": "CANCER RELIEF PROGRAM"
+          },
+          {
+           "t": "button",
+           "text": "LEARN MORE",
+           "href": "/cancerreliefprogram/",
+           "external": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "repeater",
+       "items": [
+        {
+         "blocks": [
+          {
+           "t": "heading",
+           "level": 4,
+           "html": "ADOPT A HIGHWAY"
+          },
+          {
+           "t": "rich",
+           "html": "<p>Roadside litter costs millions of dollars annually to control. Often, it is impossible to keep up with the trash that people have dumped on Colorado roads.</p>\n<p>​</p>\n<p>Star Buds is proud to partner with the Adopt-A-Highway program in Colorado. This initiative is an effective way to help keep our roadways and environments clean.</p>"
+          }
+         ]
+        },
+        {
+         "blocks": [
+          {
+           "t": "heading",
+           "level": 4,
+           "html": "COLORADO TOY DRIVE"
+          },
+          {
+           "t": "rich",
+           "html": "<p>This past holiday season Denver teamed up with King Soopers, 97.3 KBCO, and KOA NewsRadio to collect new toys and cash donations for children and youth served by the Boys &amp; Girls Clubs of Metro Denver. King Soopers collected new, unwrapped toys at all Metro Area locations. Coloradans were encouraged to donate items such as toys, games, art kits, DVDs, video games, sporting equipment, electronics, helmets and other gifts for children and youth. All items were distributed at Boys &amp; Girls Clubs’ holiday parties so that every child gets a gift this year.</p>"
+          }
+         ]
+        },
+        {
+         "blocks": [
+          {
+           "t": "heading",
+           "level": 4,
+           "html": "FIREFIGHTER &amp; POLICE SUPPORT"
+          },
+          {
+           "t": "rich",
+           "html": "<p>Aurora Police Association and Star Buds came together to support the \"Shop with a Cop\" Event.</p>\n<p>​</p>\n<p>The program is designed to unite Aurora Police officers and public safety employees with local disadvantaged children for a special day of shopping. Each child is guaranteed new shoes, several outfits of clothing, and backpacks filled with school supplies. Children and families will be carefully selected and screened by a committee of local law enforcement officers. Approximately $200 will be spent on each child. Our goal is to sponsor as many children as possible, through the support of donations from our citizens and businesses in the community.</p>"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "media": {
+   "source": "starbuds-reforge/src/content/pages/media.json",
+   "url": "https://www.starbuds.us/media",
+   "title": "MEDIA | Star Buds",
+   "h1": "IN THE PRESS",
+   "description": "",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "IN THE PRESS"
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "repeater",
+       "items": [
+        {
+         "blocks": [
+          {
+           "t": "image",
+           "src": "https://static.wixstatic.com/media/553d0f_55843d83b6c147d18d4c4afe9a3d9710~mv2.png",
+           "alt": "PotBarons.png",
+           "href": "http://www.msnbc.com/pot-barons/meet-brian-ruden-owner-starbuds",
+           "w": 216,
+           "h": 193,
+           "caption": ""
+          },
+          {
+           "t": "heading",
+           "level": 4,
+           "html": "Meet Brian Ruden: Owner of Starbuds"
+          }
+         ]
+        },
+        {
+         "blocks": [
+          {
+           "t": "image",
+           "src": "https://static.wixstatic.com/media/553d0f_63485a23dc2748b0a6671adf31a8bba4~mv2.png",
+           "alt": "download-2.png",
+           "href": "https://growmag.com/",
+           "w": 216,
+           "h": 193,
+           "caption": ""
+          },
+          {
+           "t": "heading",
+           "level": 4,
+           "html": "Grow Mag"
+          }
+         ]
+        },
+        {
+         "blocks": [
+          {
+           "t": "image",
+           "src": "https://static.wixstatic.com/media/553d0f_cbee7d8e6cb04a54a3c15f35885d7db1~mv2.jpg",
+           "alt": "boston-globe-logo-mmp.jpg",
+           "href": "https://www.bostonglobe.com/ideas/2018/02/09/uncommon-knowledge-the-impacts-legalization/jsqaeMDLCgGzkN5fQrGcWJ/story.html",
+           "w": 216,
+           "h": 193,
+           "caption": ""
+          },
+          {
+           "t": "heading",
+           "level": 4,
+           "html": "The Impacts of Legalization"
+          }
+         ]
+        },
+        {
+         "blocks": [
+          {
+           "t": "image",
+           "src": "https://static.wixstatic.com/media/553d0f_8c7b8cf13dad4b638f48f9952d823e16~mv2_d_1200_1200_s_2.png",
+           "alt": "cannabist-social-logo-lgsq.png",
+           "href": "https://www.thecannabist.co/2015/05/15/cannabist-show-neos-vape-pens-marijuana-starbuds/35011/",
+           "w": 216,
+           "h": 193,
+           "caption": ""
+          },
+          {
+           "t": "heading",
+           "level": 4,
+           "html": "The Cannabist Show"
+          }
+         ]
+        },
+        {
+         "blocks": [
+          {
+           "t": "image",
+           "src": "https://static.wixstatic.com/media/553d0f_68c11c80fe9e4d85b04b55082096bb40~mv2_d_1920_1920_s_2.png",
+           "alt": "logo-msnbc-png--1920.png",
+           "href": "http://www.msnbc.com/pot-barons",
+           "w": 216,
+           "h": 193,
+           "caption": ""
+          },
+          {
+           "t": "heading",
+           "level": 4,
+           "html": "Pot Barons of Colorado"
+          }
+         ]
+        },
+        {
+         "blocks": [
+          {
+           "t": "image",
+           "src": "https://static.wixstatic.com/media/553d0f_374204060ca74ba09fe8b57cf7e90455~mv2.png",
+           "alt": "dopemagazine.png",
+           "href": "https://www.dopemagazine.com/pootie-tang/",
+           "w": 216,
+           "h": 193,
+           "caption": ""
+          },
+          {
+           "t": "heading",
+           "level": 4,
+           "html": "Pootie Tang: A Smooth, Sweet and Stimulating Sativa"
+          }
+         ]
+        },
+        {
+         "blocks": [
+          {
+           "t": "image",
+           "src": "https://static.wixstatic.com/media/553d0f_b5fe5bd067c843efa45fb39a2ef7f272~mv2.png",
+           "alt": "forbes-logo-vector-2.png",
+           "href": "https://www.forbes.com/sites/julieweed/2016/05/21/good-news-for-marijuana-businesses-may-be-on-the-horizon/#7dd713806d82",
+           "w": 216,
+           "h": 193,
+           "caption": ""
+          },
+          {
+           "t": "heading",
+           "level": 4,
+           "html": "Good News For Marijuana Businesses"
+          }
+         ]
+        },
+        {
+         "blocks": [
+          {
+           "t": "image",
+           "src": "https://static.wixstatic.com/media/553d0f_2fd4d7d1d6694bd8baf9335181fcc592~mv2.jpg",
+           "alt": "ncv-logo-white-share-420x315.jpg",
+           "href": "https://www.newcannabisventures.com/colorados-starbuds-partners-with-compass-cannabis-clinics-to-pursue-canadian-cannabis-retail-opportunities/",
+           "w": 216,
+           "h": 193,
+           "caption": ""
+          },
+          {
+           "t": "heading",
+           "level": 4,
+           "html": "Starbuds Partners with Cannabis Clinics"
+          }
+         ]
+        },
+        {
+         "blocks": [
+          {
+           "t": "image",
+           "src": "https://static.wixstatic.com/media/553d0f_0c973af6f94647b59017f3caaa94b5b5~mv2.png",
+           "alt": "rolling_stone_logo.png",
+           "href": "https://www.rollingstone.com/culture/culture-features/the-rolling-stone-guide-to-legal-pot-colorado-627824/",
+           "w": 216,
+           "h": 193,
+           "caption": ""
+          },
+          {
+           "t": "heading",
+           "level": 4,
+           "html": "The Rolling Stone Guide to Legal Pot: Colorado"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "divider"
+      },
+      {
+       "t": "heading",
+       "level": 4,
+       "html": "JULIE'S KITCHEN"
+      },
+      {
+       "t": "heading",
+       "level": 4,
+       "html": "COOKING AT HOME WITH JULIE DOOLEY FROM STAR BAR EDIBLES"
+      },
+      {
+       "t": "heading",
+       "level": 4,
+       "html": "CANNABIS INFUSED COOKIE DOUGH"
+      },
+      {
+       "t": "heading",
+       "level": 4,
+       "html": "CANNABIS INFUSED MARINARA SAUCE"
+      },
+      {
+       "t": "button",
+       "text": "THE RECIPE",
+       "href": "https://www.starbuds.us/_files/ugd/553d0f_2c5bab4853534311a3a5f14b554d673e.pdf",
+       "external": false
+      },
+      {
+       "t": "button",
+       "text": "THE RECIPE",
+       "href": "https://www.starbuds.us/_files/ugd/553d0f_15ac1c3dba2841e5af7608cbe362df3a.pdf",
+       "external": false
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 4,
+       "html": "CANNABUTTER OR CANNA COCONUT OIL"
+      },
+      {
+       "t": "button",
+       "text": "THE RECIPE",
+       "href": "https://www.starbuds.us/_files/ugd/553d0f_9acd43295a1b4fe8adc14109ebfdbde3.pdf",
+       "external": false
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "divider"
+      },
+      {
+       "t": "heading",
+       "level": 2,
+       "html": "STAR BUDS FEATURED ON YOUTUBE"
+      },
+      {
+       "t": "embed",
+       "src": "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fgijacklin%2Fvideos%2F10155288734998713&autoplay=false&mute=false&width=790px&height=455px",
+       "title": "External Facebook",
+       "kind": "other",
+       "height": null,
+       "host": "www.facebook.com"
+      }
+     ]
+    }
+   ]
+  },
+  "cancerreliefprogram": {
+   "source": "starbuds-reforge/src/content/pages/cancerreliefprogram.json",
+   "url": "https://www.starbuds.us/cancerreliefprogram",
+   "title": "CANCER RELIEF PROGRAM | United States | Star Buds",
+   "h1": "CANCER RELIEF PROGRAM",
+   "description": "At Star Buds, we attempt to provide relief, offering discounted Hash Oil for Current Cancer Patients",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "CANCER RELIEF PROGRAM"
+      },
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "Brought to you by Star Buds"
+      },
+      {
+       "t": "divider"
+      },
+      {
+       "t": "heading",
+       "level": 4,
+       "html": "Discounted Hash Oil for Current Cancer Patients"
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "rich",
+       "html": "<p>At Star Buds, we care about our customers and our communities.</p>\n<p>​</p>\n<p>Star Buds embraces the idea that a business should give something back to the customers and communities supporting it. Beyond our daily mission of providing top quality products and customer service, we strive to find unique opportunities to do some good. In an effort to help those who use cannabis as a regular part of their cancer treatment, we have put together the Star Buds Cancer Relief Program. Eligible customers (see Terms and Conditions) may purchase one gram of select hash oil each month for just one dollar ($1).</p>\n<p>We hope this program helps to ensure that the cost of cannabis is one less hurdle on the road to recovery.</p>"
+      },
+      {
+       "t": "divider"
+      },
+      {
+       "t": "heading",
+       "level": 4,
+       "html": "About Our Product"
+      },
+      {
+       "t": "rich",
+       "html": "<p>The Star Buds Hash Oil Syringe is designed with the user in mind. During the extraction process, the hash oil is exposed to heat in order to decarboxylate the THCA, resulting in a final product rich in Active THC. This enables the user to choose their preferred route of administration: oral, vaporized, or smoked.</p>"
+      },
+      {
+       "t": "heading",
+       "level": 4,
+       "html": "Terms &amp; Conditions"
+      },
+      {
+       "t": "rich",
+       "html": "<p>Eligibility shall be at the sole discretion of Star Buds, and providing the documentation below shall not be a guarantee of eligibility.</p>\n<p>Customer must be a cancer patient who has either received treatment or had an oncology follow-up appointment within the past six months.</p>\n<p>To demonstrate eligibility at the point of purchase, customer must present a document issued in the regular course of business by a recognizable medical provider or medical insurer (eg. St. Joseph’s Hospital, Kaiser Permanente, etc.) The document must contain each of the following:</p>"
+      },
+      {
+       "t": "list",
+       "ordered": false,
+       "items": [
+        "The name of the medical provider or medical insurer",
+        "The name of the patient (which must match customer’s valid ID)",
+        "The date of the treatment or doctor visit",
+        "An indication that the treatment or doctor visit was cancer related",
+        "Documentation must be presented once every six months.",
+        "Customer must join or be an existing member of the Star Buds Loyalty Program.",
+        "Customer is limited to one gram per month at the one dollar rate. Additional purchases will be at regular store price.",
+        "Star Buds will not retain, copy, or share customer’s medical documentation.",
+        "Star Buds will not share the identity of any customers participating in the SCRP."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "eula": {
+   "source": "starbuds-reforge/src/content/pages/eula.json",
+   "url": "https://www.starbuds.us/eula",
+   "title": "Star Buds App End User License Agreement, Terms and Conditions",
+   "h1": "",
+   "description": "",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "rich",
+       "html": "<p>End-User License Agreement (\"Agreement\")</p>\n<p>Last updated: August 31, 2021</p>\n<p>Please read this End-User License Agreement carefully before clicking the \"I</p>\n<p>Agree\" button, downloading or using AIQ.</p>\n<p>Interpretation and Definitions</p>\n<p>==============================</p>\n<p>Interpretation</p>\n<p>--------------</p>\n<p>The words of which the initial letter is capitalized have meanings defined</p>\n<p>under the following conditions. The following definitions shall have the same</p>\n<p>meaning regardless of whether they appear in singular or in plural.</p>\n<p>Definitions</p>\n<p>-----------</p>\n<p>For the purposes of this End-User License Agreement:</p>\n<p>* Agreement means this End-User License Agreement that forms the entire</p>\n<p>agreement between You and the Company regarding the use of the</p>\n<p>Application.</p>\n<p>* Application means the software program provided by the Company downloaded</p>\n<p>by You through an Application Store's account to a Device, named Alpine IQ</p>\n<p>* Application Store means the digital distribution service operated and</p>\n<p>developed by Apple Inc. (Apple App Store) or Google Inc. (Google Play</p>\n<p>Store) by which the Application has been downloaded to your Device.</p>\n<p>* Company (referred to as either \"the Company\", \"We\", \"Us\" or \"Our\" in this</p>\n<p>Agreement) refers to Alpine IQ Inc., 15012 stargazer drive, Aledo TX</p>\n<p>76008.</p>\n<p>* Content refers to content such as text, images, or other information that</p>\n<p>can be posted, uploaded, linked to or otherwise made available by You,</p>\n<p>regardless of the form of that content.</p>\n<p>* Country refers to: Delaware, United States</p>\n<p>* Device means any device that can access the Application such as a</p>\n<p>computer, a cellphone or a digital tablet.</p>\n<p>* Family Sharing / Family Group permits You to share applications downloaded</p>\n<p>through the Application Store with other family members by allowing them</p>\n<p>to view and download each others' eligible Applications to their</p>\n<p>associated Devices.</p>\n<p>* Third-Party Services means any services or content (including data,</p>\n<p>information, applications and other products services) provided by a</p>\n<p>third-party that may be displayed, included or made available by the</p>\n<p>Application.</p>\n<p>* You means the individual accessing or using the Application or the</p>\n<p>company, or other legal entity on behalf of which such individual is</p>\n<p>accessing or using the Application, as applicable.</p>\n<p>Acknowledgment</p>\n<p>==============</p>\n<p>By clicking the \"I Agree\" button, downloading or using the Application, You</p>\n<p>are agreeing to be bound by the terms and conditions of this Agreement. If You</p>\n<p>do not agree to the terms of this Agreement, do not click on the \"I Agree\"</p>\n<p>button, do not download or do not use the Application.</p>\n<p>This Agreement is a legal document between You and the Company and it governs</p>\n<p>your use of the Application made available to You by the Company.</p>\n<p>This Agreement is between You and the Company only and not with the</p>\n<p>Application Store. Therefore, the Company is solely responsible for the</p>\n<p>Application and its content. Although the Application Store is not a party to</p>\n<p>this Agreement, it has the right to enforce it against You as a third party</p>\n<p>beneficiary relating to your use of the Application.</p>\n<p>Since the Application can be accessed and used by other users via, for</p>\n<p>example, Family Sharing / Family Group or volume purchasing, the use of the</p>\n<p>Application by those users is expressly subject to this Agreement.</p>\n<p>The Application is licensed, not sold, to You by the Company for use strictly</p>\n<p>in accordance with the terms of this Agreement.</p>\n<p>License</p>\n<p>=======</p>\n<p>Scope of License</p>\n<p>----------------</p>\n<p>The Company grants You a revocable, non-exclusive, non-transferable, limited</p>\n<p>license to download, install and use the Application strictly in accordance</p>\n<p>with the terms of this Agreement.</p>\n<p>You may only use the Application on a Device that You own or control and as</p>\n<p>permitted by the Application Store's terms and conditions.</p>\n<p>The license that is granted to You by the Company is solely for your personal,</p>\n<p>non-commercial purposes strictly in accordance with the terms of this</p>\n<p>Agreement.</p>\n<p>License Restrictions</p>\n<p>--------------------</p>\n<p>You agree not to, and You will not permit others to:</p>\n<p>* License, sell, rent, lease, assign, distribute, transmit, host, outsource,</p>\n<p>disclose or otherwise commercially exploit the Application or make the</p>\n<p>Application available to any third party.</p>\n<p>* Copy or use the Application for any purpose other than as permitted under</p>\n<p>the above section 'License'.</p>\n<p>* Modify, make derivative works of, disassemble, decrypt, reverse compile or</p>\n<p>reverse engineer any part of the Application.</p>\n<p>* Remove, alter or obscure any proprietary notice (including any notice of</p>\n<p>copyright or trademark) of the Company or its affiliates, partners,</p>\n<p>suppliers or the licensors of the Application.</p>\n<p>Content</p>\n<p>=======</p>\n<p>Content Restrictions</p>\n<p>--------------------</p>\n<p>The Company is not responsible for the entries, information or content of the</p>\n<p>Application's users. You expressly understand and agree that You are solely</p>\n<p>responsible for the Content and for all activity that occurs under your</p>\n<p>account, whether done so by You or any third person using your account.</p>\n<p>You may not transmit any Content that is unlawful, offensive, upsetting,</p>\n<p>intended to disgust, threatening, libelous, defamatory, obscene or otherwise</p>\n<p>objectionable. Examples of such objectionable Content include, but are not</p>\n<p>limited to, the following:</p>\n<p>* Unlawful or promoting unlawful activity.</p>\n<p>* Defamatory, discriminatory, or mean-spirited content, including references</p>\n<p>or commentary about religion, race, sexual orientation, gender,</p>\n<p>national/ethnic origin, or other targeted groups.</p>\n<p>* Spam, machine generated content or randomly generated content,</p>\n<p>constituting unauthorized or unsolicited advertising, chain letters, any</p>\n<p>other form of unauthorized solicitation, or any form of lottery or</p>\n<p>gambling.</p>\n<p>* Containing or installing any viruses, worms, malware, trojan horses, or</p>\n<p>other content that is designed or intended to disrupt, damage, or limit</p>\n<p>the functioning of any software, hardware or telecommunications equipment</p>\n<p>or to damage or obtain unauthorized access to any data or other</p>\n<p>information of a third person.</p>\n<p>* Infringing on any proprietary rights of any party, including patent,</p>\n<p>trademark, trade secret, copyright, right of publicity or other rights.</p>\n<p>* Impersonating any person or entity including the Company and its employees</p>\n<p>or representatives.</p>\n<p>* Violating the privacy of any third person.</p>\n<p>* False information and features.</p>\n<p>The Company reserves the right, but not the obligation, to, in its sole</p>\n<p>discretion, determine whether or not any Content is appropriate and complies</p>\n<p>with this Agreement, refuse or remove any Content. The Company further</p>\n<p>reserves the right to make formatting and edits and change the manner any</p>\n<p>Content. The Company can also limit or revoke the use of the Application if</p>\n<p>You post such objectionable Content.</p>\n<p>As the Company cannot control all content posted by users and/or third parties</p>\n<p>on the Application, you agree to use the Application at your own risk. You</p>\n<p>understand that by using the Application You may be exposed to content that</p>\n<p>You may find offensive, indecent, incorrect or objectionable, and You agree</p>\n<p>that under no circumstances will the Company be liable in any way for any</p>\n<p>content, including any errors or omissions in any content, or any loss or</p>\n<p>damage of any kind incurred as a result of your use of any content.</p>\n<p>Intellectual Property</p>\n<p>=====================</p>\n<p>The Application, including without limitation all copyrights, patents,</p>\n<p>trademarks, trade secrets and other intellectual property rights are, and</p>\n<p>shall remain, the sole and exclusive property of the Company.</p>\n<p>The Company shall not be obligated to indemnify or defend You with respect to</p>\n<p>any third party claim arising out of or relating to the Application. To the</p>\n<p>extend the Company is required to provide indemnification by applicable law,</p>\n<p>the Company, not the Application Store, shall be solely responsible for the</p>\n<p>investigation, defense, settlement and discharge of any claim that the</p>\n<p>Application or your use of it infringes any third party intellectual property</p>\n<p>rights.</p>\n<p>Your Suggestions</p>\n<p>================</p>\n<p>Any feedback, comments, ideas, improvements or suggestions provided by You to</p>\n<p>the Company with respect to the Application shall remain the sole and</p>\n<p>exclusive property of the Company.</p>\n<p>The Company shall be free to use, copy, modify, publish, or redistribute the</p>\n<p>Suggestions for any purpose and in any way without any credit or any</p>\n<p>compensation to You.</p>\n<p>Modifications to the Application</p>\n<p>================================</p>\n<p>The Company reserves the right to modify, suspend or discontinue, temporarily</p>\n<p>or permanently, the Application or any service to which it connects, with or</p>\n<p>without notice and without liability to You.</p>\n<p>Updates to the Application</p>\n<p>--------------------------</p>\n<p>The Company may from time to time provide enhancements or improvements to the</p>\n<p>features/functionality of the Application, which may include patches, bug</p>\n<p>fixes, updates, upgrades and other modifications.</p>\n<p>Updates may modify or delete certain features and/or functionalities of the</p>\n<p>Application. You agree that the Company has no obligation to (i) provide any</p>\n<p>Updates, or (ii) continue to provide or enable any particular features and/or</p>\n<p>functionalities of the Application to You.</p>\n<p>You further agree that all updates or any other modifications will be (i)</p>\n<p>deemed to constitute an integral part of the Application, and (ii) subject to</p>\n<p>the terms and conditions of this Agreement.</p>\n<p>Maintenance and Support</p>\n<p>-----------------------</p>\n<p>The Company does not provide any maintenance or support for the download and</p>\n<p>use of the Application. To the extent that any maintenance or support is</p>\n<p>required by applicable law, the Company, not the Application Store, shall be</p>\n<p>obligated to furnish any such maintenance or support.</p>\n<p>Third-Party Services</p>\n<p>====================</p>\n<p>The Application may display, include or make available third-party content</p>\n<p>(including data, information, applications and other products services) or</p>\n<p>provide links to third-party websites or services.</p>\n<p>You acknowledge and agree that the Company shall not be responsible for any</p>\n<p>Third-party Services, including their accuracy, completeness, timeliness,</p>\n<p>validity, copyright compliance, legality, decency, quality or any other aspect</p>\n<p>thereof. The Company does not assume and shall not have any liability or</p>\n<p>responsibility to You or any other person or entity for any Third-party</p>\n<p>Services.</p>\n<p>You must comply with applicable Third parties' Terms of agreement when using</p>\n<p>the Application. Third-party Services and links thereto are provided solely as</p>\n<p>a convenience to You and You access and use them entirely at your own risk and</p>\n<p>subject to such third parties' Terms and conditions.</p>\n<p>Privacy Policy</p>\n<p>==============</p>\n<p>The Company collects, stores, maintains, and shares information about You in</p>\n<p>accordance with Our Privacy Policy: &lt;<a href=\"https://alpineiq.com/privacy.html&gt;\" target=\"_blank\">https://alpineiq.com/privacy.html&gt;</a></p>\n<p>By accepting this Agreement, You acknowledge that You hereby agree and consent</p>\n<p>to the terms and conditions of Our Privacy Policy.</p>\n<p>Term and Termination</p>\n<p>====================</p>\n<p>This Agreement shall remain in effect until terminated by You or the Company.</p>\n<p>The Company may, in its sole discretion, at any time and for any or no reason,</p>\n<p>suspend or terminate this Agreement with or without prior notice.</p>\n<p>This Agreement will terminate immediately, without prior notice from the</p>\n<p>Company, in the event that you fail to comply with any provision of this</p>\n<p>Agreement. You may also terminate this Agreement by deleting the Application</p>\n<p>and all copies thereof from your Device or from your computer.</p>\n<p>Upon termination of this Agreement, You shall cease all use of the Application</p>\n<p>and delete all copies of the Application from your Device.</p>\n<p>Termination of this Agreement will not limit any of the Company's rights or</p>\n<p>remedies at law or in equity in case of breach by You (during the term of this</p>\n<p>Agreement) of any of your obligations under the present Agreement.</p>\n<p>Indemnification</p>\n<p>===============</p>\n<p>You agree to indemnify and hold the Company and its parents, subsidiaries,</p>\n<p>affiliates, officers, employees, agents, partners and licensors (if any)</p>\n<p>harmless from any claim or demand, including reasonable attorneys' fees, due</p>\n<p>to or arising out of your: (a) use of the Application; (b) violation of this</p>\n<p>Agreement or any law or regulation; or (c) violation of any right of a third</p>\n<p>party.</p>\n<p>No Warranties</p>\n<p>=============</p>\n<p>The Application is provided to You \"AS IS\" and \"AS AVAILABLE\" and with all</p>\n<p>faults and defects without warranty of any kind. To the maximum extent</p>\n<p>permitted under applicable law, the Company, on its own behalf and on behalf</p>\n<p>of its affiliates and its and their respective licensors and service</p>\n<p>providers, expressly disclaims all warranties, whether express, implied,</p>\n<p>statutory or otherwise, with respect to the Application, including all implied</p>\n<p>warranties of merchantability, fitness for a particular purpose, title and</p>\n<p>non-infringement, and warranties that may arise out of course of dealing,</p>\n<p>course of performance, usage or trade practice. Without limitation to the</p>\n<p>foregoing, the Company provides no warranty or undertaking, and makes no</p>\n<p>representation of any kind that the Application will meet your requirements,</p>\n<p>achieve any intended results, be compatible or work with any other software,</p>\n<p>applications, systems or services, operate without interruption, meet any</p>\n<p>performance or reliability standards or be error free or that any errors or</p>\n<p>defects can or will be corrected.</p>\n<p>Without limiting the foregoing, neither the Company nor any of the company's</p>\n<p>provider makes any representation or warranty of any kind, express or implied:</p>\n<p>(i) as to the operation or availability of the Application, or the</p>\n<p>information, content, and materials or products included thereon; (ii) that</p>\n<p>the Application will be uninterrupted or error-free; (iii) as to the accuracy,</p>\n<p>reliability, or currency of any information or content provided through the</p>\n<p>Application; or (iv) that the Application, its servers, the content, or</p>\n<p>e-mails sent from or on behalf of the Company are free of viruses, scripts,</p>\n<p>trojan horses, worms, malware, timebombs or other harmful components.</p>\n<p>Some jurisdictions do not allow the exclusion of certain types of warranties</p>\n<p>or limitations on applicable statutory rights of a consumer, so some or all of</p>\n<p>the above exclusions and limitations may not apply to You. But in such a case</p>\n<p>the exclusions and limitations set forth in this section shall be applied to</p>\n<p>the greatest extent enforceable under applicable law. To the extent any</p>\n<p>warranty exists under law that cannot be disclaimed, the Company, not the</p>\n<p>Application Store, shall be solely responsible for such warranty.</p>\n<p>Limitation of Liability</p>\n<p>=======================</p>\n<p>Notwithstanding any damages that You might incur, the entire liability of the</p>\n<p>Company and any of its suppliers under any provision of this Agreement and</p>\n<p>your exclusive remedy for all of the foregoing shall be limited to the amount</p>\n<p>actually paid by You for the Application or through the Application or 100 USD</p>\n<p>if You haven't purchased anything through the Application.</p>\n<p>To the maximum extent permitted by applicable law, in no event shall the</p>\n<p>Company or its suppliers be liable for any special, incidental, indirect, or</p>\n<p>consequential damages whatsoever (including, but not limited to, damages for</p>\n<p>loss of profits, loss of data or other information, for business interruption,</p>\n<p>for personal injury, loss of privacy arising out of or in any way related to</p>\n<p>the use of or inability to use the Application, third-party software and/or</p>\n<p>third-party hardware used with the Application, or otherwise in connection</p>\n<p>with any provision of this Agreement), even if the Company or any supplier has</p>\n<p>been advised of the possibility of such damages and even if the remedy fails</p>\n<p>of its essential purpose.</p>\n<p>Some states/jurisdictions do not allow the exclusion or limitation of</p>\n<p>incidental or consequential damages, so the above limitation or exclusion may</p>\n<p>not apply to You.</p>\n<p>You expressly understand and agree that the Application Store, its</p>\n<p>subsidiaries and affiliates, and its licensors shall not be liable to You</p>\n<p>under any theory of liability for any direct, indirect, incidental, special</p>\n<p>consequential or exemplary damages that may be incurred by You, including any</p>\n<p>loss of data, whether or not the Application Store or its representatives have</p>\n<p>been advised of or should have been aware of the possibility of any such</p>\n<p>losses arising.</p>\n<p>Severability and Waiver</p>\n<p>=======================</p>\n<p>Severability</p>\n<p>------------</p>\n<p>If any provision of this Agreement is held to be unenforceable or invalid,</p>\n<p>such provision will be changed and interpreted to accomplish the objectives of</p>\n<p>such provision to the greatest extent possible under applicable law and the</p>\n<p>remaining provisions will continue in full force and effect.</p>\n<p>Waiver</p>\n<p>------</p>\n<p>Except as provided herein, the failure to exercise a right or to require</p>\n<p>performance of an obligation under this Agreement shall not effect a party's</p>\n<p>ability to exercise such right or require such performance at any time</p>\n<p>thereafter nor shall be the waiver of a breach constitute a waiver of any</p>\n<p>subsequent breach.</p>\n<p>Product Claims</p>\n<p>==============</p>\n<p>The Company does not make any warranties concerning the Application. To the</p>\n<p>extent You have any claim arising from or relating to your use of the</p>\n<p>Application, the Company, not the Application Store, is responsible for</p>\n<p>addressing any such claims, which may include, but not limited to: (i) any</p>\n<p>product liability claims; (ii) any claim that the Application fails to conform</p>\n<p>to any applicable legal or regulatory requirement; and (iii) any claim arising</p>\n<p>under consumer protection, or similar legislation.</p>\n<p>United States Legal Compliance</p>\n<p>==============================</p>\n<p>You represent and warrant that (i) You are not located in a country that is</p>\n<p>subject to the United States government embargo, or that has been designated</p>\n<p>by the United States government as a \"terrorist supporting\" country, and (ii)</p>\n<p>You are not listed on any United States government list of prohibited or</p>\n<p>restricted parties.</p>\n<p>Changes to this Agreement</p>\n<p>=========================</p>\n<p>The Company reserves the right, at its sole discretion, to modify or replace</p>\n<p>this Agreement at any time. If a revision is material we will provide at least</p>\n<p>30 days' notice prior to any new terms taking effect. What constitutes a</p>\n<p>material change will be determined at the sole discretion of the Company.</p>\n<p>By continuing to access or use the Application after any revisions become</p>\n<p>effective, You agree to be bound by the revised terms. If You do not agree to</p>\n<p>the new terms, You are no longer authorized to use the Application.</p>\n<p>Governing Law</p>\n<p>=============</p>\n<p>The laws of the Country, excluding its conflicts of law rules, shall govern</p>\n<p>this Agreement and your use of the Application. Your use of the Application</p>\n<p>may also be subject to other local, state, national, or international laws.</p>\n<p>Entire Agreement</p>\n<p>================</p>\n<p>The Agreement constitutes the entire agreement between You and the Company</p>\n<p>regarding your use of the Application and supersedes all prior and</p>\n<p>contemporaneous written or oral agreements between You and the Company.</p>\n<p>You may be subject to additional terms and conditions that apply when You use</p>\n<p>or purchase other Company's services, which the Company will provide to You at</p>\n<p>the time of such use or purchase.</p>"
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "rich",
+       "html": "<p>TERMS &amp; CONDITIONS</p>\n<p>​</p>\n<p>Please read these Terms and Conditions (these “Terms”) carefully. All Services provided by Provider to Customer shall be governed by these Terms and Conditions.</p>\n<p>1. Definitions</p>\n<p>1. As used in these Terms, the following terms shall have the meanings given to them below. Other terms are defined in other sections of these Terms. Such other defined terms are identified by being in bold text and flanked by quotation marks. Such other terms shall have the meanings so assigned to them whenever used in these Terms.</p>\n<p>“Acceptable Use Policy” means Provider’s then current Acceptable Use Policy available at <a href=\"https://support.alpineiq.com/acceptable-use-policy\" target=\"_blank\">https://support.alpineiq.com/acceptable-use-policy</a> and attached hereto as Schedule A.</p>\n<p>“Account(s)” means the Customer account(s) enabling a person to access and use the Services, including both administrator accounts and user accounts.</p>\n<p>\"Agreement\" means these Terms together with all Service Orders and Supplemental Terms for Services governed by these Terms or that otherwise reference these Terms and that are entered into between Provider and the Customer.</p>\n<p>“Business Day” means any weekday other than a bank or public holiday in The United States of America.</p>\n<p>“Business Hours” means the hours of 09:00 to 17:00 CST on a Business Day.</p>\n<p>“Charges” means amounts charged by Provider to Customer for the Services in accordance with the Agreement.</p>\n<p>“Customer” means the person or entity identified as such in the Services Order Form.</p>\n<p>“Customer Data” means all data, works and materials, including Customer Personal Information: uploaded to or stored on the Platform by the Customer; transmitted by the Platform at the instigation of the Customer; supplied by the Customer to the Provider for uploading to, transmission by or storage on the Platform; or generated by the Platform as a result of the use of the Services by the Customer (but excluding anonymized customer data where no personal identifiable information is available to the viewer, analytics data and anything relating to the use of the Platform and server log files).</p>\n<p>“Customer Personal Information” means any Personal Information that is processed by the Provider on behalf of the Customer pursuant to these Terms.</p>\n<p>“Data Protection Laws” means all applicable laws relating to the processing and/or protection of Personal Information.</p>\n<p>“Documentation” means the documentation for the Services produced by Provider and delivered or made available by Provider to Customer.</p>\n<p>“Effective Date” means the date on which Provider sends an order confirmation to Customer following Customer’s acceptance of these Terms via the self-service sign-up or as otherwise agreed by the parties in writing.</p>\n<p>“Federal Cannabis Law” means federal laws of the United States regulating marijuana or cannabis as included on Schedule 1 under the United States Controlled Substances Act, including any such federal laws of the United States pertaining to manufacturing, distributing, dispensing or possession of marijuana or cannabis.</p>\n<p>“Hosted Services” means the Services provided by Provider to Customer through the Alpine IQ web-based portal (the “Platform”) made available by Provider to Customer as a service via the internet in accordance with the Agreement.</p>\n<p>“Intellectual Property Rights” means all intellectual property rights wherever in the world, whether registrable or unregistrable, registered or unregistered, or otherwise under or related to any patent, copyright, trademark, business names, trade names, know-how, trade secret, database protection, or other intellectual property laws, and all similar or equivalent rights or forms of protection, including but not limited to any application or right of application for such rights.</p>\n<p>“Mobile App” means the mobile application known as the Alpine IQ Native App Extension if or when such application is made available by Provider through mobile app stores.</p>\n<p>“Personal Information” means any information relating to, capable of being associated with, or could reasonably be linked, directly or indirectly, with a particular natural person or household, including, without limitation, any inferences drawn therefrom or derivatives thereof, or any other information that is regulated as “personal data” or “personal information” under applicable law.</p>\n<p>“Provider” means Alpine IQ Inc., a corporation incorporated in Delaware having its principle office at 15012 Stargazer Drive, Aledo TX 76008.</p>\n<p>“Sensitive Personal Information” means any of the following: (i) credit, debit or other payment card data subject to the Payment Card Industry Data Security Standards (“PCI DSS”), or other financial account numbers or credentials; (ii) patient, medical or other protected health information regulated by the Health Insurance Portability and Accountability Act (“HIPAA”); (iii) social security numbers, driver’s license numbers or other government ID numbers; (iv) any information deemed to be “special categories of data” of an EU resident (as defined in European Union Regulation 2016/679); or (v) other personal or sensitive information subject to regulation or protection under the Gramm-Leach-Bliley Act, Children’s Online Privacy Protection Act or similar foreign or domestic Laws.</p>\n<p>“Service Order” means any order for Services placed by Customer via the self-service signup form located at <a href=\"https://lab.alpineiq.com/signup\" target=\"_blank\">https://lab.alpineiq.com/signup</a> and accepted by Provider as evidenced by the order confirmation sent by Provider to Customer and any other written order for Services placed by Customer and accepted in writing by Provider.</p>\n<p>“Services” means any services that the Provider provides to Customer, or has an obligation to provide to the Customer, under the Agreement, which may include Hosted Services, Supplemental Services, and Support Services.</p>\n<p>“Support Services” means those support services made available by Provider in relation to the use of, and the identification and resolution of errors in, the Hosted Services or Supplemental Services, but shall not include the provision of training services.</p>\n<p>“Supported Web Browser” means the current release from time to time of Mozilla Firefox, Google Chrome or Apple Safari, or any other web browser that the Provider agrees in writing shall be supported.</p>\n<p>“Term” means the period commencing on the Effective Date and continuing until termination of the Agreement in accordance with Section 15.</p>\n<p>2. Hosted Services</p>\n<p>1. Subject to Customer’s compliance with the Agreement, Provider hereby grants to the Customer a non-exclusive license to use the Hosted Services by means of a Supported Web Browser during the Term. Provider shall use commercially reasonable efforts to maintain the availability of the Hosted Services to the Customer at the gateway between the public internet and the network of the hosting services provider for the Hosted Services, but does not guarantee 100% availability.</p>\n<p>2. The Hosted Services may only be used by the named users identified on the settings page for Customer’s Account in the Platform. Customer may change, add, or remove a designated named user in accordance with the procedure set out in the Documentation.</p>\n<p>3. Except to the extent expressly permitted by the Agreement or as otherwise required by law, the license granted by Provider to Customer under Section 2.1 is subject to the following additional prohibitions and limitations:</p>\n<p>(a) Customer must not sub-license its right to access and use the Hosted Services;</p>\n<p>(b) Customer must not permit any unauthorized person to access or use the Hosted Services;</p>\n<p>(c) Customer must not use the Hosted Services to provide services to third parties;</p>\n<p>(d) Customer must not republish or redistribute any content or material from the Hosted Services;</p>\n<p>(e) Customer must not make any alteration to the Platform, except as permitted by the Documentation;</p>\n<p>(f) Customer must not use the Hosted Services in any way that causes, or may cause, damage to the Hosted Services or Platform or impairs the availability or accessibility of the Hosted Services;</p>\n<p>(g) Customer must not use the Hosted Services in any way that is unlawful, illegal, fraudulent, or harmful, or in connection with any unlawful, illegal, fraudulent, or harmful purpose or activity;</p>\n<p>(h) Customer must not conduct or request that any other person conduct any load testing or penetration testing on the Platform or Hosted Services; and</p>\n<p>(i) Customer must not reverse engineer the Services and/or any Platform technology.</p>\n<p>4. Customer shall use reasonable efforts, including implementing and maintaining reasonable security measures relating to administrator Account access details, to ensure that no unauthorized person may gain access to the Hosted Services using an administrator Account.</p>\n<p>5. Customer must comply with Acceptable Use Policy and must ensure that all persons using the Hosted Services for or on behalf of the Customer or by means of an Account comply with the Acceptable Use Policy.</p>\n<p>6. For the avoidance of doubt, the Customer has no right to access the software code (including object code, intermediate code, and source code) of the Platform, either during or after the Term.</p>\n<p>3. Supplemental Services</p>\n<p>1. The parties may mutually agree, through the execution of an addendum or modification to the Agreement through Service Order, self-service signup form, or otherwise (each such addendum or modification, “Supplemental Terms”), for Provider to provide additional or supplemental Services to Customer, including for example, Services related to the Mobile App (collectively, “Supplemental Services”). Any such Supplemental Services shall be subject to and governed by these Terms, except as otherwise specifically set out in the applicable Supplemental Terms. In the event of any conflict between these Terms and any Supplemental Terms, the Supplemental Terms shall control.</p>\n<p>4. Support Services</p>\n<p>1. Subject to Provider’s right to suspend or terminate Services for non-payment of Charges owed by Customer, Provider shall provide Support Services to the Customer during Business Hours for the duration of the Term. The Support Services shall be provided by Provider with reasonable skill and care.</p>\n<p>2. Provider may make available to Customer an email-based help-desk, and Customer may use the help-desk for the purposes of requesting and, where applicable, receiving Support Services.</p>\n<p>3. Provider shall respond promptly to all requests for Support Services made by the Customer through the help-desk and work diligently to resolve any repeatable error or malfunction so submitted, but Provider does not guarantee resolution by any particular time of any matter so submitted.</p>\n<p>5. Customer Data</p>\n<p>1. Provider and its authorized agents, employees, and subprocessors acting under the authority of the Provider shall process Customer Data, including Customer Personal Information, in strict compliance with documented instructions from Customer, solely for the purpose of providing the Services in accordance with these Terms, and not for any other purpose (commercial or otherwise), or in any other manner, unless specifically instructed by Customer in writing or by the Customer creating a digital request to transfer or send data via the Services to any outside party or connected integration vendor, or unless required to do so by applicable law, including Data Protection Laws, to which the Provider is subject. In such case, the Provider shall notify the Customer of that legal requirement before such processing, except as otherwise prohibited by law. The Provider may process Customer Data and Customer Personal Information for internal use (including the development of anonymous analytics and log data) and security, but may not sell any Customer Data or Customer Personal Information.</p>\n<p>2. The Customer warrants to the Provider that the Customer Data will not infringe the Intellectual Property Rights or other legal rights of any person and will not breach the provisions of any applicable law, statute, or regulation.</p>\n<p>3. Except for the limited license provided in Section 3.1, nothing in these Terms shall be construed as granting Provider or any third party any right, title, or interest in Customer Data.</p>\n<p>4. Each party has made and will continue to make available to the other party information that is not generally known to the public and at the time of disclosure and is identified as, or would reasonably be understood by the receiving party to be, proprietary or confidential information of the disclosing party (“Confidential Information”). Confidential Information may be disclosed in oral, written, visual, electronic or other form. Customer’s Confidential Information includes Customer’s (a) business plans, strategies, forecasts, projects, and analyses; (b) financial information and fee structures; (c) business processes, methods, and models; (d) director, member, manager officer, employee, customer, and company information (whether past, current or prospective); (e) Personal Information; (f) product and service specifications; and (g) manufacturing, purchasing, logistics, sales and marketing information. The receiving party will use the same care and discretion to prevent disclosure, publication or dissemination of any Confidential Information received from the disclosing party as the receiving party uses with its own similar Confidential Information that it does not wish to disclose, publish or disseminate (but in no event, not less than a reasonable degree of care). The Provider will ensure that its personnel use Customer Confidential Information only to the extent necessary to perform its obligations under these Terms. The receiving party will be liable for any unauthorized disclosure or use of Confidential Information by any of its personnel, agents, advisors, or affiliates. Confidential Information shall be returned or deleted within 7 days upon a party’s written request.</p>\n<p>6. No assignment of Intellectual Property Rights</p>\n<p>1. Nothing in the Agreement shall operate to assign or transfer any Intellectual Property Rights from Provider to Customer, or from Customer to Provider.</p>\n<p>7. Charges</p>\n<p>1. Unless otherwise agreed in writing (including in a Service Order), Charges for the Services shall be as set forth in Provider’s charge policies located at <a href=\"https://support.alpineiq.com/charge-policy\" target=\"_blank\">https://support.alpineiq.com/charge-policy</a> as in effect from time to time. Such Charges may include, but are not limited to, Charges based on the number of locations or stores linked to Customer, the number of orders processed through the Services by the Provider for Customer, SMS usage fees, regular access fees for the Services, including the Mobile App, and additional fees for any other Supplemental Services.</p>\n<p>2. Provider may modify the Charges for the Services by giving Customer not less than 30 days written notice of the proposed change. In the event that the Customer does not wish to pay the modified Charges for continued provision of the Services, the Customer may terminate the Agreement be delivering written notice of its election to terminate the Agreement prior to the effective date of the modification to the Charges.</p>\n<p>3. All listed Charges provided by Provider are stated exclusive of any applicable value added and sales taxes, which will be added to the Charge and payable by Customer to Provider.</p>\n<p>8. Payments</p>\n<p>1. Customer shall pay all Charges due to Provider in advance of the due date stated for such Charges.</p>\n<p>2. If Customer does not pay any Charges due to Provider when due, Provider may charge Customer interest on the overdue amount at the lesser of 1.5% per month or the maximum amount permitted by law (which interest will accrue daily until the date of actual payment and be compounded at the end of each calendar month).</p>\n<p>3. Provider may suspend or terminate Customer’s access to and use of the Services, including the Hosted Services, Supplemental Services, and Support Services, if Customer’s payment for any Charges is past due and such past due payment has not been cured within 7 days after Provider provides Customer written notice of such past due Charges and its intention to suspend or terminate Services.</p>\n<p>9. Privacy and Data Protection</p>\n<p>1. Each party shall comply with any Data Protection Laws with respect to the processing of the Customer Personal Information.</p>\n<p>2. Customer represents and warrants to Provider that it has the legal right to disclose all Personal Information that it does in fact disclose to Provider in connection with the Services.</p>\n<p>3. Notwithstanding any other provision of the Agreement, Provider may process Customer Personal Information as necessary to provide any Services and to the extent that Provider is required to do so by applicable law. If Provider is required by applicable law to process any Customer Personal Information, Provider shall inform Customer of the legal requirement before processing, except as prohibited by applicable law.</p>\n<p>4. Provider shall ensure that persons authorized to access or process such data have executed confidentiality and/or non-disclosure agreements no less protective of Customer’s Personal Information than these Terms.</p>\n<p>5. Provider and Customer shall each implement appropriate technical and organizational measures to ensure an appropriate level of security for the Customer Personal Information.</p>\n<p>6. Provider shall, insofar as possible and taking into account the nature of the processing, take appropriate technical and organizational measures to assist Customer with the fulfillment of Customer's obligation to respond to requests exercising a consumer's rights under Data Protection Laws.</p>\n<p>7. Provider shall report any Data Breach to the Customer within 3 days following the Provider becoming aware of such Data Breach. “Data Breach” means any event that materially compromises the confidentiality, security, integrity, or availability of Customer Personal Information including any (i) unauthorized access, use, disclosure, modification, or destruction of Customer Personal Information or (ii) loss or misuse (by any means) of any Customer Personal Information.</p>\n<p>8. Following any Data Breach, Provider shall make available to Customer all information necessary to demonstrate the compliance of Provider with its obligations under this Section 9 and the Data Protection Laws, including: (i) any report generated in connection with a Data Breach, (ii) the contact information of the person(s) handling any suspected Data Breach, and (iii) a description of the measures taken or proposed to be taken to address a Data Breach.</p>\n<p>9. Customer specifically agrees not to use the Services to collect, store, process or transmit any Sensitive Personal Information, except as specifically agreed to in writing by the parties. Provider shall have no liability under the Agreement or otherwise for Sensitive Personal Information, notwithstanding anything to the contrary herein.</p>\n<p>10. If any changes or prospective changes to the Data Protection Laws result or will result in one or both parties not complying with the Data Protection Laws in relation to processing of Personal Information carried out under the Agreement, then the parties shall use their reasonable best efforts promptly to agree to such modifications to these Terms as may be necessary to remedy such non-compliance.</p>\n<p>10. RESPONSIBILITY FOR MESSAGING AND RECORDING</p>\n<p>1. IT IS EXPRESSLY AGREED BY THE PARTIES THAT CUSTOMER IS THE SOLE RESPONSIBLE INITIATOR OF ALL MESSAGING CAMPAIGNS (INCLUDING ALL TEXT, SMS, MMS, PUSH, BROWSER, EMAIL AND OR OTHER MESSAGING CHANNEL CAMPAIGNS) IN ALL CIRCUMSTANCES AND IS AND SHALL BE SOLELY RESPONSIBLE FOR ALL SUCH MESSAGING CAMPAINGS, INCLUDING OBTAINING ALL REQUIRED CONSENTS AND FOLLOWING ALL APPLICABLE LAWS AND REGULATIONS, INCLUDING THE “Telephone Consumer Protection Act” (TCPA), REGARDLESS OF WHETHER PROVIDER IS TASKED WITH CREATING AND/OR MANAGING ANY SUCH CAMPAIGNS FOR CUSTOMER. CUSTOMER SHALL INDEMNIFY, DEFEND AND HOLD HARMLESS PROVIDER FROM AND AGAINST ANY AND ALL THIRD-PARTY CLAIMS ARISING OUT OF OR IN CONNECTION WITH ANY MESSAGING CAMPAIGNS AND ANY AND ALL COSTS, DAMAGES, LOSSES, LIABILITIES AND EXPENSES (INCLUDING REASONABLE ATTORNEYS’ FEES AND COSTS) SUFFERED OR INCURRED BY PROVIDER IN CONNECTION WITH ANY SUCH THIRD-PARTY CLAIM.</p>\n<p>2. If Customer records or monitors telephone calls, SMS/ MMS messages, or other communications using the Services, Customer will do so in compliance with all applicable laws and will secure all required consents to record or monitor communications using the Services prior to engaging in such activities. Provider makes no representations or warranties with respect to recording or monitoring of telephone calls, SMS/ MMS messages, emails, push notifications, chat, or other communications. Customer acknowledges that these representations, warranties, and obligations are essential to Provider’s ability to provide Customer with access to recording and monitoring features that are part of the Services. Customer shall indemnify and hold harmless Provider and its affiliates for any claims, damages, liabilities, or actions arising out of or related to Customer’s acts or omissions with respect to or in connection with providing notice and obtaining consents regarding such recording or monitoring of telephone calls, SMS/ MMS messages, or other communications using the Services.</p>\n<p>11. Representations and Warranties</p>\n<p>1. Mutual Representations and Warranties. Each Party represents and warrants to the other Party that:</p>\n<p>(a) It is a duly organized, validly existing, and in good standing as a corporation or other legal entity under the laws of the jurisdiction of its incorporation or other organization.</p>\n<p>(b) It is duly qualified to do business and is in good standing in every jurisdiction in which such qualification is required.</p>\n<p>(c) It has all requisite power and authority to enter into the Agreement, and the Agreement will be a binding and enforceable agreement with respect to such party.</p>\n<p>2. Additional Provider Warranties. The Provider represents and warrants to the Customer that:</p>\n<p>(a) During the Term, and subject to Provider’s right to suspend or terminate the Services as provided in the Agreement, the Services, when used in accordance with the Documentation, will operate in all material respects as described in the Documentation. Provider will, at its own expense and as its sole obligation and Customer’s exclusive remedy for any breach of this warranty, correct any reasonably verifiable continuing or repeating error in the Services reported to Provider by Customer in writing during the Term.</p>\n<p>(b) The Platform, Documentation, and other materials provided or made available to Customer by Provider in connection with the Services (excluding any Customer Data) will not infringe, misappropriate, or otherwise violate any Intellectual Property rights or any other right of any third party.</p>\n<p>3. The Customer represents and warrants to the Provider that:</p>\n<p>(a) Customer has read and agrees to abide by the Acceptable Use Policy.</p>\n<p>(b) The Customer Data, or any other materials provided by Customer to Provider in connection with the Services will not infringe, misappropriate, or otherwise violate any Intellectual Property rights or any other right of any third party.</p>\n<p>4. THE EXPRESS WARRANTIES GIVEN IN THE AGREEMENT ARE GIVEN IN LIEU OF, AND THE PARTIES HEREBY DISCLAIMS, ALL OTHER WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, DATA ACCURACY, SYSTEMS INTEGRATION, PERFORMANCE, OPERATION, AND UP-TIME, AND ANY WARRANTIES ARISING FROM COURSE OF DEALING OR COURSE OF PERFORMANCE.</p>\n<p>12. Acknowledgements and Further Warranty Limitations</p>\n<p>1. Customer acknowledges that complex software is never wholly free from defects, errors, and bugs; and subject to the other provisions of these Terms, Provider gives no warranty or representation that the Services will be wholly free from defects, errors, and bugs.</p>\n<p>2. Customer acknowledges that complex software is never entirely free from security vulnerabilities; and subject to the other provisions of these Terms, Provider gives no warranty or representation that the Services will be entirely secure.</p>\n<p>3. Customer acknowledges that the Services are designed to be compatible only with that software and those systems specified as compatible; and Provider does not warrant or represent that the Services will be compatible with any other software or systems.</p>\n<p>4. Customer acknowledges that Provider will not provide any legal, financial, accountancy or taxation advice; and, except to the extent expressly provided otherwise in these Terms, Provider does not warrant or represent that the Services or the use of the Services by the Customer will not give rise to any legal liability on the part of the Customer or any other person.</p>\n<p>5. Violation of Federal Cannabis Laws shall not be, on its own and without connection to a violation of any other applicable law or term of the Agreement, considered a breach of these Terms, or any party’s obligations hereunder, including references to applicable law and/or illegal conduct, where such party is otherwise in material compliance with all state, local, and/or provincial laws pertaining to the sale, manufacture, licensing, production, and possession of cannabis and marijuana.</p>\n<p>13. Limitations and Exclusions of Liability</p>\n<p>1. Nothing in these Terms will:</p>\n<p>(a) limit or exclude any liability for death or personal injury resulting from negligence;</p>\n<p>(b) limit any liabilities in any way that is not permitted under applicable law; or</p>\n<p>(c) exclude any liabilities that may not be excluded under applicable law.</p>\n<p>2. Neither party will be liable to the other in respect of any loss of revenue or income, loss of profits, anticipated savings, loss of use or production, loss of business, contracts, or opportunities, or any special, indirect, or consequential damages.</p>\n<p>3. Except with respect to a breach of its obligations under Section 5 or Section 9 of these Terms, Provider will not be liable to Customer in respect of any loss or corruption of any data, database, or software.</p>\n<p>4. Provider will not be liable for the monetary value or regulations related to gaming, lottery, raffle, or loyalty points systems and or bookkeeping of such systems via ledgers. Any such loyalty points systems, ledgers, or rewards points recorded or offered by the Services are for purely informational purposes, and do not represent any actual value owed, held, or maintained by Provider. Provider does not guarantee the accuracy of any such ledgers or loyalty or rewards points systems.</p>\n<p>5. The aggregate liability of each party to the other under the Agreement shall not exceed the lesser of (a) the amount paid or payable by Customer to Provider under the Agreement during the 12-month period preceding the date of the claim or (b) $1,000,000.</p>\n<p>6. The limitations in this Section 13 shall not apply to the parties’ respective indemnification obligations under the Agreement.</p>\n<p>14. Insurance</p>\n<p>1. At all times during the Term, Provider shall procure and maintain, at its sole cost and expense, all insurance coverage required by applicable law, and in any event insurance coverage in the following types and amounts:</p>\n<p>(a) Commercial General Liability with limits of no less than $3 Million per occurrence and $3 Million in the aggregate, which policy will include contractual liability coverage insuring the activities of Provider under these Terms;</p>\n<p>(b) Cyber Liability Insurance, including the first party and third party coverage, with limits of no less than $3 Million per occurrence and $3 Million in the aggregate for all claims each policy year.</p>\n<p>(c) Worker’s Compensation and employers’ liability insurance with limits no less than the minimum amount required by applicable Law for each accident and occupational illness claim.</p>\n<p>The coverage limits stated herein above may be met by Provider through combined primary and excess or umbrella coverage.</p>\n<p>15. Indemnity</p>\n<p>1. Customer shall indemnify, defend, and hold harmless Provider from and against any and all third-party claims, costs, damages, losses, liabilities, and expenses (including reasonable attorneys’ fees and costs) arising out of or in connection with any Customer Data or breach or alleged breach by Customer of Section 9.9 (Sensitive Personal Information), or violation of the Acceptable Use Policy.</p>\n<p>2. Provider shall indemnify, defend, and hold harmless Customer from and against any and all third-party claims, costs, damages, losses, liabilities, and expenses (including reasonable attorneys’ fees and costs) arising out of or in connection with any gross negligence or willful misconduct of Provider.</p>\n<p>3. In addition, Provider shall defend (or at its option settle) any third-party claim, suit or action against Customer alleging that the Services, Platform, or Mobile App infringe any Intellectual Property Rights of such third party (each, an “Infringement Claim”) and indemnify Customer from the resulting costs and damages finally awarded against Customer to that third party by a court of competent jurisdiction or agreed to in settlement by Provider. Customer shall (a) promptly provide Provider with notice of any Infringement Claim within a reasonable period of time after learning of it; (b) allow Provider sole control over the claim’s defense and settlement; and (c) reasonably cooperate in response to Provider’s requests for assistance. Customer may not settle or compromise any Infringement Claim without Provider’s prior written consent. If the Services, Platform, or Mobile App is or are, or in Provider’s opinion likely to become, the subject of an Infringement Claim, then Provider may (i) procure for Customer, at no cost to Customer, the right to continue using the Services, Platform, or Mobile App, (ii) replace or modify the infringing the Services, Platform, or Mobile App to make it non-infringing, at no cost to Customer, or (iii) if the right to continue using the infringing the Services, Platform, or Mobile App cannot be procured for Customer for a reasonable cost, or cannot reasonably be modified to make it non-infringing, terminate this Agreement, and refund to Customer any prepaid Fees. Notwithstanding the foregoing, Provider will have no obligation under this Section 15.3 or otherwise with respect to any Infringement Claim based upon: (1) any use of the Services, Platform, or Mobile App in a manner not in accordance with the Agreement or the applicable Documentation; (2) any use of the Services, Platform, or Mobile App in combination with products, equipment, or software not supplied by Provider if such infringement would have been avoided without the combination with such other products, equipment, or software; or (3) any modification of the Services, Platform, or Mobile App by any person other than Provider or its authorized agents or subcontractors; or (4) any Services, Platform, or Mobile App provided on a no charge, beta, trial or evaluation basis. Provider’s obligations under this Section 15.3 are Provider’s sole obligations and Customer’s exclusive remedy for any Infringement Claim.</p>\n<p>16. Force Majeure Event</p>\n<p>1. If an event, or a series of related events, that is outside the reasonable control of the party affected (including failures of the internet or any public telecommunications network, hacker attacks, denial of service attacks, virus or other malicious software attacks or infections, power failures, industrial disputes affecting any third party, changes to the law, disasters, explosions, fires, floods, riots, terrorist attacks and wars) gives rise to a failure or delay in either party performing any obligation under these Terms (other than any obligation to make a payment), that obligation will be suspended for the duration of such event(s).</p>\n<p>17. Term and Termination</p>\n<p>1. The Agreement will commence on the Effective Date and continue for successive, automatically renewing 1-year terms (each such 1-year term, the “Term”).</p>\n<p>2. Subject to any contrary provisions in any Service Orders or Supplemental Terms, either party may terminate the Agreement at any time during the first 90 days from the Effective Date with immediate effect, or, at any time during the Term by giving the Provider at least 60 days’ written notice. Otherwise the Term will renew for the full Term Length.</p>\n<p>3. Either party may terminate the Agreement after providing written notice of a material breach and intent to terminate to the other party if the other party commits a material breach of the Agreement and the breaching party fails to cure the breach within 30 days after receipt of such written notice.</p>\n<p>4. Either party may terminate these Terms immediately by giving written notice of termination to the other party if:</p>\n<p>(a) the other party:</p>\n<p>i. is dissolved;</p>\n<p>ii. ceases to conduct all (or substantially all) of its business;</p>\n<p>iii. is or becomes unable to pay its debts as they fall due;</p>\n<p>iv. is or becomes insolvent or is declared insolvent; or</p>\n<p>v. convenes a meeting or makes or proposes to make any arrangement or composition with its creditors;</p>\n<p>(b) an administrator, administrative receiver, liquidator, receiver, trustee, manager or similar is appointed over any of the assets of the other party; or</p>\n<p>(c) an order is made for the winding up of the other party, or the other party passes a resolution for its winding up.</p>\n<p>18. Effects of Termination</p>\n<p>1. Upon the termination of the Agreement, all of the provisions of the Agreement shall cease to have effect, except that any provisions thereof that by their nature should survive termination shall survive and continue to have effect (in accordance with their express terms or otherwise indefinitely), including but not limited to Sections 5.4, 6, 8, 10, 11.4, 12, 13, 15, 18, 20, 21, and 22 of these Terms.</p>\n<p>2. Except to the extent expressly provided otherwise in the Agreement, the termination of the Agreement shall not affect the accrued rights of either party.</p>\n<p>3. Within 10 days following the termination of the Agreement for any reason:</p>\n<p>(a) Customer must pay to Provider any Charges in respect of Services provided to the Customer before the termination of the Agreement and any other amounts required by the Agreement to be paid by Customer in connection with such termination; and</p>\n<p>(b) Provider must refund to Customer any Charges paid by the Customer to Provider in respect of Services that were to be provided to the Customer after the termination of the Agreement net of any amounts Customer is required to pay pursuant to Section 18.3(a), that will not be provided because of such termination.</p>\n<p>19. Notices</p>\n<p>1. Any notice from one party to the other party with respect to the Agreement must be given by one of the following methods:</p>\n<p>(a) sent by email to the relevant email address specified through the Hosted Services, in which case the notice shall be deemed to be received upon receipt of the email by the recipient's email server; or</p>\n<p>20. General</p>\n<p>1. No breach of any provision of the Agreement shall be waived except with the express written consent of the non-breaching party.</p>\n<p>2. If any provision of the Agreement is determined by any court or other competent authority to be unlawful and/or unenforceable, the other provisions of the Agreement will continue in effect. If any unlawful and/or unenforceable provision would be lawful or enforceable if part of it were deleted, that part will be deemed to be deleted, and the rest of the provision will continue in effect (unless that would contradict the clear intention of the parties, in which case the entirety of the relevant provision will be deemed to be deleted).</p>\n<p>3. Customer may not assign or transfer, by operation of law or otherwise, any of its rights or obligations under the Agreement to any third party without Provider’s prior written consent, which consent will not be unreasonably withheld or delayed. Any attempted assignment or transfer in violation of the foregoing will be null and void and considered a material breach of the Agreement.</p>\n<p>4. The Agreement is made for the benefit of the parties and is not intended to benefit any third party or be enforceable by any third party.</p>\n<p>5. The Agreement, including the various components thereof and any schedules, addenda, and modifications thereto, shall constitute the entire agreement between the parties in relation to the subject matter therein, and shall supersede all previous agreements, arrangements, and understandings between the parties in respect of that subject matter.</p>\n<p>6. This Agreement, and all claims or causes of action (whether in contract, tort or statute) that may be based upon, arise out of or relate to the Agreement, or the negotiation, execution or performance of the Agreement (including any claim or cause of action based upon, arising out of or related to any representation or warranty made in or in connection with the Agreement or as an inducement to enter into the Agreement), shall be governed by, and enforced in accordance with, the internal laws of the State of Colorado, including its statutes of limitations.</p>\n<p>21. Miscellaneous</p>\n<p>1. Customer agrees to reasonably cooperate with the Provider to serve as a reference account upon request.</p>\n<p>2. The Provider and the Customer can enter a renegotiation (at the Customer’s request) after the Customer has obtained 30 days of operational data from their fourth retail location (that is connected to the system), assuming that the Customer had 3 stores or less prior.</p>\n<p>3. Customer hereby grants to Provider a limited, revocable license to use Customer’s name, logo, and identifying marks in advertising Provider’s Services, including through marketing activities and in marketing materials, subject to Customer’s reasonable objection.</p>\n<p>4. If the Customer is charged at a different rate than the standard default pricing as set forth in Provider’s standard charge policy referenced below, and such Customer does not connect all of its stores to the Hosted Services after 45 days of using the Hosted Services, the Provider may increase the Charges to match the standard default pricing rates found at <a href=\"https://support.alpineiq.com/charge-policy.\" target=\"_blank\">https://support.alpineiq.com/charge-policy.</a></p>\n<p>5. The Customer may not use the Services to message or otherwise send communications to individuals who are not current customers of a store currently listed as an active store of Customer in the Platform or other settings page of any Services (each such store, a “Customer Store”). If the Customer messages individuals who are not customers of a Customer Store, the Customer will be in material breach of these Terms.</p>\n<p>22. Dispute Resolution</p>\n<p>1. If any dispute arises under or with respect to the Agreement, Provider and Customer shall first attempt to resolve the dispute through negotiation. If the parties cannot resolve the dispute after 30 days of negotiation, then the parties shall submit the dispute to binding arbitration before a single arbitrator in accordance with the American Arbitration Association’s Commercial Arbitration Rules. The arbitration shall be conducted in Boulder, Colorado, and judgment on the award may be entered in any court having jurisdiction. Notwithstanding the foregoing or anything in the Agreement to the contrary, Provider may pursue a claim for non-payment of Charges in any jurisdiction or venue without condition or delay.</p>\n<p>2. TO THE EXTENT ALLOWED BY LAW, (A) EACH PARTY WAIVES ANY RIGHT TO PURSUE DISPUTES ON A CLASS-WIDE BASIS, TO EITHER JOIN A CLAIM WITH THE CLAIM OF ANY OTHER PERSON OR ENTITY OR TO ASSERT A CLAIM IN A REPRESENTATIVE CAPACITY ON BEHALF OF ANYONE ELSE IN ANY LAWSUIT, ARBITRATION, OR OTHER PROCEEDING, AND (B) WAIVE ANY RIGHT TO TRIAL BY JURY IN ANY LAWSUIT, ARBITRATION, OR OTHER PROCEEDING.</p>\n<p>23. Amendments</p>\n<p>1. Provider reserves the right to make changes to these Terms from time to time by providing Customer with written notice of the changes at least 20 days prior to any such changes. Such written notice shall specify the effective date of such changes (which must be at least 20 days after delivery of the notice) and Customer’s continued access or use of the Services on or after the effective date of any such changes constitutes Customer’s acceptance of and consent to any such changes.</p>\n<p>2. Notwithstanding the foregoing, no modification of either party’s respective limitations of liability or indemnification obligations hereunder shall be binding unless made in a written document that expressly identifies it as an amendment to the Agreement and is signed by each party’s authorized representative.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  "hr-tc": {
+   "source": "starbuds-reforge/src/content/pages/hr-tc.json",
+   "url": "https://www.starbuds.us/hr-tc",
+   "title": "Higher Rewards Terms & Conditions | Star Buds Marijuana Dispensary",
+   "h1": "",
+   "description": "",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "rich",
+       "html": "<p>HIGHER REWARDS PROGRAM TERMS &amp; CONDITIONS</p>\n<p>​</p>\n<p>LOYALTY PROGRAM TERMS &amp; CONDITIONS</p>\n<p>Your enrollment in the Higher Rewards Loyalty Program (“Program”) is subject to these Terms, which we may update from time to time. By joining the Program you agree to and are bound by the terms, conditions, policies and notices contained in these Terms, and you acknowledge that information will be processed as set forth in Our Privacy Policy. If you do not agree to these Terms, do not enroll in the Program.</p>"
+      },
+      {
+       "t": "list",
+       "ordered": true,
+       "items": [
+        "How To Sign Up"
+       ]
+      },
+      {
+       "t": "rich",
+       "html": "<p>Subject to the terms and conditions herein, the Program is automatically available to customers of dispensaries participating in the Higher Rewards program. This includes adult-use purchasers 21 years of age and older who are either: (i) new dispensary customers or (ii) existing customers who enroll in this Program that opt-in to the Program via <a href=\"https://lab.alpineiq.com/joinMembers/1130\" target=\"_blank\" rel=\"noreferrer noopener\">https://lab.alpineiq.com/joinMembers/1130</a> (“Customer”). It is free to join.</p>\n<p>By signing up for the Program, Customer will receive text, email, and push notifications from Higher Rewards. Customers may opt out of communications at any time, but may still remain part of the Program. Reply “STOP” to any text message to unsubscribe. By providing a mobile phone number and signing up for the Program, Customer consents to receive marketing communications, including special offers, sales, discounts, and/or any marketing, products, services and/or promotions from or on behalf of higher rewards at the telephone number(s) provided above, including text messages, telephone calls, ringless voicemail, automated voicemail, email and/or other outreach channels and/or any communication transmitted by an automatic telephone dialing system, artificial or prerecorded voice or other automated and/or computer technology. Customer agrees that they are allowing the Program and its 3rd party technology provider, Alpine IQ, to retain Customer’s personal contact details, engagement history, and history of purchased product for use in personalized marketing. Consent is not required as a condition of any purchase. Standard message and data rates may apply.</p>\n<p>Upon enrollment and subject to compliance with applicable law, Customer may receive, at the sole and reasonable discretion of Higher Rewards, as set forth in detail below, free branded merchandise, exclusive offers, communications, and early exclusive previews of products.</p>\n<p>To sign up, prospective Customer must (1) create an Account for the Program, providing all information requested, including a valid name and contact information, including email, address, or phone number (“Loyalty Account”).</p>\n<p>Only one (1) Loyalty Account per person/phone number. Any person attempting to obtain or use more than one Loyalty Account, phone number, identity, registration, or log-in, may be disqualified from participating in the Program at Higher Rewards sole discretion. Higher Rewards is not responsible for any incorrect or inaccurate information supplied by any Customer. You represent and warrant that all registration information you submit is truthful and accurate, and that you will maintain the accuracy of such information at all times. You may not create more than one Loyalty Account. As part of the Program enrollment, you will be required to provide your name, date of birth, zip code, and phone number.</p>\n<p>To cancel your Loyalty Account, please email Higher Rewards at <a href=\"mailto:higherrewardsllc@gmail.com\" target=\"_self\">higherrewardsllc@gmail.com</a></p>"
+      },
+      {
+       "t": "list",
+       "ordered": true,
+       "items": [
+        "How To Accrue Points"
+       ]
+      },
+      {
+       "t": "rich",
+       "html": "<p>Customers will accrue one (1) loyalty point (each, a “Point”) for every $1 spent on the total qualifying purchase of both cannabis and non-cannabis products (not including discounts, returns, credits, delivery fees, and taxes) made at any participating, qualifying dispensaries in Colorado (and such other states as may be designated by Higher Rewards in its discretion, subject to such states’ applicable legal requirements) when the transaction is rung under Customer’s Loyalty Account, except as set forth in detail herein. Customer must tell their budtender at time of purchase they wish to use their points or would like to sign up.</p>\n<p>Points may only be redeemed in the State where they were earned.</p>\n<p>Offer values and rewards may not be combined with other offers and discounts, unless otherwise state at the time of redemption.</p>\n<p>Customers can track Points via Customer’s Wallet and native app that can be accessed via the secured weblink sent to Customer’s mobile phone upon enrollment.</p>\n<p>From time to time, and at Higher Rewards sole discretion, Higher Rewards may offer other methods of accruing and redeeming Points and you may occasionally receive complimentary offer incentives. Incentive offers may be issued in recognition of various events, such as birthdays and anniversaries. You will be notified of offer eligibility via your preferred method of communication - email and/or text. Any methods of accruing and redeeming Points are subject to these Terms and any additional terms listed on the Wallet or otherwise presented in connection with the description of the applicable Point accruing and redeeming method, if any (“Additional Terms”). Not all accrual activities will be available to all Customers. In the event of any conflict between these Terms and any Additional Terms, the Additional Terms shall control. We reserve the right, at any time in our sole discretion and without notice to you, to modify, suspend or discontinue the Program. We may also impose rules for and limits on membership to the Program or restrict your access to the Program without notice or penalty. You agree that, to the fullest extent allowed by applicable law, we will not be liable to you or to any third party for any modification, suspension, or discontinuance of the Program.</p>"
+      },
+      {
+       "t": "list",
+       "ordered": true,
+       "items": [
+        "How To Redeem Points"
+       ]
+      },
+      {
+       "t": "rich",
+       "html": "<p>To redeem an offer or reward, Customers must let the budtender know that they are a Program member and that they wish to redeem their points or award at the time of the qualifying transaction.</p>\n<p>Points are subtracted from the Customer’s Loyalty Account balance at the time of redemption.</p>\n<p>In the event of a dispute concerning the identity of a Customer, the Customer will be declared the registered Loyalty Account holder of the phone number associated with the Loyalty Account, but only if that person meets all other eligibility criteria.</p>\n<p>The Points are exclusive to the participating, qualifying, Star Buds retail stores.</p>\n<p>There is no maximum on the amount of Points a Customer can earn. However, your points will expire and be removed from your Loyalty Account after 365 consecutive days of having no qualifying purchase in your Loyalty Account. Any qualifying purchase posted to your Loyalty Account will extend your Point(s) expiration date for 365 days from the posting date.</p>\n<p>Points will be converted in the following increments: 100, 250, 500, 750, 1000. All redemptions are subject to applicable law. Higher Rewards IS NOT RESPONSIBLE FOR ANY POINTS THAT CANNOT BE REDEEMED IN ACCORDANCE WITH THE TERMS DUE TO RESTRICTIONS IMPOSED BY APPLICABLE LAW.</p>\n<p>Points are non-transferable and can be redeemed only by the Customer associated with the Loyalty Account. The Customer name on the Loyalty Account must match the valid picture ID (driver’s license, passport, etc.) that matches the name printed on the Loyalty Account presented at the time of purchase. If the ID does not correspond to the Loyalty Account name, the Points cannot be redeemed.</p>\n<p>Points must be redeemed in a single transaction and will be surrendered to Higher Rewards at the time of purchase. If the entire redemption amount is not used, any unused Points can be saved and used for your next purchase. The unused Points cannot be credited to any Loyalty Account, redeemed for cash or merchandise credit.</p>\n<p>Points will not be refunded with returns if Points were redeemed during such transaction.</p>\n<p>Points have no cash value and cannot be credited to a Loyalty Account or redeemed for cash.</p>\n<p>Points are not valid on and cannot be redeemed for: (1) Previous purchases; or (2) taxes or processing charges.</p>\n<p>Lost or stolen Points will not be replaced. You agree that you are solely responsible for maintaining the confidentiality of your Loyalty Account login information and are fully responsible for all activities that occur under your Loyalty Account. You agree to immediately notify Higher Rewards of any unauthorized use, or suspected unauthorized use, of your Loyalty Account or any other breach of security. Higher Rewards cannot and will not be liable for any loss or damage arising from your failure to comply with the above requirements. Higher Rewards may suspend or terminate access to your Loyalty Account in its sole and absolute discretion. In the case that your Loyalty Account is terminated, these Terms shall remain, to the extent applicable, in full force and effect.</p>\n<p>Points cannot be sold or otherwise bartered.</p>\n<p>Higher Rewards reserves the right to alter and/or discontinue the Program at any time without notice.</p>\n<p>If the total sale is greater than the Points being redeemed, Customer must provide payment prior to completing the transaction.</p>\n<p>Customer shall have the responsibility of ensuring that his or her Points are properly credited at the time of their purchase. If a Customer believes that Points were not properly accrued to his or her Loyalty Account, the Customer must notify Higher Rewards or AlpineIQ and any claim for Points not credited accurately must be received within six (6) months of the date of claimed accrual of Points. Star Buds shall have no liability for any printing, production, typographical, mechanical or other errors or for any delay or failure to credit Points to Customer’s Loyalty Account. Customer may also email <a href=\"mailto:friends@alpineiq.com\" target=\"_self\">friends@alpineiq.com</a> for any Point discrepancies.</p>"
+      },
+      {
+       "t": "list",
+       "ordered": true,
+       "items": [
+        "Disqualifying Activities"
+       ]
+      },
+      {
+       "t": "rich",
+       "html": "<p>Higher Rewards is entitled to take any action it considers appropriate in its sole discretion, including removing or suspending your Loyalty Account and canceling Points accrued if we detect any disqualifying activity concerning your Loyalty Account including but not limited to:</p>\n<p>(i) engaging in illegal or fraudulent activities;</p>\n<p>(ii) supplying or attempting to supply false or misleading information, or making a misrepresentation to Higher Rewards or it’s dispensary partners;</p>\n<p>(iii) selling, assigning, transferring or acquiring, or offering to sell, assign, transfer or acquire any Points other than in accordance with these terms and conditions; or</p>\n<p>(iv) excessive accruing of Points (via fraud or other means).</p>"
+      },
+      {
+       "t": "list",
+       "ordered": true,
+       "items": [
+        "Other Terms"
+       ]
+      },
+      {
+       "t": "rich",
+       "html": "<p>THE PROGRAM IS SUBJECT TO APPLICABLE LAW AND APPROVAL BY INDIVIDUAL U.S. STATES. STAR BUDS IS NOT RESPONSIBLE FOR ANY POINTS THAT CANNOT BE REDEEMED IN ACCORDANCE WITH THE TERMS DUE TO RESTRICTIONS IMPOSED BY APPLICABLE LAW. Higher Rewards and it’s dispensary partners RESERVE THE RIGHT TO DISCONTINUE THE PROGRAM, FOR ANY REASON, AT ANY TIME, WITHOUT NOTICE.</p>\n<p>Higher Rewards and its dispensary partners are not responsible for: (a) misdirected, late, lost, garbled, unintelligible, damaged, stolen, non-delivered or postage-due communications or other Program-related materials whether caused by Customers, wireless carriers, Internet Service Providers (“ISP”) or unauthorized human intervention; (b) any damage to a dispenary partner or other person’s computer system or digital device which is caused or occasioned by participating in the Program or attempting to redeem Points; (c) technical difficulties or failures of any kind including, but not limited to, lost, interrupted, inaccessible or unavailable networks, servers, satellites, Internet, digital device or wireless carriers, websites or other connections, availability or accessibility problems arising in connection with or over the course of the Program; (d) miscommunications, failed, jumbled, scrambled, delayed, dropped, interrupted, lost, non-delivered or misdirected computer, telephone, digital device, email, mobile or cable transmissions or hardware, software, program or programming malfunctions, failures or difficulties of any kind including, but not limited to: malfunctions, interruptions or disconnections in transmissions or connections, phone lines, network hardware or software, computers, equipment, programming errors, cable, satellite, cellular tower, or ISP or wireless carriers; (e) any technical malfunctions, failures or difficulties, printing errors, clerical, typographical or other errors in these Terms, any Program advertisement, on the Wallet or other materials; (f) any errors or failures of any kind, whether human, mechanical, clerical, electronic, interruption of power, digital, mobile or technical in nature, or unauthorized human intervention; (g) any incorrect or inaccurate information, whether caused by tampering or hacking, or by any equipment or programming associated with, or utilized in the Program, including, without limitation, redemptions that are submitted by automated computer programs or other illegitimate means; or (h) the incorrect or inaccurate capture of information or the failure to capture or loss of any information.</p>\n<p>If you have any questions or concerns regarding the Program, please contact Higher Rewards at <a href=\"mailto:higherrewardsllc@gmail.com\">higherrewardsllc@gmail.com</a>.</p>\n<p>Higher Rewards and it’s dispensary partners reserve the right to terminate a Customer’s Program membership, and void any Points accumulated in such Loyalty Account(s), if, in Higher Rewards’ sole discretion, the Customer appears to have violated any of the Terms or any applicable law, or earns Points via deception, forgery, fraud, or commit any other abuse of the Program. Higher Rewards reserves the right to seek damages and other remedies from any such person to the fullest extent permitted by law.</p>\n<p>Star Buds reserves the right, without prior notice and at any time, to terminate the Program, in whole or in part, or modify or suspend the Program, or any portion thereof, in any way, if it determines, in its sole discretion, that the Program is impaired or corrupted or that fraud, breach of confidentiality, or technical problems, failures or malfunctions have destroyed or severely undermined the integrity and/or feasibility of the Program.</p>\n<p>Star Buds reserves the right, in its sole discretion, to cancel, change, modify or discontinue the Program, in whole or in part, including any terms, rules, features, benefits, rewards, conditions of participation, the Point accruing/accumulation ratio, the Point redemption policy, and the Point expiration policy, or any other aspect of the Program, in whole or in part, at any time, with or without advance notice, even though changes may affect the value of the Points and rewards already accumulated. Star Buds may make changes to any element of the Program to correct for typographical, printing or other errors and you waive any rights relating to same. Any changes will become effective immediately upon posting the revisions. At all times, Customers are solely responsible for remaining knowledgeable about and in compliance with these Terms. Your use of Points after we post any changes constitutes your agreement to those changes and your agreement to be bound by any such revisions.</p>\n<p>Intellectual property, customer data and program structure are owned by Higher Rewards, LLC and subject to the terms</p>\n<p>Only the type and quantity of Points described in these Terms will be awarded.</p>\n<p>This section 5 will survive any termination, discontinuation, or cancellation of the Program or your Loyalty Account.</p>"
+      }
+     ]
+    }
+   ]
+  },
+  "products": {
+   "source": "starbuds-reforge/src/content/pages/products.json",
+   "url": "https://www.starbuds.us/products",
+   "title": "Star Buds Products",
+   "h1": "PRODUCTS",
+   "description": "",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "PRODUCTS"
+      },
+      {
+       "t": "rich",
+       "html": "<p>What are you in the mood for? Flower? Concentrates? Edibles? At Star Buds, we have all those products and more!</p>\n<p>Find more information about your favorites below.</p>"
+      },
+      {
+       "t": "rich",
+       "html": "<p>- PRODUCT SELECTION AND AVAILABILITY VARIES BY LOCATION -</p>"
+      },
+      {
+       "t": "columns",
+       "cols": [
+        {
+         "bg": null,
+         "blocks": [
+          {
+           "t": "repeater",
+           "items": [
+            {
+             "blocks": [
+              {
+               "t": "image",
+               "src": "https://static.wixstatic.com/media/553d0f_bea32d6b012a47b18e11856252c0347b~mv2.jpg",
+               "alt": "",
+               "href": null,
+               "w": 531,
+               "h": 651,
+               "caption": "",
+               "role": "background"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "STRAINS"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "WE HAVE A VARIETY OF STRAINS TO MEET YOUR SPECIFIC"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "NEEDS, INCLUDING OUR CANNABIS CUP-WINNING POOTIE TANG"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "​"
+              },
+              {
+               "t": "button",
+               "text": "VIEW PRODUCTS",
+               "href": "/",
+               "external": false
+              }
+             ]
+            },
+            {
+             "blocks": [
+              {
+               "t": "image",
+               "src": "https://static.wixstatic.com/media/553d0f_374e1ca93f174b44ae4c7e2a58039992~mv2.jpg",
+               "alt": "",
+               "href": null,
+               "w": 5096,
+               "h": 2120,
+               "caption": "",
+               "role": "background"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "EDIBLES"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "STAR BUDS HAS YOUR EDIBLE MARIJUANA PRODUCT NEEDS"
+              },
+              {
+               "t": "button",
+               "text": "VIEW PRODUCTS",
+               "href": "/edibles/",
+               "external": false
+              }
+             ]
+            },
+            {
+             "blocks": [
+              {
+               "t": "image",
+               "src": "https://static.wixstatic.com/media/553d0f_bba638d679634533a9ff8077db2c6ca8~mv2_d_3488_2335_s_2.jpeg",
+               "alt": "",
+               "href": null,
+               "w": 3488,
+               "h": 2335,
+               "caption": "",
+               "role": "background"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "CBD"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "EVIDENCE OF CBD'S MEDICAL BENEFITS CONTINUES TO GROW AND AT"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "STARBUDS WE CARRY AN ARRAY OF CBD PRODUCTS"
+              },
+              {
+               "t": "button",
+               "text": "VIEW PRODUCTS",
+               "href": "/cbd/",
+               "external": false
+              }
+             ]
+            },
+            {
+             "blocks": [
+              {
+               "t": "image",
+               "src": "https://static.wixstatic.com/media/553d0f_6ef590ffb4964003b3192e5d1aca98ad~mv2.jpg",
+               "alt": "",
+               "href": null,
+               "w": 770,
+               "h": 627,
+               "caption": "",
+               "role": "background"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "CONCENTRATES"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "WE CARRY THE FINEST AND MOST POTENT CONCENTRATES"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "IN COLORADO, INCLUDING SHATTER, WAX AND KAVIAR"
+              },
+              {
+               "t": "button",
+               "text": "VIEW PRODUCTS",
+               "href": "/concentrates/",
+               "external": false
+              }
+             ]
+            },
+            {
+             "blocks": [
+              {
+               "t": "image",
+               "src": "https://static.wixstatic.com/media/553d0f_abd8c6aac9c44e2bb20f632bb991dc16~mv2_d_2000_1500_s_2.jpg",
+               "alt": "",
+               "href": null,
+               "w": 2000,
+               "h": 1500,
+               "caption": "",
+               "role": "background"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "VAPES"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "VAPE PENS ARE A DISCREET AND CONVENIENT WAY TO"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "CONSUME MARIJUANA AND CANNABIS PRODUCTS"
+              },
+              {
+               "t": "button",
+               "text": "VIEW PRODUCTS",
+               "href": "/vapes/",
+               "external": false
+              }
+             ]
+            },
+            {
+             "blocks": [
+              {
+               "t": "image",
+               "src": "https://static.wixstatic.com/media/553d0f_63a4dbfa3ec246538fa6be4bf9a74fe8~mv2.jpg",
+               "alt": "",
+               "href": null,
+               "w": 640,
+               "h": 420,
+               "caption": "",
+               "role": "background"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "TOPICALS"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "CANNABIS TOPICALS ARE A GREAT WAY TO"
+              },
+              {
+               "t": "heading",
+               "level": 4,
+               "html": "ENJOY THE BENEFITS OF THC AND CBD"
+              },
+              {
+               "t": "button",
+               "text": "VIEW PRODUCTS",
+               "href": "/topicals/",
+               "external": false
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "cbd": {
+   "source": "starbuds-reforge/src/content/pages/cbd.json",
+   "url": "https://www.starbuds.us/cbd",
+   "title": "CBD | Star Buds Marijuana Dispensary | Colorado",
+   "h1": "CANNABINOIDS",
+   "description": "",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 2,
+       "html": "TRY OUR CBD PRODUCTS"
+      },
+      {
+       "t": "rich",
+       "html": "<p>AVAILABLE AT EVERY</p>"
+      },
+      {
+       "t": "rich",
+       "html": "<p>STARBUDS</p>"
+      },
+      {
+       "t": "button",
+       "text": "FIND NEAREST LOCATION",
+       "href": "/locations/",
+       "external": false
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "CANNABINOIDS"
+      },
+      {
+       "t": "rich",
+       "html": "<p>CBD, or cannabidiol, is quickly changing the debate surrounding the use of marijuana as a medicine.Most people have heard of a chemical called THC, which is the <a href=\"http://www.leafscience.com/2014/03/16/6-surprising-facts-thc/\" target=\"_blank\">ingredient in marijuana</a> that gets users high. But recently, attention has shifted to another compound in marijuana called CBD — and for good reason. Because while doctors can’t seem to look past certain side effects of THC, CBD doesn’t appear to present that problem. On the other hand, evidence of CBD’s medical benefits continues to grow.</p>"
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "bg": null,
+     "blocks": []
+    },
+    {
+     "id": "s4",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "rich",
+       "html": "<p>- PRODUCT SELECTION AND AVAILABILITY VARIES BY LOCATION -</p>"
+      }
+     ]
+    }
+   ]
+  },
+  "concentrates": {
+   "source": "starbuds-reforge/src/content/pages/concentrates.json",
+   "url": "https://www.starbuds.us/concentrates",
+   "title": "Concentrates | Star Buds Marijuana Dispensary | Colorado",
+   "h1": "CONCENTRATES",
+   "description": "",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": {
+      "image": "https://static.wixstatic.com/media/553d0f_52eb16d7e7844c87863bb338be6e9d25~mv2_d_5472_3648_s_4_2.jpg",
+      "alt": ""
+     },
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 2,
+       "html": "KAVIAR NOW AVAILABLE"
+      },
+      {
+       "t": "heading",
+       "level": 2,
+       "html": "IN ALL STORES"
+      },
+      {
+       "t": "button",
+       "text": "FIND NEAREST LOCATION",
+       "href": "/locations/",
+       "external": false
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "CONCENTRATES"
+      },
+      {
+       "t": "heading",
+       "level": 6,
+       "html": "Proudly Carrying the Most Potent Concentrates in Colorado"
+      },
+      {
+       "t": "rich",
+       "html": "<p>- PRODUCT SELECTION AND AVAILABILITY VARIES BY LOCATION -</p>"
+      }
+     ]
+    }
+   ]
+  },
+  "edibles": {
+   "source": "starbuds-reforge/src/content/pages/edibles.json",
+   "url": "https://www.starbuds.us/edibles",
+   "title": "Edibles | Star Buds Marijuana Dispensary | Colorado",
+   "h1": "- DAILY DEAL -",
+   "description": "",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "columns",
+       "cols": [
+        {
+         "bg": null,
+         "blocks": [
+          {
+           "t": "heading",
+           "level": 1,
+           "html": "- DAILY DEAL -"
+          },
+          {
+           "t": "heading",
+           "level": 1,
+           "html": "MUNCHIE MONDAY"
+          },
+          {
+           "t": "heading",
+           "level": 1,
+           "html": "BUY ONE EDIBLE, GET ONE HALF OFF"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "EDIBLES"
+      },
+      {
+       "t": "rich",
+       "html": "<p>PRODUCT SELECTION AND AVAILABILITY VARIES BY LOCATION</p>"
+      }
+     ]
+    }
+   ]
+  },
+  "topicals": {
+   "source": "starbuds-reforge/src/content/pages/topicals.json",
+   "url": "https://www.starbuds.us/topicals",
+   "title": "Topicals | Star Buds Marijuana Dispensary | Colorado",
+   "h1": "TOPICALS",
+   "description": "",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": {
+      "image": "https://static.wixstatic.com/media/553d0f_fd7ea1040d564ea397c3fb2c8ee8cbc2~mv2.jpg",
+      "alt": ""
+     },
+     "blocks": []
+    },
+    {
+     "id": "s2",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "TOPICALS"
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "rich",
+       "html": "<p>- PRODUCT SELECTION AND AVAILABILITY VARIES BY LOCATION -</p>"
+      }
+     ]
+    }
+   ]
+  },
+  "vapes": {
+   "source": "starbuds-reforge/src/content/pages/vapes.json",
+   "url": "https://www.starbuds.us/vapes",
+   "title": "Vapes | Star Buds Marijuana Dispensary | Colorado",
+   "h1": "VAPES",
+   "description": "",
+   "sections": [
+    {
+     "id": "s1",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "columns",
+       "cols": [
+        {
+         "bg": {
+          "image": "https://static.wixstatic.com/media/553d0f_9adbf4593d484c16aa23bfc61c98d935~mv2_d_9958_4310_s_4_2.jpg",
+          "color": null
+         },
+         "blocks": [
+          {
+           "t": "heading",
+           "level": 2,
+           "html": "STARBUDS VAPE CARTRIDGES (500mg)"
+          },
+          {
+           "t": "rich",
+           "html": "<p>Available at all Locations</p>"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "heading",
+       "level": 1,
+       "html": "VAPES"
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "bg": null,
+     "blocks": [
+      {
+       "t": "rich",
+       "html": "<p>- PRODUCT SELECTION AND AVAILABILITY VARIES BY LOCATION -</p>"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

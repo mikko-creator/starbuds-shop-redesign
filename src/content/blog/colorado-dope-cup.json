@@ -1,0 +1,68 @@
+{
+  "slug": "colorado-dope-cup",
+  "category": "news-and-culture",
+  "categoryReason": "Events: Star Buds sponsors the 2017 Colorado Dope Cup.",
+  "title": "Colorado Dope Cup",
+  "date": "2017-07-19",
+  "dateText": "Jul 19, 2017",
+  "readTime": "1 min read",
+  "excerpt": "Starbuds is a proud Sponsor of Dope Magazine's First Colorado Dope Cup. The DOPE Cup, now one of the most respected cannabis competitions in the country, continues to elevate its name…",
+  "tags": [],
+  "hero": null,
+  "image": {
+    "src": "/assets/photos/blog/06c0024aef67-298.webp",
+    "w": 298,
+    "h": 169,
+    "alt": "",
+    "srcset": "/assets/photos/blog/06c0024aef67-298.webp 298w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "Starbuds is a proud Sponsor of Dope Magazine's First Colorado Dope Cup. The DOPE Cup, now one of the most respected cannabis competitions in the country, continues to elevate its name through a highly transparent and technical judging processes matched only by seamless event production. With upwards of 2000 attendees expected; a reach in the tens of thousands virally, a national platform and stellar musical acts, the DOPE Cup Colorado is making its Rocky Mountain debut! The First Annual Colorado DOPE Cup will no doubt bring that Dope flavor."
+    },
+    {
+      "t": "p",
+      "html": "Starbuds will have a booth set up giving out swag and hanging out with all of the attendees. Keep your"
+    },
+    {
+      "t": "p",
+      "html": "eye out for our booth and come see us!"
+    },
+    {
+      "t": "h2",
+      "html": "august 13, 2017"
+    },
+    {
+      "t": "h2",
+      "html": "cluster studios"
+    },
+    {
+      "t": "p",
+      "html": "Make sure you RSVP here. http://dopecupco.dopemagazine.com/rsvp/"
+    },
+    {
+      "t": "p",
+      "html": "The DOPE Cup is a FREE event for anyone over the age of 21 to attend. We do have limited space so make sure and RSVP early to guarantee your entry. You will receive a confirmation after filling out the RSVP form. Please bring a valid photo ID to the event to check in. RSVP’s cannot be transferred to another person. Must be 21+ years or older at the time of the event to enter."
+    },
+    {
+      "t": "p",
+      "html": "*We are sorry but we will not be accepting walk-ins at the door."
+    },
+    {
+      "t": "img",
+      "src": "/assets/photos/blog/06c0024aef67-298.webp",
+      "w": 298,
+      "h": 169,
+      "srcset": [
+        {
+          "src": "/assets/photos/blog/06c0024aef67-298.webp",
+          "w": 298
+        }
+      ],
+      "alt": ""
+    }
+  ],
+  "source": "single-post__2017__05__30__colorado-dope-cup.json",
+  "legacyPath": "/single-post/2017/05/30/colorado-dope-cup"
+}

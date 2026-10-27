@@ -1,0 +1,86 @@
+{
+  "slug": "which-strain-makes-you-laugh-the-most",
+  "category": "shopping-and-reviews",
+  "categoryReason": "Strain picks for laugh-out-loud moments.",
+  "title": "Which Strain Makes You Laugh the Most?",
+  "date": "2025-03-18",
+  "dateText": "Mar 18, 2025",
+  "readTime": "1 min read",
+  "excerpt": "Ever had one of those laugh-until-you-cry moments? The kind where everything feels lighter, funnier, and just plain better? Sometimes, the right cannabis strain is all it takes to get you…",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/31613ba42ec5-1280.webp",
+    "w": 1280,
+    "h": 875,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/31613ba42ec5-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/31613ba42ec5-1280.webp",
+        "w": 1280
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/31613ba42ec5-640.webp",
+    "w": 640,
+    "h": 438,
+    "alt": "",
+    "srcset": "/assets/photos/blog/31613ba42ec5-640.webp 640w, /assets/photos/blog/31613ba42ec5-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "Ever had one of those laugh-until-you-cry moments? The kind where everything feels lighter, funnier, and just plain better? Sometimes, the right cannabis strain is all it takes to get you there."
+    },
+    {
+      "t": "p",
+      "html": "At <strong>Star Buds</strong>, we love the strains that turn up the good vibes and bring the giggles. It’s not just about THC—it’s the full mix of cannabinoids and terpenes like <strong>limonene</strong> and <strong>myrcene</strong> that creates that feel-good magic."
+    },
+    {
+      "t": "h2",
+      "html": "Here are the best strains for laugh-out-loud moments:"
+    },
+    {
+      "t": "h2",
+      "html": "<strong>Ice Cream Cake</strong>"
+    },
+    {
+      "t": "p",
+      "html": "<strong>Type:</strong> Indica-dominant<strong>THC:</strong> 29–33%<strong>Vibe:</strong> Deeply relaxing with sweet vanilla and fruity notes. Melts stress and opens the door to easy, contagious laughter."
+    },
+    {
+      "t": "h2",
+      "html": "<strong>Bubba Fett</strong>"
+    },
+    {
+      "t": "p",
+      "html": "<strong>Type:</strong> Indica-leaning hybrid<strong>THC:</strong> 26–30%<strong>Vibe:</strong> Bold, calming, and perfect for kicking back with friends. Earthy, berry-rich flavor that sets a chill, giggly mood."
+    },
+    {
+      "t": "h2",
+      "html": "<strong>Jack Herer</strong>"
+    },
+    {
+      "t": "p",
+      "html": "<strong>Type:</strong> Sativa-dominant<strong>Vibe:</strong> Uplifting, energizing, and a classic go-to for creative, social highs. Think citrus, pine, and nonstop smiles."
+    },
+    {
+      "t": "h2",
+      "html": "<strong>Sunset Sherbet</strong>"
+    },
+    {
+      "t": "p",
+      "html": "<strong>Type:</strong> Balanced hybrid<strong>THC:</strong> ~18%<strong>Vibe:</strong> Sweet, citrusy, and perfectly balanced to relax your body while keeping your head light and happy."
+    },
+    {
+      "t": "p",
+      "html": "Whether you're winding down with friends or just need a mood boost, stop by <strong>Star Buds</strong> and ask for one of these laugh-ready strains. Your next great laugh might just be one puff away."
+    }
+  ],
+  "source": "single-post__which-strain-makes-you-laugh-the-most.json",
+  "legacyPath": "/single-post/which-strain-makes-you-laugh-the-most"
+}

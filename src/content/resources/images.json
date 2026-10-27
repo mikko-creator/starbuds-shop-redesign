@@ -1,0 +1,158 @@
+{
+ "note": "RESOURCES-R2: starbuds.us images used by the resources/content pages, localized as WebP (D8). from = the live Wix URL in the capture; source = the starbuds-reforge assets/source original.",
+ "images": {
+  "about-cannabis-cup": {
+   "src": "/assets/photos/pages/about-cannabis-cup.webp",
+   "w": 380,
+   "h": 302,
+   "alt": "high times cannabis cup winner 2015 best sativa, pootie tang",
+   "from": "https://static.wixstatic.com/media/553d0f_973f653d1f7a49fea87b579ad9be4096~mv2.png",
+   "source": "assets/source/553d0f_973f653d1f7a49fea87b579ad9be4096.png",
+   "bytes": 20838
+  },
+  "team-master-grower": {
+   "src": "/assets/photos/pages/team-master-grower.webp",
+   "w": 350,
+   "h": 393,
+   "alt": "",
+   "from": "https://static.wixstatic.com/media/553d0f_aeb8a2450d4b441581d7b97aeea9c679~mv2.jpg",
+   "source": "assets/source/553d0f_aeb8a2450d4b441581d7b97aeea9c679.jpg",
+   "bytes": 10356
+  },
+  "press-msnbc-pot-barons": {
+   "src": "/assets/photos/pages/press-msnbc-pot-barons.webp",
+   "w": 432,
+   "h": 432,
+   "alt": "PotBarons.png",
+   "from": "https://static.wixstatic.com/media/553d0f_55843d83b6c147d18d4c4afe9a3d9710~mv2.png",
+   "source": "assets/source/553d0f_55843d83b6c147d18d4c4afe9a3d9710.png",
+   "bytes": 5562
+  },
+  "press-growmag": {
+   "src": "/assets/photos/pages/press-growmag.webp",
+   "w": 310,
+   "h": 311,
+   "alt": "download-2.png",
+   "from": "https://static.wixstatic.com/media/553d0f_63485a23dc2748b0a6671adf31a8bba4~mv2.png",
+   "source": "assets/source/553d0f_63485a23dc2748b0a6671adf31a8bba4.png",
+   "bytes": 5642
+  },
+  "press-boston-globe": {
+   "src": "/assets/photos/pages/press-boston-globe.webp",
+   "w": 432,
+   "h": 278,
+   "alt": "boston-globe-logo-mmp.jpg",
+   "from": "https://static.wixstatic.com/media/553d0f_cbee7d8e6cb04a54a3c15f35885d7db1~mv2.jpg",
+   "source": "assets/source/553d0f_cbee7d8e6cb04a54a3c15f35885d7db1.jpg",
+   "bytes": 4222
+  },
+  "press-cannabist": {
+   "src": "/assets/photos/pages/press-cannabist.webp",
+   "w": 432,
+   "h": 432,
+   "alt": "cannabist-social-logo-lgsq.png",
+   "from": "https://static.wixstatic.com/media/553d0f_8c7b8cf13dad4b638f48f9952d823e16~mv2_d_1200_1200_s_2.png",
+   "source": "assets/source/553d0f_8c7b8cf13dad4b638f48f9952d823e16_d_1200_1200_s_2.png",
+   "bytes": 7230
+  },
+  "press-msnbc": {
+   "src": "/assets/photos/pages/press-msnbc.webp",
+   "w": 432,
+   "h": 432,
+   "alt": "logo-msnbc-png--1920.png",
+   "from": "https://static.wixstatic.com/media/553d0f_68c11c80fe9e4d85b04b55082096bb40~mv2_d_1920_1920_s_2.png",
+   "source": "assets/source/553d0f_68c11c80fe9e4d85b04b55082096bb40_d_1920_1920_s_2.png",
+   "bytes": 13796
+  },
+  "press-dope-magazine": {
+   "src": "/assets/photos/pages/press-dope-magazine.webp",
+   "w": 432,
+   "h": 171,
+   "alt": "dopemagazine.png",
+   "from": "https://static.wixstatic.com/media/553d0f_374204060ca74ba09fe8b57cf7e90455~mv2.png",
+   "source": "assets/source/553d0f_374204060ca74ba09fe8b57cf7e90455.png",
+   "bytes": 9396
+  },
+  "press-forbes": {
+   "src": "/assets/photos/pages/press-forbes.webp",
+   "w": 432,
+   "h": 204,
+   "alt": "forbes-logo-vector-2.png",
+   "from": "https://static.wixstatic.com/media/553d0f_b5fe5bd067c843efa45fb39a2ef7f272~mv2.png",
+   "source": "assets/source/553d0f_b5fe5bd067c843efa45fb39a2ef7f272.png",
+   "bytes": 4372
+  },
+  "press-ncv": {
+   "src": "/assets/photos/pages/press-ncv.webp",
+   "w": 420,
+   "h": 315,
+   "alt": "ncv-logo-white-share-420x315.jpg",
+   "from": "https://static.wixstatic.com/media/553d0f_2fd4d7d1d6694bd8baf9335181fcc592~mv2.jpg",
+   "source": "assets/source/553d0f_2fd4d7d1d6694bd8baf9335181fcc592.jpg",
+   "bytes": 6620
+  },
+  "press-rolling-stone": {
+   "src": "/assets/photos/pages/press-rolling-stone.webp",
+   "w": 432,
+   "h": 84,
+   "alt": "rolling_stone_logo.png",
+   "from": "https://static.wixstatic.com/media/553d0f_0c973af6f94647b59017f3caaa94b5b5~mv2.png",
+   "source": "assets/source/553d0f_0c973af6f94647b59017f3caaa94b5b5.png",
+   "bytes": 6700
+  },
+  "products-strains": {
+   "src": "/assets/photos/pages/products-strains.webp",
+   "w": 531,
+   "h": 651,
+   "alt": "",
+   "from": "https://static.wixstatic.com/media/553d0f_bea32d6b012a47b18e11856252c0347b~mv2.jpg",
+   "source": "assets/source/553d0f_bea32d6b012a47b18e11856252c0347b.jpg",
+   "bytes": 97810
+  },
+  "products-edibles": {
+   "src": "/assets/photos/pages/products-edibles.webp",
+   "w": 1280,
+   "h": 532,
+   "alt": "",
+   "from": "https://static.wixstatic.com/media/553d0f_374e1ca93f174b44ae4c7e2a58039992~mv2.jpg",
+   "source": "assets/source/553d0f_374e1ca93f174b44ae4c7e2a58039992.jpg",
+   "bytes": 40600
+  },
+  "products-cbd": {
+   "src": "/assets/photos/pages/products-cbd.webp",
+   "w": 1280,
+   "h": 857,
+   "alt": "",
+   "from": "https://static.wixstatic.com/media/553d0f_bba638d679634533a9ff8077db2c6ca8~mv2_d_3488_2335_s_2.jpeg",
+   "source": "assets/source/553d0f_bba638d679634533a9ff8077db2c6ca8_d_3488_2335_s_2.jpg",
+   "bytes": 191534
+  },
+  "products-concentrates": {
+   "src": "/assets/photos/pages/products-concentrates.webp",
+   "w": 770,
+   "h": 627,
+   "alt": "",
+   "from": "https://static.wixstatic.com/media/553d0f_6ef590ffb4964003b3192e5d1aca98ad~mv2.jpg",
+   "source": "assets/source/553d0f_6ef590ffb4964003b3192e5d1aca98ad.jpg",
+   "bytes": 51158
+  },
+  "products-vapes": {
+   "src": "/assets/photos/pages/products-vapes.webp",
+   "w": 1280,
+   "h": 960,
+   "alt": "",
+   "from": "https://static.wixstatic.com/media/553d0f_abd8c6aac9c44e2bb20f632bb991dc16~mv2_d_2000_1500_s_2.jpg",
+   "source": "assets/source/553d0f_abd8c6aac9c44e2bb20f632bb991dc16_d_2000_1500_s_2.jpg",
+   "bytes": 55940
+  },
+  "products-topicals": {
+   "src": "/assets/photos/pages/products-topicals.webp",
+   "w": 640,
+   "h": 420,
+   "alt": "",
+   "from": "https://static.wixstatic.com/media/553d0f_63a4dbfa3ec246538fa6be4bf9a74fe8~mv2.jpg",
+   "source": "assets/source/553d0f_63a4dbfa3ec246538fa6be4bf9a74fe8.jpg",
+   "bytes": 17884
+  }
+ }
+}

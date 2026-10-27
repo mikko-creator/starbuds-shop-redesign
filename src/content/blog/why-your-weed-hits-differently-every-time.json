@@ -1,0 +1,102 @@
+{
+  "slug": "why-your-weed-hits-differently-every-time",
+  "category": "cannabis-101",
+  "categoryReason": "Explains why the same strain can feel different each time: terpenes, body chemistry, freshness.",
+  "title": "Why Your Weed Hits Differently Every Time (And How to Choose Smarter at Star Buds)",
+  "date": "2025-11-12",
+  "dateText": "Nov 12, 2025",
+  "readTime": "1 min read",
+  "excerpt": "Have you ever bought the same strain twice and had totally different experiences? One time you’re relaxed and giggly, the next you’re stuck on the couch overthinking a text from 2016…",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/da7d4697b557-1280.webp",
+    "w": 1280,
+    "h": 803,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/da7d4697b557-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/da7d4697b557-1280.webp",
+        "w": 1280
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/da7d4697b557-640.webp",
+    "w": 640,
+    "h": 402,
+    "alt": "",
+    "srcset": "/assets/photos/blog/da7d4697b557-640.webp 640w, /assets/photos/blog/da7d4697b557-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "Have you ever bought the <em>same strain</em> twice and had totally different experiences? One time you’re relaxed and giggly, the next you’re stuck on the couch overthinking a text from 2016. You’re not imagining things: <strong>cannabis doesn’t hit the same every time</strong>, and there are real reasons why."
+    },
+    {
+      "t": "p",
+      "html": "At <strong>Star Buds</strong>, we believe better cannabis experiences start with better understanding. Here’s why your weed can feel different—and how to shop smarter next time."
+    },
+    {
+      "t": "h2",
+      "html": "Terpenes Matter More Than You Think"
+    },
+    {
+      "t": "p",
+      "html": "Most people focus on THC percentages, but <strong>terpenes</strong>—the aromatic compounds in cannabis—play a huge role in how a product makes you feel."
+    },
+    {
+      "t": "ul",
+      "items": [
+        "<strong>Myrcene</strong> → relaxing, couch-lock vibes",
+        "<strong>Limonene</strong> → uplifting, mood-boosting effects",
+        "<strong>Pinene</strong> → alert, focused, clear-headed"
+      ]
+    },
+    {
+      "t": "p",
+      "html": "Two products with identical THC levels can feel completely different depending on terpene content. That’s why Star Buds budtenders always look beyond the number."
+    },
+    {
+      "t": "h2",
+      "html": "Your Body Chemistry Changes"
+    },
+    {
+      "t": "p",
+      "html": "Hydration, sleep, stress, food intake, and tolerance all influence how cannabis affects you. Even the time of day matters. That “perfect” strain from last weekend might hit differently after a long workday or an empty stomach."
+    },
+    {
+      "t": "h2",
+      "html": "Freshness &amp; Storage Count"
+    },
+    {
+      "t": "p",
+      "html": "Cannabis degrades over time. Heat, light, and air break down cannabinoids and terpenes, dulling effects and flavor. Shopping at a regulated dispensary like <strong>Star Buds</strong> ensures proper storage and fresh inventory—something you won’t get from unregulated sources."
+    },
+    {
+      "t": "h2",
+      "html": "How to Choose Smarter at Star Buds"
+    },
+    {
+      "t": "p",
+      "html": "Next time you shop:"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Ask about <strong>terpene profiles</strong>, not just THC",
+        "Tell your budtender <em>how you want to feel</em>",
+        "Rotate strains instead of chasing the highest percentage"
+      ]
+    },
+    {
+      "t": "p",
+      "html": "Cannabis is personal, and when you shop intentionally, it shows!"
+    }
+  ],
+  "source": "single-post__why-your-weed-hits-differently-every-time.json",
+  "legacyPath": "/single-post/why-your-weed-hits-differently-every-time"
+}

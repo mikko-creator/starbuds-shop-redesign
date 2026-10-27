@@ -1,0 +1,118 @@
+{
+  "slug": "the-art-of-the-perfect-pre-roll",
+  "category": "cannabis-101",
+  "categoryReason": "Explains what makes a good pre-roll and how to enjoy one: product basics.",
+  "title": "The Art of the Perfect Pre-Roll: What Separates a Great Smoke From a Bad One",
+  "date": "2025-10-23",
+  "dateText": "Oct 23, 2025",
+  "readTime": "1 min read",
+  "excerpt": "Not all pre-rolls are created equal, and if you’ve ever dealt with canoeing, harsh hits, or a joint that won’t stay lit, you already know that.",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/360f362efd77-1280.webp",
+    "w": 1280,
+    "h": 1280,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/360f362efd77-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/360f362efd77-1280.webp",
+        "w": 1280
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/360f362efd77-640.webp",
+    "w": 640,
+    "h": 640,
+    "alt": "",
+    "srcset": "/assets/photos/blog/360f362efd77-640.webp 640w, /assets/photos/blog/360f362efd77-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "Not all pre-rolls are created equal, and if you’ve ever dealt with canoeing, harsh hits, or a joint that won’t stay lit, you already know that."
+    },
+    {
+      "t": "p",
+      "html": "At <strong>Star Buds</strong>, we carry pre-rolls that actually smoke the way they’re supposed to. Here’s what separates a <strong>top-tier pre-roll</strong> from one you’ll regret lighting."
+    },
+    {
+      "t": "h2",
+      "html": "It’s Not Just Shake (At Least It Shouldn’t Be)"
+    },
+    {
+      "t": "p",
+      "html": "Low-quality pre-rolls are often packed with trim or leftover shake. Quality pre-rolls use <strong>ground flower</strong>, preserving flavor, potency, and smoothness."
+    },
+    {
+      "t": "p",
+      "html": "Pro tip: If the pre-roll tastes harsh or burns unevenly, that’s usually a quality issue—not user error."
+    },
+    {
+      "t": "h2",
+      "html": "The Grind Makes the Difference"
+    },
+    {
+      "t": "p",
+      "html": "Too fine? It burns too fast and clogs airflow.Too chunky? It won’t stay lit."
+    },
+    {
+      "t": "p",
+      "html": "A proper grind allows for:"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Even airflow",
+        "Consistent burn",
+        "Better terpene expression"
+      ]
+    },
+    {
+      "t": "p",
+      "html": "This is one of the biggest reasons dispensary-grade pre-rolls outperform anything rolled at home with leftovers."
+    },
+    {
+      "t": "h2",
+      "html": "Weight, Paper &amp; Filter All Matter"
+    },
+    {
+      "t": "p",
+      "html": "Premium pre-rolls use:"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Consistent weight (no empty tips)",
+        "Quality rolling paper (no chemical taste)",
+        "Proper filters or crutches for smooth draws"
+      ]
+    },
+    {
+      "t": "p",
+      "html": "At <strong>Star Buds</strong>, we vet brands for craftsmanship—not just hype."
+    },
+    {
+      "t": "h2",
+      "html": "How to Get the Best Experience From Your Pre-Roll"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "Light evenly while rotating",
+        "Don’t rush the first few hits",
+        "Store unused pre-rolls in an airtight container"
+      ]
+    },
+    {
+      "t": "p",
+      "html": "And if you’re not sure which pre-roll fits your vibe—chill, creative, social, or sleep-ready—our budtenders have you covered."
+    }
+  ],
+  "source": "single-post__the-art-of-the-perfect-pre-roll.json",
+  "legacyPath": "/single-post/the-art-of-the-perfect-pre-roll"
+}

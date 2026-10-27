@@ -10,6 +10,8 @@ PREFIX="/starbuds-shop-redesign"
 KEYS="${KEYS_DIR:?set KEYS_DIR to the folder holding fal.key (outside the project)}"
 [ -n "${HF_KEY:-}" ] || { echo "HF_KEY is not set: cannot scan for the Higgsfield key"; exit 1; }
 SCAN=(--keys "$KEYS/fal.key" --env-key HF_KEY)
+# revision 2: neither public copy may name the site whose architecture was adopted; the word list stays in tmp/
+RESIDUE=(--patterns tmp/r2-residue.json --allow tmp/r2-residue-allow.json)
 MSG="${1:-Update}"
 TRAILER=$'\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
 
@@ -26,6 +28,7 @@ if [ ! -d publish/repo/.git ]; then git -C publish/repo init -q -b main; git -C 
 find publish/repo -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
 git archive HEAD | tar -x -C publish/repo
 node tools/secret-scan.mjs --dir publish/repo "${SCAN[@]}"
+node tools/residue-scan.mjs --dir publish/repo "${RESIDUE[@]}"
 git -C publish/repo add -A
 git -C publish/repo -c user.name="mikko-creator" -c user.email="mikko@dispenza.com" commit -q -m "$MSG$TRAILER" || echo "repo: nothing to commit"
 git -C publish/repo push -q -u origin main
@@ -33,6 +36,7 @@ git -C publish/repo push -q -u origin main
 # ---- 3. preview (gh-pages) ----
 MSYS_NO_PATHCONV=1 node tools/make-pages-preview.mjs --prefix "$PREFIX" --out preview
 node tools/secret-scan.mjs --dir preview "${SCAN[@]}"
+node tools/residue-scan.mjs --dir preview "${RESIDUE[@]}"
 if [ ! -d preview/.git ]; then git -C preview init -q -b gh-pages; git -C preview remote add origin "$REPO_URL"; fi
 git -C preview add -A
 git -C preview -c user.name="mikko-creator" -c user.email="mikko@dispenza.com" commit -q -m "Preview: $MSG$TRAILER" || echo "preview: nothing to commit"

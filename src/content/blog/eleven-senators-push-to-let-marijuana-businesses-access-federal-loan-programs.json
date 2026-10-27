@@ -1,0 +1,47 @@
+{
+  "slug": "eleven-senators-push-to-let-marijuana-businesses-access-federal-loan-programs",
+  "category": "news-and-culture",
+  "categoryReason": "A news link-out: federal policy (2020).",
+  "title": "Eleven Senators Push To Let Marijuana Businesses Access Federal Loan Programs",
+  "date": "2020-04-02",
+  "dateText": "Apr 2, 2020",
+  "readTime": "1 min read",
+  "excerpt": "Eleven senators sent a letter to leadership in a key committee asking that they add a provision allowing marijuana businesses to access federal loan services in an upcoming annual spending…",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/c0b22312be30-1280.webp",
+    "w": 1280,
+    "h": 853,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/c0b22312be30-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/c0b22312be30-1280.webp",
+        "w": 1280
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/c0b22312be30-640.webp",
+    "w": 640,
+    "h": 427,
+    "alt": "",
+    "srcset": "/assets/photos/blog/c0b22312be30-640.webp 640w, /assets/photos/blog/c0b22312be30-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "h2",
+      "html": "Eleven senators sent a letter to leadership in a key committee asking that they add a provision allowing marijuana businesses to access federal loan services in an upcoming annual spending bill."
+    },
+    {
+      "t": "link",
+      "href": "http://www.marijuanamoment.net/eleven-senators-push-to-let-marijuana-businesses-access-federal-loan-programs/",
+      "text": "READ THE REST OF THE ARTICLE HERE"
+    }
+  ],
+  "source": "single-post__2020__04__02__eleven-senators-push-to-let-marijuana-businesses-access-federal-loan-programs.json",
+  "legacyPath": "/single-post/2020/04/02/eleven-senators-push-to-let-marijuana-businesses-access-federal-loan-programs"
+}

@@ -1,0 +1,125 @@
+{
+  "slug": "star-buds-westmont-is-now-open",
+  "category": "news-and-culture",
+  "categoryReason": "Store news: the opening of Star Buds Westmont, Illinois.",
+  "title": "Star Buds Westmont Is Now Open!",
+  "date": "2025-04-05",
+  "dateText": "Apr 5, 2025",
+  "readTime": "2 min read",
+  "excerpt": "Exciting news for cannabis enthusiasts in the Chicagoland area: Star Buds Westmont is now officially open! Located at 101 W Ogden Ave, Westmont, IL 60559, this new dispensary brings Star…",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/73f4973cf647-1280.webp",
+    "w": 1280,
+    "h": 720,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/73f4973cf647-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/73f4973cf647-1280.webp",
+        "w": 1280
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/73f4973cf647-640.webp",
+    "w": 640,
+    "h": 360,
+    "alt": "",
+    "srcset": "/assets/photos/blog/73f4973cf647-640.webp 640w, /assets/photos/blog/73f4973cf647-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "Exciting news for cannabis enthusiasts in the Chicagoland area: <strong>Star Buds Westmont</strong> is now officially open! Located at <strong>101 W Ogden Ave, Westmont, IL 60559</strong>, this new dispensary brings Star Buds' renowned commitment to quality, service, and community to the western suburbs."
+    },
+    {
+      "t": "h2",
+      "html": "Welcome to Star Buds Westmont"
+    },
+    {
+      "t": "p",
+      "html": "Star Buds Westmont offers a welcoming environment for both seasoned cannabis consumers and newcomers. Their knowledgeable and friendly staff are dedicated to guiding you through their extensive selection, ensuring you find the perfect product to suit your needs."
+    },
+    {
+      "t": "h2",
+      "html": "A Diverse Selection of Premium Products"
+    },
+    {
+      "t": "p",
+      "html": "At Star Buds Westmont, you'll find a wide array of high-quality cannabis products, including:"
+    },
+    {
+      "t": "ul",
+      "items": [
+        "<strong>Flower</strong> – A variety of indicas, sativas, and hybrids to match any preference",
+        "<strong>Pre-Rolls</strong> – Convenient, ready-to-use options for on-the-go enjoyment",
+        "<strong>Vapes</strong> – Discreet and flavorful cartridges and pens",
+        "<strong>Edibles</strong> – Tasty THC-infused treats like gummies, chocolates, and beverages",
+        "<strong>Concentrates</strong> – Potent options like wax, live resin, and shatter",
+        "<strong>Tinctures &amp; Topicals</strong> – Non-smoking alternatives for diverse needs"
+      ]
+    },
+    {
+      "t": "p",
+      "html": "Their rotating menu ensures there's always something new to explore, catering to a variety of preferences and experiences."
+    },
+    {
+      "t": "h2",
+      "html": "Convenient Hours &amp; Online Ordering"
+    },
+    {
+      "t": "p",
+      "html": "Star Buds Westmont is open daily from <strong>8:00 AM to 10:00 PM</strong>, making it easy to fit a visit into your schedule. For added convenience, they offer online ordering with in-store pickup. Simply browse their live menu, place your order, and pick it up when it works best for you."
+    },
+    {
+      "t": "h2",
+      "html": "Celebrating the Grand Opening"
+    },
+    {
+      "t": "p",
+      "html": "The community came together to celebrate the grand opening of Star Buds Westmont on <strong>April 5, 2025</strong>, with a ribbon-cutting ceremony hosted by the Westmont Chamber of Commerce. The event featured surprises, gifts, and food, marking the beginning of Star Buds' commitment to serving the Westmont community."
+    },
+    {
+      "t": "h2",
+      "html": "Loyalty Rewards Program"
+    },
+    {
+      "t": "p",
+      "html": "To show appreciation for their customers, Star Buds offers the <strong>Higher Rewards</strong> program. Earn <strong>1 point for every dollar spent</strong>, and receive <strong>60 bonus points</strong> just for signing up. It's their way of saying thank you for choosing Star Buds."
+    },
+    {
+      "t": "h2",
+      "html": "Visit Star Buds Westmont Today"
+    },
+    {
+      "t": "p",
+      "html": "Whether you're a local resident or just passing through, Star Buds Westmont is your go-to destination for premium cannabis products and exceptional customer service. Experience the difference at:"
+    },
+    {
+      "t": "p",
+      "html": "<strong>Star Buds Westmont</strong>"
+    },
+    {
+      "t": "p",
+      "html": "<strong>Address:</strong> 101 W Ogden Ave, Westmont, IL 60559"
+    },
+    {
+      "t": "p",
+      "html": "<strong>Phone:</strong> (331) 233-6361"
+    },
+    {
+      "t": "p",
+      "html": "<strong>Hours:</strong> Daily, 8:00 AM – 10:00 PM"
+    },
+    {
+      "t": "p",
+      "html": "Discover the Star Buds difference—where quality products, knowledgeable staff, and community focus come together to create an unparalleled cannabis experience."
+    }
+  ],
+  "source": "single-post__star-buds-westmont-is-now-open.json",
+  "legacyPath": "/single-post/star-buds-westmont-is-now-open"
+}

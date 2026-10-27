@@ -1,0 +1,110 @@
+{
+  "slug": "the-science-of-consumption-how-cannabis-is-absorbed-into-the-body-at-the-cellular-level",
+  "category": "cannabis-101",
+  "categoryReason": "Explains how cannabinoids are absorbed and act in the body: science basics.",
+  "title": "The Science of Consumption: How Cannabis is Absorbed into the Body at the Cellular Level",
+  "date": "2024-06-11",
+  "dateText": "Jun 11, 2024",
+  "updated": "Sep 20, 2024",
+  "readTime": "3 min read",
+  "excerpt": "Cannabis, with its complex blend of cannabinoids and terpenes, interacts intricately with the human body, particularly at the cellular level. Understanding this interaction not only…",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/4f402b4dc202-1280.webp",
+    "w": 1280,
+    "h": 852,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/4f402b4dc202-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/4f402b4dc202-1280.webp",
+        "w": 1280
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/4f402b4dc202-640.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "",
+    "srcset": "/assets/photos/blog/4f402b4dc202-640.webp 640w, /assets/photos/blog/4f402b4dc202-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "Cannabis, with its complex blend of cannabinoids and terpenes, interacts intricately with the human body, particularly at the cellular level. Understanding this interaction not only demystifies the effects of cannabis but also highlights its potential therapeutic benefits. Let’s delve into how cannabis is absorbed into the body, focusing on its journey through cells and neurotransmitters."
+    },
+    {
+      "t": "p",
+      "html": "<strong>Cannabinoids and the Endocannabinoid System</strong>"
+    },
+    {
+      "t": "p",
+      "html": "Central to understanding how cannabis affects the body is the endocannabinoid system (ECS), a network of receptors, enzymes, and endogenous cannabinoids that play a crucial role in maintaining homeostasis. The ECS comprises two primary receptors: CB1 and CB2. These receptors are found throughout the body, particularly in the brain, nervous system, and immune cells."
+    },
+    {
+      "t": "p",
+      "html": "When cannabis is consumed, its cannabinoids—primarily THC (tetrahydrocannabinol) and CBD (cannabidiol)—interact with the ECS. THC is known for its psychoactive effects, while CBD is non-intoxicating and often associated with therapeutic benefits."
+    },
+    {
+      "t": "p",
+      "html": "<strong>Absorption and Distribution</strong>"
+    },
+    {
+      "t": "p",
+      "html": "The route of administration significantly influences how cannabinoids are absorbed and distributed in the body:"
+    },
+    {
+      "t": "ol",
+      "items": [
+        "<strong>Inhalation</strong>: When cannabis is smoked or vaporized, cannabinoids are rapidly absorbed through the alveoli in the lungs. This direct route allows cannabinoids to enter the bloodstream quickly, leading to almost immediate effects. Once in the bloodstream, cannabinoids travel to the brain and other tissues, binding to CB1 and CB2 receptors.",
+        "<strong>Oral Consumption</strong>: When cannabis is ingested, it undergoes a different absorption process. Cannabinoids are absorbed through the digestive tract and metabolized by the liver before entering the bloodstream. This process, known as first-pass metabolism, converts THC into 11-hydroxy-THC, a metabolite with potent psychoactive effects. The onset of effects is slower with oral consumption, typically taking 30 minutes to 2 hours.",
+        "<strong>Sublingual and Topical</strong>: Sublingual administration involves placing cannabis tinctures or oils under the tongue, allowing cannabinoids to be absorbed directly into the bloodstream through the mucous membranes. Topical applications, on the other hand, interact with local cannabinoid receptors in the skin but do not typically enter the bloodstream."
+      ]
+    },
+    {
+      "t": "p",
+      "html": "<strong>Cannabinoid Interaction at the Cellular Level</strong>"
+    },
+    {
+      "t": "p",
+      "html": "Once cannabinoids enter the bloodstream, they traverse the blood-brain barrier to interact with cannabinoid receptors in the brain and central nervous system. At the cellular level, these interactions are mediated by G-protein coupled receptors (GPCRs), which are involved in various signaling pathways."
+    },
+    {
+      "t": "ol",
+      "items": [
+        "<strong>THC and CB1 Receptors</strong>: THC primarily binds to CB1 receptors, which are abundant in the brain and central nervous system. This binding alters the release of neurotransmitters, including dopamine, gamma-aminobutyric acid (GABA), and glutamate. The modulation of these neurotransmitters contributes to the psychoactive effects of THC, such as euphoria, altered perception, and relaxation.",
+        "<strong>CBD and Multiple Targets</strong>: Unlike THC, CBD has a low affinity for CB1 and CB2 receptors. Instead, it interacts with multiple targets, including serotonin receptors, vanilloid receptors, and orphan receptors. CBD’s interaction with these receptors is thought to mediate its anxiolytic, anti-inflammatory, and neuroprotective effects. CBD also influences the reuptake of endocannabinoids, enhancing their signaling and prolonging their effects."
+      ]
+    },
+    {
+      "t": "p",
+      "html": "<strong>Neurotransmitter Modulation</strong>"
+    },
+    {
+      "t": "p",
+      "html": "Cannabinoids exert their effects by modulating the release and uptake of various neurotransmitters:"
+    },
+    {
+      "t": "ol",
+      "items": [
+        "<strong>Dopamine</strong>: THC increases dopamine release in the brain’s reward pathways, contributing to its euphoric and reinforcing effects. This action is similar to that of other psychoactive substances but is typically milder and shorter-lived.",
+        "<strong>GABA and Glutamate</strong>: By interacting with CB1 receptors, THC can inhibit the release of GABA and glutamate, two critical neurotransmitters involved in excitatory and inhibitory signaling. This modulation can lead to altered sensory perception, coordination, and cognitive function.",
+        "<strong>Serotonin</strong>: CBD’s interaction with serotonin receptors, particularly 5-HT1A, is believed to contribute to its anxiolytic and mood-stabilizing effects. This interaction may explain why CBD is often used to manage anxiety and depression."
+      ]
+    },
+    {
+      "t": "p",
+      "html": "<strong>Conclusion</strong>"
+    },
+    {
+      "t": "p",
+      "html": "The absorption and cellular interaction of cannabis in the body is a complex and fascinating process that underscores the plant’s diverse effects. From rapid absorption via inhalation to slower, metabolically intensive oral consumption, the route of administration shapes the onset and intensity of cannabis’s effects. At the cellular level, cannabinoids like THC and CBD modulate neurotransmitter systems, leading to a range of psychoactive and therapeutic outcomes. Understanding these processes not only enhances our appreciation of cannabis’s versatility but also informs its safe and effective use in various contexts."
+    }
+  ],
+  "source": "single-post__the-science-of-consumption-how-cannabis-is-absorbed-into-the-body-at-the-cellular-level.json",
+  "legacyPath": "/single-post/the-science-of-consumption-how-cannabis-is-absorbed-into-the-body-at-the-cellular-level"
+}

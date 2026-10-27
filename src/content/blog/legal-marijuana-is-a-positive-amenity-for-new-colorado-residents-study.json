@@ -1,0 +1,50 @@
+{
+  "slug": "legal-marijuana-is-a-positive-amenity-for-new-colorado-residents-study",
+  "category": "news-and-culture",
+  "categoryReason": "A news link-out: a Colorado study (2019).",
+  "title": "Legal Marijuana Is A ‘Positive Amenity’ For New Colorado Residents, Study Finds",
+  "date": "2019-09-23",
+  "dateText": "Sep 23, 2019",
+  "readTime": "1 min read",
+  "excerpt": "Many people consider a number of factors before deciding to move to a new state, including the availability of jobs, the quality of schools and the cost of living, among other things. In…",
+  "tags": [],
+  "hero": {
+    "src": "/assets/photos/blog/341d67ed18b3-1280.webp",
+    "w": 1280,
+    "h": 960,
+    "srcset": [
+      {
+        "src": "/assets/photos/blog/341d67ed18b3-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/assets/photos/blog/341d67ed18b3-1280.webp",
+        "w": 1280
+      }
+    ],
+    "alt": ""
+  },
+  "image": {
+    "src": "/assets/photos/blog/341d67ed18b3-640.webp",
+    "w": 640,
+    "h": 480,
+    "alt": "",
+    "srcset": "/assets/photos/blog/341d67ed18b3-640.webp 640w, /assets/photos/blog/341d67ed18b3-1280.webp 1280w"
+  },
+  "blocks": [
+    {
+      "t": "p",
+      "html": "Many people consider a number of factors before deciding to move to a new state, including the availability of jobs, the quality of schools and the cost of living, among other things. In recent years, another amenity that may attract new residents to a state, according to a recent study, is access to legal marijuana."
+    },
+    {
+      "t": "p",
+      "html": "Specifically, researchers focused on the number of people who migrated to Colorado before and after legalization as compared with a model of what the state would look like under continued prohibition..."
+    },
+    {
+      "t": "p",
+      "html": "Read the full article <a href=\"http://www.marijuanamoment.net/legal-marijuana-is-a-positive-amenity-for-new-colorado-residents-study-finds/\">here</a>"
+    }
+  ],
+  "source": "single-post__2019__09__23__legal-marijuana-is-a-e2-80-98positive-amenity-e2-80-99-for-new-colorado-residents-study.json",
+  "legacyPath": "/single-post/2019/09/23/legal-marijuana-is-a-e2-80-98positive-amenity-e2-80-99-for-new-colorado-residents-study"
+}
