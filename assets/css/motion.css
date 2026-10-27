@@ -1,0 +1,35 @@
+/* motion.css - reveals, float, spin, marquee, reduced motion (FOUNDATION).
+   Reveals apply ONLY under html.js; they animate the individual opacity/translate/scale/clip-path properties, never
+   `transform`, so hover and tilt transforms keep working. Failsafe: html.reveal-all (set by the head script 2.5 s after
+   load when site.js has not booted) shows everything; site.js reveals anything already above or in the viewport. */
+html.js [data-reveal] {
+  transition: opacity .8s var(--ease-out), translate .8s var(--ease-out), scale .8s var(--ease-out), clip-path 1s var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 90ms);
+}
+html.js [data-reveal="up"]:not(.is-in) { opacity: 0; translate: 0 34px; }
+html.js [data-reveal="left"]:not(.is-in) { opacity: 0; translate: -44px 0; }
+html.js [data-reveal="right"]:not(.is-in) { opacity: 0; translate: 44px 0; }
+html.js [data-reveal="scale"]:not(.is-in) { opacity: 0; scale: .86; }
+html.js [data-reveal="wipe"]:not(.is-in) { clip-path: inset(0 100% 0 0); }
+html.js [data-reveal="wipe"] { clip-path: inset(0 0 0 0); }
+html.js [data-reveal="pop"]:not(.is-in) { opacity: 0; scale: .4; }
+html.js [data-reveal="pop"] { transition-timing-function: var(--ease-pop); }
+/* staggered children: put data-stagger on the parent; site.js sets --i on each child */
+html.js [data-stagger] > * { transition: opacity .7s var(--ease-out), translate .7s var(--ease-out); transition-delay: calc(var(--i, 0) * 80ms); }
+html.js [data-stagger]:not(.is-in) > * { opacity: 0; translate: 0 26px; }
+html.reveal-all [data-reveal], html.reveal-all [data-stagger] > * { opacity: 1 !important; translate: none !important; scale: none !important; clip-path: none !important; }
+
+@keyframes sb-float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(1.6deg); } }
+@keyframes sb-spin { to { rotate: 360deg; } }
+@keyframes sb-marquee { to { transform: translateX(-50%); } }
+@keyframes sb-wiggle { 0%, 100% { rotate: var(--tilt, -4deg); } 50% { rotate: calc(var(--tilt, -4deg) + 4deg); } }
+.wiggle { animation: sb-wiggle 3.2s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-reveal], html.js [data-stagger] > * { opacity: 1 !important; translate: none !important; scale: none !important; clip-path: none !important; transition: none !important; }
+  .float--slow, .float--fast, .starburst--spin .starburst__svg, .marquee__track, .wiggle { animation: none !important; }
+  .cutout { transform: rotate(var(--rot, 0deg)) !important; }
+  [data-tilt] { --rx: 0deg !important; --ry: 0deg !important; }
+  .bg-video { display: none; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
