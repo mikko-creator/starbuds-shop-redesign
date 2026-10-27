@@ -22,11 +22,15 @@
   DATA.stores.forEach(function (s) { bySlug[s.slug] = s; });
   var SB = window.SB = { data: DATA, current: null, pendingCat: null };
 
+  // Live-menu links start from the absolute s.liveUrl (https://shop.starbuds.us/stores/<slug>/), and store-page links
+  // come from the rendered switcher anchors, so this file holds no root-absolute string literal for the Pages preview
+  // rewrite (tools/make-pages-preview.mjs) to misjudge: live-shop links stay unprefixed, store pages get the prefix.
   function menuUrl(s, cat) {
-    if (!cat) return s.liveUrl || (DATA.shop + '/stores/' + s.slug + '/');
-    return DATA.shop + '/stores/' + s.slug + '/products/' + cat;
+    return cat ? s.liveUrl + 'products/' + cat : s.liveUrl;
   }
   SB.menuUrl = menuUrl;
+  var storeHref = {};
+  $$('a[data-store-pick][href]').forEach(function (a) { storeHref[a.getAttribute('data-store-pick')] = a.getAttribute('href'); });
 
   /* ---------- store memory ---------- */
   function applyStore(s) {
@@ -38,7 +42,7 @@
     });
     $$('a[data-store-link]').forEach(function (a) {
       if (!a.hasAttribute('data-default-href')) a.setAttribute('data-default-href', a.getAttribute('href'));
-      a.setAttribute('href', s ? '/stores/' + s.slug + '/' : a.getAttribute('data-default-href'));
+      a.setAttribute('href', s && storeHref[s.slug] ? storeHref[s.slug] : a.getAttribute('data-default-href'));
     });
     $$('[data-store-label]').forEach(function (el) {
       if (!el.hasAttribute('data-default-text')) el.setAttribute('data-default-text', el.textContent);
