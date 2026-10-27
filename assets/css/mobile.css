@@ -1,0 +1,87 @@
+/* mobile.css (revision 3.1): phone optimizations, loaded last so it wins at equal specificity.
+   - Lighter glass: every rule that sets backdrop-filter (the list below is generated from the other stylesheets) gets a
+     12px blur on phones instead of 18-28px, which keeps scrolling smooth on mid-range phones.
+   - No full-screen twinkle or aurora drift on phones (large repaints); the floating cut-outs and meteors stay.
+   - Tap targets: breadcrumbs 34px, arrow links 44px. The finder store list scrolls inside a half-screen panel. */
+@media (max-width: 767px) {
+  .glass,
+  .btn--chrome,
+  .btn--light,
+  .btn--ghost,
+  .btn--dark,
+  .patch,
+  .seal,
+  .sb-rocker,
+  .emblem__ring,
+  .marquee--strap,
+  .chip,
+  .site-header::before,
+  .site-header.is-scrolled::before,
+  .burger,
+  .mm-menu__panel,
+  .switcher__panel,
+  .drawer__stores,
+  .sb-foot__card,
+  .agegate__veil,
+  .toast,
+  .page-home .hero__panel,
+  .page-home .hero__mark,
+  .page-home .sb-vibe,
+  .page-home .board__row,
+  .finder__tab,
+  .finder__list,
+  .finder__frame,
+  .finder__place,
+  .finder__reset,
+  .fcard,
+  .faq__tab span,
+  .faq__item,
+  .st-pill,
+  .sh-shero__copy,
+  .sp-rw__inner,
+  .sp-info__panel,
+  .sp-amen,
+  .sh-board,
+  .sh-gdisc,
+  .sh-tile,
+  .sp-more__link,
+  .sh-faq__item,
+  .sp-faq__item,
+  .sp-print__paper,
+  .st-filter__chip,
+  .st-pick,
+  .sp-ticker .marquee,
+  .ct-glass,
+  .ct-pill,
+  .ct-orb,
+  .dl-jump__link,
+  .dl-hero__moon,
+  .dl-day,
+  .dl-day--art,
+  .dl-md__note,
+  .rw-tab,
+  .nf__ticker .marquee,
+  .rs-pill,
+  .rs-quote,
+  .rs-sheet .rs-quote,
+  .bl-cat,
+  .bl-pager__num {
+    -webkit-backdrop-filter: blur(12px) saturate(130%);
+    backdrop-filter: blur(12px) saturate(130%);
+  }
+  body::after { animation: none; opacity: .65; }
+  .sb-sky__aurora, .sb-sky__stars--twinkle { animation: none; }
+  .sb-crumbbar { padding-top: 8px; }
+  .sb-crumbs { margin-bottom: 10px; }
+  .sb-crumbs__link, .sb-crumbs__here { display: inline-flex; align-items: center; min-height: 34px; }
+  .link-arrow { min-height: 44px; }
+  .finder__rows {
+    max-height: 52vh; overflow-y: auto;
+    -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 40px), transparent);
+    mask-image: linear-gradient(180deg, #000 calc(100% - 40px), transparent);
+  }
+  /* tighter rhythm: lanes set their own 90-120px section padding; on phones every section after the hero gets 56px */
+  main > section:not(:first-of-type), main > div > section:not(:first-of-type), main > article > section:not(:first-of-type) {
+    padding-top: 56px; padding-bottom: 56px;
+  }
+}
