@@ -597,7 +597,7 @@ html.age-pending body { overflow: hidden; }
 /* ========== revision 2 shared page helpers: crumbs(), hubHero(), cardGrid(), articleCard() ========== */
 /* ---------- breadcrumbs ---------- */
 .sb-crumbs { margin: 0 0 22px; font-family: var(--font-body); font-weight: 600; font-size: .7rem; letter-spacing: var(--track-caps); text-transform: uppercase; }
-.sb-crumbs__list { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 0; }
+.sb-crumbs__list { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 0; margin: 0; padding: 0; list-style: none; }
 .sb-crumbs__item { display: inline-flex; align-items: center; min-width: 0; }
 .sb-crumbs__link { color: var(--text-light-soft); text-decoration: none; transition: color var(--t-fast); }
 .sb-crumbs__link:hover { color: var(--white); }

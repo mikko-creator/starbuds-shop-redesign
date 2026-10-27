@@ -140,3 +140,7 @@
 @media (max-width: 999px) {
   :root { --header-h: 64px; --promo-h: 32px; }
 }
+/* phones (revision 3.1): tighter rhythm, lighter glass, slightly smaller corners */
+@media (max-width: 767px) {
+  :root { --section-y: 52px; --glass-blur: blur(12px) saturate(130%); --r-lg: 20px; --r-xl: 26px; }
+}

@@ -12,7 +12,7 @@ import { esc, attrs, cx, uid, icon, btn, img, picture, imgUrl, glass, patch, sti
 
 export { esc, attrs, cx, uid, icon, btn, img, picture, imgUrl, glass, patch, sticker, seal, starburst, rocker, emblem, halftone, leaves, grain, cutout, patchCut, seam, pinstripe, marquee, reveal, menuAttrs, storeLinkAttrs, storeLabel, liveMenu, crumbs, hubHero, cardGrid, articleCard, fmtDate, stateSlug, sky, spark, RETIRED_ART, isRetiredArt };
 
-export const CSS_ORDER = ['tokens', 'base', 'components', 'motion', 'home', 'finder', 'faq', 'stores', 'states', 'content', 'resources', 'blog'];
+export const CSS_ORDER = ['tokens', 'base', 'components', 'motion', 'home', 'finder', 'faq', 'stores', 'states', 'content', 'resources', 'blog', 'mobile'];
 
 // ---------- IA data (src/content/ia.json + the files other lanes write), read once per build ----------
 /** read src/content/<rel> as JSON; null when it does not exist (other lanes write some of these files) */
@@ -390,6 +390,7 @@ export function page({ title, description = '', body, bodyClass = '', ctx, path 
   ${head}
 </head>
 <body class="${esc(cx('pg', bodyClass))}">
+  <div class="sb-meteors" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
   ${header(ctx, path)}
   <main id="main" tabindex="-1">
 ${bar}${body}

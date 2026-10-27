@@ -54,3 +54,43 @@ html.js .sheen.is-in { animation: sb-sheen 2.4s var(--ease-float) .4s both; }
   .bg-video { display: none; }
   *, *::before, *::after { transition-duration: .01ms !important; }
 }
+
+/* ---- meteors (revision 3.1): a subtle shower across the whole site ----
+   One fixed layer above the page and below the header (z 40 < header 50), never taking a tap. Screen-blended, so a
+   streak glows over the night sky and all but vanishes over light reading panels. Five streaks share one radiant
+   (all fall at 32deg) on long, staggered cycles: about one meteor every 4-5 s on desktop, one every 6-7 s on phones
+   (two streaks hidden). Each is visible for about 6% of its cycle, roughly one second. */
+.sb-meteors { position: fixed; inset: 0; z-index: 40; pointer-events: none; overflow: hidden; mix-blend-mode: screen; contain: strict; }
+.sb-meteors i {
+  position: absolute; top: var(--my); left: var(--mx); width: var(--ml, 170px); height: 1.5px; border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(200, 214, 255, .45) 62%, rgba(255, 255, 255, .95) 100%);
+  transform-origin: 100% 50%; opacity: 0; will-change: transform, opacity;
+  animation: sb-meteor var(--md, 19s) linear var(--mdel, 0s) infinite;
+}
+.sb-meteors i::after {
+  content: ""; position: absolute; right: -1px; top: 50%; width: 3px; height: 3px; margin-top: -1.5px; border-radius: 50%;
+  background: #fff; box-shadow: 0 0 8px 2px rgba(214, 226, 255, .75), 0 0 18px 4px rgba(141, 123, 255, .3);
+}
+.sb-meteors i:nth-child(1) { --mx: 6%;  --my: 4%;  --md: 16s; --mdel: 1.5s; }
+.sb-meteors i:nth-child(2) { --mx: 44%; --my: 1%;  --md: 19s; --mdel: 6s;   --ml: 210px; }
+.sb-meteors i:nth-child(3) { --mx: 72%; --my: 14%; --md: 23s; --mdel: 10.5s; --ml: 140px; }
+.sb-meteors i:nth-child(4) { --mx: 20%; --my: 30%; --md: 27s; --mdel: 15s; }
+.sb-meteors i:nth-child(5) { --mx: 56%; --my: 40%; --md: 31s; --mdel: 3.5s; --ml: 190px; }
+@keyframes sb-meteor {
+  0%   { opacity: 0; transform: rotate(32deg) translateX(0); }
+  .8%  { opacity: .9; }
+  5%   { opacity: .75; }
+  6.5% { opacity: 0; transform: rotate(32deg) translateX(min(46vw, 560px)); }
+  100% { opacity: 0; transform: rotate(32deg) translateX(min(46vw, 560px)); }
+}
+@media (max-width: 767px) {
+  .sb-meteors i:nth-child(4), .sb-meteors i:nth-child(5) { display: none; }
+  .sb-meteors i { --ml: 110px; }
+  /* start below the phone header so the streaks are seen */
+  .sb-meteors i:nth-child(1) { --mx: 4%;  --my: 16%; }
+  .sb-meteors i:nth-child(2) { --mx: 38%; --my: 30%; }
+  .sb-meteors i:nth-child(3) { --mx: 14%; --my: 47%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sb-meteors { display: none; }
+}
