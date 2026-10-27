@@ -1,0 +1,30 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "POP-BUD",
+  "file": "assets/generated/pop-bud.png",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "1960s comic-book pop art illustration of a single plump cannabis flower bud, thick black ink outlines, flat green and violet fills with Ben-Day halftone dot shading, small yellow comic sparkle bursts around it, crisp screen-print look, centred with space around it on a plain white background, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "1:1",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 1726375425,
+  "requestId": "01a17baf-adcb-7e11-b518-612ffbea52fe",
+  "cutout": {
+    "model": "fal-ai/birefnet/v2",
+    "requestId": "01a17baf-ddab-7623-82f1-36bb809d5fd6"
+  },
+  "width": 2048,
+  "height": 2048,
+  "sha256": "3901a36d228f69f9c0f61b4c4053327b7972b1239bbe9959068db3c7b25ba125",
+  "raw": "tmp/img/raw/POP-BUD.1793076483706.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T04:48:10.993Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

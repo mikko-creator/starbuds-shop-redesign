@@ -1,0 +1,27 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "G-GLASS",
+  "file": "assets/generated/g-glass.jpg",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "abstract 3D render of layered frosted glass panels and translucent glass cannabis leaf shapes refracting light, saturated emerald green and sunshine yellow gradients with a hint of hot pink, soft caustics on a pale cream ground, clean minimal composition, studio lighting, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "16:9",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 2701592230,
+  "requestId": "01a17baf-b381-75d0-8479-21922f7110dd",
+  "cutout": null,
+  "width": 2752,
+  "height": 1536,
+  "sha256": "7bdb779e6255bbf1c9651bb92257cc83029016e3fe1651d976743db9474369e9",
+  "raw": "tmp/img/raw/G-GLASS.1793076483897.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T04:48:05.618Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

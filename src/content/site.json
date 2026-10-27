@@ -1,0 +1,1063 @@
+{
+  "brand": {
+    "name": "Star Buds",
+    "est": "2013",
+    "logo": "/assets/brand/logo.png",
+    "logoOnDark": "/assets/brand/logo-on-dark.png",
+    "star": "/assets/brand/star-on-dark.png",
+    "tagline": "Shining High Above the Rest",
+    "taglineSource": "About.json (\"At Star Buds, we pride ourselves on Shining High Above the Rest.\")"
+  },
+  "shopOrigin": "https://shop.starbuds.us",
+  "mainSite": "https://www.starbuds.us",
+  "promo": {
+    "text": "Shop Our Special Offers",
+    "href": "/deals/"
+  },
+  "nav": [
+    {
+      "label": "Shop All",
+      "href": "/#shop"
+    },
+    {
+      "label": "Deals",
+      "href": "/deals/"
+    },
+    {
+      "label": "Locations",
+      "href": "/stores/",
+      "switcher": true
+    },
+    {
+      "label": "Higher Rewards",
+      "href": "/rewards/"
+    }
+  ],
+  "legal": [
+    {
+      "label": "EULA",
+      "href": "https://shop.starbuds.us/eula/"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "https://shop.starbuds.us/privacy-policy/"
+    },
+    {
+      "label": "Terms Of Use",
+      "href": "https://shop.starbuds.us/terms-of-use/"
+    }
+  ],
+  "apps": {
+    "ios": "https://apps.apple.com/us/app/star-buds-dispensary/id1589380634",
+    "android": "https://play.google.com/store/apps/details?id=com.starbudsdispensary.wallet"
+  },
+  "ageGate": {
+    "title": "Are you 21 years of age or older?",
+    "body": "You must be 21 years of age or older or 18+ with a valid medical card to enter this site.",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "categories": [
+    {
+      "slug": "flower",
+      "label": "Flower",
+      "cutout": "cut-bud"
+    },
+    {
+      "slug": "pre-rolls",
+      "label": "Pre-Rolls",
+      "cutout": "cut-preroll"
+    },
+    {
+      "slug": "vaporizers",
+      "label": "Vaporizers",
+      "cutout": "cut-vape"
+    },
+    {
+      "slug": "concentrates",
+      "label": "Concentrates",
+      "cutout": "cut-concentrate"
+    },
+    {
+      "slug": "edibles",
+      "label": "Edibles",
+      "cutout": "cut-gummies"
+    },
+    {
+      "slug": "tinctures",
+      "label": "Tinctures",
+      "cutout": "cut-tincture"
+    },
+    {
+      "slug": "topicals",
+      "label": "Topicals",
+      "cutout": "cut-leaf"
+    },
+    {
+      "slug": "accessories",
+      "label": "Accessories",
+      "cutout": "cut-jar"
+    },
+    {
+      "slug": "apparel",
+      "label": "Apparel",
+      "cutout": "pop-star"
+    }
+  ],
+  "states": [
+    {
+      "code": "MS",
+      "name": "Mississippi",
+      "blurb": "",
+      "hub": "https://www.starbuds.us/mississippi",
+      "source": "mississippi.json (store cards only, no state copy)"
+    },
+    {
+      "code": "OK",
+      "name": "Oklahoma",
+      "blurb": "",
+      "hub": "https://www.starbuds.us/oklahoma",
+      "source": "oklahoma.json (store cards only, no state copy)"
+    },
+    {
+      "code": "MD",
+      "name": "Maryland",
+      "blurb": "Star Buds Baltimore is proud to be the first Star Buds location in Maryland!",
+      "hub": "https://www.starbuds.us/maryland",
+      "source": "maryland.json"
+    },
+    {
+      "code": "NY",
+      "name": "New York",
+      "blurb": "Exciting news for cannabis enthusiasts in Western New York: Star Buds Buffalo is officially open!",
+      "hub": "https://www.starbuds.us/single-post/star-buds-buffalo-now-open-to-serve-western-new-york",
+      "source": "single-post__star-buds-buffalo-now-open-to-serve-western-new-york.json"
+    }
+  ],
+  "stores": [
+    {
+      "slug": "greenwood-dispensary",
+      "state": "MS",
+      "city": "Greenwood",
+      "name": "Star Buds Greenwood",
+      "address": [
+        "2218 Highway 82 W",
+        "Greenwood, MS 38930"
+      ],
+      "phone": "(662) 456-1181",
+      "hours": [],
+      "about": [],
+      "photo": null,
+      "source": "name/address/phone: mississippi.json hub card (\"GREENWOOD / 2218 Highway 82 W / Greenwood MS, 38930 / (662) 456-1181\"; order-online.json agrees); hours/about/photo: not captured (no main-site store page; the hub links straight to the shop)",
+      "shortName": "Star Buds Greenwood",
+      "tel": "+16624561181",
+      "hoursSummary": "",
+      "liveUrl": "https://shop.starbuds.us/stores/greenwood-dispensary/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=2218%20Highway%2082%20W%2C%20Greenwood%2C%20MS%2038930"
+    },
+    {
+      "slug": "natchez-dispensary",
+      "state": "MS",
+      "city": "Natchez",
+      "name": "Star Buds Natchez",
+      "address": [
+        "135 US-61 #1",
+        "Natchez, MS 39120"
+      ],
+      "phone": "(601) 653-0400",
+      "hours": [],
+      "about": [],
+      "photo": null,
+      "source": "name/address/phone: mississippi.json hub card (order-online.json lists (662) 638-3008 for Natchez, which is the Oxford number; hub card kept); hours/about/photo: not captured",
+      "shortName": "Star Buds Natchez",
+      "tel": "+16016530400",
+      "hoursSummary": "",
+      "liveUrl": "https://shop.starbuds.us/stores/natchez-dispensary/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=135%20US-61%20%231%2C%20Natchez%2C%20MS%2039120"
+    },
+    {
+      "slug": "ocean-springs-dispensary",
+      "state": "MS",
+      "city": "Ocean Springs",
+      "name": "Star Buds Ocean Springs",
+      "address": [
+        "718 Bienville Blvd Ste A",
+        "Ocean Springs, MS 39564"
+      ],
+      "phone": "(228) 215-1776",
+      "hours": [],
+      "about": [],
+      "photo": null,
+      "source": "name/address/phone: mississippi.json hub card (order-online.json agrees); hours/about/photo: not captured",
+      "shortName": "Star Buds Ocean Springs",
+      "tel": "+12282151776",
+      "hoursSummary": "",
+      "liveUrl": "https://shop.starbuds.us/stores/ocean-springs-dispensary/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=718%20Bienville%20Blvd%20Ste%20A%2C%20Ocean%20Springs%2C%20MS%2039564"
+    },
+    {
+      "slug": "pearl",
+      "state": "MS",
+      "city": "Pearl",
+      "name": "Star Buds Pearl",
+      "address": [
+        "190 Riverwind E Dr, Unit 306",
+        "Pearl, MS 39208"
+      ],
+      "phone": "(601) 706-6050",
+      "hours": [],
+      "about": [],
+      "photo": null,
+      "source": "name/address/phone: mississippi.json hub card (order-online.json agrees); hours/about/photo: not captured",
+      "shortName": "Star Buds Pearl",
+      "tel": "+16017066050",
+      "hoursSummary": "",
+      "liveUrl": "https://shop.starbuds.us/stores/pearl/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=190%20Riverwind%20E%20Dr%2C%20Unit%20306%2C%20Pearl%2C%20MS%2039208"
+    },
+    {
+      "slug": "oxford-dispensary",
+      "state": "MS",
+      "city": "Oxford",
+      "name": "Star Buds Medical Marijuana Dispensary Oxford",
+      "address": [
+        "1319 N Lamar Blvd Suite A",
+        "Oxford, MS 38655"
+      ],
+      "phone": "(662) 638-3008",
+      "hours": [
+        {
+          "day": "Monday",
+          "time": "8:00AM-9:00PM"
+        },
+        {
+          "day": "Tuesday",
+          "time": "8:00AM-9:00PM"
+        },
+        {
+          "day": "Wednesday",
+          "time": "8:00AM-9:00PM"
+        },
+        {
+          "day": "Thursday",
+          "time": "8:00AM-9:00PM"
+        },
+        {
+          "day": "Friday",
+          "time": "8:00AM-9:00PM"
+        },
+        {
+          "day": "Saturday",
+          "time": "8:00AM-9:00PM"
+        },
+        {
+          "day": "Sunday",
+          "time": "8:00AM-7:00PM"
+        }
+      ],
+      "about": [
+        "Star Buds Oxford is proud to be a medical cannabis dispensary serving the community of Oxford, Mississippi, come see us for all your medical marijuana needs."
+      ],
+      "photo": null,
+      "source": "name/address/phone/hours/about: oxford.json store page (address case tidied from \"1319 N LAMAR BLVD SUITE A, OXFORD MS, 38655\"; mississippi.json hub card agrees); photo: none on the page (only a deals logo)",
+      "shortName": "Star Buds Oxford",
+      "tel": "+16626383008",
+      "hoursSummary": "Mon-Sat 8:00AM-9:00PM, Sun 8:00AM-7:00PM",
+      "liveUrl": "https://shop.starbuds.us/stores/oxford-dispensary/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1319%20N%20Lamar%20Blvd%20Suite%20A%2C%20Oxford%2C%20MS%2038655"
+    },
+    {
+      "slug": "tupelo-saltillo-dispensary",
+      "state": "MS",
+      "city": "Tupelo",
+      "locality": "Saltillo",
+      "name": "Star Buds Tupelo",
+      "address": [
+        "2546 Hwy 145 Ste D",
+        "Saltillo, MS 38866"
+      ],
+      "phone": "(662) 458-1872",
+      "hours": [],
+      "about": [],
+      "photo": null,
+      "source": "name/address/phone: mississippi.json hub card (\"TUPELO / 2546 Hwy 145 Ste D / Saltillo, MS 38866\"; order-online.json: \"Star Buds Tupelo / 2546 Highway 145, Suite D, Saltillo, MS 38866\"); hours/about/photo: not captured",
+      "shortName": "Star Buds Tupelo",
+      "tel": "+16624581872",
+      "hoursSummary": "",
+      "liveUrl": "https://shop.starbuds.us/stores/tupelo-saltillo-dispensary/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=2546%20Hwy%20145%20Ste%20D%2C%20Saltillo%2C%20MS%2038866"
+    },
+    {
+      "slug": "lawton-dispensary",
+      "state": "OK",
+      "city": "Lawton",
+      "name": "Star Buds Dispensary Medical Weed Lawton",
+      "address": [
+        "2629 NW Cache Rd",
+        "Lawton, OK 73505"
+      ],
+      "phone": "(580) 699-2833",
+      "hours": [
+        {
+          "day": "Monday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Tuesday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Wednesday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Thursday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Friday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Saturday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Sunday",
+          "time": "8:00AM-12:00AM"
+        }
+      ],
+      "about": [
+        "Welcome to Star Buds Weed Dispensary in Lawton Oklahoma! We are conveniently located on NW Cache Rd just a quarter mile west of Sheridan Rd. We maintain a large inventory of cannabis flower, edibles, extracts, concentrates, tinctures, topicals, and more! We seek to have a selection of products for everyone whether you are a first time user or a seasoned cannabis consumer.",
+        "Looking for extra speed and convenience? Skip the line and place your order online to pick up in store!",
+        "Star Buds Lawton Medical Weed Dispensary is proud to serve cannabis consumers in Comanche County to include the communities of Cache, Chattanooga, Elgin, Faxon, Fort Sill, Frederick, Indiahoma, Lawton, Manitou Medicine Park, Meers, Mountain Park, Roosevelt, Snyder, Walters and the surrounding areas."
+      ],
+      "visit": [
+        {
+          "q": "This is my first time visiting Star Buds. What should I bring with me?",
+          "a": "All visitors must be at least 18 years of age with a valid medical card and must provide a valid photo ID. We take cash and debit cards and there is also an ATM inside our dispensary for your convenience."
+        },
+        {
+          "q": "Is your dispensary open late?",
+          "a": "We understand that normal operating hours are not always convenient for our consumers with busy lifestyles, which is why our dispensary is open Monday through Sunday from 8:00 am to 12:00 am."
+        },
+        {
+          "q": "Does Star Buds offer any discounts or ways to save on orders?",
+          "a": "We run product specials seven days a week, and our loyalty rewards program offers even more savings. We are happy to provide our MED card holders and veterans with a discount upon request."
+        }
+      ],
+      "photo": {
+        "src": "/assets/photos/lawton-interior.webp",
+        "w": 1800,
+        "h": 1689,
+        "alt": "Inside Star Buds Lawton: glass display cases of jarred flower",
+        "source": "oklahoma.json, Lawton card background (553d0f_e037159889f64cd2b2cb59a618038672)"
+      },
+      "source": "name/address/phone/hours/about/visit: lawton.json store page (address case tidied from \"2629 NW CACHE RD - LAWTON, OKLAHOMA 73505\"; the oklahoma.json hub card adds \"Suite 3\", not used per the store-page-first rule); photo: oklahoma.json Lawton card",
+      "shortName": "Star Buds Lawton",
+      "tel": "+15806992833",
+      "hoursSummary": "Daily 8:00AM-12:00AM",
+      "liveUrl": "https://shop.starbuds.us/stores/lawton-dispensary/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=2629%20NW%20Cache%20Rd%2C%20Lawton%2C%20OK%2073505"
+    },
+    {
+      "slug": "altus-dispensary",
+      "state": "OK",
+      "city": "Altus",
+      "name": "Star Buds Medical Weed Dispensary Altus",
+      "address": [
+        "1100 Falcon Rd Suite 104",
+        "Altus, OK 73521"
+      ],
+      "phone": "(580) 379-0487",
+      "hours": [
+        {
+          "day": "Monday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Tuesday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Wednesday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Thursday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Friday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Saturday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Sunday",
+          "time": "8:00AM-12:00AM"
+        }
+      ],
+      "about": [
+        "Welcome to Star Buds dispensary in Altus! We understand how fast the cannabis industry is developing and changing and how difficult it can be to keep up with product availability and product evolution. It is our goal to provide our customers with the knowledge and information they need to make the most informed purchasing decisions.",
+        "Looking for extra speed and convenience? Skip the line and place your order online to pick up in store!",
+        "Our location is 1100 Falcon Rd Suite 104, Altus, OK 73521, right across the street from Altus City Reservoir near Altus Lake and a short drive away from Altus Air Force Base.",
+        "Star Buds Altus Medical Weed Dispensary is proud to serve cannabis consumers in Jackson County to include the communities of Altus, Blair, Duke, Eldorado, Elmer, Frederick, Gould, Granite, Headrick, Mangum, Manitou, Martha, Mountain Park, Odell, Olustee, Roosevelt, Snyder, Tipton, and the surrounding areas."
+      ],
+      "visit": [
+        {
+          "q": "This is my first time visiting Star Buds. What should I bring with me?",
+          "a": "All visitors must be at least 18 years of age with a valid medical card and must provide a valid photo ID. We take cash and debit cards and there is also an ATM inside our dispensary for your convenience."
+        },
+        {
+          "q": "Is your dispensary open late?",
+          "a": "We understand that normal operating hours are not always convenient for our consumers with busy lifestyles, which is why our dispensary is open every day from 8:00 am to 12:00 am."
+        },
+        {
+          "q": "Does Star Buds offer any discounts or ways to save on orders?",
+          "a": "We run product specials seven days a week, and our loyalty rewards program offers even more savings. We are happy to provide our MED card holders and veterans with a discount upon request."
+        }
+      ],
+      "photo": {
+        "src": "/assets/photos/altus-interior.webp",
+        "w": 1599,
+        "h": 1101,
+        "alt": "Inside Star Buds Altus: glass display counters under menu screens",
+        "source": "oklahoma.json, Altus card background (553d0f_b654cbeb10974d11a0f39722a1a1a29c)"
+      },
+      "source": "name/address/phone/hours/about/visit: altus.json store page (address case tidied from \"1100 FALCON RD SUITE 104 - ALTUS, OKLAHOMA 73521\"); photo: oklahoma.json Altus card",
+      "shortName": "Star Buds Altus",
+      "tel": "+15803790487",
+      "hoursSummary": "Daily 8:00AM-12:00AM",
+      "liveUrl": "https://shop.starbuds.us/stores/altus-dispensary/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1100%20Falcon%20Rd%20Suite%20104%2C%20Altus%2C%20OK%2073521"
+    },
+    {
+      "slug": "ardmore-dispensary",
+      "state": "OK",
+      "city": "Ardmore",
+      "name": "Star Buds Medical Weed Dispensary Ardmore",
+      "address": [
+        "2502 Crossroads Dr.",
+        "Ardmore, OK 73401"
+      ],
+      "phone": "(580) 319-7935",
+      "hours": [
+        {
+          "day": "Monday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Tuesday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Wednesday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Thursday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Friday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Saturday",
+          "time": "8:00AM-12:00AM"
+        },
+        {
+          "day": "Sunday",
+          "time": "8:00AM-12:00AM"
+        }
+      ],
+      "about": [
+        "We highly encourage you to take your time inside our dispensary and enjoy the ambiance of our clean and friendly cannabis store. Feel free to smell the aroma of every premium cannabis strain, inspect the trichomes on various cannabis flowers.",
+        "Each budtender is knowledgeable and prepared to provide you with outstanding customer service and expert advice to help you pick out marijuana products specific to your needs."
+      ],
+      "visit": [
+        {
+          "q": "This is my first time visiting Star Buds. What should I bring with me?",
+          "a": "All visitors must be at least 18 years of age with a valid Oklahoma Medical Marijuana card and must provide a valid photo ID. We take cash and debit cards, and there is also an ATM inside our dispensary for your convenience."
+        },
+        {
+          "q": "Is your dispensary open late?",
+          "a": "We understand that normal operating hours are not always convenient for our consumers with busy lifestyles, which is why our dispensary is open every day from 8:00 AM to 12:00 AM."
+        },
+        {
+          "q": "Does Star Buds offer any discounts or ways to save on orders?",
+          "a": "We run product specials 7 days a week, and our loyalty rewards program offers even more savings. We are happy to provide our MED card holders and veterans with a discount upon request."
+        }
+      ],
+      "photo": {
+        "src": "/assets/photos/ardmore-exterior.webp",
+        "w": 1800,
+        "h": 1290,
+        "alt": "The Star Buds Ardmore storefront, with store hours and phone number on the door",
+        "source": "ardmore.json store page image (b86374_bb2423ee5f9d45e5968d4219116c564e); the door shows 580-319-7935, the Ardmore number"
+      },
+      "source": "name/address/phone/hours/about/visit: ardmore.json store page (address case tidied from \"2502 CROSSROADS DR. ARDMORE, OK 73401\"); photo: ardmore.json",
+      "shortName": "Star Buds Ardmore",
+      "tel": "+15803197935",
+      "hoursSummary": "Daily 8:00AM-12:00AM",
+      "liveUrl": "https://shop.starbuds.us/stores/ardmore-dispensary/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=2502%20Crossroads%20Dr.%2C%20Ardmore%2C%20OK%2073401"
+    },
+    {
+      "slug": "chickasha-dispensary",
+      "state": "OK",
+      "city": "Chickasha",
+      "name": "Star Buds Medical Weed Dispensary Chickasha",
+      "address": [
+        "718 S 4th St",
+        "Chickasha, OK 73018"
+      ],
+      "phone": "(405) 825-3424",
+      "hours": [
+        {
+          "day": "Monday",
+          "time": "8:00AM-10:00PM"
+        },
+        {
+          "day": "Tuesday",
+          "time": "8:00AM-10:00PM"
+        },
+        {
+          "day": "Wednesday",
+          "time": "8:00AM-10:00PM"
+        },
+        {
+          "day": "Thursday",
+          "time": "8:00AM-10:00PM"
+        },
+        {
+          "day": "Friday",
+          "time": "8:00AM-10:00PM"
+        },
+        {
+          "day": "Saturday",
+          "time": "8:00AM-10:00PM"
+        },
+        {
+          "day": "Sunday",
+          "time": "8:00AM-10:00PM"
+        }
+      ],
+      "about": [
+        "Welcome to Star Buds dispensary in Chickasha! We are conveniently located on the corner of 4th St and W Oregon Ave in Chickasha. We maintain a large selection of flower, extracts, concentrates, tinctures, topicals and edibles. Our dispensary seeks to always have something in store for everyone whether you are new to cannabis or a long time user.",
+        "Looking for extra speed and convenience? Skip the line and place your order online to pick up in store!",
+        "Star Buds Chickasha Medical Weed Dispensary is proud to serve cannabis consumers in Grady County to include the communities of Alex, Amber, Anadarko, Apache, Binger, Blanchard, Bradley, Cement, Chickasha, Cyril, Dibble, Elgin, Fletcher, Gracemont, Lindsay, Minco, Mustang, Newcastle, Ninnekah, Oklahoma City, Pocasset, Rush Springs, Sterling, Tuttle, Union City, Verden, Wheatland and the surrounding areas."
+      ],
+      "visit": [
+        {
+          "q": "This is my first time visiting Star Buds. What should I bring with me?",
+          "a": "All visitors must be at least 18 years of age with a valid medical card and must provide a valid photo ID. We take cash and debit cards and there is also an ATM inside our dispensary for your convenience."
+        },
+        {
+          "q": "Does Star Buds offer any discounts or ways to save on orders?",
+          "a": "We run product specials seven days a week, and our loyalty rewards program offers even more savings. We are happy to provide our MED card holders and veterans with a discount upon request."
+        }
+      ],
+      "photo": {
+        "src": "/assets/photos/chickasha-interior.webp",
+        "w": 713,
+        "h": 557,
+        "alt": "Inside Star Buds Chickasha: glass display counters under menu screens",
+        "source": "oklahoma.json, Chickasha card background (553d0f_b1062e94355b4d179229435cbc6e8d7f); chickasha.json uses the same photo (553d0f_3e61fca433dc45acb7938caad6f204db)"
+      },
+      "source": "name/address/phone/hours/about/visit: chickasha.json store page (address case tidied from \"718 S 4TH ST - CHICKASHA, OKLAHOMA 73018\"); the page's \"open late\" answer says 8:00 am to 12:00 am, which contradicts its own hours list (8:00AM-10:00PM), so that answer is left out; photo: oklahoma.json Chickasha card",
+      "shortName": "Star Buds Chickasha",
+      "tel": "+14058253424",
+      "hoursSummary": "Daily 8:00AM-10:00PM",
+      "liveUrl": "https://shop.starbuds.us/stores/chickasha-dispensary/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=718%20S%204th%20St%2C%20Chickasha%2C%20OK%2073018"
+    },
+    {
+      "slug": "baltimore-dispensary",
+      "state": "MD",
+      "city": "Baltimore",
+      "name": "Star Buds Marijuana Dispensary Baltimore",
+      "address": [
+        "5975 Belair Rd",
+        "Baltimore, MD 21206"
+      ],
+      "phone": "(443) 438-7494",
+      "hours": [
+        {
+          "day": "Monday",
+          "time": "9:00AM-9:00PM"
+        },
+        {
+          "day": "Tuesday",
+          "time": "9:00AM-9:00PM"
+        },
+        {
+          "day": "Wednesday",
+          "time": "9:00AM-9:00PM"
+        },
+        {
+          "day": "Thursday",
+          "time": "9:00AM-9:00PM"
+        },
+        {
+          "day": "Friday",
+          "time": "9:00AM-9:00PM"
+        },
+        {
+          "day": "Saturday",
+          "time": "9:00AM-9:00PM"
+        },
+        {
+          "day": "Sunday",
+          "time": "9:00AM-9:00PM"
+        }
+      ],
+      "about": [
+        "Star Buds Baltimore is proud to be the first Star Buds location in Maryland! We are a recreational cannabis dispensary, come see us for all your marijuana needs.",
+        "Located at 5975 Belair Rd, Baltimore, MD 21206, we are just off Belair Rd and Powell Ave and just outside of Cedmont."
+      ],
+      "visit": [
+        {
+          "q": "This is my first time visiting Star Buds. What should I bring with me?",
+          "a": "All visitors must be at least 21 years of age and must provide a valid photo ID. We take cash and there is also an ATM inside our dispensary for your convenience."
+        },
+        {
+          "q": "Is your dispensary open late?",
+          "a": "We understand that normal operating hours are not always convenient for our consumers with busy lifestyles, which is why our dispensary is open every day from 9:00 am to 9:00 pm."
+        },
+        {
+          "q": "Does Star Buds offer any discounts or ways to save on orders?",
+          "a": "We run product specials seven days a week, and our loyalty rewards program offers even more savings. We are happy to provide our MED card holders and veterans with a discount upon request."
+        }
+      ],
+      "social": [
+        {
+          "label": "Facebook",
+          "href": "https://www.facebook.com/starbudsbmore"
+        },
+        {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/star.budsmd/"
+        }
+      ],
+      "photo": {
+        "src": "/assets/photos/baltimore-interior.webp",
+        "w": 749,
+        "h": 410,
+        "alt": "Inside Star Buds Baltimore: lit display cases and product shelves",
+        "source": "maryland.json store page image (553d0f_0b230f95b65e4dce82d7d2e971ba1a24)"
+      },
+      "source": "name/phone/hours/about/visit/social: maryland.json store page; address: maryland.json body copy and order-online.json (\"5975 Belair Rd, Baltimore, MD 21206\"; the page heading line reads \"5975 S BELAIR RD\"); photo: maryland.json",
+      "shortName": "Star Buds Baltimore",
+      "tel": "+14434387494",
+      "hoursSummary": "Daily 9:00AM-9:00PM",
+      "liveUrl": "https://shop.starbuds.us/stores/baltimore-dispensary/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=5975%20Belair%20Rd%2C%20Baltimore%2C%20MD%2021206"
+    },
+    {
+      "slug": "buffalo-dispensary",
+      "state": "NY",
+      "city": "Buffalo",
+      "name": "Star Buds Buffalo",
+      "address": [
+        "396 Kenmore Ave",
+        "Buffalo, NY 14223"
+      ],
+      "phone": "(716) 829-7235",
+      "hours": [],
+      "about": [
+        "Exciting news for cannabis enthusiasts in Western New York: Star Buds Buffalo is officially open! Located in the heart of Buffalo, NY, this dispensary is more than just a place to purchase premium cannabis products—it’s a community-focused space where education, quality, and care take center stage.",
+        "The dispensary was designed to provide an inviting, approachable space where customers can feel comfortable asking questions, learning about cannabis, and exploring the benefits of THC and CBD."
+      ],
+      "photo": {
+        "src": "/assets/photos/buffalo-exterior.webp",
+        "w": 1742,
+        "h": 1442,
+        "alt": "The Star Buds Buffalo storefront with a green and white balloon arch at the door",
+        "source": "single-post__star-buds-buffalo-now-open-to-serve-western-new-york.json hero image (3493a0_46b462c14e514f1ea40f16843063f3e0)"
+      },
+      "source": "name/address/phone: order-online.json NY card (\"Star Buds Buffalo / 396 Kenmore Ave, Buffalo, NY 14223 / (716) 829-7235\"; the Buffalo post confirms the address); about/photo: Buffalo opening post (2024-12-02); hours: not captured anywhere",
+      "shortName": "Star Buds Buffalo",
+      "tel": "+17168297235",
+      "hoursSummary": "",
+      "liveUrl": "https://shop.starbuds.us/stores/buffalo-dispensary/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=396%20Kenmore%20Ave%2C%20Buffalo%2C%20NY%2014223"
+    }
+  ],
+  "dealsIntro": {
+    "title": "We know you love a great deal.",
+    "subtitle": "Get one at Star Buds today and every day.",
+    "paragraphs": [
+      "Everyone wants to buy their favorite products for less. That's why our customers shop at Star Buds - we have a great deal for everyone at all times. Check out what's available now:"
+    ],
+    "source": "deals.json"
+  },
+  "deals": [
+    {
+      "state": "MS",
+      "group": "daily",
+      "title": "Daily deals",
+      "intro": "No need to wait for a sale. You save seven days a week with our daily deals!",
+      "items": [
+        "MUNCHIE MONDAY: Buy one edible get one 25% off (equal or lesser value)",
+        "PHAT TUESDAY: Buy one eighth get one 25% off (equal or lesser value)",
+        "WAX WEDNESDAY: 15% off all concentrates including vapes",
+        "THERAPEUTIC THURSDAY: 20% off all wellness products",
+        "TRIFECTA FRIDAY: Buy any three pre-rolls, get 15% off",
+        "STOCK UP SATURDAY: Fulfill Your weekly MMCEU allotment, receive 15% off"
+      ],
+      "days": [
+        {
+          "day": "MUNCHIE MONDAY",
+          "deal": "Buy one edible get one 25% off (equal or lesser value)"
+        },
+        {
+          "day": "PHAT TUESDAY",
+          "deal": "Buy one eighth get one 25% off (equal or lesser value)"
+        },
+        {
+          "day": "WAX WEDNESDAY",
+          "deal": "15% off all concentrates including vapes"
+        },
+        {
+          "day": "THERAPEUTIC THURSDAY",
+          "deal": "20% off all wellness products"
+        },
+        {
+          "day": "TRIFECTA FRIDAY",
+          "deal": "Buy any three pre-rolls, get 15% off"
+        },
+        {
+          "day": "STOCK UP SATURDAY",
+          "deal": "Fulfill Your weekly MMCEU allotment, receive 15% off"
+        }
+      ],
+      "terms": "",
+      "scope": "Captured on the Oxford store page only; no Mississippi deals page was captured.",
+      "source": "oxford.json"
+    },
+    {
+      "state": "OK",
+      "group": "community",
+      "title": "Community discounts",
+      "intro": "Star Buds Oklahoma offers a 10% discount every day for:",
+      "items": [
+        "Veterans and Active Military",
+        "Tribal Members",
+        "Cannabis Industry Employee"
+      ],
+      "terms": "",
+      "source": "ok-deals.json"
+    },
+    {
+      "state": "OK",
+      "group": "daily",
+      "title": "Daily deals at Star Buds Oklahoma",
+      "intro": "No need to wait for a sale. You save seven days a week with our daily deals!",
+      "items": [
+        "MUNCHEEZMONDAY: BUY ONE, GET ONE 25% OFF (Equal or lesser value)",
+        "TOP SHELF TUESDAY: $25 TOP SHELF EIGHTHS (Valid on Top Shelf Only)",
+        "WAX WEDNESDAY: FEATURED 1G CONCENTRATES 10 FOR $75",
+        "TOP SHELF THURSDAY: $25 TOP SHELF EIGHTHS (Valid on Top Shelf Only)",
+        "FIRE FRIDAY: TWO 1.5G KAVIAR CONES FOR $25",
+        "SUPER SATURDAY: SPEND $25 GET A FREE GRAM OF PREMIUM FLOWER",
+        "SUNDAY FUNDAY: YOU PICK ANY DAILY DEAL"
+      ],
+      "days": [
+        {
+          "day": "MUNCHEEZMONDAY",
+          "deal": "BUY ONE, GET ONE 25% OFF (Equal or lesser value)"
+        },
+        {
+          "day": "TOP SHELF TUESDAY",
+          "deal": "$25 TOP SHELF EIGHTHS (Valid on Top Shelf Only)"
+        },
+        {
+          "day": "WAX WEDNESDAY",
+          "deal": "FEATURED 1G CONCENTRATES 10 FOR $75"
+        },
+        {
+          "day": "TOP SHELF THURSDAY",
+          "deal": "$25 TOP SHELF EIGHTHS (Valid on Top Shelf Only)"
+        },
+        {
+          "day": "FIRE FRIDAY",
+          "deal": "TWO 1.5G KAVIAR CONES FOR $25"
+        },
+        {
+          "day": "SUPER SATURDAY",
+          "deal": "SPEND $25 GET A FREE GRAM OF PREMIUM FLOWER"
+        },
+        {
+          "day": "SUNDAY FUNDAY",
+          "deal": "YOU PICK ANY DAILY DEAL"
+        }
+      ],
+      "terms": "TERMS AND CONDITIONS: ALL PRICES ARE POST-TAX. ALL DEALS WHILE SUPPLIES LAST. RESTRICTIONS APPLY.",
+      "source": "ok-deals.json"
+    },
+    {
+      "state": "OK",
+      "group": "early-bird",
+      "title": "Early Bird Gets the herb",
+      "intro": "Take advantage of our morning happy hour every day of the week",
+      "items": [],
+      "terms": "",
+      "source": "ok-deals.json"
+    },
+    {
+      "state": "MD",
+      "group": "daily",
+      "title": "Daily deals at Maryland Star Buds",
+      "intro": "No need to wait for a sale. You save seven days a week with our daily deals!",
+      "note": "NOW SERVING ADULTS 21+ W/ VALID ID FROM ANY STATE",
+      "items": [
+        "MUNCHIE MONDAY: 10% OFF Edibles & Topicals",
+        "SPECIAL SHELF TUESDAY: 10% OFF Special Flower",
+        "WARRIOR WEDNESDAY: 22% OFF For Veterans/Military",
+        "TWO TOKE THURSDAY: 50% OFF House Pre-Rolls",
+        "FLAMELESS FRIDAY: 10% OFF Vapes",
+        "SPECIAL SHELF SATURDAY: 10% OFF Special Flower",
+        "SUNDAY FUNDAY: $200 Ounces of Value Flower"
+      ],
+      "days": [
+        {
+          "day": "MUNCHIE MONDAY",
+          "deal": "10% OFF Edibles & Topicals"
+        },
+        {
+          "day": "SPECIAL SHELF TUESDAY",
+          "deal": "10% OFF Special Flower"
+        },
+        {
+          "day": "WARRIOR WEDNESDAY",
+          "deal": "22% OFF For Veterans/Military"
+        },
+        {
+          "day": "TWO TOKE THURSDAY",
+          "deal": "50% OFF House Pre-Rolls"
+        },
+        {
+          "day": "FLAMELESS FRIDAY",
+          "deal": "10% OFF Vapes"
+        },
+        {
+          "day": "SPECIAL SHELF SATURDAY",
+          "deal": "10% OFF Special Flower"
+        },
+        {
+          "day": "SUNDAY FUNDAY",
+          "deal": "$200 Ounces of Value Flower"
+        }
+      ],
+      "terms": "TERMS AND CONDITIONS: ALL PRICES ARE PRE-TAX. ALL DEALS WHILE SUPPLIES LAST. RESTRICTIONS APPLY.",
+      "source": "md-deals.json"
+    },
+    {
+      "state": "MD",
+      "group": "medical",
+      "title": "Medical daily deals at Maryland Star Buds",
+      "intro": "available for Maryland medical patients",
+      "items": [
+        "MONDAY: 20% OFF Edibles, Topicals, & RSO",
+        "SPECIAL SHELF TUESDAY: 20% OFF Special Flower",
+        "WAX WEDNESDAY: 20% OFF Concentrates + 22% OFF For Veterans",
+        "THURSDAY: 50% OFF House Pre-Rolled Joints",
+        "FLAMELESS FRIDAY: 20% OFF Vapes",
+        "SPECIAL SHELF SATURDAY: 20% OFF Special Flower",
+        "BIG SAVINGS SUNDAY: $200 Ounces of Value Flower"
+      ],
+      "days": [
+        {
+          "day": "MONDAY",
+          "deal": "20% OFF Edibles, Topicals, & RSO"
+        },
+        {
+          "day": "SPECIAL SHELF TUESDAY",
+          "deal": "20% OFF Special Flower"
+        },
+        {
+          "day": "WAX WEDNESDAY",
+          "deal": "20% OFF Concentrates + 22% OFF For Veterans"
+        },
+        {
+          "day": "THURSDAY",
+          "deal": "50% OFF House Pre-Rolled Joints"
+        },
+        {
+          "day": "FLAMELESS FRIDAY",
+          "deal": "20% OFF Vapes"
+        },
+        {
+          "day": "SPECIAL SHELF SATURDAY",
+          "deal": "20% OFF Special Flower"
+        },
+        {
+          "day": "BIG SAVINGS SUNDAY",
+          "deal": "$200 Ounces of Value Flower"
+        }
+      ],
+      "terms": "TERMS AND CONDITIONS: ALL PRICES ARE PRE-TAX. ALL DEALS WHILE SUPPLIES LAST. RESTRICTIONS APPLY.",
+      "source": "md-deals.json"
+    },
+    {
+      "state": "MD",
+      "group": "new-medical",
+      "title": "New Medical Deal",
+      "intro": "20% OFF 1ST PURCHASE",
+      "items": [
+        "No stacking discounts/points. All products are subject to availability.",
+        "MEDICAL ONLY DELIVERY: Please note all deliveries will be subject to a delivery fee of $7.99 + a service fee of 8.5% on your subtotal. At this time delivery is only available using Dutchie Pay."
+      ],
+      "terms": "",
+      "source": "md-deals.json"
+    }
+  ],
+  "rewards": {
+    "title": "Higher Rewards",
+    "programName": "Higher Rewards Loyalty Program",
+    "nameNote": "The main site calls it \"Higher Rewards Loyalty Program\" (rewards.json, hr-tc.json); the sister storefront nav calls it \"Higher Rewards\".",
+    "paragraphs": [
+      "Join our Higher Rewards Loyalty Program and get rewarded when you visit the store! Simply present your custom rewards wallet on each visit and automatically earn points towards discounts and specials on your favorite products. Best of all, it’s absolutely FREE!"
+    ],
+    "points": [
+      "Customers will accrue one (1) loyalty point (each, a “Point”) for every $1 spent on the total qualifying purchase of both cannabis and non-cannabis products (not including discounts, returns, credits, delivery fees, and taxes).",
+      "To redeem an offer or reward, Customers must let the budtender know that they are a Program member and that they wish to redeem their points or award at the time of the qualifying transaction."
+    ],
+    "pointsSource": "hr-tc.json (sentence 1 ends early: the captured text continues \"made at any participating, qualifying dispensaries in Colorado (and such other states as may be designated by Higher Rewards in its discretion ...)\")",
+    "loginHref": "https://lab.alpineiq.com/wallet/1130",
+    "joinHref": "https://lab.alpineiq.com/joinMembers/1130",
+    "termsHref": "https://www.starbuds.us/hr-tc",
+    "byState": [
+      {
+        "state": "MS",
+        "title": "MISSISSIPPI HIGHER REWARDS",
+        "intro": "Members receive up to 10% back in rewards, free stuff and exclusive deals. Sign up now and start earning points on your next purchase.",
+        "tiers": [
+          {
+            "points": "100 POINTS",
+            "reward": "$5 OFF"
+          },
+          {
+            "points": "250 POINTS",
+            "reward": "$20 OFF"
+          },
+          {
+            "points": "500 POINTS",
+            "reward": "$50 OFF + $20 ACCESSORY"
+          },
+          {
+            "points": "1000 POINTS",
+            "reward": "$100 OFF + $5 EIGHTH"
+          }
+        ],
+        "outro": "Simply present your custom reward wallet with each visit and automatically earn points towards discounts and specials on your favorite Star Buds products. Best of all, it's absolutely free to sign up!",
+        "joinHref": "https://lab.alpineiq.com/join/c/1130/3215",
+        "source": "mississippirewards.json (tiers listed there in the order 250, 100, 500, 1000; sorted here)"
+      },
+      {
+        "state": "OK",
+        "title": "OKLAHOMA HIGHER REWARDS",
+        "intro": "Members receive over 10% back in rewards, free stuff and exclusive deals. Sign up now and start earning points on your next purchase.",
+        "tiers": [
+          {
+            "points": "100 POINTS",
+            "reward": "$5 OFF"
+          },
+          {
+            "points": "250 POINTS",
+            "reward": "$10 OFF + FREE JOINT"
+          },
+          {
+            "points": "500 POINTS",
+            "reward": "$30 OFF + $10 FEATURED ITEM"
+          },
+          {
+            "points": "750 POINTS",
+            "reward": "$50 OFF + FREE ACCESSORY"
+          },
+          {
+            "points": "1,000 POINTS",
+            "reward": "$70 OFF + $10 PREMIUM ITEM"
+          },
+          {
+            "points": "2,000 POINTS",
+            "reward": "$150 OFF + $20 QUARTER"
+          },
+          {
+            "points": "250K POINTS",
+            "reward": "TESLA MODEL 3",
+            "prize": true
+          }
+        ],
+        "outro": "Simply present your rewards wallet with each visit and automatically earn points towards discounts and specials on your favorite Star Buds products. Best of all, it's absolutely free to sign up!",
+        "joinHref": "https://lab.alpineiq.com/joinMembers/1130",
+        "source": "oklahomarewards.json"
+      },
+      {
+        "state": "MD",
+        "title": "MARYLAND HIGHER REWARDS",
+        "intro": "Members receive over 10% back in rewards, free stuff and exclusive deals. Sign up now and start earning points on your next purchase.",
+        "tiers": [
+          {
+            "points": "100 POINTS",
+            "reward": "$5 OFF"
+          },
+          {
+            "points": "200 POINTS",
+            "reward": "$10 OFF"
+          },
+          {
+            "points": "500 POINTS",
+            "reward": "$50 OFF"
+          },
+          {
+            "points": "1,000 POINTS",
+            "reward": "$100 OFF"
+          },
+          {
+            "points": "2,000 POINTS",
+            "reward": "$250 OFF"
+          },
+          {
+            "points": "250K POINTS",
+            "reward": "FORD MUSTANG",
+            "prize": true
+          }
+        ],
+        "outro": "Simply present your custom reward wallet with each visit and automatically earn points towards discounts and specials on your favorite Star Buds products. Best of all, it's absolutely free to sign up!",
+        "joinHref": "https://lab.alpineiq.com/joinMembers/1130",
+        "source": "marylandrewards.json"
+      },
+      {
+        "state": "NY",
+        "title": "NEW YORK",
+        "intro": "",
+        "tiers": [],
+        "outro": "",
+        "joinHref": "https://lab.alpineiq.com/join/c/1130/101717?storeID=41",
+        "source": "rewards.json (NEW YORK button only; no New York rewards page was captured)"
+      }
+    ],
+    "source": "rewards.json, mississippirewards.json, oklahomarewards.json, marylandrewards.json, hr-tc.json. gratify-rewards-terms-conditions.json is the Colorado \"Gratify Rewards\" programme and is not used."
+  },
+  "about": {
+    "title": "The Star Buds Difference",
+    "paragraphs": [
+      "Star Buds is your neighborhood dispensary. We provide a comfortable setting to learn about and purchase all types of cannabis products. Our carefully curated selection includes: flower, concentrates, edibles and topicals. We have something for everyone… from the occasional smoker to the daily consumer. We strive to educate customers, normalize usage and contribute to our local communities.",
+      "Community is at the heart of everything we do. Through our Cancer Relief Program, we extend discounted access to cannabis products to those in need. We're also dedicated to honoring our veterans, providing ongoing discounts, and continuously seeking ways to make a positive impact in our communities."
+    ],
+    "photo": {
+      "src": "/assets/photos/store-interior-il.webp",
+      "w": 1254,
+      "h": 1254,
+      "alt": "Inside a Star Buds store",
+      "source": "starbudsillinois.us front page (audit/sister/img/starbuds-frontpage.webp): a real Star Buds interior from the Illinois sister site, not one of the 12 shop locations"
+    },
+    "source": "title: About.json heading; paragraph 1: index.json (home); paragraph 2: About.json (\"The Star Buds Community\")"
+  },
+  "dataNotes": "Store about[] and visit[] hold whole sentences copied verbatim from the captured store pages; sentences making superlative, award or count claims (\"best\", \"premier\", \"award-winning\", \"7 Oklahoma locations\") and customer reviews were left out. Addresses and day names are case-tidied from captured all-caps text; facts unchanged. See docs/LOCATIONS.md for per-store sources and gaps."
+}

@@ -1,0 +1,30 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "CUT-VAPE",
+  "file": "assets/generated/cut-vape.png",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "studio product photograph of a single sleek unbranded vape cartridge standing upright, clear glass tank filled with golden amber cannabis oil, a matte black ceramic mouthpiece and a brushed gold metal base, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light with glowing amber highlights, completely blank with no print, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "3:4",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 1378101964,
+  "requestId": "01a17baf-5fd6-7cf2-b007-4970f9d3a99a",
+  "cutout": {
+    "model": "fal-ai/birefnet/v2",
+    "requestId": "01a17baf-913e-7310-ac8c-d64719d14bac"
+  },
+  "width": 1792,
+  "height": 2368,
+  "sha256": "af36ccacebd75dc0da43663a9e595beaca02caddd7e5020985784a7c14f42228",
+  "raw": "tmp/img/raw/CUT-VAPE.1793076464109.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T04:47:49.792Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

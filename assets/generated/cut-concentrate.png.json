@@ -1,0 +1,30 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "CUT-CONCENTRATE",
+  "file": "assets/generated/cut-concentrate.png",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "studio macro product photograph of a single translucent golden amber shard of cannabis shatter concentrate with glassy facets catching the light, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light, bright golden glints, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "1:1",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 3751082228,
+  "requestId": "01a17baf-6dad-7cd0-b606-68929c0260bc",
+  "cutout": {
+    "model": "fal-ai/birefnet/v2",
+    "requestId": "01a17baf-9de3-7033-83cc-cb6e32df7ca1"
+  },
+  "width": 2048,
+  "height": 2048,
+  "sha256": "9bb62b7f12933f14e62f1afac0015adbaf799af81dd9b7c520dbf3697b10f4f5",
+  "raw": "tmp/img/raw/CUT-CONCENTRATE.1793076467303.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T04:47:54.561Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "CUT-LEAF",
+  "file": "assets/generated/cut-leaf.png",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "studio product photograph of a single fresh vivid green cannabis fan leaf with seven serrated leaflets and a short stem, flat and fully in frame with space around it, centred, isolated on a plain flat light grey seamless background, soft backlight showing the leaf veins, crisp edges, no shadow, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "1:1",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 3272377624,
+  "requestId": "01a17baf-68b5-72e0-9884-09ac34b41e58",
+  "cutout": {
+    "model": "fal-ai/birefnet/v2",
+    "requestId": "01a17baf-9a0d-7182-b39d-3a8521fdd041"
+  },
+  "width": 2048,
+  "height": 2048,
+  "sha256": "de1cb735e6e6522923bd990ad023e728e24776acb109673b23dafd35f754e31f",
+  "raw": "tmp/img/raw/CUT-LEAF.1793076466073.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T04:47:53.101Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "CUT-GUMMIES",
+  "file": "assets/generated/cut-gummies.png",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "studio product photograph of a small heap of glossy sugar-dusted star-shaped fruit gummies in hot pink, lime green, sunny yellow and orange, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light, crisp sugar crystals, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "4:3",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 994925669,
+  "requestId": "01a17baf-25d8-7ae3-a4ed-f90be15351bc",
+  "cutout": {
+    "model": "fal-ai/birefnet/v2",
+    "requestId": "01a17baf-574a-7fe0-9f13-15d6128ee8ba"
+  },
+  "width": 2368,
+  "height": 1792,
+  "sha256": "138ed5856fa2cfe651ae4914a91495eae88a57a035c681bfacc5d135785d366b",
+  "raw": "tmp/img/raw/CUT-GUMMIES.1793076448945.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T04:47:35.412Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

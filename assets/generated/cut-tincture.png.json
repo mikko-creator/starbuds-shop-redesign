@@ -1,0 +1,30 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "CUT-TINCTURE",
+  "file": "assets/generated/cut-tincture.png",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "studio product photograph of an amber glass dropper bottle with a black rubber dropper cap standing upright, two small fresh cannabis leaflets resting against its base, completely blank bottle with no label and no print, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light, warm glow through the amber glass, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "3:4",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 1699194976,
+  "requestId": "01a17baf-688c-7890-9c99-5a03c9db3d5b",
+  "cutout": {
+    "model": "fal-ai/birefnet/v2",
+    "requestId": "01a17baf-9a3c-79a2-be2e-ec96fa5356cb"
+  },
+  "width": 1792,
+  "height": 2368,
+  "sha256": "7a2112c98c30c200e32ea79ca87b554435470d7665da8435d1c6e3d0d60d7e63",
+  "raw": "tmp/img/raw/CUT-TINCTURE.1793076466370.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T04:47:53.887Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

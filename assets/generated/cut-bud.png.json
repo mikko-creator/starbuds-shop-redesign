@@ -1,0 +1,30 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "CUT-BUD",
+  "file": "assets/generated/cut-bud.png",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "studio macro product photograph of a single large dense cured cannabis flower bud, frosty white trichomes, curled orange pistils, deep green with violet tones, the whole bud centred and fully in frame with generous space around it, isolated on a plain flat light grey seamless background, soft even studio light with crisp specular highlights, no shadow, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "1:1",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 1888314852,
+  "requestId": "01a17baf-25dc-7851-86a0-3e892597f138",
+  "cutout": {
+    "model": "fal-ai/birefnet/v2",
+    "requestId": "01a17baf-573b-7a10-92db-8f4a6e4f10f8"
+  },
+  "width": 2048,
+  "height": 2048,
+  "sha256": "90552a8fc7c7fbf92aaa2b765f2698c37c5fa205afdb4c8845281bd5a74a09e3",
+  "raw": "tmp/img/raw/CUT-BUD.1793076448965.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T04:47:36.689Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

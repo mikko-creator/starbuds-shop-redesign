@@ -1,0 +1,47 @@
+{
+  "_note": "FOUNDATION test stub only (same schema as site.json). Every store and text here is FAKE and obviously so. The build uses src/content/site.json whenever it exists.",
+  "brand": { "name": "Star Buds", "est": "2013", "logo": "/assets/brand/logo.png", "logoOnDark": "/assets/brand/logo-on-dark.png", "star": "/assets/brand/star-on-dark.png" },
+  "shopOrigin": "https://shop.starbuds.us",
+  "mainSite": "https://www.starbuds.us",
+  "promo": { "text": "Shop Our Special Offers", "href": "/deals/" },
+  "nav": [
+    { "label": "Shop All", "href": "/#shop" },
+    { "label": "Deals", "href": "/deals/" },
+    { "label": "Locations", "href": "/stores/", "switcher": true },
+    { "label": "Higher Rewards", "href": "/rewards/" }
+  ],
+  "legal": [
+    { "label": "EULA", "href": "https://shop.starbuds.us/eula/" },
+    { "label": "Privacy Policy", "href": "https://shop.starbuds.us/privacy-policy/" },
+    { "label": "Terms Of Use", "href": "https://shop.starbuds.us/terms-of-use/" }
+  ],
+  "apps": { "ios": "https://apps.apple.com/us/app/star-buds-dispensary/id1589380634", "android": "https://play.google.com/store/apps/details?id=com.starbudsdispensary.wallet" },
+  "ageGate": { "title": "Are you 21 years of age or older?", "body": "You must be 21 years of age or older or 18+ with a valid medical card to enter this site.", "yes": "Yes", "no": "No" },
+  "categories": [
+    { "slug": "flower", "label": "Flower", "cutout": "cut-bud" },
+    { "slug": "pre-rolls", "label": "Pre-Rolls", "cutout": "cut-preroll" },
+    { "slug": "vaporizers", "label": "Vaporizers", "cutout": "cut-vape" },
+    { "slug": "concentrates", "label": "Concentrates", "cutout": "cut-concentrate" },
+    { "slug": "edibles", "label": "Edibles", "cutout": "cut-gummies" },
+    { "slug": "tinctures", "label": "Tinctures", "cutout": "cut-tincture" },
+    { "slug": "topicals", "label": "Topicals", "cutout": "cut-leaf" },
+    { "slug": "accessories", "label": "Accessories", "cutout": "cut-jar" },
+    { "slug": "apparel", "label": "Apparel", "cutout": "pop-star" }
+  ],
+  "states": [
+    { "code": "MS", "name": "Mississippi", "blurb": "" },
+    { "code": "OK", "name": "Oklahoma", "blurb": "" },
+    { "code": "MD", "name": "Maryland", "blurb": "" },
+    { "code": "NY", "name": "New York", "blurb": "" }
+  ],
+  "stores": [
+    { "slug": "stub-alpha", "state": "MS", "city": "Stubville", "name": "Star Buds Stubville (STUB)", "address": ["1 Stub Street (STUB)", "Stubville, MS 00000"], "phone": "(000) 000-0000", "tel": "+10000000000", "hours": [], "about": ["STUB paragraph: the DATA lane replaces this file."], "photo": null, "liveUrl": "https://shop.starbuds.us/stores/stub-alpha/", "mapUrl": "https://www.google.com/maps/search/?api=1&query=stub", "source": "stub" },
+    { "slug": "stub-beta", "state": "OK", "city": "Placeholder", "name": "Star Buds Placeholder (STUB)", "address": ["2 Stub Avenue (STUB)", "Placeholder, OK 00000"], "phone": "(000) 000-0001", "tel": "+10000000001", "hours": [], "about": [], "photo": null, "liveUrl": "https://shop.starbuds.us/stores/stub-beta/", "mapUrl": "https://www.google.com/maps/search/?api=1&query=stub", "source": "stub" }
+  ],
+  "deals": [
+    { "state": "OK", "title": "STUB deals headline", "items": ["STUB deal line one (DATA lane fills).", "STUB deal line two."], "source": "stub" },
+    { "state": "MS", "title": "STUB deals headline two", "items": ["STUB deal line."], "source": "stub" }
+  ],
+  "rewards": { "title": "STUB rewards title", "paragraphs": ["STUB rewards paragraph (DATA lane fills)."], "points": ["STUB point one", "STUB point two"], "termsHref": "https://www.starbuds.us/", "source": "stub" },
+  "about": { "title": "STUB about title", "paragraphs": ["STUB about paragraph (DATA lane fills)."], "photo": null, "source": "stub" }
+}

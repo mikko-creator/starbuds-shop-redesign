@@ -1,0 +1,30 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "CUT-JAR",
+  "file": "assets/generated/cut-jar.png",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "studio product photograph of a small clear glass apothecary jar with a matte black screw lid, filled with dense green cannabis buds, completely blank glass with no label and no print, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, crisp white rim highlights tracing the glass edges, soft even light, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "3:4",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 1192877076,
+  "requestId": "01a17baf-25d5-7a60-9941-9cad3a0b3774",
+  "cutout": {
+    "model": "fal-ai/birefnet/v2",
+    "requestId": "01a17baf-50da-7a51-b248-bd5efd6f08cb"
+  },
+  "width": 1792,
+  "height": 2368,
+  "sha256": "2eefb227b3ec9377f68799c753acffd9d07e3d2b017158eee74d36d7bcac0dcb",
+  "raw": "tmp/img/raw/CUT-JAR.1793076447228.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T04:47:35.372Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "tool": "tools/fal-gen.mjs",
+  "slot": "POP-STAR",
+  "file": "assets/generated/pop-star.png",
+  "iptcDigitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  "provenance": "AI-generated (fal.ai). Illustrative only: never a photograph of Star Buds (starbuds.us), its store, staff, customers, products or brands.",
+  "model": "fal-ai/flux-pro/v1.1-ultra",
+  "prompt": "1960s comic-book pop art illustration of a green cannabis fan leaf bursting out of a bold sunshine-yellow starburst shape, thick black ink outlines, flat saturated green, yellow and hot pink fills, Ben-Day halftone dot shading, crisp screen-print look, centred with space around it on a plain white background, sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+  "input": {
+    "aspect_ratio": "1:1",
+    "output_format": "jpeg",
+    "safety_tolerance": "5"
+  },
+  "seed": 3986650982,
+  "requestId": "01a17baf-a0dc-7072-9f6f-851c588a164b",
+  "cutout": {
+    "model": "fal-ai/birefnet/v2",
+    "requestId": "01a17baf-d2c6-7d80-b8c0-9966b57a4e07"
+  },
+  "width": 2048,
+  "height": 2048,
+  "sha256": "7ffddcc8b6fd719b38d1167e8861e2119b6d4a41e055f86cab5499f4070713a7",
+  "raw": "tmp/img/raw/POP-STAR.1793076480419.jpg",
+  "attempt": 1,
+  "generatedAt": "2026-10-27T04:48:07.707Z",
+  "review": {
+    "verdict": "PENDING",
+    "reason": null
+  }
+}

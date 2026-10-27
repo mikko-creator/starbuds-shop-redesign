@@ -1,0 +1,91 @@
+{
+  "schema": "image-plan/1",
+  "note": "MEDIA lane for the Star Buds shop redesign pitch (\"Pop Glass\"). Illustrative industry imagery added by the redesign. Every file is AI-generated and labelled (IPTC trainedAlgorithmicMedia); none depicts Star Buds, its stores, staff, customers, products or brands. Cut-outs (transparent PNG) are the front plane that breaks out of glass panels and section edges.",
+  "defaults": {
+    "model": "fal-ai/flux-pro/v1.1-ultra",
+    "style": "sharp focus, vivid clean colour, no people, no hands, no faces, no text, no lettering, no numbers, no labels, no logos, no brand marks, all surfaces blank and unmarked",
+    "input": { "aspect_ratio": "1:1", "output_format": "jpeg", "safety_tolerance": "5" },
+    "cutoutModel": "fal-ai/birefnet/v2",
+    "cutoutInput": { "model": "General Use (Heavy)", "operating_resolution": "2048x2048", "output_format": "png", "refine_foreground": true }
+  },
+  "images": [
+    {
+      "id": "CUT-BUD", "file": "assets/generated/cut-bud.png", "cutout": true,
+      "role": "front-plane cut-out: hero and flower category", "alt": "A frosty cannabis flower bud",
+      "prompt": "studio macro product photograph of a single large dense cured cannabis flower bud, frosty white trichomes, curled orange pistils, deep green with violet tones, the whole bud centred and fully in frame with generous space around it, isolated on a plain flat light grey seamless background, soft even studio light with crisp specular highlights, no shadow",
+      "input": { "aspect_ratio": "1:1" }
+    },
+    {
+      "id": "CUT-PREROLL", "file": "assets/generated/cut-preroll.png", "cutout": true,
+      "role": "front-plane cut-out: pre-roll category", "alt": "A cone-shaped pre-rolled joint",
+      "prompt": "studio product photograph of a single cone-shaped pre-rolled joint in plain unbleached white rolling paper with a neatly twisted tip and a short rolled paper filter at the narrow end, green cannabis visible at the open end, lying diagonally across the frame, fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light, no shadow, blank paper with no print",
+      "input": { "aspect_ratio": "1:1" }
+    },
+    {
+      "id": "CUT-JAR", "file": "assets/generated/cut-jar.png", "cutout": true,
+      "role": "front-plane cut-out: flower jar", "alt": "A glass jar filled with cannabis buds",
+      "prompt": "studio product photograph of a small clear glass apothecary jar with a matte black screw lid, filled with dense green cannabis buds, completely blank glass with no label and no print, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, crisp white rim highlights tracing the glass edges, soft even light",
+      "input": { "aspect_ratio": "3:4" }
+    },
+    {
+      "id": "CUT-GUMMIES", "file": "assets/generated/cut-gummies.png", "cutout": true,
+      "role": "front-plane cut-out: edibles category", "alt": "A small heap of star-shaped fruit gummies",
+      "prompt": "studio product photograph of a small heap of glossy sugar-dusted star-shaped fruit gummies in hot pink, lime green, sunny yellow and orange, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light, crisp sugar crystals",
+      "input": { "aspect_ratio": "4:3" }
+    },
+    {
+      "id": "CUT-VAPE", "file": "assets/generated/cut-vape.png", "cutout": true,
+      "role": "front-plane cut-out: vape category", "alt": "A vape cartridge filled with golden oil",
+      "prompt": "studio product photograph of a single sleek unbranded vape cartridge standing upright, clear glass tank filled with golden amber cannabis oil, a matte black ceramic mouthpiece and a brushed gold metal base, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light with glowing amber highlights, completely blank with no print",
+      "input": { "aspect_ratio": "3:4" }
+    },
+    {
+      "id": "CUT-TINCTURE", "file": "assets/generated/cut-tincture.png", "cutout": true,
+      "role": "front-plane cut-out: tincture / wellness", "alt": "An amber dropper bottle beside cannabis leaflets",
+      "prompt": "studio product photograph of an amber glass dropper bottle with a black rubber dropper cap standing upright, two small fresh cannabis leaflets resting against its base, completely blank bottle with no label and no print, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light, warm glow through the amber glass",
+      "input": { "aspect_ratio": "3:4" }
+    },
+    {
+      "id": "CUT-LEAF", "file": "assets/generated/cut-leaf.png", "cutout": true,
+      "role": "front-plane cut-out: floating leaves at section seams", "alt": "A single cannabis fan leaf",
+      "prompt": "studio product photograph of a single fresh vivid green cannabis fan leaf with seven serrated leaflets and a short stem, flat and fully in frame with space around it, centred, isolated on a plain flat light grey seamless background, soft backlight showing the leaf veins, crisp edges, no shadow",
+      "input": { "aspect_ratio": "1:1" }
+    },
+    {
+      "id": "CUT-CONCENTRATE", "file": "assets/generated/cut-concentrate.png", "cutout": true,
+      "role": "front-plane cut-out: concentrates category", "alt": "A translucent amber shard of cannabis concentrate",
+      "prompt": "studio macro product photograph of a single translucent golden amber shard of cannabis shatter concentrate with glassy facets catching the light, centred and fully in frame with space around it, isolated on a plain flat light grey seamless background, soft even light, bright golden glints",
+      "input": { "aspect_ratio": "1:1" }
+    },
+    {
+      "id": "POP-STAR", "file": "assets/generated/pop-star.png", "cutout": true,
+      "role": "pop-art sticker: cannabis leaf bursting from a starburst", "alt": "Pop-art illustration of a cannabis leaf bursting out of a yellow starburst",
+      "prompt": "1960s comic-book pop art illustration of a green cannabis fan leaf bursting out of a bold sunshine-yellow starburst shape, thick black ink outlines, flat saturated green, yellow and hot pink fills, Ben-Day halftone dot shading, crisp screen-print look, centred with space around it on a plain white background",
+      "input": { "aspect_ratio": "1:1" }
+    },
+    {
+      "id": "POP-BUD", "file": "assets/generated/pop-bud.png", "cutout": true,
+      "role": "pop-art sticker: cannabis bud with sparkles", "alt": "Pop-art illustration of a cannabis bud with comic sparkles",
+      "prompt": "1960s comic-book pop art illustration of a single plump cannabis flower bud, thick black ink outlines, flat green and violet fills with Ben-Day halftone dot shading, small yellow comic sparkle bursts around it, crisp screen-print look, centred with space around it on a plain white background",
+      "input": { "aspect_ratio": "1:1" }
+    },
+    {
+      "id": "G-HERO", "file": "assets/generated/g-hero.jpg",
+      "role": "home hero backdrop; V-HERO loop source", "alt": "Glossy cannabis leaves and frosted glass discs floating against a deep green backdrop",
+      "prompt": "pop art studio set photograph, oversized glossy green cannabis fan leaves and translucent frosted glass discs and glass spheres floating in mid-air against a saturated deep emerald green backdrop printed with a faint pattern of large halftone dots, bold sunshine-yellow rim light from the right and a soft hot pink glow from the left, playful clean composition, the left third of the frame calmer with only soft out-of-focus shapes for headline space, shallow depth of field",
+      "input": { "aspect_ratio": "16:9" }
+    },
+    {
+      "id": "G-GLASS", "file": "assets/generated/g-glass.jpg",
+      "role": "section backdrop behind glass panels (light)", "alt": "Layered frosted glass panels and glass leaf shapes refracting green and yellow light",
+      "prompt": "abstract 3D render of layered frosted glass panels and translucent glass cannabis leaf shapes refracting light, saturated emerald green and sunshine yellow gradients with a hint of hot pink, soft caustics on a pale cream ground, clean minimal composition, studio lighting",
+      "input": { "aspect_ratio": "16:9" }
+    },
+    {
+      "id": "G-GLASS-DARK", "file": "assets/generated/g-glass-dark.jpg",
+      "role": "section backdrop behind glass panels (dark); V-GLASS loop source", "alt": "Dark green glass shapes and cannabis leaf silhouettes glowing with lime and pink light",
+      "prompt": "abstract 3D render of translucent dark green glass shapes, glass cannabis leaf silhouettes and glossy glass spheres floating in deep black-green space, glowing lime green and hot pink rim light, soft caustic reflections, clean minimal composition with calm empty space in the centre",
+      "input": { "aspect_ratio": "16:9" }
+    }
+  ]
+}

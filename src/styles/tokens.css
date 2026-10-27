@@ -1,0 +1,81 @@
+/* tokens.css - Pop Glass design tokens (FOUNDATION). Table + usage: docs/DESIGN.md */
+:root {
+  /* brand + pop palette */
+  --green: #006937;        /* brand green (template) */
+  --green-deep: #11432B;   /* pill buttons, dark grounds */
+  --green-ink: #0B2A1C;    /* darkest green ground */
+  --ink: #101512;          /* text, outlines, hard shadows */
+  --charcoal: #231F20;
+  --paper: #FFF8EA;        /* warm light ground */
+  --white: #fff;
+  --mist: #F2F6F8;
+  --coral: #DA5347;        /* deal urgency only */
+  --pop-yellow: #FFD23F;   /* pop accent */
+  --pop-pink: #FF5FA2;     /* pop accent */
+  --pop-lime: #C7F45A;     /* pop accent on dark */
+  --green-bright: #19A35B; /* lighter green for lines on dark (derived from --green) */
+  --ink-soft: rgba(16, 21, 18, .72);
+  --paper-soft: rgba(255, 248, 234, .82);
+
+  /* type */
+  --font-display: "Oswald", "Oswald Fallback", "Arial Narrow", Impact, sans-serif;
+  --font-body: "Manrope", "Manrope Fallback", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --fs-hero: clamp(3.1rem, 1.4rem + 6.4vw, 7.4rem);
+  --fs-h2: clamp(2.3rem, 1.35rem + 3.6vw, 4.6rem);
+  --fs-h3: clamp(1.35rem, 1.1rem + .9vw, 1.9rem);
+  --fs-lead: clamp(1.06rem, 1rem + .35vw, 1.3rem);
+  --fs-body: 1.0625rem;
+  --fs-small: .875rem;
+  --fs-tiny: .75rem;
+  --lh-tight: .92;
+  --lh-body: 1.6;
+  --track-caps: .04em;
+
+  /* layout */
+  --maxw: 1280px;
+  --gutter: clamp(16px, 4vw, 56px);
+  --section-y: clamp(80px, 9vw, 150px);
+  --promo-h: 36px;
+  --header-h: 76px;
+
+  /* shape */
+  --r-sm: 10px;
+  --r-md: 18px;
+  --r-lg: 28px;
+  --r-xl: 40px;
+  --r-pill: 999px;
+  --outline: 2px solid var(--ink);
+
+  /* shadows */
+  --shadow-pop: 6px 6px 0 var(--ink);
+  --shadow-pop-hover: 9px 9px 0 var(--ink);
+  --shadow-pop-yellow: 6px 6px 0 var(--pop-yellow);
+  --shadow-pop-pink: 6px 6px 0 var(--pop-pink);
+  --shadow-soft: 0 24px 60px -24px rgba(11, 42, 28, .45);
+  --shadow-cut: drop-shadow(0 18px 22px rgba(11, 42, 28, .35));
+
+  /* glass */
+  --glass-light: rgba(255, 255, 255, .55);
+  --glass-dark: rgba(255, 255, 255, .14);
+  --glass-blur: blur(18px) saturate(160%);
+  --glass-edge-light: rgba(255, 255, 255, .75);
+  --glass-edge-dark: rgba(255, 255, 255, .28);
+
+  /* motion */
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+  --ease-pop: cubic-bezier(.34, 1.56, .64, 1);
+  --t-fast: .18s;
+  --t-med: .45s;
+  --t-slow: .9s;
+
+  /* stacking: back plane < mid plane < front plane < header < drawer < gate */
+  --z-back: 0;
+  --z-mid: 2;
+  --z-front: 6;
+  --z-header: 50;
+  --z-drawer: 60;
+  --z-gate: 100;
+}
+@media (max-width: 999px) {
+  :root { --header-h: 64px; --promo-h: 32px; }
+}
