@@ -247,8 +247,13 @@ export const reveal = (kind = 'up', i) => ` data-reveal="${esc(kind === 'pop' ? 
 
 /** "MS: Pearl" (template switcher label) */
 export const storeLabel = (s) => `${s.state}: ${s.city}`;
-/** live menu URL for a store (+ category) */
-export const liveMenu = (ctx, slug, cat = '') => `${ctx.site.shopOrigin || 'https://shop.starbuds.us'}/stores/${slug}/${cat ? 'products/' + cat : ''}`;
+/** live menu URL for a store (+ category): the store's Dutchie or Leafly menu from site.json liveUrl (shop.starbuds.us
+ *  returns 403 outside the US); Leafly menus (menuNoCats) take no category path */
+export const liveMenu = (ctx, slug, cat = '') => {
+  const s = (ctx.stores || []).find((x) => x.slug === slug);
+  if (!s || !s.liveUrl) return '/dispensaries/';
+  return cat && !s.menuNoCats ? s.liveUrl + 'products/' + cat : s.liveUrl;
+};
 
 // ---------- revision 2 shared page helpers (FOUNDATION-R2; classes prefixed sb-) ----------
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];

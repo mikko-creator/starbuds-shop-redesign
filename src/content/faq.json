@@ -65,7 +65,7 @@
           "q": "Can I order online?",
           "answer": [
             "The Oklahoma store pages say: “Looking for extra speed and convenience? Skip the line and place your order online to pick up in store!”",
-            "Every store's live menu is linked from this site: choose your store, then open its menu on shop.starbuds.us."
+            "Every store's live menu is linked from this site: choose your store, then open its live menu."
           ],
           "cite": "Quoted from the Star Buds Lawton, Altus and Chickasha store pages on starbuds.us",
           "links": [{ "label": "Shop the live menu", "to": "menu" }],
@@ -74,7 +74,7 @@
             "refs": [
               { "file": "src/content/site.json", "path": "stores[slug=lawton-dispensary].about[1]", "origin": "lawton.json; the same sentence is on altus.json and chickasha.json", "quote": "Looking for extra speed and convenience? Skip the line and place your order online to pick up in store!" }
             ],
-            "uiParts": ["Every store's live menu is linked from this site: choose your store, then open its menu on shop.starbuds.us."]
+            "uiParts": ["Every store's live menu is linked from this site: choose your store, then open its live menu."]
           }
         },
         {

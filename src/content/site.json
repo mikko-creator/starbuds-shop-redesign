@@ -33,23 +33,13 @@
       "href": "/rewards/"
     }
   ],
-  "legal": [
-    {
-      "label": "EULA",
-      "href": "https://shop.starbuds.us/eula/"
-    },
-    {
-      "label": "Privacy Policy",
-      "href": "https://shop.starbuds.us/privacy-policy/"
-    },
-    {
-      "label": "Terms Of Use",
-      "href": "https://shop.starbuds.us/terms-of-use/"
-    }
-  ],
+  "legal": [],
   "apps": {
     "ios": "https://apps.apple.com/us/app/star-buds-dispensary/id1589380634",
-    "android": "https://play.google.com/store/apps/details?id=com.starbudsdispensary.wallet"
+    "androidRemoved": {
+      "href": "https://play.google.com/store/apps/details?id=com.starbudsdispensary.wallet",
+      "why": "Google Play returns 404 for this app id (checked 2026-10-28)"
+    }
   },
   "ageGate": {
     "title": "Are you 21 years of age or older?",
@@ -152,8 +142,10 @@
       "shortName": "Star Buds Greenwood",
       "tel": "+16624561181",
       "hoursSummary": "",
-      "liveUrl": "https://shop.starbuds.us/stores/greenwood-dispensary/",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=2218%20Highway%2082%20W%2C%20Greenwood%2C%20MS%2038930"
+      "liveUrl": "https://dutchie.com/dispensary/sb-greenwood/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=2218%20Highway%2082%20W%2C%20Greenwood%2C%20MS%2038930",
+      "shopUrl": "https://shop.starbuds.us/stores/greenwood-dispensary/",
+      "liveUrlSource": "Dutchie menu found by web search, checked in a browser 2026-10-28 (title: Star Buds (Greenwood) Menu | Greenwood, MS)"
     },
     {
       "slug": "natchez-dispensary",
@@ -172,8 +164,11 @@
       "shortName": "Star Buds Natchez",
       "tel": "+16016530400",
       "hoursSummary": "",
-      "liveUrl": "https://shop.starbuds.us/stores/natchez-dispensary/",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=135%20US-61%20%231%2C%20Natchez%2C%20MS%2039120"
+      "liveUrl": "https://www.leafly.com/dispensary-info/star-buds-natchez/menu",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=135%20US-61%20%231%2C%20Natchez%2C%20MS%2039120",
+      "shopUrl": "https://shop.starbuds.us/stores/natchez-dispensary/",
+      "liveUrlSource": "no Dutchie menu found; Leafly menu checked in a browser 2026-10-28 (Star Buds - Natchez)",
+      "menuNoCats": true
     },
     {
       "slug": "ocean-springs-dispensary",
@@ -192,8 +187,11 @@
       "shortName": "Star Buds Ocean Springs",
       "tel": "+12282151776",
       "hoursSummary": "",
-      "liveUrl": "https://shop.starbuds.us/stores/ocean-springs-dispensary/",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=718%20Bienville%20Blvd%20Ste%20A%2C%20Ocean%20Springs%2C%20MS%2039564"
+      "liveUrl": "https://www.leafly.com/dispensary-info/star-buds-ocean-springs/menu",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=718%20Bienville%20Blvd%20Ste%20A%2C%20Ocean%20Springs%2C%20MS%2039564",
+      "shopUrl": "https://shop.starbuds.us/stores/ocean-springs-dispensary/",
+      "liveUrlSource": "no Dutchie menu found; Leafly menu checked in a browser 2026-10-28 (Star Buds - Ocean Springs)",
+      "menuNoCats": true
     },
     {
       "slug": "pearl",
@@ -212,8 +210,10 @@
       "shortName": "Star Buds Pearl",
       "tel": "+16017066050",
       "hoursSummary": "",
-      "liveUrl": "https://shop.starbuds.us/stores/pearl/",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=190%20Riverwind%20E%20Dr%2C%20Unit%20306%2C%20Pearl%2C%20MS%2039208"
+      "liveUrl": "https://dutchie.com/dispensary/sb-pearl/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=190%20Riverwind%20E%20Dr%2C%20Unit%20306%2C%20Pearl%2C%20MS%2039208",
+      "shopUrl": "https://shop.starbuds.us/stores/pearl/",
+      "liveUrlSource": "Dutchie, checked in a browser 2026-10-28 (Star Buds Pearl Menu | Pearl, MS)"
     },
     {
       "slug": "oxford-dispensary",
@@ -263,8 +263,10 @@
       "shortName": "Star Buds Oxford",
       "tel": "+16626383008",
       "hoursSummary": "Mon-Sat 8:00AM-9:00PM, Sun 8:00AM-7:00PM",
-      "liveUrl": "https://shop.starbuds.us/stores/oxford-dispensary/",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1319%20N%20Lamar%20Blvd%20Suite%20A%2C%20Oxford%2C%20MS%2038655"
+      "liveUrl": "https://dutchie.com/dispensary/starbuds-oxford/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1319%20N%20Lamar%20Blvd%20Suite%20A%2C%20Oxford%2C%20MS%2038655",
+      "shopUrl": "https://shop.starbuds.us/stores/oxford-dispensary/",
+      "liveUrlSource": "Dutchie, checked in a browser 2026-10-28 (Star Buds (Oxford) Menu | Oxford, MS)"
     },
     {
       "slug": "tupelo-saltillo-dispensary",
@@ -284,8 +286,10 @@
       "shortName": "Star Buds Tupelo",
       "tel": "+16624581872",
       "hoursSummary": "",
-      "liveUrl": "https://shop.starbuds.us/stores/tupelo-saltillo-dispensary/",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=2546%20Hwy%20145%20Ste%20D%2C%20Saltillo%2C%20MS%2038866"
+      "liveUrl": "https://dutchie.com/dispensary/sb-tupelo/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=2546%20Hwy%20145%20Ste%20D%2C%20Saltillo%2C%20MS%2038866",
+      "shopUrl": "https://shop.starbuds.us/stores/tupelo-saltillo-dispensary/",
+      "liveUrlSource": "Dutchie, checked in a browser 2026-10-28 (Star Buds (Tupelo) Menu | Saltillo, MS)"
     },
     {
       "slug": "lawton-dispensary",
@@ -357,8 +361,10 @@
       "shortName": "Star Buds Lawton",
       "tel": "+15806992833",
       "hoursSummary": "Daily 8:00AM-12:00AM",
-      "liveUrl": "https://shop.starbuds.us/stores/lawton-dispensary/",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=2629%20NW%20Cache%20Rd%2C%20Lawton%2C%20OK%2073505"
+      "liveUrl": "https://dutchie.com/dispensary/starbuds-lawton/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=2629%20NW%20Cache%20Rd%2C%20Lawton%2C%20OK%2073505",
+      "shopUrl": "https://shop.starbuds.us/stores/lawton-dispensary/",
+      "liveUrlSource": "Dutchie link on www.starbuds.us lawton page (dutchie.com/stores/starbuds-lawton), checked in a browser 2026-10-28"
     },
     {
       "slug": "altus-dispensary",
@@ -431,8 +437,10 @@
       "shortName": "Star Buds Altus",
       "tel": "+15803790487",
       "hoursSummary": "Daily 8:00AM-12:00AM",
-      "liveUrl": "https://shop.starbuds.us/stores/altus-dispensary/",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1100%20Falcon%20Rd%20Suite%20104%2C%20Altus%2C%20OK%2073521"
+      "liveUrl": "https://dutchie.com/dispensary/starbuds-altus/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1100%20Falcon%20Rd%20Suite%20104%2C%20Altus%2C%20OK%2073521",
+      "shopUrl": "https://shop.starbuds.us/stores/altus-dispensary/",
+      "liveUrlSource": "Dutchie link on www.starbuds.us altus page (dutchie.com/stores/starbuds-altus)"
     },
     {
       "slug": "ardmore-dispensary",
@@ -503,8 +511,10 @@
       "shortName": "Star Buds Ardmore",
       "tel": "+15803197935",
       "hoursSummary": "Daily 8:00AM-12:00AM",
-      "liveUrl": "https://shop.starbuds.us/stores/ardmore-dispensary/",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=2502%20Crossroads%20Dr.%2C%20Ardmore%2C%20OK%2073401"
+      "liveUrl": "https://dutchie.com/dispensary/star-buds-ardmore/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=2502%20Crossroads%20Dr.%2C%20Ardmore%2C%20OK%2073401",
+      "shopUrl": "https://shop.starbuds.us/stores/ardmore-dispensary/",
+      "liveUrlSource": "Dutchie link on www.starbuds.us ardmore page (dutchie.com/stores/star-buds-ardmore)"
     },
     {
       "slug": "chickasha-dispensary",
@@ -572,8 +582,10 @@
       "shortName": "Star Buds Chickasha",
       "tel": "+14058253424",
       "hoursSummary": "Daily 8:00AM-10:00PM",
-      "liveUrl": "https://shop.starbuds.us/stores/chickasha-dispensary/",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=718%20S%204th%20St%2C%20Chickasha%2C%20OK%2073018"
+      "liveUrl": "https://dutchie.com/dispensary/star-buds-chickasha/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=718%20S%204th%20St%2C%20Chickasha%2C%20OK%2073018",
+      "shopUrl": "https://shop.starbuds.us/stores/chickasha-dispensary/",
+      "liveUrlSource": "Dutchie link on www.starbuds.us chickasha page (dutchie.com/stores/star-buds-chickasha)"
     },
     {
       "slug": "baltimore-dispensary",
@@ -654,8 +666,10 @@
       "shortName": "Star Buds Baltimore",
       "tel": "+14434387494",
       "hoursSummary": "Daily 9:00AM-9:00PM",
-      "liveUrl": "https://shop.starbuds.us/stores/baltimore-dispensary/",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=5975%20Belair%20Rd%2C%20Baltimore%2C%20MD%2021206"
+      "liveUrl": "https://dutchie.com/dispensary/star-buds-baltimore/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=5975%20Belair%20Rd%2C%20Baltimore%2C%20MD%2021206",
+      "shopUrl": "https://shop.starbuds.us/stores/baltimore-dispensary/",
+      "liveUrlSource": "Dutchie link on www.starbuds.us maryland page (dutchie.com/stores/star-buds-baltimore)"
     },
     {
       "slug": "buffalo-dispensary",
@@ -683,8 +697,10 @@
       "shortName": "Star Buds Buffalo",
       "tel": "+17168297235",
       "hoursSummary": "",
-      "liveUrl": "https://shop.starbuds.us/stores/buffalo-dispensary/",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=396%20Kenmore%20Ave%2C%20Buffalo%2C%20NY%2014223"
+      "liveUrl": "https://dutchie.com/dispensary/occ-wny-ventures/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=396%20Kenmore%20Ave%2C%20Buffalo%2C%20NY%2014223",
+      "shopUrl": "https://shop.starbuds.us/stores/buffalo-dispensary/",
+      "liveUrlSource": "Dutchie, checked in a browser 2026-10-28 (Star Buds Buffalo NY Menu | Buffalo, NY)"
     }
   ],
   "dealsIntro": {
@@ -1059,5 +1075,25 @@
     },
     "source": "title: About.json heading; paragraph 1: index.json (home); paragraph 2: About.json (\"The Star Buds Community\")"
   },
-  "dataNotes": "Store about[] and visit[] hold whole sentences copied verbatim from the captured store pages; sentences making superlative, award or count claims (\"best\", \"premier\", \"award-winning\", \"7 Oklahoma locations\") and customer reviews were left out. Addresses and day names are case-tidied from captured all-caps text; facts unchanged. See docs/LOCATIONS.md for per-store sources and gaps."
+  "dataNotes": [
+    "Store about[] and visit[] hold whole sentences copied verbatim from the captured store pages; sentences making superlative, award or count claims (\"best\", \"premier\", \"award-winning\", \"7 Oklahoma locations\") and customer reviews were left out. Addresses and day names are case-tidied from captured all-caps text; facts unchanged. See docs/LOCATIONS.md for per-store sources and gaps.",
+    "2026-10-28: live-menu links point at each store menu on Dutchie (10 stores) or Leafly (Natchez, Ocean Springs: no Dutchie menu found), because shop.starbuds.us (the old liveUrl, kept as shopUrl) returns 403 Forbidden outside the US."
+  ],
+  "legalRemoved": {
+    "items": [
+      {
+        "label": "EULA",
+        "href": "https://shop.starbuds.us/eula/"
+      },
+      {
+        "label": "Privacy Policy",
+        "href": "https://shop.starbuds.us/privacy-policy/"
+      },
+      {
+        "label": "Terms Of Use",
+        "href": "https://shop.starbuds.us/terms-of-use/"
+      }
+    ],
+    "why": "shop.starbuds.us returns 403 outside the US (checked 2026-10-28); the EULA is the site page /eula/"
+  }
 }

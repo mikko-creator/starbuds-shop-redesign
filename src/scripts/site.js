@@ -25,11 +25,12 @@
   DATA.stores.forEach(function (s) { bySlug[s.slug] = s; });
   var SB = window.SB = { data: DATA, current: null, pendingCat: null };
 
-  // Live-menu links start from the absolute s.liveUrl (https://shop.starbuds.us/stores/<slug>/), and store-page links
-  // come from the rendered switcher anchors, so this file holds no root-absolute string literal for the Pages preview
-  // rewrite (tools/make-pages-preview.mjs) to misjudge: live-shop links stay unprefixed, store pages get the prefix.
+  // Live-menu links start from the absolute s.liveUrl (the store's Dutchie menu, https://dutchie.com/dispensary/<id>/,
+  // or a Leafly menu where no Dutchie menu exists: menuNoCats, no category paths), and store-page links come from the
+  // rendered switcher anchors, so this file holds no root-absolute string literal for the Pages preview rewrite
+  // (tools/make-pages-preview.mjs) to misjudge: live-menu links stay unprefixed, store pages get the prefix.
   function menuUrl(s, cat) {
-    return cat ? s.liveUrl + 'products/' + cat : s.liveUrl;
+    return cat && !s.menuNoCats ? s.liveUrl + 'products/' + cat : s.liveUrl;
   }
   SB.menuUrl = menuUrl;
   var storeHref = {};

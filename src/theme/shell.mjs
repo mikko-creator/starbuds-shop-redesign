@@ -348,7 +348,7 @@ function footer(ctx, path) {
 function clientData(ctx) {
   const data = {
     shop: ctx.site.shopOrigin || 'https://shop.starbuds.us',
-    stores: ctx.stores.map((s) => ({ slug: s.slug, state: s.state, city: s.city, name: s.name, address: s.address || [], phone: s.phone || '', tel: s.tel || '', mapUrl: s.mapUrl || '', liveUrl: s.liveUrl || '' })),
+    stores: ctx.stores.map((s) => ({ slug: s.slug, state: s.state, city: s.city, name: s.name, address: s.address || [], phone: s.phone || '', tel: s.tel || '', mapUrl: s.mapUrl || '', liveUrl: s.liveUrl || '', menuNoCats: !!s.menuNoCats })),
   };
   return JSON.stringify(data).replace(/</g, '\\u003c');
 }
